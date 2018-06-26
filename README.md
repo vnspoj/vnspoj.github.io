@@ -46,3 +46,7 @@ In the above file, you should change the `title`, `categories`, `code` and `src`
 
 
 If you need static files (such as iamge, pdf, or bla bla), you can add in the directory `static`, and the url becomes `https://vnspoj.github.io/static/[path/to/your/file]`
+
+### Add new category
++ Add new file in `category` as the others in the directory.
++ In directory `_posts/tips`, add new file as the others.
