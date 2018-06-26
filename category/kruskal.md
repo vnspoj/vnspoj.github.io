@@ -1,6 +1,6 @@
 ---
 layout: posts_by_category
 categories: kruskal
-title: MST - Kruskal
+title: Kruskal - Tìm cây khung nhỏ nhất MST 
 permalink: /category/kruskal
 ---

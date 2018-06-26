@@ -1,6 +1,6 @@
-title: Tutorial SPOJ
+title: Solution for problems
 description: Hướng dẫn và chia sẻ lời giải cho các problems trên vn.spoj.com
-author: Huynh Sam Ha
+author: Tutorial SPOJ
 github: //github.com/vnspoj
 about: Hướng dẫn và chia sẻ lời giải cho các problems trên vn.spoj.com
 # disqus_shortname: vnspoj
@@ -35,17 +35,17 @@ share:
   # fb_appid: 1749788565247320
 
 urls:
-    - text: About Me
+    - text: About
       url: /about
-    - text: My Projects
-      url: /projects
+    - text: Categories
+      url: /category
     - text: XML Feed
       url: /feed.xml
 
 url: "//vnspoj.github.io"
 baseurl: ""
-paginate: 20
-per_page: 20
+paginate: 25
+per_page: 25
 paginate_path: "/page/:num/"
 markdown: kramdown
 gems:
