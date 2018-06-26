@@ -170,6 +170,14 @@ div.sidebar-layout img.profile-avatar {
 .share-page > div.btn-share {
   margin-top: 5px;
 }
+
+div.btn-share .twitter-share-button {
+  margin-right: 10px;
+}
+div.btn-share .fb-share-button {
+  margin-left: 10px;
+}
+
 .post-content img,
 .content img {
   max-width: 100%
