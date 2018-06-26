@@ -1,0 +1,58 @@
+title: Problems trên SPOJ
+description: Chia sẻ lời giải cho các bài toán trên diễn đàn SPOj (https://vn.spoj.com/)
+author: Huynh Sam Ha
+github: //github.com/huynhsamha
+about: Chia sẻ lời giải cho các bài toán trên diễn đàn SPOj (https://vn.spoj.com/)
+# disqus_shortname: vnspoj
+# google_analytics: UA-XXXXXXXX-Y
+avatar_url: /static/img/avatar.jpeg
+
+username: huynhsamha
+repo: spoj
+
+enableTags: true
+tagarray: []
+
+collections:
+  project:
+    output: true
+    permalink: /project/:path/
+
+social:
+    - icon: fa-facebook
+      link: "//facebook.com/huynhsamha"
+    - icon: fa-twitter
+      link: "//twitter.com/huynhsamha"
+    - icon: fa-linkedin
+      link: "//www.linkedin.com/in/huynhsamha"
+    - icon: fa-stack-overflow
+      link: "//stackoverflow.com/users/8828489/huynhsamha"
+    - icon: fa-github
+      link: "//github.com/huynhsamha"
+
+share:
+  twitter_username: huynhsamha
+  # fb_appid: 1749788565247320
+
+urls:
+    - text: About Me
+      url: /about
+    - text: My Projects
+      url: /projects
+    - text: XML Feed
+      url: /feed.xml
+
+url: "//huynhsamha.github.io"
+baseurl: "/spoj"
+paginate: 20
+per_page: 20
+paginate_path: "/page/:num/"
+markdown: kramdown
+gems:
+  - jekyll-paginate
+  - jekyll-gist
+
+compress_html:
+  clippings: all
+  comments: ["<!-- ", " -->"]
+  endings: all

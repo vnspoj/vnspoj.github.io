@@ -1,0 +1,90 @@
+---
+layout: default
+---
+<header class="post-header">
+  <h1 class="post-title">{{ page.title }}</h1>
+</header>
+
+<span class="time">{{ page.date | date_to_string }}</span>
+{% if page.categories %}
+  <span class="categories">
+    &raquo; {% for category in page.categories %}<a href="{{ site.baseurl }}/category/{{ category }}">{{ category }}</a>{% if forloop.last == false %}, {% endif %}{% endfor %}
+  </span>
+{% endif %}
+
+<div class="content">
+  <h4>
+    Đề bài: &nbsp;
+    <a href="//vn.spoj.com/problems/{{ page.code }}">
+      https://vn.spoj.com/problems/{{ page.code }}
+    </a>
+  </h4>
+  <h4>Solution:</h4>
+  <div class="post">{{ content }}</div>
+
+  <a href="//github.com/huynhsamha/spoj/blob/master/static/src/{{ page.src }}" class="btn-tool" target="_blank">
+    <button class="btn btn-success">View on Github <i class="fa fa-github"></i></button>
+  </a>
+  <a download href="{{ site.baseurl }}/static/src/{{ page.src }}" class="btn-tool">
+    <button class="btn btn-primary">Download <i class="fa fa-download"></i></button>
+  </a>
+
+  {% include share-page.html %}
+</div>
+
+{% assign hasSimilar = '' %}
+  {% for post in site.posts  %}
+    {% assign postHasSimilar = false %}
+      {% for tag in post.categories %}
+        {% for thisTag in page.categories %}
+          {% if postHasSimilar == false and hasSimilar.size < 6 and post != page and tag == thisTag %}
+            {% if hasSimilar.size == 0 %}
+            <div class="panel-body">
+              <h4>Related Posts</h4>
+              <ul>
+            {% endif %}
+                <li class="relatedPost">
+                  <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+                  {% if post.categories %}
+                    (Categories: {% for category in post.categories %}<a href="{{ site.baseurl }}/category/{{ category }}">{{ category }}</a>{% if forloop.last == false %}, {% endif %}{% endfor %})
+                  {% endif %}
+                </li>
+          {% capture hasSimilar %}{{ hasSimilar }}*{% endcapture %}
+          {% assign postHasSimilar = true %}
+        {% endif %}
+      {% endfor %}
+    {% endfor %}
+  {% endfor %}
+  {% if hasSimilar.size > 0 %}
+  </ul>
+</div>
+{% endif %}
+
+<div class="PageNavigation">
+  {% if page.previous.url %}
+    <a class="prev" href="{{ site.baseurl }}{{ page.previous.url }}">&laquo; {{ page.previous.title }}</a>
+  {% endif %}
+  {% if page.next.url %}
+    <a class="next" href="{{ site.baseurl }}{{ page.next.url }}">{{ page.next.title }} &raquo;</a>
+  {% endif %}
+</div>
+
+{% if site.disqus_shortname %}
+<div class="disqus-comments">
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+    /* <![CDATA[ */
+    var disqus_shortname = "{{ site.disqus_shortname }}";
+    var disqus_identifier = "{{ site.url }}_{{ page.title }}";
+    var disqus_title = "{{ page.title }}";
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    /* ]]> */
+  </script>
+</div>
+{% endif %}
