@@ -13,14 +13,23 @@ layout: default
 {% endif %}
 
 <div class="content">
-  <h4>
-    Đề bài: &nbsp;
+  <h4>Problem: 
     <a href="//vn.spoj.com/problems/{{ page.code }}">
       https://vn.spoj.com/problems/{{ page.code }}
     </a>
   </h4>
+
   <h4>Solution:</h4>
   <div class="post">{{ content }}</div>
+  
+  <h4>Source Code:</h4>
+  <span id="js-filename-code" style="display: none">{{ page.src }}</span>
+  <pre><code id="js-source-code"></code></pre>
+  <!-- load prism -->
+  <script src="{{ site.baseurl }}/static/js/prism.js"></script>
+  <!-- load source code from github -->
+  <script src="{{ site.baseurl }}/static/js/load-code.js"></script>
+  
 
   <a href="//github.com/vnspoj/solution/blob/master/src/{{ page.src }}" class="btn-tool" target="_blank">
     <button class="btn btn-success">View on Github <i class="fa fa-github"></i></button>
