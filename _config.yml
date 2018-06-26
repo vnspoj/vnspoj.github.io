@@ -1,14 +1,14 @@
-title: Problems trên SPOJ
-description: Chia sẻ lời giải cho các bài toán trên diễn đàn SPOj (https://vn.spoj.com/)
+title: Tutorial SPOJ
+description: Hướng dẫn và chia sẻ lời giải cho các problems trên vn.spoj.com
 author: Huynh Sam Ha
-github: //github.com/huynhsamha
-about: Chia sẻ lời giải cho các bài toán trên diễn đàn SPOj (https://vn.spoj.com/)
+github: //github.com/vnspoj
+about: Hướng dẫn và chia sẻ lời giải cho các problems trên vn.spoj.com
 # disqus_shortname: vnspoj
 # google_analytics: UA-XXXXXXXX-Y
 avatar_url: /static/img/avatar.jpeg
 
-username: huynhsamha
-repo: spoj
+username: vnspoj
+repo: solution
 
 enableTags: true
 tagarray: []
@@ -28,7 +28,7 @@ social:
     - icon: fa-stack-overflow
       link: "//stackoverflow.com/users/8828489/huynhsamha"
     - icon: fa-github
-      link: "//github.com/huynhsamha"
+      link: "//github.com/vnspoj"
 
 share:
   twitter_username: huynhsamha
@@ -42,8 +42,8 @@ urls:
     - text: XML Feed
       url: /feed.xml
 
-url: "//huynhsamha.github.io"
-baseurl: "/spoj"
+url: "//vnspoj.github.io"
+baseurl: ""
 paginate: 20
 per_page: 20
 paginate_path: "/page/:num/"
