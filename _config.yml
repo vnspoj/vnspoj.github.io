@@ -10,14 +10,6 @@ avatar_url: /static/img/avatar.jpeg
 username: vnspoj
 repo: solution
 
-enableTags: true
-tagarray: []
-
-collections:
-  project:
-    output: true
-    permalink: /project/:path/
-
 social:
     - icon: fa-facebook
       link: "//facebook.com/huynhsamha"
