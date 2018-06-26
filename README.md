@@ -9,7 +9,7 @@ Hướng dẫn và chia sẻ lời giải cho các problems trên vn.spoj.com.
 ```bash
 bundle install
 ```
-+ Serve jekyll server on localhost, and open `localhost:4000/spoj/` to view the site.
++ Serve jekyll server on localhost, and open `localhost:4000/` to view the site.
 ```bash
 bundle exec jekyll serve
 ```
