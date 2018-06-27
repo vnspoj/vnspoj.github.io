@@ -207,13 +207,13 @@ div.btn-share .fb-share-button {
     margin-bottom: 35px;
   }
 }
-
-
 .pagination-custom {
   margin-left: 15px;
 }
-
 .post-title {
   font-weight: 500;
   font-size: 36px;
+}
+.btn:focus, .btn:active {
+  outline: none !important;
 }

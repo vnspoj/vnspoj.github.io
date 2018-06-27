@@ -1,18 +1,27 @@
 (() => {
-    const filename = document.getElementById('js-filename-code').innerText;
+    const filename = $('#js-filename-code').attr('value');
     let lang = 'cpp';
     if (filename && filename.split('.').length > 0) {
         lang = filename.split('.')[1];
     }
 
-    const xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function() {
-        if (this.readyState == 4 && this.status == 200) {
-            const code = this.responseText;
-            const highlightCode = Prism.highlight(code, Prism.languages[lang], 'cpp');
-            document.getElementById('js-source-code').innerHTML = highlightCode;
+    $.get('https://vnspoj.github.io/solution/src/' + filename, (code) => {
+        const highlightCode = Prism.highlight(code, Prism.languages[lang]);
+        $('#js-source-code').addClass('language-' + lang);
+        $('#js-source-code').html(highlightCode);
+    });
+
+    $('#js-toggle-code').click(function() {
+        $('#js-area-code').slideToggle(500, 'linear');
+        let $this = $(this);
+        if ($this.attr('data-visible') == '1') {
+            $this.attr('data-visible', '0');
+            $this.children('span.text').text('Show');
+            $this.children('i.fa').removeClass('fa-eye-slash').addClass('fa-eye');
+        } else {
+            $this.attr('data-visible', '1');
+            $this.children('span.text').text('Hide');
+            $this.children('i.fa').removeClass('fa-eye').addClass('fa-eye-slash');
         }
-    }
-    xhttp.open('GET', 'https://vnspoj.github.io/solution/src/' + filename, true);
-    xhttp.send();
+    });
 })();

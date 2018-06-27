@@ -23,20 +23,25 @@ layout: default
   <div class="post">{{ content }}</div>
   
   <h4>Source Code:</h4>
-  <span id="js-filename-code" style="display: none">{{ page.src }}</span>
-  <pre><code id="js-source-code"></code></pre>
-  <!-- load prism -->
-  <script src="{{ site.baseurl }}/static/js/prism.js"></script>
-  <!-- load source code from github -->
-  <script src="{{ site.baseurl }}/static/js/load-code.js"></script>
   
+  <div id="js-filename-code" value="{{ page.src }}" style="display: none"></div>
 
-  <a href="//github.com/vnspoj/solution/blob/master/src/{{ page.src }}" class="btn-tool" target="_blank">
-    <button class="btn btn-success">View on Github <i class="fa fa-github"></i></button>
-  </a>
-  <a download href="/solution/src/{{ page.src }}" class="btn-tool">
-    <button class="btn btn-primary">Download <i class="fa fa-download"></i></button>
-  </a>
+  <div style="padding-top: 10px; padding-bottom: 15px">
+    <button id="js-toggle-code" class="btn btn-success" data-visible="1">
+      <span class="text">Hide</span>
+      <i class="fa fa-eye-slash"></i>
+    </button>
+    <a href="//github.com/vnspoj/solution/blob/master/src/{{ page.src }}" class="btn-tool" target="_blank">
+      <button class="btn btn-warning">View on Github <i class="fa fa-github"></i></button>
+    </a>
+    <a download href="/solution/src/{{ page.src }}" class="btn-tool">
+      <button class="btn btn-primary">Download <i class="fa fa-download"></i></button>
+    </a>
+  </div>
+
+  <div id="js-area-code">
+    <pre><code id="js-source-code"></code></pre>
+  </div>
 
   {% include share-page.html %}
 </div>

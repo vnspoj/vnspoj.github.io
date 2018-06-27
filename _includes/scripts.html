@@ -5,3 +5,11 @@
 <script src="{{ site.baseurl }}/static/js/bootstrap.min.js"></script>
 <script src="{{ site.baseurl }}/static/js/super-search.js"></script>
 <script src="{{ site.baseurl }}/static/js/thickbox-compressed.js"></script>
+
+<!-- highlight source code -->
+{% if page.src %}
+    <!-- load prism -->
+    <script src="{{ site.baseurl }}/static/js/prism.js"></script>
+    <!-- load source code from github -->
+    <script src="{{ site.baseurl }}/static/js/load-code.js"></script>
+{% endif %}
