@@ -50,3 +50,26 @@ If you need static files (such as iamge, pdf, or bla bla), you can add in the di
 ### Add new category
 + Add new file in `category` as the others in the directory.
 + In directory `_posts/tips`, add new file as the others.
+
+### Use with Math type
+If in post you need use math type, you should have `use_math: true` in top file, such as:
+```bash
+---
+layout: post
+title:  "SPSEQ - Sequences"
+categories: [dp, lis]
+code: SPSEQ
+src: SPSEQ.cpp
+use_math: true
+---
+```
+
+For inline math type: 
+```
+That is inline:  \\( 1/x^{n} \\)
+```
+
+For block math type: 
+```
+That is block \\[ \frac{1}{n^{2}} \\]
+```

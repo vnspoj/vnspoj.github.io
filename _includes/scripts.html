@@ -6,6 +6,10 @@
 <script src="{{ site.baseurl }}/static/js/super-search.js"></script>
 <script src="{{ site.baseurl }}/static/js/thickbox-compressed.js"></script>
 
+{% if page.use_math %}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+{% endif %}
+
 <!-- highlight source code -->
 {% if page.src %}
     <!-- load prism -->
