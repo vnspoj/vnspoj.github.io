@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "BARICAVN - "
-categories: []
+title:  "BARICAVN - BARICA"
+categories: [dp, sortings]
 code: BARICAVN
 src: BARICAVN.cpp
 ---
