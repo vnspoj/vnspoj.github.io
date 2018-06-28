@@ -4,7 +4,14 @@ Hướng dẫn và chia sẻ lời giải cho các problems trên vn.spoj.com.
 
 ## Development
 
-+ Install jekyll theme [here](https://jekyllrb.com/)
++ Make sure you have Ruby install in your computer, if not
+```bash
+sudo apt install ruby ruby-dev
+```
++ Install jekyll theme [here](https://jekyllrb.com/) or simply type
+```bash
+gem install bundler jekyll
+```
 + Install packages in gem. You'll be required password to install packages. If you get error requiring "Make sure that `gem install ...`", please execute the command with `sudo` (if you use linux or macOS).
 ```bash
 bundle install
