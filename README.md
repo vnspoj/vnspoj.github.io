@@ -12,7 +12,7 @@ sudo apt install ruby ruby-dev
 ```bash
 gem install bundler jekyll
 ```
-+ Install packages in gem. You'll be required password to install packages. If you get error requiring "Make sure that `gem install ...`", please execute the command with `sudo` (if you use linux or macOS).
++ Install packages in gem. You'll be required password to install packages. If you get error requiring "Make sure that `gem install ...`", please execute the command with `sudo`.
 ```bash
 bundle install
 ```
