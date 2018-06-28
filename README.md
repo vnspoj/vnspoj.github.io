@@ -16,9 +16,15 @@ gem install bundler jekyll
 ```bash
 bundle install
 ```
-+ Serve jekyll server on localhost, and open `localhost:4000/` to view the site.
++ Serve jekyll server on localhost, and open [http://localhost:4000/](http://localhost:4000/) to view the site.
 ```bash
 bundle exec jekyll serve
+```
++ If you get this error, you will need to install `node.js`.
+> jekyll 3.3.1 | Error:  Could not find a JavaScript runtime. See https://github.com/rails/execjs for a list of available runtimes.
+
+```
+sudo apt-get install nodejs
 ```
 
 ## Contribution
