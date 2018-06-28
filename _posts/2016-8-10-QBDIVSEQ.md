@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "QBDIVSEQ - "
-categories: []
+title:  "QBDIVSEQ - Chia dãy"
+categories: [lis, dp]
 code: QBDIVSEQ
 src: QBDIVSEQ.cpp
 ---

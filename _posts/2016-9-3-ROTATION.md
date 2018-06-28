@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "ROTATION - "
-categories: []
+title:  "ROTATION - Quay bánh xe"
+categories: [math]
 code: ROTATION
 src: ROTATION.cpp
 ---
