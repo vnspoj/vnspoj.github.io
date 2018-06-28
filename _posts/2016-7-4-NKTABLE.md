@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "NKTABLE - "
-categories: []
+title:  "NKTABLE - NKTable"
+categories: [bfs]
 code: NKTABLE
 src: NKTABLE.cpp
 ---
