@@ -12,13 +12,19 @@ sudo apt install ruby ruby-dev
 ```bash
 gem install bundler jekyll
 ```
-+ Install packages in gem. You'll be required password to install packages. If you get error requiring "Make sure that `gem install ...`", please execute the command with `sudo` (if you use linux or macOS).
++ Install packages in gem. You'll be required password to install packages. If you get error requiring "Make sure that `gem install ...`", please execute the command with `sudo`.
 ```bash
 bundle install
 ```
-+ Serve jekyll server on localhost, and open `localhost:4000/` to view the site.
++ Serve jekyll server on localhost, and open [http://localhost:4000/](http://localhost:4000/) to view the site.
 ```bash
 bundle exec jekyll serve
+```
++ If you get this error, you will need to install `node.js`.
+> jekyll 3.3.1 | Error:  Could not find a JavaScript runtime. See https://github.com/rails/execjs for a list of available runtimes.
+
+```
+sudo apt-get install nodejs
 ```
 
 ## Contribution
