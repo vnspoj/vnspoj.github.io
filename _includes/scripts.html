@@ -1,19 +1,21 @@
 <!-- Bootstrap core JavaScript -->
-<!-- Placed at the end of the document so the pages load faster -->
 <script src="{{ site.baseurl }}/static/lib/js/jquery.min.js" type="text/javascript"></script>
 <script src="{{ site.baseurl }}/static/lib/js/jquery-migrate.min.js" type="text/javascript"></script>
 <script src="{{ site.baseurl }}/static/lib/js/bootstrap.min.js" type="text/javascript"></script>
+
+<!-- Template JS -->
 <script src="{{ site.baseurl }}/static/lib/js/super-search.js" type="text/javascript"></script>
 <script src="{{ site.baseurl }}/static/lib/js/thickbox-compressed.js" type="text/javascript"></script>
 
+<!-- Math Type -->
 {% if page.use_math %}
-    <script src="{{ site.baseurl }}/static/lib/js/math-jax.js" type="text/javascript"></script>
+<script src="{{ site.baseurl }}/static/lib/js/math-jax.js" type="text/javascript"></script>
 {% endif %}
 
 <!-- highlight source code -->
 {% if page.src %}
-    <!-- load prism -->
-    <script src="{{ site.baseurl }}/static/lib/js/prism.js" type="text/javascript"></script>
-    <!-- load source code from github -->
-    <script src="{{ site.baseurl }}/static/js/load-code.js" type="text/javascript"></script>
+<!-- load prism -->
+<script src="{{ site.baseurl }}/static/lib/js/prism.js" type="text/javascript"></script>
+<!-- ajax source code from github -->
+<script src="{{ site.baseurl }}/static/js/load-code.js" type="text/javascript"></script>
 {% endif %}

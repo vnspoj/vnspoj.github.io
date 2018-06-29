@@ -1,13 +1,20 @@
 <!-- Google Fonts -->
 <link href="//fonts.googleapis.com/css?family=Quicksand:400,500,700&amp;subset=latin-ext,vietnamese" rel="stylesheet">
+
 <!-- Font awesome icons -->
 <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
-<!-- syntax highlighting CSS -->
-<link rel="stylesheet" href="{{ site.baseurl }}/static/css/prism.css">
-<!-- <link rel="stylesheet" href="{{ site.baseurl }}/static/css/syntax.css"> -->
+
 <!-- Bootstrap core CSS -->
-<link rel="stylesheet" href="{{ site.baseurl }}/static/css/bootstrap.min.css">
+<link rel="stylesheet" href="{{ site.baseurl }}/static/lib/css/bootstrap.min.css">
+
+<!-- highlighting source code -->
+{% if page.src %}
+<link rel="stylesheet" href="{{ site.baseurl }}/static/lib/css/prism.css">
+{% endif %}
+
+<!-- Template CSS -->
+<link rel="stylesheet" href="{{ site.baseurl }}/static/lib/css/super-search.css">
+<link rel="stylesheet" href="{{ site.baseurl }}/static/lib/css/thickbox.css">
+
 <!-- Custom CSS -->
-<link rel="stylesheet" href="{{ site.baseurl }}/static/css/super-search.css">
-<link rel="stylesheet" href="{{ site.baseurl }}/static/css/thickbox.css">
 <link rel="stylesheet" href="{{ site.baseurl }}/static/css/main.css">
