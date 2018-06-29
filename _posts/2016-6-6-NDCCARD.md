@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "NDCCARD - "
-categories: []
+title:  "NDCCARD - Các lá bài Blackjack"
+categories: [dp]
 code: NDCCARD
 src: NDCCARD.cpp
 ---

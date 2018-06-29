@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "MYSTERY - "
-categories: []
+title:  "MYSTERY - Số huyền bí"
+categories: [math, brute-force]
 code: MYSTERY
 src: MYSTERY.cpp
 ---

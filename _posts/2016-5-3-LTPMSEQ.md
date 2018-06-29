@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "LTPMSEQ - "
-categories: []
+title:  "LTPMSEQ - Tìm xâu"
+categories: [trie, tree, string]
 code: LTPMSEQ
 src: LTPMSEQ.cpp
 ---
