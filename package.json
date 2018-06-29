@@ -1,0 +1,26 @@
+{
+  "name": "vnspoj.github.io",
+  "version": "1.0.0",
+  "description": "Hướng dẫn và chia sẻ lời giải cho các problems trên vn.spoj.com.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vnspoj/vnspoj.github.io.git"
+  },
+  "author": "vnspoj",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vnspoj/vnspoj.github.io/issues"
+  },
+  "homepage": "https://github.com/vnspoj/vnspoj.github.io#readme",
+  "dependencies": {
+    "eslint": "^5.0.1",
+    "eslint-config-airbnb": "^17.0.0",
+    "eslint-plugin-import": "^2.13.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-react": "^7.10.0"
+  }
+}

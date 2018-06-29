@@ -1,19 +1,19 @@
 <!-- Bootstrap core JavaScript -->
 <!-- Placed at the end of the document so the pages load faster -->
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-<script src="{{ site.baseurl }}/static/js/bootstrap.min.js"></script>
-<script src="{{ site.baseurl }}/static/js/super-search.js"></script>
-<script src="{{ site.baseurl }}/static/js/thickbox-compressed.js"></script>
+<script src="{{ site.baseurl }}/static/libs/js/jquery.min.js" type="text/javascript"></script>
+<script src="{{ site.baseurl }}/static/libs/js/jquery-migrate.min.js" type="text/javascript"></script>
+<script src="{{ site.baseurl }}/static/libs/js/bootstrap.min.js" type="text/javascript"></script>
+<script src="{{ site.baseurl }}/static/libs/js/super-search.js" type="text/javascript"></script>
+<script src="{{ site.baseurl }}/static/libs/js/thickbox-compressed.js" type="text/javascript"></script>
 
 {% if page.use_math %}
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+    <script src="{{ site.baseurl }}/static/libs/js/math-jax.js" type="text/javascript"></script>
 {% endif %}
 
 <!-- highlight source code -->
 {% if page.src %}
     <!-- load prism -->
-    <script src="{{ site.baseurl }}/static/js/prism.js"></script>
+    <script src="{{ site.baseurl }}/static/libs/js/prism.js" type="text/javascript"></script>
     <!-- load source code from github -->
-    <script src="{{ site.baseurl }}/static/js/load-code.js"></script>
+    <script src="{{ site.baseurl }}/static/js/load-code.js" type="text/javascript"></script>
 {% endif %}
