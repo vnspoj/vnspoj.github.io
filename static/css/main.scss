@@ -1,9 +1,9 @@
---- 
+---
 ---
 
 
 body {
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Muli', sans-serif;
     background: url("/static/img/subtle_dots.png");
     line-height: 1.8em;
     font-weight: 300;
@@ -259,4 +259,8 @@ div.btn-share {
     &:active {
         outline: none !important;
     }
+}
+
+.table-full-width table {
+	width: 100%;
 }
