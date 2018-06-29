@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "TRAFFICN - "
-categories: []
+title:  "TRAFFICN - Traffic Network"
+categories: [dijkstra, graph]
 code: TRAFFICN
 src: TRAFFICN.cpp
 ---

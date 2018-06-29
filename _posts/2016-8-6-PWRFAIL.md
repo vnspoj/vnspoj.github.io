@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "PWRFAIL - "
-categories: []
+title:  "PWRFAIL - Mất điện"
+categories: [dijkstra, graph]
 code: PWRFAIL
 src: PWRFAIL.cpp
 ---

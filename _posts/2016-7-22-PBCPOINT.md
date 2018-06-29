@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "PBCPOINT - "
-categories: []
+title:  "PBCPOINT - Nối điểm"
+categories: [bfs, dsu, dp, queue]
 code: PBCPOINT
 src: PBCPOINT.cpp
 ---

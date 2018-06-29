@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "VCOWFLIX - "
-categories: []
+title:  "VCOWFLIX - Đi xem phim"
+categories: [dp]
 code: VCOWFLIX
 src: VCOWFLIX.cpp
 ---
