@@ -12,14 +12,14 @@ layout: compress
     <meta name="keywords" content="{% if page.title %}{{ page.title }}, {{ site.title }}, {% for categ in page.categories %}{{ categ }}{% if forloop.last == false %}, {% endif %}{% endfor %}{% else %}{{ site.title }}, {% for category in site.categories %}{% capture categories_slug %}{{ category | first }}{% endcapture %}{% for categ in categories_slug %}{{ categ }}{% endfor %}{% if forloop.last == false %}, {% endif %}{% endfor %}{% endif %}" />
 
     <title>{% if page.title %}{{ page.title }} - {{ site.title }}{% else %}{{ site.author }}{% endif %}</title>
-    
-    <link rel="shortcut icon" href="{{ site.baseurl }}/static/img/favicon.ico" />
+
+    <link rel="shortcut icon" href="{{ site.baseurl }}/static/img/favicon.png" />
     <link rel="alternate" type="application/rss+xml" title="RSS" href="{{ site.baseurl }}/feed.xml">
- 
+
     {% if page.noindex %}
       <meta name="robots" content="noindex">
     {% endif %}
-    
+
     <!-- Facebook share -->
     {% include meta-facebook.html %}
 
@@ -37,53 +37,18 @@ layout: compress
   <body>
     <div class="container">
       <div class="row">
-      <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 sidebar-layout">
-        <div class="">
-          <a href="{{ site.baseurl }}/"><img class="profile-avatar" src="{{ site.baseurl }}{{ site.avatar_url }}" height="90px" width="90px" /></a>
-          <h1 class="author-name">{{ site.author }}</h1>
-          {% if site.about %}
-            <div class="profile-about">
-              {{ site.about }}
-            </div>
-          {% endif %}
-          <div class="social">
-            <ul>
-              {% for link in site.social %}
-                <li><a href="{{ link.link }}" target="_blank"><i class="fa {{ link.icon }}"></i></a></li>
-              {% endfor %}
-            </ul>
-          </div>
-          <div class="search" id="js-search">
-            <input type="text" placeholder="Search ..." class="search__input form-control" id="js-search__input">
-            <ul class="search__results" id="js-search__results"></ul>
-          </div>
-          <hr />
-          <ul class="sidebar-nav">
-            <strong>Navigation</strong>
-            <li><a href="{{ site.baseurl }}/">Home</a></li>
-            {% for i in site.urls %}
-              <li><a class="about" href="{{ site.baseurl }}{{ i.url }}">{{ i.text }}</a></li>
-            {% endfor %}
-          </ul>
+        <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 sidebar-layout">
+          {% include header.html %}
+        </div>
+
+        <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 main-layout">
+          {{ content }}
         </div>
       </div>
-
-      <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 main-layout">
-        {{ content }}
-        <footer>
-          &copy; {{ site.author }}
-          {% if site.github %}
-            - <a href="{{ site.github }}">https://github.com/vnspoj</a> 
-            - Powered by Github.
-          {% endif %}
-          <div class="btn-github" style="float:right;">
-            <iframe src="//ghbtns.com/github-btn.html?user={{ site.username }}&repo={{ site.repo }}&type=star&count=true" frameborder="0" scrolling="0" width="85" height="20px"></iframe>
-            <iframe src="//ghbtns.com/github-btn.html?user={{ site.username }}&repo={{ site.repo }}&type=fork&count=true" frameborder="0" scrolling="0" width="85" height="20px"></iframe>
-          </div>
-        </footer>
-      </div>
-      </div>
     </div>
+
+    <!-- Footer -->
+    {% include footer.html %}
 
     <!-- Scripts -->
     {% include scripts.html %}

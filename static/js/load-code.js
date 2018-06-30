@@ -1,11 +1,15 @@
 (() => {
-  const { Prism } = window;
+  const { Prism, PerfectScrollbar } = window;
 
   const filename = $('#js-filename-code').attr('value');
   let lang = 'cpp';
   if (filename && filename.split('.').length > 0) {
     lang = filename.split('.')[1];
   }
+
+  const ps = new PerfectScrollbar('#js-area-code', {
+    wheelSpeed: 1.2
+  });
 
   $.get(`https://vnspoj.github.io/solution/src/${filename}`, (code) => {
     const highlightCode = Prism.highlight(code, Prism.languages[lang]);

@@ -20,7 +20,9 @@ layout: default
   </h4>
 
   <h4>Solution:</h4>
-  <div class="post">{{ content }}</div>
+  <div class="post">
+    {{ content }}
+  </div>
 
   <hr />
   Hãy nhớ, suy ngẫm, suy nghĩ và làm thử trước khi xem source code dưới đây nhé.
@@ -29,7 +31,7 @@ layout: default
 
   <div id="js-filename-code" value="{{ page.src }}" style="display: none"></div>
 
-  <div style="padding-top: 10px; padding-bottom: 15px">
+  <div class="btn-toolbar-code">
     <button id="js-toggle-code" class="btn btn-success" data-visible="0">
       <span class="text">Show</span>
       <i class="fa fa-eye"></i>
@@ -54,7 +56,7 @@ layout: default
     {% assign postHasSimilar = false %}
       {% for tag in post.categories %}
         {% for thisTag in page.categories %}
-          {% if postHasSimilar == false and hasSimilar.size < 6 and post != page and tag == thisTag %}
+          {% if postHasSimilar == false and hasSimilar.size < 8 and post != page and tag == thisTag %}
             {% if hasSimilar.size == 0 %}
             <div class="panel-body">
               <h4>Related Posts</h4>

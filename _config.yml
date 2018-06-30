@@ -6,6 +6,7 @@ about: Hướng dẫn và chia sẻ lời giải cho các problems trên vn.spoj
 # disqus_shortname: vnspoj
 # google_analytics: UA-XXXXXXXX-Y
 avatar_url: /static/img/avatar.jpeg
+email: tutorialspoj@gmail.com
 
 username: vnspoj
 repo: solution
@@ -33,6 +34,8 @@ urls:
       url: /category
     - text: XML Feed
       url: /feed.xml
+    - text: Join with us
+      url: //github.com/vnspoj
 
 url: "//vnspoj.github.io"
 baseurl: ""

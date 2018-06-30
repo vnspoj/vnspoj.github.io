@@ -104,21 +104,22 @@ div.content {
 }
 
 footer {
+	$color-footer-white: rgb(235, 235, 235);
 	position: relative;
 	bottom: 0;
 	background-color: $color-bg-code;
-	color: white;
+	color: $color-footer-white;
 	font-size: 0.9em;
 	font-family: $font-family;
 	margin-top: 80px;
 	padding-top: 60px;
 	a {
-		color: white !important;
+		color: $color-footer-white !important;
 		&:hover { color: lighten($color-primary, 15%) !important }
 		&:active, &:focus {color: $color-primary !important}
 	}
 	h3 {
-		color: white;
+		color: $color-footer-white;
 		margin-top: 25px;
 		margin-bottom: 15px;
 	}
@@ -152,19 +153,19 @@ footer {
 				height: 120px;
 				border-radius: 20%;
 				padding: 15px;
-				background-color: white;
+				background-color: $color-footer-white;
 			}
-			h1 {color: white; font-size: 30px; padding: 16px;}
+			h1 {color: $color-footer-white; font-size: 30px; padding: 16px;}
 		}
 	}
 	.social-links {
 		padding-top: 15px;
 		a {
-			color: white;
+			color: $color-footer-white;
 			font-size: 16px;
 			margin-right: 10px;
 			span {
-				border: 2px solid white;
+				border: 2px solid $color-footer-white;
 				border-radius: 50%;
 				width: 40px;
 				height: 40px;
@@ -374,4 +375,10 @@ div.btn-share {
 .btn-toolbar-code {
 	padding-top: 10px; padding-bottom: 15px;
 	button {margin: 2px;}
+}
+
+#js-area-code {
+	position: relative;
+	height: 600px;
+	border-radius: 9px;
 }
