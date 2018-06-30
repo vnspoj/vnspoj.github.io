@@ -69,14 +69,20 @@ a {
 
 .sidebar-nav {
     margin: 0;
-    padding: 0;
+		padding: 0;
+		font-size: 16px;
+		.title {font-size: 20px; margin-bottom: 10px;}
     li {
         margin: 0;
-        list-style: none;
+				list-style: none;
+				transition-duration: 0.3s;
         &::before {
             content: "»";
             margin-right: .5em;
-        }
+				}
+				&:hover {
+					padding-left: 10px;
+				}
     }
 }
 
@@ -194,6 +200,9 @@ footer {
 			.top {display: block;}
 		}
 	}
+	.end > span {
+		display: block;
+	}
 }
 
 /* Left column */
@@ -205,12 +214,13 @@ div.sidebar-layout {
     strong {
         font-size: 18px;
         color: rgb(14, 14, 14);
-        font-weight: normal;
+				font-weight: normal;
+				margin-bottom: 20px;
     }
     div.profile-about {
         margin-top: 15px;
         color: rgb(12, 12, 12);
-        font-size: 14px;
+				font-size: 15px;
     }
     img.profile-avatar {
         border-radius: 150px;
@@ -255,26 +265,29 @@ div.sidebar-layout {
         margin: 0;
         padding: 0;
         li {
-            display: inline-block;
-            margin: 0 8px;
-            width: 32px;
-            height: 32px;
+						display: inline-block;
+						margin-right: 8px;
+            width: 36px;
+            height: 36px;
             border-radius: 50%;
-            border: 1px solid #d85803;
-            text-align: center;
+            border: 2px solid $color-primary;
+						&:last-child {margin-right: 0px}
+						position: relative;
         }
     }
     li {
         a {
-            font-size: 16px;
-            color: #d85803;
+					position: absolute;
+            font-size: 15px;
+						color: $color-primary;
+						top: 50%;
+						left: 50%;
+						transform: translate(-50%, -50%);
         }
         &:hover {
-            cursor: pointer;
-            border-color: rgb(197, 152, 3);
-            a {
-                color: rgb(197, 152, 3);
-            }
+						cursor: pointer;
+						transition-duration: 0.5s;
+						transform: rotate(360deg);
         }
     }
 }
@@ -350,4 +363,15 @@ div.btn-share {
 
 .table-full-width table {
 	width: 100%;
+}
+
+@media only screen and (max-width: 576px) {
+	.header {
+		text-align: center;
+	}
+}
+
+.btn-toolbar-code {
+	padding-top: 10px; padding-bottom: 15px;
+	button {margin: 2px;}
 }
