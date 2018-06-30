@@ -389,3 +389,18 @@ div.btn-share {
 	height: 600px;
 	border-radius: 9px;
 }
+
+#js-scroll-top {
+	position: fixed;
+	bottom: 30px;
+	right: 30px;
+	cursor: pointer;
+	font-size: 32px;
+	width: 40px;
+	height: 40px;
+	span {
+		position: absolute;
+		top: 50%; left: 50%;
+		transform: translate(-50%, -52%);
+	}
+}
