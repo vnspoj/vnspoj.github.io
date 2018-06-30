@@ -35,22 +35,24 @@ layout: compress
   </head>
 
   <body>
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 sidebar-layout">
-          {% include header.html %}
-        </div>
+    <div id="js-wrapper-body">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 sidebar-layout">
+            {% include header.html %}
+          </div>
 
-        <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 main-layout">
-          {{ content }}
+          <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 main-layout">
+            {{ content }}
+          </div>
         </div>
       </div>
-    </div>
 
-    <!-- Footer -->
-    {% include footer.html %}
+      <!-- Footer -->
+      {% include footer.html %}
 
-    <!-- Scripts -->
-    {% include scripts.html %}
-  </body>
+      <!-- Scripts -->
+      {% include scripts.html %}
+    </body>
+  </div>
 </html>

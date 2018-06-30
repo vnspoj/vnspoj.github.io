@@ -1,6 +1,7 @@
 (() => {
   const { PerfectScrollbar } = window;
 
-  // const ps = new PerfectScrollbar('body');
+  // Awesome scrollbar body
+  const ps = new PerfectScrollbar('#js-wrapper-body');
 
 })();

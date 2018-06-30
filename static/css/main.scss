@@ -9,7 +9,12 @@ body {
     line-height: 1.8em;
     font-weight: 300;
     font-size: 16px;
-    color: rgb(22, 22, 22);
+		color: rgb(22, 22, 22);
+		overflow: hidden;
+}
+
+#js-wrapper-body {
+	height: 100vh;
 }
 
 hr {
