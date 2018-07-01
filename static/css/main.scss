@@ -2,9 +2,10 @@
 ---
 
 @import 'base';
+@import 'class';
 
 body {
-    font-family: $font-family;
+		@extend .fontPrimary;
     background: url("/static/img/subtle_dots.png");
     line-height: 1.8em;
     font-weight: 300;
@@ -111,15 +112,14 @@ div.content {
 }
 
 footer {
-	$color-footer-white: rgb(235, 235, 235);
 	position: relative;
 	bottom: 0;
 	background-color: $color-bg-code;
 	color: $color-footer-white;
 	font-size: 0.9em;
-	font-family: $font-family;
-	margin-top: 80px;
-	padding-top: 60px;
+	margin-top: 100px;
+	padding-top: 80px;
+	@extend .fontSecondary;
 	a {
 		color: $color-footer-white !important;
 		&:hover { color: lighten($color-primary, 15%) !important }
@@ -131,10 +131,11 @@ footer {
 		margin-bottom: 15px;
 	}
 	.end {
-		margin-top: 70px;
-		padding-top: 20px;
-		padding-bottom: 20px;
+		margin-top: 90px;
+		padding-top: 30px;
+		padding-bottom: 30px;
 		background-color: darken($color-bg-code, 10%);
+		letter-spacing: 0.5px;
 	}
 	.navigation {
 		div.link {
@@ -160,10 +161,11 @@ footer {
 				height: 120px;
 				border-radius: 20%;
 				padding: 15px;
-				background-color: $color-footer-white;
+				background-color: white;
 			}
 			h1 {color: $color-footer-white; font-size: 30px; padding: 16px;}
 		}
+		.down {padding-right: 35px;}
 	}
 	.social-links {
 		padding-top: 15px;
@@ -206,6 +208,7 @@ footer {
 	footer {
 		.intro {
 			.top {display: block;}
+			.down {text-align: center; padding-right: 0px;}
 		}
 	}
 	.end > span {
