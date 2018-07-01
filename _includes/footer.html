@@ -2,52 +2,52 @@
   <div class="container">
     <div class="row">
       <div class="col-12 col-lg-5 col-md-5 intro">
-        <div class="top">
+        <div class="top js-reveal">
           <img src="{{ site.avatar_url }}" alt="SPOJ Avatar">
           <h1>Tutorial SPOJ</h1>
         </div>
-        <div class="down text-justify">
+        <div class="down text-justify js-reveal">
           Nơi chia sẻ lời giải, hướng dẫn các bài trên trang chấm bài tự động trực tuyến
           <a href="//vn.spoj.com">https://vn.spoj.com</a>. Phân loại các dạng bài trong lập trình, các kỹ thuật xử lý trong ngôn ngữ C++.
         </div>
       </div>
       <div class="col-12 col-lg-3 col-md-3">
-        <h3>Navigation</h3>
+        <h3 class="js-reveal">Navigation</h3>
         <div class="navigation">
-          <div class="link">
+          <div class="link js-reveal">
             <a href="{{ site.baseurl }}/">Home</a>
           </div>
           {% for i in site.urls %}
-            <div class="link">
+            <div class="link js-reveal">
               <a href="{{ site.baseurl }}{{ i.url }}">{{ i.text }}</a>
             </div>
           {% endfor %}
         </div>
-        <h3 style="margin: 25px 0px 20px">Community</h3>
-        <div class="btn-github">
+        <h3 style="margin: 25px 0px 20px" class="js-reveal">Community</h3>
+        <div class="btn-github js-reveal">
           <iframe src="//ghbtns.com/github-btn.html?user={{ site.username }}&repo={{ site.repo }}&type=star&count=true" frameborder="0" scrolling="0" width="85" height="20px"></iframe>
           <iframe src="//ghbtns.com/github-btn.html?user={{ site.username }}&repo={{ site.repo }}&type=fork&count=true" frameborder="0" scrolling="0" width="85" height="20px"></iframe>
         </div>
       </div>
       <div class="col-12 col-lg-4 col-md-4">
-        <h3>Contact Us</h3>
-        <div class="external-links">
+        <h3 class="js-reveal">Contact Us</h3>
+        <div class="external-links js-reveal">
           <span><i class="fa fa-envelope"></i></span> &ThickSpace;
           <a href="mailto:{{ site.email }}">{{ site.email }}</a>
         </div>
-        <div class="external-links">
+        <div class="external-links js-reveal">
           <span><i class="fa fa-globe"></i></span> &ThickSpace;
           <a href="{{ site.url }}">https:{{ site.url }}</a>
         </div>
-        <div class="external-links">
+        <div class="external-links js-reveal">
           <span><i class="fa fa-github"></i></span> &ThickSpace;
           <a href="{{ site.github }}">https:{{ site.github }}</a>
         </div>
         <br>
-        <h3>Follow Us</h3>
+        <h3 class="js-reveal">Follow Us</h3>
         <div class="social-links">
           {% for link in site.social %}
-            <a href="{{ link.link }}" target="_blank">
+            <a href="{{ link.link }}" target="_blank" class="js-reveal">
               <span><i class="fa {{ link.icon }}"></i></span>
             </a>
           {% endfor %}
@@ -57,10 +57,10 @@
     </div>
   </div>
   <div class="end text-center">
-    <span>
+    <span class="js-reveal">
       {{ site.author }} &copy;
       <a href="{{ site.github }}">https://github.com/vnspoj</a>.
     </span>
-    <span>All rights reversed.</span>
+    <span class="js-reveal">All rights reversed.</span>
   </div>
 </footer>

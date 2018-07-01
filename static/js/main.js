@@ -1,5 +1,7 @@
 (() => {
-  const { PerfectScrollbar } = window;
+  const { PerfectScrollbar, ScrollReveal } = window;
+
+  const sr = ScrollReveal();
 
   const $scrollTop = $('#js-scroll-top');
   const $topElement = $('#js-top-element');
@@ -24,5 +26,15 @@
       scrollTop: $topElement.offset().top
     }, 500);
   });
+
+  const revealElementsOnScroll = () => {
+    sr.reveal('.js-reveal', {
+      container: '#js-wrapper-body',
+      duration: 1000,
+      delay: 300
+    });
+  };
+
+  revealElementsOnScroll();
 
 })();
