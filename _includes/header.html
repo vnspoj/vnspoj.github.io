@@ -1,30 +1,35 @@
 <div class="header">
-  <a href="{{ site.baseurl }}/"><img class="profile-avatar" src="{{ site.baseurl }}{{ site.avatar_url }}" height="90px" width="90px" /></a>
-  <h1 class="author-name">{{ site.author }}</h1>
+  <a href="{{ site.baseurl }}/"><img class="profile-avatar animated zoomIn duration-500" src="{{ site.baseurl }}{{ site.avatar_url }}" height="90px" width="90px" /></a>
+  <h1 class="author-name animated fadeInUp duration-700">{{ site.author }}</h1>
   {% if site.about %}
-    <div class="profile-about">
+    <div class="profile-about animated fadeInUp duration-1000">
       {{ site.about }}
     </div>
   {% endif %}
-  <div class="social">
+  <div class="social animated fadeInLeft duration-700">
     <ul>
       {% for link in site.social %}
         <li><a href="{{ link.link }}" target="_blank"><i class="fa {{ link.icon }}"></i></a></li>
       {% endfor %}
     </ul>
   </div>
-  <div class="search" id="js-search">
+  <div class="search animated fadeInLeft duration-900" id="js-search">
     <input type="text" placeholder="Search ..." class="search__input form-control" id="js-search__input">
     <ul class="search__results" id="js-search__results"></ul>
   </div>
   <hr />
   <ul class="sidebar-nav">
-    <div class="title">
+    <div class="title animated fadeInLeft duration-800">
       <strong>Navigation</strong>
     </div>
-    <li><a href="{{ site.baseurl }}/">Home</a></li>
+    <li class="animated fadeInLeft duration-1000">
+      <a href="{{ site.baseurl }}/">Home</a>
+    </li>
     {% for i in site.urls %}
-      <li><a class="about" href="{{ site.baseurl }}{{ i.url }}">{{ i.text }}</a></li>
+    {% assign time = forloop.index | times: 100 | plus: 1000 %}
+    <li class="animated fadeInLeft duration-{{ time }}">
+      <a class="about" href="{{ site.baseurl }}{{ i.url }}">{{ i.text }}</a>
+    </li>
     {% endfor %}
   </ul>
 </div>

@@ -1,0 +1,24 @@
+/* custom lib animate.css */
+
+/*
+	from 0.1s to 3s with step 0.1s
+	generated classes:
+		.animated.duration-100
+		.animated.duration-200
+		...
+		.animated.duration-1100
+		.animated.duration-1200
+		...
+		.animated.duration-3000
+*/
+
+@for $i from 1 through 30 {
+
+	$suffix: $i * 100;
+
+	$time: $i / 10;
+
+	.animated.duration-#{$suffix} {
+		animation-duration: #{$time}s;
+	}
+}
