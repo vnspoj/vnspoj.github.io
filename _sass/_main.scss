@@ -7,14 +7,30 @@ body {
     line-height: 1.8em;
     font-weight: 300;
     font-size: 16px;
-    color: rgb(22, 22, 22);
-    overflow: hidden;
+		color: rgb(22, 22, 22);
 }
 
-#js-wrapper-body {
-    position: relative;
-    overflow: hidden;
-    height: 100vh;
+::-webkit-scrollbar {
+	width: 8px;
+	height: 8px;
+}
+
+::-webkit-scrollbar-track {
+	background: rgba(0, 0, 0, 0.05);
+	border-radius: 0px;
+	-webkit-border-radius: 0px;
+}
+
+$color-scrollbar: rgb(185, 185, 185);
+
+::-webkit-scrollbar-thumb {
+	background: $color-scrollbar;
+	border-radius: 4px;
+	-webkit-border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:window-inactive {
+	background: $color-scrollbar;
 }
 
 hr {

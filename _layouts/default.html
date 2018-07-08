@@ -36,22 +36,20 @@ layout: compress
 
   <body>
     <div id="js-top-element"></div>
-    <div id="js-wrapper-body">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 sidebar-layout">
-            {% include header.html %}
-          </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 sidebar-layout">
+          {% include header.html %}
+        </div>
 
-          <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 main-layout">
-            {{ content }}
-          </div>
+        <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 main-layout">
+          {{ content }}
         </div>
       </div>
-
-      <!-- Footer -->
-      {% include footer.html %}
     </div>
+
+    <!-- Footer -->
+    {% include footer.html %}
 
     <button id="js-scroll-top" class="btn btn-success">
       <span><i class="fa fa-caret-up"></i></span>
