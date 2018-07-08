@@ -29,24 +29,29 @@ layout: default
   <hr />
   <h4>Source Code:</h4>
 
-  <div id="js-filename-code" value="{{ page.src }}" style="display: none"></div>
+  {% if page.src %}
+    {% for src in page.src %}
+      <div class="js-single-src single-src">
+        <div class="js-filename-code filename-code" value="{{ src }}">{{ src }}</div>
+        <div class="btn-toolbar-code">
+          <button class="js-toggle-code btn btn-success" data-visible="0">
+            <span class="text">Show</span>
+            <i class="fa fa-eye"></i>
+          </button>
+          <a href="//github.com/vnspoj/solution/blob/master/src/{{ src }}" class="btn-tool" target="_blank">
+            <button class="btn btn-warning">View on Github <i class="fa fa-github"></i></button>
+          </a>
+          <a download href="/solution/src/{{ src }}" class="btn-tool">
+            <button class="btn btn-primary">Download <i class="fa fa-download"></i></button>
+          </a>
+        </div>
 
-  <div class="btn-toolbar-code">
-    <button id="js-toggle-code" class="btn btn-success" data-visible="0">
-      <span class="text">Show</span>
-      <i class="fa fa-eye"></i>
-    </button>
-    <a href="//github.com/vnspoj/solution/blob/master/src/{{ page.src }}" class="btn-tool" target="_blank">
-      <button class="btn btn-warning">View on Github <i class="fa fa-github"></i></button>
-    </a>
-    <a download href="/solution/src/{{ page.src }}" class="btn-tool">
-      <button class="btn btn-primary">Download <i class="fa fa-download"></i></button>
-    </a>
-  </div>
-
-  <div id="js-area-code" style="display: none">
-    <pre><code id="js-source-code"></code></pre>
-  </div>
+        <div class="js-area-code" style="display: none">
+          <pre><code class="js-source-code"></code></pre>
+        </div>
+      </div>
+    {% endfor %}
+  {% endif %}
 
   {% include share-page.html %}
 </div>

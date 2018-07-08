@@ -411,3 +411,15 @@ div.btn-share {
 .posts {
 	span {font-weight: 400;}
 }
+
+
+.single-src {
+	margin-top: 15px;
+	.filename-code {
+		font-weight: 900;
+		color: $color-primary;
+		font-family: $font-secondary;
+		margin-left: 5px;
+		font-size: 1.2em;
+	}
+}
