@@ -4,4 +4,4 @@ dist/*
 dll/*
 build/*
 
-static/assets
+static/lib
