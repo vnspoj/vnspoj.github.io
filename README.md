@@ -12,14 +12,31 @@ sudo apt install ruby ruby-dev
 ```bash
 gem install bundler jekyll
 ```
-+ Install packages in gem. You'll be required password to install packages. If you get error requiring "Make sure that `gem install ...`", please execute the command with `sudo`.
+
++ Install packages in gem. You'll be required password to install packages.
 ```bash
 bundle install
 ```
+
++ If you get error requiring "Make sure that `gem install ...`", please execute the command with `sudo`. Example, on OSX or Linux, maybe you get error:
+> An error occurred while installing nokogiri (1.6.8.1), and Bundler cannot continue. Make sure that `gem install nokogiri -v '1.6.8.1' --source
+'https://rubygems.org/'` succeeds before bundling.
+
+In case, you should run
+```bash
+# use sudo for permission
+sudo gem install nokogiri -v '1.6.8.1' --source 'https://rubygems.org/'
+```
+
 + Serve jekyll server on localhost, and open [http://localhost:4000/](http://localhost:4000/) to view the site.
 ```bash
 bundle exec jekyll serve
+# or use npm cli if you've install npm
+npm start
+# or use yarn instead of npm
+yarn start
 ```
+
 + If you get this error, you will need to install `node.js`.
 > jekyll 3.3.1 | Error:  Could not find a JavaScript runtime. See https://github.com/rails/execjs for a list of available runtimes.
 
@@ -27,13 +44,17 @@ bundle exec jekyll serve
 sudo apt-get install nodejs
 ```
 
-## Contribution
+## Contributors
+If you contribute for the project, you maybe have some solution files or tutorial for problems.
 
 ### Solution files
 The solution files (source code) should be in the repository [https://github.com/vnspoj/solution](https://github.com/vnspoj/solution). You will add your files which name is formatted as `[problem_code].cpp` or `[problem_code].java` in directory `src/*`. 
 
 
 Example, if the problem you solved is `NKCITY` (the problem url will be [https://vn.spoj.com/problems/NKCITY/](https://vn.spoj.com/problems/NKCITY/)), then your solution file is `NKCITY.cpp` or `NKCITY.java`, and it'll be added to `src`, the path is `src/NKCITY.cpp` (or `.java`). And the file will be served staticly at [https://vnspoj.github.io/solution/src/NKCITY.cpp](https://vnspoj.github.io/solution/src/NKCITY.cpp)
+
+
+If you have multiple solutions for a problem, example such as `NKCITY.cpp` and `NKCITY_v2.cpp` or `NKCITY.java`, you can add to solution repository and the `src` value is array of filename, such as `src: [NKCITY.cpp, NKCITY_v1.cpp, NKCITY.java]`.
 
 
 ### Tutorial
