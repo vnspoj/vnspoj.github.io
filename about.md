@@ -26,3 +26,13 @@ Tutorial SPOJ phát triển dựa trên Github, source code cùng với các bà
 
 # Đóng góp
 Nếu bạn quan tâm và muốn đóng góp cho trang web, hãy cùng Tutorial SPOJ trở thành contributer trên Github, và viết những bài viết chia sẻ kinh nghiệm và lời giải cho các bài toán mà bạn tâm đắc, để người khác biết được, học hỏi cũng như giúp phát triển cộng đồng lập trình. Chi tiết về quá trình phát triển nếu bạn trở thành một contributer được public [tại đây](https://github.com/vnspoj/vnspoj.github.io#contribution).
+
+<!-- vnspoj.github.io_ads_post_upper_related -->
+<div style="margin-top: 50px; margin-bottom: 30px">
+<ins class="adsbygoogle"
+	style="display:block"
+	data-ad-client="ca-pub-2949659900148168"
+	data-ad-slot="1965177778"
+	data-ad-format="auto"
+	data-full-width-responsive="true"></ins>
+</div>
