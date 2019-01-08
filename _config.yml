@@ -32,6 +32,8 @@ urls:
       url: /about
     - text: Categories
       url: /category
+    - text: Top Interview Questions
+      url: /top-interview-questions
     - text: XML Feed
       url: /feed.xml
     - text: Join with us
