@@ -179,9 +179,10 @@ footer {
             img {
                 width: 120px;
                 height: 120px;
-                border-radius: 20%;
-                padding: 15px;
-                background-color: white;
+                border-radius: 10px;
+                // padding: 15px;
+								// background-color: white;
+								background-color: transparent;
             }
             h1 {
                 color: $color-footer-white;
@@ -265,11 +266,11 @@ div.sidebar-layout {
         font-size: 15px;
     }
     img.profile-avatar {
-        border-radius: 150px;
-        -webkit-border-radius: 150px;
-        -moz-border-radius: 150px;
-        -ms-border-radius: 150px;
-        -o-border-radius: 150px;
+        border-radius: 10px;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        -ms-border-radius: 10px;
+        -o-border-radius: 10px;
         margin-left: auto;
         margin-right: auto;
     }
@@ -423,7 +424,9 @@ div.btn-share {
     font-size: 32px;
     width: 40px;
     height: 40px;
-    display: none;
+		display: none;
+		background-color: $color-primary;
+		border: none;
     span {
         position: absolute;
         top: 50%;
@@ -459,4 +462,15 @@ div.btn-share {
 				height: 600px;
 				border-radius: 8px;
     }
+}
+
+
+// Override super search input
+input#js-search__input {
+	&.form-control {
+		&:focus {
+			border-color: $color-primary !important;
+			box-shadow: none !important;
+		}
+	}
 }

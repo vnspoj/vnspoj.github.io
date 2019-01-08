@@ -5,7 +5,7 @@ github: //github.com/vnspoj
 about: Hướng dẫn và chia sẻ lời giải cho các problems trên vn.spoj.com
 disqus_shortname: vnspoj
 # google_analytics: UA-XXXXXXXX-Y
-avatar_url: /static/img/avatar.jpeg
+avatar_url: /static/img/favicon.png
 email: tutorialspoj@gmail.com
 
 username: vnspoj
