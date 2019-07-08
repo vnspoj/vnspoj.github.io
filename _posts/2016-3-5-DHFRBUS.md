@@ -1,7 +1,9 @@
 ---
 layout: post
-title:  "DHFRBUS - "
-categories: []
+title:  "DHFRBUS - Vé xe miễn phí"
+categories: [dijkstra]
 code: DHFRBUS
 src: DHFRBUS.cpp
 ---
+
+Dijkstra đơn giản
