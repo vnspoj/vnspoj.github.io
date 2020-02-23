@@ -1,27 +1,27 @@
-title: Solution for problems
+title: Solution for SPOJ
 description: Hướng dẫn và chia sẻ lời giải cho các problems trên vn.spoj.com
 author: Tutorial SPOJ
 github: //github.com/vnspoj
 about: Hướng dẫn và chia sẻ lời giải cho các problems trên vn.spoj.com
-disqus_shortname: vnspoj
-# google_analytics: UA-XXXXXXXX-Y
+# disqus_shortname: vnspoj
+google_analytics: UA-158907960-1
 avatar_url: /static/img/favicon.png
 email: tutorialspoj@gmail.com
 
 username: vnspoj
-repo: solution
+repo: vnspoj.github.io
 
 social:
-    - icon: fa-facebook
-      link: "//facebook.com/huynhsamha"
-    - icon: fa-twitter
-      link: "//twitter.com/huynhsamha"
-    - icon: fa-linkedin
-      link: "//www.linkedin.com/in/huynhsamha"
+    # - icon: fa-facebook
+      # link: "//facebook.com/huynhsamha"
     - icon: fa-stack-overflow
       link: "//stackoverflow.com/users/8828489/huynhsamha"
     - icon: fa-github
       link: "//github.com/vnspoj"
+    - icon: fa-linkedin
+      link: "//www.linkedin.com/in/huynhsamha"
+    - icon: fa-twitter
+      link: "//twitter.com/huynhsamha"
 
 share:
   twitter_username: huynhsamha
@@ -32,17 +32,19 @@ urls:
       url: /about
     - text: Categories
       url: /category
-    - text: Top Interview Questions
+    - text: CodeLearn.io
+      url: /code-learn
+    - text: Interview Questions
       url: /top-interview-questions
     - text: XML Feed
       url: /feed.xml
-    - text: Join with us
-      url: //github.com/vnspoj
+    # - text: Join with us
+    #   url: //github.com/vnspoj
 
 url: "//vnspoj.github.io"
 baseurl: ""
-paginate: 50
-per_page: 50
+paginate: 20
+per_page: 20
 paginate_path: "/page/:num/"
 markdown: kramdown
 mathjax: true
