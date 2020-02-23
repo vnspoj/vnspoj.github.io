@@ -8,6 +8,8 @@
         searchEl = document.querySelector('#js-search'),
         searchInputEl = document.querySelector('#js-search__input'),
         searchResultsEl = document.querySelector('#js-search__results'),
+        searchNoResultsEl = document.querySelector('#js-search__no_results'),
+        searchMoreResultsEl = document.querySelector('#js-search__more_results'),
         currentInputValue = '',
         lastSearchResultHash,
         posts = [];
@@ -74,7 +76,7 @@
     xmlhttp.send();
 
     window.toggleSearch = function toggleSearch() {
-        _gaq.push(['_trackEvent', 'supersearch', searchEl.classList.contains('is-active')]);
+        // _gaq.push(['_trackEvent', 'supersearch', searchEl.classList.contains('is-active')]);
         searchEl.classList.toggle('is-active');
         if (searchEl.classList.contains('is-active')) {
             // while opening
@@ -103,9 +105,11 @@
         var currentResultHash, d;
 
         currentInputValue = (searchInputEl.value + '').toLowerCase();
-        if (!currentInputValue || currentInputValue.length < 3) {
+        if (!currentInputValue || currentInputValue.length < 2) {
             lastSearchResultHash = '';
             searchResultsEl.classList.add('is-hidden');
+            searchNoResultsEl.classList.add('is-hidden');
+            searchMoreResultsEl.classList.add('is-hidden');
             return;
         }
         searchResultsEl.style.offsetWidth;
@@ -123,16 +127,32 @@
           matchingPosts = [posts]; // assign single object to Array
         }
         if (!matchingPosts.length) {
-            searchResultsEl.classList.add('is-hidden');
+          // no results found, no more
+          searchNoResultsEl.classList.remove('is-hidden');
+          searchResultsEl.classList.add('is-hidden');
+          searchMoreResultsEl.classList.add('is-hidden');
         }
+        // calc current hash result
         currentResultHash = matchingPosts.reduce(function(hash, post) { return post.title + hash; }, '');
+        // has results and results changed
         if (matchingPosts.length && currentResultHash !== lastSearchResultHash) {
-            searchResultsEl.classList.remove('is-hidden');
+          searchNoResultsEl.classList.add('is-hidden');
+          searchMoreResultsEl.classList.add('is-hidden');
+          searchResultsEl.classList.remove('is-hidden');
+          // show the first 10 elements
             searchResultsEl.innerHTML = matchingPosts.map(function (post) {
-                d = new Date(post.pubDate);
-                return '<li><a href="' + post.link + '">' + post.title + '<span class="search__result-date">' + d.toUTCString().replace(/.*(\d{2})\s+(\w{3})\s+(\d{4}).*/,'$2 $1, $3') + '</span></a></li>';
-            }).join('');
-        }
+              // d = new Date(post.pubDate);
+              // return '<li><a href="' + post.link + '">' + post.title + '<span class="search__result-date">' + d.toUTCString().replace(/.*(\d{2})\s+(\w{3})\s+(\d{4}).*/,'$2 $1, $3') + '</span></a></li>';
+              return '<li><a href="' + post.link + '">' + post.title + '</a></li>';
+            }).slice(0, 6).join('');
+            // more than 10 results, show more button
+            if (matchingPosts.length > 6) {
+              const searchText = '/search.html?' + searchInputEl.value;
+              searchMoreResultsEl.querySelector('a').setAttribute('href', searchText);
+              searchMoreResultsEl.classList.remove('is-hidden');
+            }
+          }
+          // update current hash result
         lastSearchResultHash = currentResultHash;
     });
 

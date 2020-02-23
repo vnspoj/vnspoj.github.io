@@ -32,6 +32,8 @@ urls:
       url: /about
     - text: Categories
       url: /category
+    - text: Search
+      url: /search.html
     - text: CodeLearn.io
       url: /code-learn
     - text: Interview Questions
@@ -43,8 +45,8 @@ urls:
 
 url: "//vnspoj.github.io"
 baseurl: ""
-paginate: 20
-per_page: 20
+paginate: 30
+per_page: 30
 paginate_path: "/page/:num/"
 markdown: kramdown
 mathjax: true

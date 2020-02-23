@@ -13,21 +13,20 @@ layout: default
 {% endif %}
 
 <div class="content">
-  <h4>Problem:
-    <a href="//vn.spoj.com/problems/{{ page.code }}">
+  <h2 style="margin-bottom: 15px">Problem</h2>
+  <h4>
+    <a href="//vn.spoj.com/problems/{{ page.code }}" target="_blank">
       https://vn.spoj.com/problems/{{ page.code }}
     </a>
   </h4>
+  <hr />
 
-  <h4>Solution:</h4>
+  <h2 style="margin-bottom: 15px">Tutorial</h2>
   <div class="post">
     {{ content }}
   </div>
 
   <hr />
-  Hãy nhớ, suy ngẫm, suy nghĩ và làm thử trước khi xem source code dưới đây nhé.
-  <hr />
-
 
 <!-- vnspoj.github.io_ads_post_upper_source -->
 <div style="margin-top: 30px; margin-bottom: 30px">
@@ -39,7 +38,8 @@ layout: default
     data-full-width-responsive="true"></ins>
 </div>
 
-  <h4>Source Code:</h4>
+<br>
+<h2>Accepted Submissions:</h2>
 
   {% if page.src %}
     {% for src in page.src %}
@@ -86,13 +86,14 @@ layout: default
           {% if postHasSimilar == false and hasSimilar.size < 8 and post != page and tag == thisTag %}
             {% if hasSimilar.size == 0 %}
             <div class="panel-body">
-              <h4>Related Posts</h4>
+              <h3>Related Posts</h3>
+              <div class="block-15"></div>
               <ul>
             {% endif %}
                 <li class="relatedPost">
                   <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
                   {% if post.categories %}
-                    (Categories: {% for category in post.categories %}<a href="{{ site.baseurl }}/category/{{ category }}">{{ category }}</a>{% if forloop.last == false %}, {% endif %}{% endfor %})
+                    (<i>Categories:</i> {% for category in post.categories %}<a href="{{ site.baseurl }}/category/{{ category }}">{{ category }}</a>{% if forloop.last == false %}, {% endif %}{% endfor %})
                   {% endif %}
                 </li>
           {% capture hasSimilar %}{{ hasSimilar }}*{% endcapture %}

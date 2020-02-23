@@ -30,9 +30,12 @@ input#js-search__input {
         border-top: 1px solid #f0f0f0;
         >a {
             display: block;
-            padding: 10px;
-        }
-    }
+            padding: 5px;
+				}
+		}
+		>li:nth-child(0) {
+			margin-top: 10px;
+		}
 }
 
 .search__result-date {
