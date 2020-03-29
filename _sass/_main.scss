@@ -529,10 +529,6 @@ input#js-page-search__input {
 }
 
 // Override Prism
-code[class*="language-"], pre[class*="language-"] {
-	color: #c7254e !important;
-}
-
-:not(pre)>code[class*="language-"], pre[class*="language-"] {
+:not(pre)>code[class*="language-"] {
 	background: #f9f2f4 !important;
 }
