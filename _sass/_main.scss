@@ -532,3 +532,8 @@ input#js-page-search__input {
 :not(pre)>code[class*="language-"] {
 	background: #f9f2f4 !important;
 }
+
+:not(pre)>code[class*="language-plaintext"] {
+	background: #a90000 !important;
+  padding: 0.3em 0.4em;
+}
