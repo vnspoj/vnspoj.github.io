@@ -12,39 +12,40 @@ username: vnspoj
 repo: vnspoj.github.io
 
 social:
-    # - icon: fa-facebook
-      # link: "//facebook.com/huynhsamha"
-    - icon: fa-stack-overflow
-      link: "//stackoverflow.com/users/8828489/huynhsamha"
-    - icon: fa-github
-      link: "//github.com/vnspoj"
-    - icon: fa-linkedin
-      link: "//www.linkedin.com/in/huynhsamha"
-    - icon: fa-twitter
-      link: "//twitter.com/huynhsamha"
+  # - icon: fa-facebook
+  # link: "//facebook.com/huynhsamha"
+  - icon: fa-stack-overflow
+    link: "//stackoverflow.com/users/8828489/huynhsamha"
+  - icon: fa-github
+    link: "//github.com/vnspoj"
+  - icon: fa-linkedin
+    link: "//www.linkedin.com/in/huynhsamha"
+  - icon: fa-twitter
+    link: "//twitter.com/huynhsamha"
 
 share:
   twitter_username: huynhsamha
   # fb_appid: 1749788565247320
 
 urls:
-    - text: About Us
-      url: /about
-    - text: Categories
-      url: /category
-    - text: Search
-      url: /search.html
-    - text: CodeLearn.io
-      url: /code-learn
-    - text: Interview Questions
-      url: /top-interview-questions
-    - text: XML Feed
-      url: /feed.xml
-    # - text: Join with us
-    #   url: //github.com/vnspoj
+  - text: About Us
+    url: /about
+  - text: Categories
+    url: /category
+  - text: Search
+    url: /search.html
+  - text: CodeLearn.io
+    url: /code-learn
+  - text: Interview Questions
+    url: /top-interview-questions
+  - text: XML Feed
+    url: /feed.xml
+  # - text: Join with us
+  #   url: //github.com/vnspoj
 
 url: "//vnspoj.github.io"
 baseurl: ""
+permalink: /problems/:title:output_ext
 paginate: 30
 per_page: 30
 paginate_path: "/page/:num/"
