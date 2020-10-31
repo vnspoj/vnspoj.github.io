@@ -9,7 +9,7 @@ src: ROTATION.cpp
 
 Nông dân John có một cái máy gặt đập cũ, máy này yêu cầu một số dây curoa được đặt trên các bánh xe khác nhau để quay các bộ phận. Động cơ sẽ làm quay bánh xe 1 theo chiều kim đồng hồ, bánh xe 1 lại được gắn kèm 1 dây curoa với bánh xe 2. Bánh xe 2 lại được gắn kèm 1 dây curoa với bánh xe 3 , v.v.. và cứ như vậy có tổng cộng N (1 <= N <= 1,000) bánh xe (và N-1 dây curoa).
 
-![](../../../SPOJVN/content/rotation1.jpg)
+![](https://vn.spoj.com/SPOJVN/content/rotation1.jpg)
 
 Hình ở trên minh họa 2 cách đặt dây curoa giữa 2 bánh xe. Trong hình minh họa, dây curoa của bánh xe 1 đã trực tiếp làm bánh xe 2 chuyển động và quay cùng chiều với bánh xe 1 (gọi là dây curoa thẳng - straight belt). Bánh xe 3 quay kéo theo bánh xe 4 cũng quay nhờ vào dây curoa chéo (crossed belt) khiến cho bánh xe 4 chuyển động ngược chiều so với bánh xe 3 => Đảo ngược chiều chuyển động.
 

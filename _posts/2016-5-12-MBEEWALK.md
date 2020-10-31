@@ -21,7 +21,7 @@ và đi về tổ ở bước thứ n. Ở mỗi ô, nó có thể đ
 
 ```
 
-[![Image and video hosting by TinyPic](../../../content/simes:mbeewalk.jpg)](http://tinypic.com)
+[![Image and video hosting by TinyPic](https://vn.spoj.com/content/simes:mbeewalk.jpg)](http://tinypic.com)
 
 #### Input
 

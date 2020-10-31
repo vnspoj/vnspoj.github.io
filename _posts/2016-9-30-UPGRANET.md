@@ -29,8 +29,7 @@ Người ta muốn nâng cấp mạng bằng cách tăng thông lượng của m
 
 **Dữ liệu**
 
-**Kết quả**
-
+```
 6 7  
 1 2 6  
 1 3 5  
@@ -39,8 +38,13 @@ Người ta muốn nâng cấp mạng bằng cách tăng thông lượng của m
 4 5 4  
 4 6 8  
 5 6 7
+```
 
+**Kết quả**
+
+```
 5
+```
 
 ![](https://vn.spoj.com/content/voj:upgranet.png)
 

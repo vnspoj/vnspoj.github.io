@@ -32,7 +32,6 @@ Cho N (1 <= N <= 16) con bò và khối lượng W\_i của từng con, hãy cho
 
 **Kết quả**
 242
-
 ```
 
 #### Giải thích

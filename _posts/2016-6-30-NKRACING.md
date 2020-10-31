@@ -13,7 +13,7 @@ src: NKRACING.cpp
 
 Singapore sẽ tổ chức một cuộc đua xe Công Thức 1 vào năm 2008. Trước khi cuộc đua diễn ra, đã xuất hiện một số cuộc đua về đêm trái luật. Chính quyền muốn thiết kế một hệ thống kiểm soát giao thông để bắt giữ các tay đua phạm luật. Hệ thống bao gồm một số camera đặt trên các tuyến đường khác nhau. Để đảm bảo tính hiệu quả cho hệ thống, cần có ít nhất một camera dọc theo mỗi vòng đua.
 
-![Hình minh họa](../../../SPOJVN/content/NKRACING_1)
+![Hình minh họa](https://vn.spoj.com/SPOJVN/content/NKRACING_1)
 
 Hệ thống đường ở Singapore có thể được mô tả bởi một dãy các nút giao thông và các đường nối hai chiều (xem hình vẽ). Một vòng đua bao gồm một nút giao thông xuất phát, tiếp theo là đường đi bao gồm ít nhất 3 tuyến đường và cuối cùng quay trở lại điểm xuất phát. Trong một vòng đua, mỗi tuyến đường chỉ được đi qua đúng một lần, theo đúng một hướng.
 
@@ -21,7 +21,7 @@ Chi phí để đặt camera phụ thuộc vào tuyến đường được chọ
 
 Viết chương trính tìm cách đặt các camera theo dõi giao thông sao cho tổng chi phí lắp đặt là thấp nhất.
 
-![Hình minh họa](../../../SPOJVN/content/NKRACING_2)
+![Hình minh họa](https://vn.spoj.com/SPOJVN/content/NKRACING_2)
 
 #### Dữ liệu
 

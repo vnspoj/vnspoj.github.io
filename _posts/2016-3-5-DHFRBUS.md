@@ -21,7 +21,7 @@ Tuyến 3: 1-4 giá vé 3 đồng; Tuyến 4: 3-4 giá vé 5 đồng;
 
 Tuyến 5: 3-5 giá vé 3 đồng; Tuyến 6: 1-3 giá vé 20 đồng.
 
-![](../../../content/voj:FREEBUS)
+![](https://vn.spoj.com/content/voj:FREEBUS)
 
 Xuất phát từ nút 1 đến nút 5_,_ đi theo hành trình 1à4à3à5 hết 11 đồng là đường đi với chi phí ít nhất. Tuy nhiên, nếu Khuê sử dụng 1 vé xe miễn phí thì đường đi 1à3à5 hết 3 đồng là ít nhất (vé xe miễn phí được sử dụng tại tuyến 1-3).
 
