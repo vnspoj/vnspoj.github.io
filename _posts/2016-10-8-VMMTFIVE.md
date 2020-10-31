@@ -6,6 +6,49 @@ code: VMMTFIVE
 src: VMMTFIVE.cpp
 ---
 
+
+Cho một bảng số 5x5. Nhiệm vụ của bạn là sẽ phải điền vào ma trận sao cho tổng của các phần tử trên mỗi hàng và mỗi cột bằng một số nguyên cho trước. Mỗi phần tử trong bảng số từ 1 đến 25 và không có hai phần tử bất kì nào giống nhau.
+
+#### Input
+
+*   Dòng thứ nhất gồm 5 số là tổng của các số từ dòng thứ 1 đến dòng thứ 5 của bảng số.
+*   Dòng thứ hai gồm 5 số là tổng của các số từ cột thứ 1 đến cột thứ 5 của bảng số.
+
+#### Output
+
+*   Gồm 5 dòng, mỗi dòng 5 số thể hiện bảng 5x5 là kết quả của bạn. Nếu có nhiều đáp án, hãy in ra một đáp án bất kì. Dữ liệu đầu vào luôn luôn có kết quả.
+
+#### Example
+
+```
+**Input:**
+
+60 86 59 38 82 
+
+61 59 57 89 59 
+
+60 86 59 38 82 
+61 59 57 89 59 
+
+```
+
+```
+**Output:**
+```
+
+```
+15 5 9 25 6 
+17 10 23 20 16 
+12 19 3 18 7 
+13 14 1 2 8 
+4 11 21 24 22 
+
+```
+
+<!--more-->
+
+
+
 Ta đệ quy theo từng vị trí trên bảng từ ô 1,1 đến ô 5,5. Bắt đầu từ 
 
 1,1 -> 1,2 -> 1,3 -> 1,4 -> 1,5 -> 2,1 -> 2,2 ->... -> 5,5 -> 6,1.

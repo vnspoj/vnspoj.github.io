@@ -6,6 +6,53 @@ code: TREEPATH
 src: TREEPATH.cpp
 ---
 
+Cho một cây tam phân đầy đủ, mỗi nút có đúng 3 nút con: nút con trái, nút con giữa và nút con phải. Mỗi nút ghi một số nguyên theo quy tắc sau:
+
+*   Nút gốc ghi số 1.
+*   Nếu một nút ghi số X thì nút con trái của nó ghi số 3X, nút giữa ghi số 3X+1, nút phải ghi số 3X+2.
+
+![](https://vn.spoj.com/content/treepath.jpg)
+
+Để di chuyển trên cây từ một nút người ta dùng một trong 4 lệnh sau:
+
+*   L: Di chuyển đến nút con trái,
+*   C: Di chuyển đến nút con giữa,
+*   R: Di chuyển đến nút con phải,
+*   S: Đứng nguyên tại nút hiện thời.
+
+Một khuôn mẫu đường đi từ nút gốc là một xâu gồm các ký tự : ‘L’, ‘C’, ‘R’, ‘S’ và ‘\*’ trong đó dấu ‘\*’ có thể được thay thế bởi 1 trong 4 ký tự: ‘L’, ‘C’, ‘R’ và ‘S’.
+
+Với một cách thay thế dấu ‘\*’ ta nhận được một đường đi từ nút gốc tới một nút lá nào đó và tổng các số ghi trên các nút đi qua gọi là trọng số của đường đi đó.
+
+#### Yêu cầu
+
+Cho một khuôn mẫu đường đi, hãy tính tổng T trọng số các đường đi phù hợp với khuôn mẫu.
+
+#### Dữ liệu
+
+Chứa một xâu không quá 2000 ký tự ‘L’, ‘C’, ‘R’, ‘S’ và ‘\*’.
+
+#### Kết quả
+
+Ghi ra file văn bản số T tìm được.
+
+#### Ví dụ
+
+```
+**Dữ liệu**
+\*LS		
+
+**Kết quả**
+55
+
+```
+
+Nguồn: 5-й этап Республиканской олимпиады по информатике, 10-11 класс Республика Казахстан, Апрель, 2009
+
+<!--more-->
+
+
+
 Bài này ý tưởng hoàn toàn tương tự bài SETNJA, nhưng có một chỗ khác chính là trọng số một đường đi là tổng các số trên các nút đã đi qua trên con đường. Cụ thể như sau:
 
 <img src="/static/img/posts/TREEPATH.png">
