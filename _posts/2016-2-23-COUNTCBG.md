@@ -21,7 +21,7 @@ Mỗi dòng ghi một số nguyên là số cách phân tích số N đọc đư
 #### Ví dụ
 
 ```
-**Input:**
+Input
 12
 5
 4
@@ -32,7 +32,7 @@ Mỗi dòng ghi một số nguyên là số cách phân tích số N đọc đư
 3
 175
 
-**Output:**
+Output
 1
 1
 0

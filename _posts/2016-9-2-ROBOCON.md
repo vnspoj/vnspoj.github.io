@@ -33,7 +33,7 @@ Ghi ra một số nguyên dương là thời điểm sớm nhất tìm được.
 #### Example
 
 ```
-**Input:**
+Input
 5 5  
 2 2  
 1 4  
@@ -41,7 +41,7 @@ Ghi ra một số nguyên dương là thời điểm sớm nhất tìm được.
 3 5  
 4 2
 
-**Output:**
+Output
 3
 
 ```

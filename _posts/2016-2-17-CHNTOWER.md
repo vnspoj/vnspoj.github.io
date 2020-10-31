@@ -26,9 +26,9 @@ Mỗi dòng ghi số lần chuyển tối thiểu cần thực hiện
 #### Example
 
 ```
-**Input:**
+Input
 5 3
-**Output:**
+Output
 31
 ```
 

@@ -28,7 +28,7 @@ Dòng thứ i trong M dòng tiếp theo, ghi N số nguyên dương h\[i,1\],h\[
 #### Example
 
 ```
-**Input:**  
+Input  
 5 5  
 9 9 9 9 9  
 9 2 2 2 9  
@@ -36,7 +36,7 @@ Dòng thứ i trong M dòng tiếp theo, ghi N số nguyên dương h\[i,1\],h\[
 9 2 2 2 9  
 9 9 9 9 9  
   
-**Output:**  
+Output  
 60  
   
 **Giới hạn:** 1<=M,N<=100,1<=H\[i,j\]<=1000  

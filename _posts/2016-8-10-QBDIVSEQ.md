@@ -30,14 +30,14 @@ Ghi một duy nhất là số lượng dãy con ít nhất thỏa mãn.
 #### Example
 
 ```
-**Input:**
+Input
 4
 1
 5
 4
 6
 
-**Output:**
+Output
 2
 
 

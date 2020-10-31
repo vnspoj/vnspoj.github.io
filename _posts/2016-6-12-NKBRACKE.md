@@ -39,7 +39,7 @@ Cho M truy vấn, mỗi truy vấn thuộc 1 trong 2 loại sau:
 
       Trong truy vấn loại 2:    1 <= i <= j <= N;
 
-**Input:**
+Input
 
 \-     Dòng đầu tiên chứa 2 số N, M
 
@@ -47,7 +47,7 @@ Cho M truy vấn, mỗi truy vấn thuộc 1 trong 2 loại sau:
 
 \-     M dòng tiếp theo, mỗi dòng chứa 1 truy vấn thuộc 1 trong 2 loại trên.
 
-**Output:**
+Output
 
 \-     In ra 0 hoặc 1 tương ứng với mỗi truy vấn loại 2.
 

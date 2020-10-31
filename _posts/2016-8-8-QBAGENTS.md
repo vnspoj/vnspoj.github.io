@@ -40,7 +40,7 @@ Nếu 2 sếp không thể gặp nhau ghi -1.
 #### Example
 
 ```
-**Input:**
+Input
 6 7
 1 5
 1 2
@@ -51,7 +51,7 @@ Nếu 2 sếp không thể gặp nhau ghi -1.
 5 4
 5 6
 
-**Output:**
+Output
 3
 
 ```

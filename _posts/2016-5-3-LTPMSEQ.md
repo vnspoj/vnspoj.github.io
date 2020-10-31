@@ -35,7 +35,7 @@ N dòng sau là các xâu st ( length(st) <=15);
 Nếu không tìm được in ra -1;
 
 ```
-**Input:**
+Input
 9
 Mai
 Yeu
@@ -47,7 +47,7 @@ Lam
 Son
 Yeu
 
-**Output:**
+Output
 Mai
 ```
 

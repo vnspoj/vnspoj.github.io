@@ -40,7 +40,7 @@ một số duy nhất là chi phí ít nhất để đi từ nút giao thông _s
 #### Example
 
 ```
-**Input:**
+Input
 
 **5 6 1 1 5**
 
@@ -56,7 +56,7 @@ một số duy nhất là chi phí ít nhất để đi từ nút giao thông _s
 
 **1 3 20**
 
-**Output:**
+Output
 **3**
 ```
 

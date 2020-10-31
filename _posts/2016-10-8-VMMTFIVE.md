@@ -21,14 +21,14 @@ Cho một bảng số 5x5. Nhiệm vụ của bạn là sẽ phải điền vào
 #### Example
 
 ```
-**Input:**
+Input
 
 60 86 59 38 82 
 61 59 57 89 59 
 60 86 59 38 82 
 61 59 57 89 59 
 
-**Output:**
+Output
 
 15 5 9 25 6 
 17 10 23 20 16 

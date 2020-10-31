@@ -32,7 +32,7 @@ Gồm 1 dòng duy nhất là tổng chi phí nhỏ nhất để xây dựng hệ
 #### Example
 
 ```
-**Input:**
+Input
 5
 2 3 4 1
 1 2 10
@@ -42,7 +42,7 @@ Gồm 1 dòng duy nhất là tổng chi phí nhỏ nhất để xây dựng hệ
 4 3 3
 3 2 2
 
-**Output:**
+Output
 5
 
 ```

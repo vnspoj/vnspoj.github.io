@@ -25,14 +25,14 @@ Trên mặt phẳng toạ độ xét các điểm có toạ độ nguyên. Có N
 #### Example
 
 ```
-**Input**  
+Input  
 4   
 0 2   
 3 1   
 1 4   
 4 4   
   
-**Output**  
+Output  
 12
 ```
 

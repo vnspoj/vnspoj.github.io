@@ -16,7 +16,7 @@ When dwarfs enter the mine, Snow White goes back to their house and goes through
 
 Write a program that will check for a set of M pictures if they are pretty, and what color is dominating if they are.
 
-#### **Input**
+#### Input
 
 First line contains two integers N and C (3 ≤ N ≤ 300000, 1 ≤ C ≤ 100000) number of dwarfs and number of colors.
 
@@ -33,7 +33,7 @@ Output M lines. For each picture output “no” if Snow White doesn't think the
 #### Example
 
 ```
-**Input:**
+Input
 10 3
 1 2 1 2 1 2 3 2 3 3
 8
@@ -46,7 +46,7 @@ Output M lines. For each picture output “no” if Snow White doesn't think the
 6 9
 7 10
 
-**Output:**
+Output
 no
 yes 1
 no

@@ -28,7 +28,7 @@ Cho bảng m \* n ô, mỗi ô có 1 trong 3 số: 0, 1, 2:
 \-   2 <= m, n <= 500
 
   
-**Input:** 
+Input 
 
 \- Dòng đầu tiên gồm 2 số m, n.
 
@@ -36,7 +36,7 @@ Cho bảng m \* n ô, mỗi ô có 1 trong 3 số: 0, 1, 2:
 
 \- Các số cùng dòng trong input cách nhau một hoặc nhiều dấu cách.
 
-**Output:**
+Output
 
 \-   Một dòng duy nhất là chuỗi nhị phân có giá trị số ở hệ thập phân lớn nhất tìm được (các số in liền).
 

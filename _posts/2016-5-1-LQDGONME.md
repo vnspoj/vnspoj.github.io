@@ -28,13 +28,13 @@ M dòng sau mỗi dòng chứa n số nguyên là dãy hoán vị của n số t
 #### Example
 
 ```
-**Input:**  
+Input  
 5 3  
 1 5 3 4 2  
 1 3 4 2 5  
 3 1 5 4 2  
   
-**Output:**  
+Output  
 3  
   
 Dãy con chung dài nhất là 1,4,2  

@@ -46,7 +46,7 @@ Gồm 1 dòng duy nhất ghi chi phí nhỏ nhất tìm được
 #### Example
 
 ```
-**Input:**
+Input
 3 6 8 20 30 40
 7
 2 6
@@ -57,7 +57,7 @@ Gồm 1 dòng duy nhất ghi chi phí nhỏ nhất tìm được
 15
 23
 
-**Output:**
+Output
 70
 
 ```

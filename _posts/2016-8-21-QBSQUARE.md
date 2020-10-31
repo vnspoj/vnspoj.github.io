@@ -38,7 +38,7 @@ Gồm 1 dòng duy nhất ghi kích thước cạnh của hình vuông tìm đư�
 #### Example
 
 ```
-**Input:**
+Input
 11 13
 0 0 0 0 0 1 0 0 0 0 0 0 0
 0 0 0 0 1 1 1 0 0 0 0 0 0
@@ -52,7 +52,7 @@ Gồm 1 dòng duy nhất ghi kích thước cạnh của hình vuông tìm đư�
 0 0 0 0 1 1 1 0 0 0 0 1 1
 0 0 0 0 0 1 0 0 0 0 0 1 1
 
-**Output:**
+Output
 7
 
 ```

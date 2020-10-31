@@ -34,12 +34,12 @@ Ghi hai số là độ dài đường đi ngắn nhấn và số lượng đư�
 #### Example
 
 ```
-**Input:**
+Input
 3 2
 1 1 2 3
 2 2 3 1
 
-**Output:**
+Output
 4 1
 
 **Giới hạn:**

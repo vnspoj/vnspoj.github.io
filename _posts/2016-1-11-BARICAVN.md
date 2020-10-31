@@ -32,7 +32,7 @@ Lưu ý: không có hai lá sen nào trùng tọa độ và luôn tồn tại í
 #### Example
 
 ```
-**Input:**
+Input
 6 5
 1 1 5
 2 1 5
@@ -41,7 +41,7 @@ Lưu ý: không có hai lá sen nào trùng tọa độ và luôn tồn tại í
 3 2 30
 3 3 5
 
-**Output:**
+Output
 5
 ```
 
