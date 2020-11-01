@@ -16,11 +16,16 @@ layout: default
 
 <div class="content">
   <h2 style="margin-bottom: 15px">Problem</h2>
-  <h4>
+  <p>
     <a href="//vn.spoj.com/problems/{{ page.code }}" target="_blank">
       https://vn.spoj.com/problems/{{ page.code }}
     </a>
-  </h4>
+  </p>
+  {% if page.codeforces %}
+  <p>
+    <a href="{{ page.codeforces }}" target="_blank">{{ page.codeforces }}</a>
+  </p>
+  {% endif %}
 
   <!-- Split more directive -->
   {% capture page_content %}{{ content }}{% endcapture %}
@@ -46,8 +51,7 @@ layout: default
 
   <hr />
 
-  <br>
-  <h2>Accepted Submissions:</h2>
+  <h2>Submission:</h2>
 
   {% if page.src %}
   {% for src in page.src %}
