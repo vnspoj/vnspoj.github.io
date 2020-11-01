@@ -4,6 +4,7 @@ title:  "LUBENICA - Lubenica"
 categories: [lca, dp, tree, graph]
 code: LUBENICA
 src: LUBENICA.cpp
+codeforces: https://codeforces.com/group/FLVn1Sc504/contest/274821/problem/Y
 ---
 
 

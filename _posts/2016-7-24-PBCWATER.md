@@ -4,6 +4,7 @@ title:  "PBCWATER - Tính toán lượng nước"
 categories: [heap, dp, data-structure, dijkstra]
 code: PBCWATER
 src: PBCWATER.cpp
+codeforces: https://codeforces.com/group/FLVn1Sc504/contest/274516/problem/I
 ---
 
 

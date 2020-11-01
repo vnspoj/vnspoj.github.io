@@ -4,6 +4,7 @@ title:  "PBCPOINT - Nối điểm"
 categories: [bfs, dsu, dp, queue]
 code: PBCPOINT
 src: PBCPOINT.cpp
+codeforces: https://codeforces.com/group/FLVn1Sc504/contest/274827/problem/O
 ---
 
 

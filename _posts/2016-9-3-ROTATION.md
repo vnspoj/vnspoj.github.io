@@ -4,6 +4,7 @@ title:  "ROTATION - Quay bánh xe"
 categories: [math]
 code: ROTATION
 src: ROTATION.cpp
+codeforces: https://codeforces.com/group/FLVn1Sc504/contest/274830/problem/Y
 ---
 
 

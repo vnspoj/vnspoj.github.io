@@ -4,6 +4,7 @@ title:  "NKLINEUP - Xếp hàng"
 categories: [segment-tree, rmq, data-structure]
 code: NKLINEUP
 src: NKLINEUP.cpp
+codeforces: https://codeforces.com/group/FLVn1Sc504/contest/274824/problem/M
 ---
 
 

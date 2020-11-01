@@ -4,6 +4,7 @@ title:  "NKPOLICE - "
 categories: []
 code: NKPOLICE
 src: NKPOLICE.cpp
+codeforces: https://codeforces.com/group/FLVn1Sc504/contest/274825/problem/G
 ---
 
 

@@ -4,6 +4,7 @@ title:  "UPGRANET - VOI 2011 Nâng cấp mạng"
 categories: [lca, dsu, tree, dfs]
 code: UPGRANET
 src: UPGRANET.cpp
+codeforces: https://codeforces.com/group/FLVn1Sc504/contest/274854/problem/G
 ---
 
 Một hệ thống gồm n máy tính đánh số từ 1 đến n được kết nối thành một mạng bởi m đoạn cáp mạng đánh số từ 1 đến m. Đoạn cáp mạng thứ i có thông lượng wi kết nối hai máy ui, vi cho phép truyền dữ liệu theo cả hai chiều giữa hai máy này.

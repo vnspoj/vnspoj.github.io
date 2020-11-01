@@ -4,6 +4,7 @@ title:  "LUCKYNUM - Lucky Numbers"
 categories: [bfs, dp]
 code: LUCKYNUM
 src: LUCKYNUM.cpp
+codeforces: https://codeforces.com/group/FLVn1Sc504/contest/274501/problem/W
 ---
 
 

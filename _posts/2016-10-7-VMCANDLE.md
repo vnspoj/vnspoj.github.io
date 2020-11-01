@@ -4,6 +4,7 @@ title:  "VMCANDLE - Aladdin và cây đèn cầy"
 categories: [math]
 code: VMCANDLE
 src: VMCANDLE.cpp
+codeforces: https://codeforces.com/group/FLVn1Sc504/contest/274855/problem/L
 ---
 
 

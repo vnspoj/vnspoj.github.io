@@ -4,6 +4,7 @@ title:  "QBSQUARE - Hình vuông 0 1"
 categories: [dp]
 code: QBSQUARE
 src: QBSQUARE.cpp
+codeforces: https://codeforces.com/group/FLVn1Sc504/contest/274518/problem/Z
 ---
 
 

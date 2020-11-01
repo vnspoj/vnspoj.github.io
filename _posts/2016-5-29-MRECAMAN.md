@@ -4,6 +4,7 @@ title:  "MRECAMAN - Recaman’s Sequence"
 categories: [set, data-structure]
 code: MRECAMAN
 src: MRECAMAN.cpp
+codeforces: https://codeforces.com/group/FLVn1Sc504/contest/274710/problem/Y
 ---
 
 

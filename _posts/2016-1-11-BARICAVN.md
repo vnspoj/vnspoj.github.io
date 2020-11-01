@@ -4,6 +4,7 @@ title:  "BARICAVN - BARICA"
 categories: [dp, sortings]
 code: BARICAVN
 src: BARICAVN.cpp
+codeforces: https://codeforces.com/group/FLVn1Sc504/contest/274766/problem/N
 ---
 
 

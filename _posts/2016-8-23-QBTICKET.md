@@ -4,6 +4,7 @@ title:  "QBTICKET - Mua vé tàu hoả"
 categories: [dp]
 code: QBTICKET
 src: QBTICKET.cpp
+codeforces: https://codeforces.com/group/FLVn1Sc504/contest/274829/problem/Y
 ---
 
 

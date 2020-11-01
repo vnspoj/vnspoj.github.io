@@ -4,6 +4,7 @@ title:  "PARIGAME - VOI 2011 Trò chơi chẵn lẻ"
 categories: [dp]
 code: PARIGAME
 src: PARIGAME.cpp
+codeforces: https://codeforces.com/group/FLVn1Sc504/contest/274827/problem/K
 ---
 
 

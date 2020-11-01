@@ -4,6 +4,7 @@ title:  "QBAGENTS - Các đại lý"
 categories: [bfs, queue, dp]
 code: QBAGENTS
 src: QBAGENTS.cpp
+codeforces: https://codeforces.com/group/FLVn1Sc504/contest/274518/problem/H
 ---
 
 

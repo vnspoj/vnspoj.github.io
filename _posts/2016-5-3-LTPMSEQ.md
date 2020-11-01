@@ -4,6 +4,7 @@ title:  "LTPMSEQ - Tìm xâu"
 categories: [trie, tree, string]
 code: LTPMSEQ
 src: LTPMSEQ.cpp
+codeforces: https://codeforces.com/group/FLVn1Sc504/contest/274710/problem/J
 ---
 
 

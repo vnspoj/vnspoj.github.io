@@ -4,6 +4,7 @@ title:  "PIZZALOC - Pizza Location"
 categories: [math, sortings, brute-force, graph]
 code: PIZZALOC
 src: PIZZALOC.cpp
+codeforces: https://codeforces.com/group/FLVn1Sc504/contest/274516/problem/O
 ---
 
 

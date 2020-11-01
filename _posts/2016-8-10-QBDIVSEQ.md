@@ -4,6 +4,7 @@ title:  "QBDIVSEQ - Chia dãy"
 categories: [lis, dp]
 code: QBDIVSEQ
 src: QBDIVSEQ.cpp
+codeforces: https://codeforces.com/group/FLVn1Sc504/contest/274518/problem/L
 ---
 
 

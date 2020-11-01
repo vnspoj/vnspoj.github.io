@@ -4,6 +4,7 @@ title:  "PWRFAIL - Mất điện"
 categories: [dijkstra, graph]
 code: PWRFAIL
 src: PWRFAIL.cpp
+codeforces: https://codeforces.com/group/FLVn1Sc504/contest/274829/problem/M
 ---
 
 

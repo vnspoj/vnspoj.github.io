@@ -4,6 +4,7 @@ title:  "MBEEWALK - Bee Walk"
 categories: [bfs, queue, graph]
 code: MBEEWALK
 src: MBEEWALK.cpp
+codeforces: https://codeforces.com/group/FLVn1Sc504/contest/274505/problem/I
 ---
 
 

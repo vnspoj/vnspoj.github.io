@@ -4,6 +4,7 @@ title:  "NICEQUAD - Tứ giác đẹp"
 categories: [math, brute-force]
 code: NICEQUAD
 src: NICEQUAD.cpp
+codeforces: https://codeforces.com/group/FLVn1Sc504/contest/274512/problem/G
 ---
 
 

@@ -4,6 +4,7 @@ title:  "VCOWFLIX - Đi xem phim"
 categories: [dp]
 code: VCOWFLIX
 src: VCOWFLIX.cpp
+codeforces: https://codeforces.com/group/FLVn1Sc504/contest/274854/problem/X
 ---
 
 Nông dân John đang đưa các con bò của anh ta đi xem phim! Xe tải của anh ta thì có sức chứa có hạn thôi, là C (100 <= C <= 5000) kg, anh ta muốn đưa 1 số con bò đi xem phim sao cho tổng khối lượng của đống bò này là lớn nhất, đồng thời xe tải của anh ta vẫn chịu được.

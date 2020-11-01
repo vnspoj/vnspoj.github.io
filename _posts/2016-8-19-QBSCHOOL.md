@@ -4,6 +4,7 @@ title:  "QBSCHOOL - Đến trường"
 categories: [dijkstra, dp, graph, heap]
 code: QBSCHOOL
 src: QBSCHOOL.cpp
+codeforces: https://codeforces.com/group/FLVn1Sc504/contest/274518/problem/W
 ---
 
 

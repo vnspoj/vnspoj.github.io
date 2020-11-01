@@ -4,6 +4,7 @@ title:  "NKMAXSEQ - Dãy con dài nhất"
 categories: [binary-index-tree]
 code: NKMAXSEQ
 src: NKMAXSEQ.cpp
+codeforces: https://codeforces.com/group/FLVn1Sc504/contest/274824/problem/Q
 ---
 
 

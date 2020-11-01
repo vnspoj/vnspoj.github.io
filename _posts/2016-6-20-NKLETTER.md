@@ -4,6 +4,7 @@ title:  "NKLETTER - "
 categories: []
 code: NKLETTER
 src: NKLETTER.cpp
+codeforces: https://codeforces.com/group/FLVn1Sc504/contest/274824/problem/K
 ---
 
 

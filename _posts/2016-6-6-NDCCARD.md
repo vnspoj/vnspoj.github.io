@@ -4,6 +4,7 @@ title:  "NDCCARD - Các lá bài Blackjack"
 categories: [dp, brute-force]
 code: NDCCARD
 src: NDCCARD.cpp
+codeforces: https://codeforces.com/group/FLVn1Sc504/contest/274823/problem/B
 ---
 
 

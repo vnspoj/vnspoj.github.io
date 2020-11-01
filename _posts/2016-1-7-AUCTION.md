@@ -4,6 +4,7 @@ title:  "AUCTION - Going Once, Going Twice, Gone!"
 categories: [dp]
 code: AUCTION
 src: AUCTION.cpp
+codeforces: https://codeforces.com/group/FLVn1Sc504/contest/274766/problem/I
 ---
 
 

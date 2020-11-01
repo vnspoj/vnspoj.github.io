@@ -4,6 +4,7 @@ title:  "NKBRACKE - Dãy ngoặc đúng"
 categories: [segment-tree, data-structure]
 code: NKBRACKE
 src: NKBRACKE.cpp
+codeforces: https://codeforces.com/group/FLVn1Sc504/contest/274512/problem/L
 ---
 
 

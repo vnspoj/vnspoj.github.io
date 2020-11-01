@@ -4,6 +4,7 @@ title:  "TREEPATH - Đường đi trên cây"
 categories: [bignum, dp, tree]
 code: TREEPATH
 src: TREEPATH.cpp
+codeforces: https://codeforces.com/group/FLVn1Sc504/contest/274834/problem/Z
 ---
 
 Cho một cây tam phân đầy đủ, mỗi nút có đúng 3 nút con: nút con trái, nút con giữa và nút con phải. Mỗi nút ghi một số nguyên theo quy tắc sau:

@@ -4,6 +4,7 @@ title:  "BESTSPOT - Vị trí tốt nhất"
 categories: [dijkstra, heap]
 code: BESTSPOT
 src: BESTSPOT.cpp
+codeforces: https://codeforces.com/group/FLVn1Sc504/contest/274766/problem/Q
 ---
 
 
@@ -20,60 +21,4 @@ Ví dụ, hãy xem xét một nông trang được trình bày như một bản 
 | |
 \[3\] \[4\]
 | |
-4 - \[3\] - 5 - \[1\] --- 6 --- \[6\] --- 7 - \[7\] - 8 \*
-| | | |
-\[3\] \[2\] \[1\] \[3\]
-| | | |
-13 \* 9 - \[3\] - 10 \*-- \[1\] - 11 \*-- \[3\] - 12 \*
-```
-
-Bảng sau đây cho thấy các khoảng cách trung bình nếu nghỉ tại các cánh đồng 4, 5, 6, 7, 9, 10, 11, và 12: 4 7 16 5 6 9 3 46/6 = 7.67 5 10 13 2 3 6 6 40/6 = 6.67 6 11 12 1 2 5 7 38/6 = 6.33 7 16 7 4 3 6 12 48/6 = 8.00 9 12 14 3 4 7 8 48/6 = 8.00 10 12 11 0 1 4 8 36/6 = 6.00 \*\* BEST 11 13 10 1 0 3 9 36/6 = 6.00 12 16 13 4 3 0 12 48/6 = 8.00
-
-Kết quả tối ưu là cánh đồng 10
-
-#### Dữ liệu
-
-*   Dòng 1: 3 số nguyên P,F,C
-*   Dòng 2..F+1: Dòng i+2 chứa 1 số Nguyên F\_i
-*   Dòng F+2..C+F+1 : Mỗi dòng chứa 3 số Nguyên a\_i, b\_i, F\_i mô tả 1 con đường 2 chiều là thời gian di chuyển giữa chúng.
-
-#### Kết quả
-
-Gồm 1 dòng duy nhất là cánh đồng được chọn . nếu có nhiều kết quả , chọn cánh đồng có chỉ số nhỏ nhất !
-
-#### Ví dụ
-
-```
-**Dữ liệu**
-13 6 15
-11
-13
-10
-12
-8
-1
-2 4 3
-7 11 3
-10 11 1
-4 13 3
-9 10 3
-2 3 2
-3 5 4
-5 9 2
-6 7 6
-5 6 1
-1 2 4
-4 5 3
-11 12 3
-6 10 1
-7 8 7
-
-**Kết quả**
-10
-```
-
-<!--more-->
-
-
-
-Bài này cơ bản chỉ là tìm đường đi ngắn nhất từ `u` tới `v` với mọi cặp đỉnh `u`, `v`, nhưng chủ yếu bài này yêu cầu dùng dijkstra + heap để AC.
+4 - \[3\] - 5 - \[1\] 

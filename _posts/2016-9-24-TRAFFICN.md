@@ -4,6 +4,7 @@ title:  "TRAFFICN - Traffic Network"
 categories: [dijkstra, graph]
 code: TRAFFICN
 src: TRAFFICN.cpp
+codeforces: https://codeforces.com/group/FLVn1Sc504/contest/274566/problem/N
 ---
 
 Mạng lưới giao thông thành phố gồm n nút được đánh số từ 1 đến n và m đường một chiều nối các cặp nút. Để giảm được độ dài của đường đi ngắn nhất giữa hai nút trọng yếu s và t khác nhau, một danh sách gồm k đường hai chiều được đề xuất để xem xét xây dựng.

@@ -4,6 +4,7 @@ title:  "LINEGAME - VOI09 Trò chơi với băng số"
 categories: [dp]
 code: LINEGAME
 src: LINEGAME.cpp
+codeforces: https://codeforces.com/group/FLVn1Sc504/contest/274821/problem/K
 ---
 
 

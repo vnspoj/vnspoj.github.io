@@ -4,6 +4,7 @@ title:  "NKTABLE - NKTable"
 categories: [bfs]
 code: NKTABLE
 src: NKTABLE.cpp
+codeforces: https://codeforces.com/group/FLVn1Sc504/contest/274512/problem/P
 ---
 
 

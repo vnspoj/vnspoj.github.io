@@ -4,6 +4,7 @@ title:  "NETACCEL - Tăng tốc mạng máy tính"
 categories: [dijkstra, graph]
 code: NETACCEL
 src: NETACCEL.cpp
+codeforces: https://codeforces.com/group/FLVn1Sc504/contest/274823/problem/D
 ---
 
 

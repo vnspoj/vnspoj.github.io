@@ -4,6 +4,7 @@ title:  "BWPOINTS - VOI 2011 Nối điểm đen trắng"
 categories: [greedy, sortings]
 code: BWPOINTS
 src: BWPOINTS.cpp
+codeforces: https://codeforces.com/group/FLVn1Sc504/contest/274804/problem/J
 ---
 
 

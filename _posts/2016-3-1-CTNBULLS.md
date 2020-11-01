@@ -4,6 +4,7 @@ title:  "CTNBULLS - "
 categories: []
 code: CTNBULLS
 src: CTNBULLS.cpp
+codeforces: https://codeforces.com/group/FLVn1Sc504/contest/274811/problem/C
 ---
 
 

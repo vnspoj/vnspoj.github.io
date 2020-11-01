@@ -4,6 +4,7 @@ title:  "PBCGANGS - Các băng đảng"
 categories: [dsu]
 code: PBCGANGS
 src: PBCGANGS.cpp
+codeforces: https://codeforces.com/group/FLVn1Sc504/contest/274711/problem/C
 ---
 
 
