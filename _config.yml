@@ -34,12 +34,14 @@ urls:
     url: /category
   - text: Search
     url: /search.html
-  - text: CodeLearn.io
-    url: /code-learn
-  - text: Interview Questions
-    url: /top-interview-questions
+  # - text: CodeLearn.io
+  #   url: /code-learn
+  # - text: Interview Questions
+  #   url: /top-interview-questions
   - text: XML Feed
     url: /feed.xml
+  # - text: XML Sitemap
+  #   url: /sitemap.xml
   # - text: Join with us
   #   url: //github.com/vnspoj
 
