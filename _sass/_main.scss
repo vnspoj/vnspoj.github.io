@@ -539,7 +539,8 @@ input#js-page-search__input {
 }
 
 :not(pre)>code[class*="language-plaintext"] {
-	background: #fff1f1 !important;
-	padding: 0.3em 0.4em;
-	color: #ea2741 !important;
+	background: #f9f2f4 !important;
+	padding: 2px 4px;
+	color: #c7254e !important;
+	font-size: 90%;
 }

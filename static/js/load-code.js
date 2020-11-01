@@ -14,14 +14,21 @@
     }
 
     // fetch source from github
-    $.get(`https://vnspoj.github.io/solution/src/${filename}`, (code) => {
-      sourceCode[lang] = code; // store source
-      const highlightCode = Prism.highlight(code, Prism.languages[lang]);
-      $src
-        .find('.js-source-code')
-        .addClass(`language-${lang}`)
-        .html(highlightCode);
-    });
+    $.ajax({
+      url: `https://vnspoj.github.io/solution/src/${filename}`,
+      dataType: 'text',
+    })
+      .done((code) => {
+        sourceCode[lang] = code; // store source
+        const highlightCode = Prism.highlight(code, Prism.languages[lang]);
+        $src
+          .find('.js-source-code')
+          .addClass(`language-${lang}`)
+          .html(highlightCode);
+      })
+      .fail(function (err) {
+        console.log(err);
+      });
 
     // toggle visibility
     $src.find('.js-toggle-code').click(function () {
