@@ -1,27 +1,29 @@
 (() => {
-  const { Prism, PerfectScrollbar } = window;
+  const { Prism, copyToClipboard } = window;
 
-  // $('.js-area-code > pre').each(function () {
-  //   const ps = new PerfectScrollbar($(this)[0], {
-  //     wheelSpeed: 1.2
-  //   });
-  // });
+  // map source code by language
+  const sourceCode = {};
 
+  // loop by source (language)
   $('.js-single-src').each(function () {
     const $src = $(this);
     const filename = $src.children('.js-filename-code').attr('value');
-    let lang = 'cpp';
+    let lang = 'cpp'; // default is `cpp`
     if (filename && filename.split('.').length > 0) {
       lang = filename.split('.')[1];
     }
 
+    // fetch source from github
     $.get(`https://vnspoj.github.io/solution/src/${filename}`, (code) => {
+      sourceCode[lang] = code; // store source
       const highlightCode = Prism.highlight(code, Prism.languages[lang]);
-      $src.find('.js-source-code')
+      $src
+        .find('.js-source-code')
         .addClass(`language-${lang}`)
         .html(highlightCode);
     });
 
+    // toggle visibility
     $src.find('.js-toggle-code').click(function () {
       $src.children('.js-area-code').slideToggle(500, 'linear');
       const $this = $(this);
@@ -35,6 +37,11 @@
         $this.children('i.fa').removeClass('fa-eye').addClass('fa-eye-slash');
       }
     });
-  });
 
+    // copy to clipboard
+    $src.find('.js-copy-code').click(function () {
+      const source = sourceCode[lang] || '';
+      copyToClipboard(source);
+    });
+  });
 })();

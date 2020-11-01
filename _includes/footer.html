@@ -2,54 +2,57 @@
   <div class="container">
     <div class="row">
       <div class="col-12 col-lg-5 col-md-5 intro">
-        <div class="top js-reveal">
+        <div class="top ">
           <img src="{{ site.avatar_url }}" alt="SPOJ Avatar">
           <h1>Tutorial SPOJ</h1>
         </div>
-        <div class="down text-justify js-reveal">
+        <div class="down text-justify ">
           Nơi chia sẻ lời giải, hướng dẫn các bài trên trang chấm bài tự động trực tuyến
-          <a href="//vn.spoj.com">https://vn.spoj.com</a>. Phân loại các dạng bài trong lập trình, các kỹ thuật xử lý trong ngôn ngữ C++.
+          <a href="//vn.spoj.com">https://vn.spoj.com</a>. Phân loại các dạng bài trong lập trình, các kỹ thuật xử lý
+          trong ngôn ngữ C++.
         </div>
       </div>
       <div class="col-12 col-lg-3 col-md-3">
-        <h3 class="js-reveal">Navigation</h3>
+        <h3 class="">Navigation</h3>
         <div class="navigation">
-          <div class="link js-reveal">
+          <div class="link ">
             <a href="{{ site.baseurl }}/">Home</a>
           </div>
           {% for i in site.urls %}
-            <div class="link js-reveal">
-              <a href="{{ site.baseurl }}{{ i.url }}">{{ i.text }}</a>
-            </div>
+          <div class="link ">
+            <a href="{{ site.baseurl }}{{ i.url }}">{{ i.text }}</a>
+          </div>
           {% endfor %}
         </div>
-        <h3 style="margin: 25px 0px 20px" class="js-reveal">Community</h3>
-        <div class="btn-github js-reveal">
-          <iframe src="//ghbtns.com/github-btn.html?user={{ site.username }}&repo={{ site.repo }}&type=star&count=true" frameborder="0" scrolling="0" width="85" height="20px"></iframe>
-          <iframe src="//ghbtns.com/github-btn.html?user={{ site.username }}&repo={{ site.repo }}&type=fork&count=true" frameborder="0" scrolling="0" width="85" height="20px"></iframe>
+        <h3 style="margin: 25px 0px 20px" class="">Community</h3>
+        <div class="btn-github ">
+          <iframe src="//ghbtns.com/github-btn.html?user={{ site.username }}&repo={{ site.repo }}&type=star&count=true"
+            frameborder="0" scrolling="0" width="85" height="20px"></iframe>
+          <iframe src="//ghbtns.com/github-btn.html?user={{ site.username }}&repo={{ site.repo }}&type=fork&count=true"
+            frameborder="0" scrolling="0" width="85" height="20px"></iframe>
         </div>
       </div>
       <div class="col-12 col-lg-4 col-md-4">
-        <h3 class="js-reveal">Contact Us</h3>
-        <div class="external-links js-reveal">
+        <h3 class="">Contact Us</h3>
+        <div class="external-links ">
           <span><i class="fa fa-envelope"></i></span> &ThickSpace;
           <a href="mailto:{{ site.email }}">{{ site.email }}</a>
         </div>
-        <div class="external-links js-reveal">
+        <div class="external-links ">
           <span><i class="fa fa-globe"></i></span> &ThickSpace;
           <a href="{{ site.url }}">https:{{ site.url }}</a>
         </div>
-        <div class="external-links js-reveal">
+        <div class="external-links ">
           <span><i class="fa fa-github"></i></span> &ThickSpace;
           <a href="{{ site.github }}">https:{{ site.github }}</a>
         </div>
         <br>
-        <h3 class="js-reveal">Follow Us</h3>
+        <h3 class="">Follow Us</h3>
         <div class="social-links">
           {% for link in site.social %}
-            <a href="{{ link.link }}" target="_blank" class="js-reveal">
-              <span><i class="fa {{ link.icon }}"></i></span>
-            </a>
+          <a href="{{ link.link }}" target="_blank" class="">
+            <span><i class="fa {{ link.icon }}"></i></span>
+          </a>
           {% endfor %}
           </ul>
         </div>
@@ -57,10 +60,10 @@
     </div>
   </div>
   <div class="end text-center">
-    <span class="js-reveal">
+    <span class="">
       Made with <i class="fa fa-heart" style="color: #eb0025"></i> by
       <a href="{{ site.github }}">{{ site.author }}</a>.
     </span>
-    <span class="js-reveal">All rights reserved.</span>
+    <span class="">All rights reserved.</span>
   </div>
 </footer>
