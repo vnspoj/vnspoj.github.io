@@ -534,6 +534,7 @@ input#js-page-search__input {
 }
 
 :not(pre)>code[class*="language-plaintext"] {
-	background: #a90000 !important;
-  padding: 0.3em 0.4em;
+	background: #fff1f1 !important;
+	padding: 0.3em 0.4em;
+	color: #ea2741 !important;
 }
