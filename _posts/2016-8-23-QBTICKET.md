@@ -16,13 +16,10 @@ Tuyến đường sắt từ thành phố A đến thành phố B đi qua một 
 
 Giá vé đi lại giữa hai nhà ga chỉ phụ thuộc vào khoảng cách giữa chúng. Cách tính giá vé như sau:
 
-Khoảng cách giữa hai nhà ga (X)
-
-Khoảng cách 0 < X <= L1 -> Giá vé C1
-
-Khoảng cách 0 < X <= L2 -> Giá vé C2
-
-Khoảng cách 0 < X <= L3 -> Giá vé C3
++ Khoảng cách giữa hai nhà ga (X)
++ Khoảng cách 0 < X <= L1 -> Giá vé C1
++ Khoảng cách 0 < X <= L2 -> Giá vé C2
++ Khoảng cách 0 < X <= L3 -> Giá vé C3
 
 Nghĩa là với các giá vé C1, C2, C3 tương ứng bạn sẽ đi quảng đường tối đa là L1, L2, L3.
 
@@ -60,7 +57,6 @@ Input
 
 Output
 70
-
 ```
 
 <!--more-->

@@ -20,11 +20,9 @@ Yêu cầu:
 
 Hãy tìm một hình vuông gồm các ô của bảng thoả mãn các điều kiện sau:
 
-1 - Hình vuông là đồng nhất: tức là các ô thuộc hình vuông đó phải ghi các số giống nhau (0 hoặc 1)
-
-2 - Cạnh hình vuông song song với cạnh bảng.
-
-3 - Kích thước hình vuông là lớn nhất có thể
+1. Hình vuông là đồng nhất: tức là các ô thuộc hình vuông đó phải ghi các số giống nhau (0 hoặc 1)
+2. Cạnh hình vuông song song với cạnh bảng.
+3. Kích thước hình vuông là lớn nhất có thể
 
 #### Input
 
@@ -55,7 +53,6 @@ Input
 
 Output
 7
-
 ```
 
 <!--more-->

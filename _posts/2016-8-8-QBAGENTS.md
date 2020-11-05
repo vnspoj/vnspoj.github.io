@@ -14,11 +14,9 @@ codeforces: https://codeforces.com/group/FLVn1Sc504/contest/274518/problem/H
 
 Sau một số rủi ro và thất bại trong kinh doanh, tổng giám đốc công ty Fsoft là Zone quyết định tổ chức cho các sếp nhỏ của các đại lý thuộc công ty gặp mặt và thảo luận với nhau. Công ty Fsoft là một công ty cực kì lớn trải khắp toàn cầu nên một vấn đề lớn đặt ra là làm sao tổ chức cho 2 sếp nhỏ gặp nhau trong thời gian sớm nhất. Vấn đề đặc biệt trở nên hóc búa vì các nhân viên của công ty chỉ được đi bằng mạng giao thông của công ty để đảm bảo an toàn, bảo mật và chi phí. Nhưng mạng này lại hơi tệ:
 
-\- Các nhân viên buộc phải di chuyển theo các tuyến giao thông giữa các đại lý.
-
-\- Mạng giao thông của công ty là mạng gồm các tuyến đường 1 chiều.
-
-\- Các nhân viên khi đi trong mạng thì mỗi giờ đi được theo đúng 1 tuyến đường và phải liên tục di chuyển (nghĩa là không được dừng lại).
++ Các nhân viên buộc phải di chuyển theo các tuyến giao thông giữa các đại lý.
++ Mạng giao thông của công ty là mạng gồm các tuyến đường 1 chiều.
++ Các nhân viên khi đi trong mạng thì mỗi giờ đi được theo đúng 1 tuyến đường và phải liên tục di chuyển (nghĩa là không được dừng lại).
 
 Được cái đây là mạng nội bộ và với công nghệ đỉnh cao nên không có chuyện tắc đường. Vì vậy, trong 1 giờ luôn có thể di chuyển từ đại lý này sang đại lý khác nếu có đường.
 
@@ -54,7 +52,6 @@ Input
 
 Output
 3
-
 ```
 
 <!--more-->

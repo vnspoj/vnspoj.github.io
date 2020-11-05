@@ -16,7 +16,7 @@ Dãy số M phần tử B được gọi là dãy con của dãy số A gồm N 
 
 Một cách chia dãy A thành các dãy con "được chấp nhận" nếu các dãy con này là các dãy không giảm và mỗi phần tử của dãy A thuộc đúng một dãy con.
 
-Yêu cầu: Bạn hãy chia dãy con ban đầu thành ít dãy con nhất mà vẫn "được chấp nhận".
+**Yêu cầu:** Bạn hãy chia dãy con ban đầu thành ít dãy con nhất mà vẫn "được chấp nhận".
 
 #### Input
 
@@ -40,9 +40,9 @@ Input
 
 Output
 2
-
-
 ```
 
 <!--more-->
 
+
+Một bài chuỗi con tăng dài nhất để luyện tay.

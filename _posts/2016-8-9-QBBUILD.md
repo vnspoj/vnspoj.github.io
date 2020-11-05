@@ -45,7 +45,6 @@ Input
 
 Output
 5
-
 ```
 
 <!--more-->
