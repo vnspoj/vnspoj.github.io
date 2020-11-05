@@ -22,7 +22,7 @@ Với mỗi bộ dữ liệu, dòng đầu tiên chứa năm số nguyên dươn
 Với mỗi bộ dữ liệu, ghi ra trên một dòng độ dài nhỏ nhất có thể của đường đi ngắn nhất giữa hai nút trọng yếu sau khi xây dựng xong một đường hai chiều từ danh sách đề xuất. Trường hợp không có đường đi từ s đến t, ghi -1.
 
 ```
-**Dữ liệu vào**
+Input
 1
 4 5 3 1 4
 1 2 13
@@ -34,7 +34,7 @@ Với mỗi bộ dữ liệu, ghi ra trên một dòng độ dài nhỏ nhất c
 2 3 5
 2 4 25	
 
-**Dữ liệu ra**
+Output
 35
 
 ```

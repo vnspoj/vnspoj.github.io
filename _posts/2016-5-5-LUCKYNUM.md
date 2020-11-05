@@ -39,14 +39,14 @@ Với mỗi bộ dữ liệu, ghi ra trên một dòng số may mắn dạng S n
 #### Ví dụ
 
 ```
-**Dữ liệu vào**	
+Input	
 4
 6
 8
 43
 5	
 
-**Dữ liệu ra**
+Output
 6
 8
 86
