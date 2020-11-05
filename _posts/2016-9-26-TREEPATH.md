@@ -40,10 +40,10 @@ Ghi ra file văn bản số T tìm được.
 #### Ví dụ
 
 ```
-**Dữ liệu**
+Input
 \*LS		
 
-**Kết quả**
+Output
 55
 
 ```

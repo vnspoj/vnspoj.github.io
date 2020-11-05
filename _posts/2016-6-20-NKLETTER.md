@@ -37,11 +37,11 @@ Ghi ra độ dài của xâu S tìm được.
 #### Ví dụ
 
 ```
-**Dữ liệu**
+Input
 truongnguyendu
 nguyenduquannhat
 
-**Kết quả**
+Output
 22
 
 ```

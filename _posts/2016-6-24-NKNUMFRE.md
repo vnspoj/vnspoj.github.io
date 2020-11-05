@@ -27,10 +27,10 @@ Bao gồm một dòng là kết quả của bài toán.
 #### Ví dụ
 
 ```
-**Dữ liệu**
+Input
 20 30		
 
-**Kết quả**
+Output
 3
 
 ```

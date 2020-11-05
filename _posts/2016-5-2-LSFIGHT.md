@@ -33,7 +33,7 @@ Tuy nhiên ban tổ chức muốn biết trước xem có bao nhiêu người c�
 #### Ví dụ
 
 ```
-**Dữ liệu**
+Input
 7
 1 1 1 1 1 0 1
 0 1 0 1 1 0 0
@@ -43,7 +43,7 @@ Tuy nhiên ban tổ chức muốn biết trước xem có bao nhiêu người c�
 1 1 0 1 1 1 1
 0 1 0 0 0 0 1
 
-**Kết quả**
+Output
 3
 1
 3

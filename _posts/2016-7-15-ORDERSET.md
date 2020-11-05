@@ -42,7 +42,7 @@ Với mỗi truy vấn, in ra kết quả tương ứng trên một dòng. Với
 #### Ví dụ
 
 ```
-**Dữ liệu**
+Input
 8
 I -1
 I -1
@@ -53,7 +53,7 @@ D -1
 K 1
 K 2
 
-**Kết quả**
+Output
 1
 2
 2

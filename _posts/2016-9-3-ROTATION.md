@@ -40,15 +40,14 @@ Dây curoa thẳng được nối tới bánh xe 2 và 3 bởi vậy mà chúng 
 #### VÍ DỤ
 
 ```
-**Dữ liệu**
+Input
 4
 2 3 0
 3 4 1
 1 2 0
 
-**Kết quả**
+Output
 1
-
 ```
 
 <!--more-->

@@ -41,7 +41,7 @@ Người ta muốn nâng cấp mạng bằng cách tăng thông lượng của m
 5 6 7
 ```
 
-**Kết quả**
+Output
 
 ```
 5

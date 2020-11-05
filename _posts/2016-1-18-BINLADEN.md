@@ -23,7 +23,7 @@ Ghi ra 1 số là thời gian nhỏ nhất để đến được phòng của Bi
 #### Ví dụ
 
 ```
-**Dữ liệu**
+Input
 4 2
 99 10
 1
@@ -34,7 +34,7 @@ Ghi ra 1 số là thời gian nhỏ nhất để đến được phòng của Bi
 10 99
 1
 
-**Kết quả**
+Output
 44
 
 +--99--+--10--+

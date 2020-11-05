@@ -39,7 +39,7 @@ In ra 1 số duy nhất là tốc độ kết nối nhanh nhất có thể sau k
 #### Ví dụ
 
 ```
-**Dữ liệu**
+Input
 5 5 2
 1 2 1
 2 3 9
@@ -47,7 +47,7 @@ In ra 1 số duy nhất là tốc độ kết nối nhanh nhất có thể sau k
 1 4 5
 4 5 5
 
-**Kết quả**
+Output
 4.25
 
 ```

@@ -41,7 +41,7 @@ Gồm 1 dòng duy nhất, chứa N số nguyên, cách nhau một khoảng trắ
 #### Ví dụ
 
 ```
-**Dữ liệu**
+Input
 2
 4
 
