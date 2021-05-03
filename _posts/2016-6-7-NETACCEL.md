@@ -49,7 +49,6 @@ Input
 
 Output
 4.25
-
 ```
 
 #### Giải thích

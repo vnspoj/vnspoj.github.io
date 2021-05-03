@@ -25,12 +25,11 @@ In ra số nguyên duy nhất là phần dư của số huyền bí cơ sở a k
 #### Ví dụ
 
 ```
-**Dữ liệu:**
+Dữ liệu
 10
 
-**Kết qủa**
+Kết qủa
 7291779
-
 ```
 
 <!--more-->

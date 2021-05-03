@@ -23,21 +23,17 @@ Trò chơi chẵn lẻ là trò chơi hai đối thủ được mô tả như sa
 
 + Dòng thứ nhất chứa số nguyên dương k là số lượng bộ dữ liệu.
 + Tiếp theo là k nhóm dòng, mỗi nhóm dòng tương ứng với một bộ dữ liệu có dạng:
++ Dòng thứ nhất chứa số nguyên dương n (n <= 500).
++ Dòng thứ i trong số n dòng tiếp theo chứa n số nguyên dương (mỗi số không vượt quá 10^9) là các số trên dòng thứ i của bảng trò chơi, i = 1, 2, …, n.
 
-o   Dòng thứ nhất chứa số nguyên dương n (n <= 500).
-
-o   Dòng thứ i trong số n dòng tiếp theo chứa n số nguyên dương (mỗi số không vượt quá 10^9) là các số trên dòng thứ i của bảng trò chơi, i = 1, 2, …, n.
-
-         Các số trên cùng một dòng được ghi cách nhau ít nhất một dấu cách.
+Các số trên cùng một dòng được ghi cách nhau ít nhất một dấu cách.
 
 **Kết quả:** Ghi ra k dòng, mỗi dòng là kết quả tương ứng với một bộ dữ liệu theo thứ tự xuất hiện trong file dữ liệu vào: ghi thông báo **“YES”** nếu người đi trước có cách chơi giành chiến thắng và **“NO”**  trong trường hợp ngược lại.
 
 **Ví dụ:**
 
+```
 Dữ liệu
-
-Kết quả
-
 2  
 3  
 1 2 2  
@@ -49,8 +45,10 @@ Kết quả
 2 2 2 2  
 2 2 2 2
 
+Kết quả
 YES  
 NO
+```
 
 **Ràng buộc:** 50% số test ứng với 50% số điểm của bài có n <= 50.
 

@@ -7,15 +7,6 @@ src: LSFIGHT.cpp
 ---
 
 
-
-
-
-LSFIGHT/en/)
-
-
-
-LSFIGHT/vn/)
-
 Trong kỳ thi Marathon 08 năm nay các vCoders phải tham gia một môn thi đấu đối kháng giữa 2 người. Sau vòng loại, ban tổ chức sẽ chọn ra N thí sinh có số điểm cao nhất và đánh số từ 1 đến N. Các thí sinh này phải xếp lần lượt theo thứ tự thành 1 vòng tròn (người thứ N đứng cạnh người thứ 1). Sau đó sẽ chọn ra 2 thí sinh bất kì đang đứng cạnh nhau trong vòng tròn để thi đấu, thí sinh nào thua sẽ bị loại và buộc phải đi ra vòng tròn, trở về hàng ghế khán giả. Cuộc đấu cứ tiếp tục như thế đến khi chỉ còn một người ở lại và cũng chính là người thắng cuộc.
 
 Tuy nhiên ban tổ chức muốn biết trước xem có bao nhiêu người có khả năng thắng cuộc và đó là những người nào. Biết trước ai sẽ thắng trong mỗi trận đấu, bạn hãy giúp ban tổ chức nhé ^^
@@ -48,7 +39,6 @@ Output
 1
 3
 6
-
 ```
 
 <!--more-->

@@ -26,8 +26,7 @@ Ghi trên T dòng, mỗi dòng là kết quả tương ứng của từng test.
 #### Ví dụ
 
 ```
- 
-**Dữ liệu:** 
+Dữ liệu
 1
 6
 1 1
@@ -36,9 +35,9 @@ Ghi trên T dòng, mỗi dòng là kết quả tương ứng của từng test.
 -2 2
 2 -1
 -3 -4
-**Kết qủa** 
-2 
 
+Kết qủa
+2 
 ```
 
 <!--more-->

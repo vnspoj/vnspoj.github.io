@@ -7,12 +7,6 @@ src: LTPMSEQ.cpp
 codeforces: https://codeforces.com/group/FLVn1Sc504/contest/274710/problem/J
 ---
 
-
-
-  
-
-
-
 Sau khi đã giải được PTQMSEQ, PM bắt leaxtanh vượt qua thử thách thứ 2 là chứng tỏ tình cảm của mình. Leaxtanh viết ra trên giấy n xâu với những dòng chữ tình cảm.
 
 Sau khi viết xong, với con mắt tinh đời, PM hỏi leaxtanh : có duy nhất 1 xâu xuất hiện lẻ lần. Nếu tìm được thì sẽ đi chơi.

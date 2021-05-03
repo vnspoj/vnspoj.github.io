@@ -48,7 +48,6 @@ In ra 1 số nguyên duy nhất là tổng chi phí lắp đặt thất nhất t
 
 **Kết qủa**
 6
-
 ```
 
 <!--more-->

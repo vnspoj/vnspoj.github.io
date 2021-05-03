@@ -7,15 +7,6 @@ src: LUBENICA.cpp
 codeforces: https://codeforces.com/group/FLVn1Sc504/contest/274821/problem/Y
 ---
 
-
-
-  
-
-
-
-
-
-
 Mạng lưới giao thông ở 1 nước bao gồm N thành phố (đánh số từ 1 đến N) và N-1 đường nối các thành phố với nhau. Có một đường đi duy nhất giữa mỗi cặp thành phố. Mỗi con đường có một độ dài xác định.
 
 Viết chương trình, với mỗi K cặp thành phố cho trước, tìm độ dài của con đường ngắn nhất và dài nhất trên đường đi giữa 2 thành phố này.
@@ -37,7 +28,7 @@ Mỗi dòng trong số K dòng chứa 2 số nguyên - độ dài của con đư
 #### Ví dụ
 
 ```
-**Dữ liệu:**
+Dữ liệu
 5
 2 3 100
 4 3 200
@@ -47,12 +38,13 @@ Mỗi dòng trong số K dòng chứa 2 số nguyên - độ dài của con đư
 2 4
 3 5
 1 2
-**Kết qủa**
+
+Kết qủa
 100 200
 50 150
 50 100
 
-**Dữ liệu:**
+Dữ liệu
 7
 3 6 4
 1 7 1
@@ -67,14 +59,14 @@ Mỗi dòng trong số K dòng chứa 2 số nguyên - độ dài của con đư
 1 3
 3 5
 
-**Kết qủa**
+Kết qủa
 2 6
 1 4
 6 6
 2 2
 2 6
 
-**Dữ liệu:**
+Dữ liệu
 9
 1 2 2
 2 3 1
@@ -91,13 +83,12 @@ Mỗi dòng trong số K dòng chứa 2 số nguyên - độ dài của con đư
 1 2
 7 3
 
-**Kết qủa**
+Kết qủa
 1 2
 2 4
 1 5
 2 2
 1 4
-
 ```
 
 <!--more-->

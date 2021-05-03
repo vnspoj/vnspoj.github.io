@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "NKLETTER - "
-categories: []
+title:  "NKLETTER - Gửi thư"
+categories: [string]
 code: NKLETTER
 src: NKLETTER.cpp
 codeforces: https://codeforces.com/group/FLVn1Sc504/contest/274824/problem/K
@@ -19,7 +19,6 @@ Ví dụ: với văn bản S=’truongnguyenduquannhat’ tạo ra hai bức th�
 ```
 Sb=truong**ngueNdu**
          **ngueNdu**quanNhat=Se=
-
 ```
 
 Sb=’truongnguyendu’ và Se=’nguyenduquannhat’
@@ -43,7 +42,6 @@ nguyenduquannhat
 
 Output
 22
-
 ```
 
 <!--more-->

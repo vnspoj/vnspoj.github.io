@@ -28,23 +28,17 @@ Trò chơi với băng số là trò chơi tham gia trúng thưởng được m�
 
 + Một số nguyên duy nhất là số điểm lớn nhất có thể đạt được từ một lượt chơi.
 
-#### Ví dụ:![](http://vn.spoj.com/content/LINEGAME.jpg)
+#### Ví dụ
+
+![](http://vn.spoj.com/content/LINEGAME.jpg)
 
 ```
-
-
 Dữ liệu
-
- 
-
-Kết quả
-
 7  
 4 9 2 4 1 3 7
 
+Kết quả
 17
-
-
 ```
 
 **Ràng buộc:** 60% số tests ứng với 60% số điểm của bài có 1 ≤ n ≤ 20.

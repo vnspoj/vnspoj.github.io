@@ -45,7 +45,6 @@ Gồm Q dòng, mỗi dòng chứa 1 số nguyên, là chênh lệch chiều cao 
 6
 3
 0
-
 ```
 
 <!--more-->

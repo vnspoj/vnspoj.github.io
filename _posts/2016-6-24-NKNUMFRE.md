@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "NKNUMFRE - "
-categories: []
+title:  "NKNUMFRE - Số thân thiện"
+categories: [math]
 code: NKNUMFRE
 src: NKNUMFRE.cpp
 codeforces: https://codeforces.com/group/FLVn1Sc504/contest/274824/problem/X

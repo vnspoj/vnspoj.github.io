@@ -7,15 +7,6 @@ src: LUCKYNUM.cpp
 codeforces: https://codeforces.com/group/FLVn1Sc504/contest/274501/problem/W
 ---
 
-
-
-  
-
-
-
-
-
-
 Trong một số nước châu Á, 8 và 6 được coi là những chữ số may mắn. Bất cứ số nguyên nào chỉ chứa chữ số 8 và 6 được coi là số may mắn, ví dụ 6, 8, 66, 668, 88, 886 …. Nguyên là một học sinh rất thích toán. Nguyên thích các số may mắn nhưng chỉ thích các số có dạng
 
 S = 8…86…6
@@ -51,7 +42,6 @@ Output
 8
 86
 -1
-
 ```
 
 <!--more-->

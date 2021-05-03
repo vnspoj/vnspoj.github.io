@@ -7,15 +7,6 @@ src: ORDERSET.cpp
 codeforces: https://codeforces.com/group/FLVn1Sc504/contest/274512/problem/X
 ---
 
-
-
-  
-
-
-
-
-
-
 #### Tập hợp thứ tự
 
 Bạn cần quản lý một tập hợp động các số, hỗ trợ hai thao tác cơ bản:
@@ -58,7 +49,6 @@ Output
 2
 2
 invalid
-
 ```
 
 <!--more-->

@@ -26,24 +26,20 @@ Cho k, tính ak.
 Gồm vài test case, mỗi dòng chứa một số nguyên k. (0<=k<=500000). Kết thúc là số -1.
 
 ```
-  
 Sample Input  
 7  
 10000  
-\-1  
-
+-1  
 ```
 
 #### Output
 
-```
-   
 In ra ak trên 1 dòng.  
   
+```
 Sample output  
 20  
 18658  
-
 ```
 
 <!--more-->

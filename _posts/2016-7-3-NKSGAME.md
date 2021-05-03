@@ -50,7 +50,6 @@ Ghi ra giá nhỏ nhất tìm được.
 
 **Kết qủa**
 0
-
 ```
 
 <!--more-->

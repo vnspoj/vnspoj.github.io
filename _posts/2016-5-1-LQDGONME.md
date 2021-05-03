@@ -39,7 +39,6 @@ Output
 3  
   
 Dãy con chung dài nhất là 1,4,2  
-
 ```
 
 <!--more-->

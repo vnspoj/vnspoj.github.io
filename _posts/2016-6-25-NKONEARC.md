@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "NKONEARC - "
-categories: []
+title:  "NKONEARC - Mạng máy tính"
+categories: [tarjan]
 code: NKONEARC
 src: NKONEARC.cpp
 codeforces: https://codeforces.com/group/FLVn1Sc504/contest/274824/problem/Y

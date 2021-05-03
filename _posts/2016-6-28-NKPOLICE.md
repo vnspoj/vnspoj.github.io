@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "NKPOLICE - "
-categories: []
+title:  "NKPOLICE - Police"
+categories: [lca]
 code: NKPOLICE
 src: NKPOLICE.cpp
 codeforces: https://codeforces.com/group/FLVn1Sc504/contest/274825/problem/G
@@ -20,8 +20,8 @@ codeforces: https://codeforces.com/group/FLVn1Sc504/contest/274825/problem/G
 
 Cảnh sát muốn bắt các tội phạm di chuyển từ thành phố này đến thành phố khác. Các điều tra viên, theo dõi bản đồ, phải xác định vị trí thiết lập trạm gác. Hệ thống máy tính mới phải trả lời được 2 loại truy vấn sau:
 
-+ 1\. Đối với hai thành phố A, B và một đường nối giữa hai thành phố G1, G2, hỏi tội phạm có thể di chuyển từ A đến B nếu đường nối này bị chặn (nghĩa là tên tội phạm không thể sử dụng con đường này) không?
-+ 2\. Đối với 3 thành phố A, B, C, hỏi tội phạm có thể di chuyển từ A đến B nếu như toàn bộ thành phố C bị kiểm soát (nghĩa là tên tội phạm không thể đi vào thành phố này) không?
++ 1. Đối với hai thành phố A, B và một đường nối giữa hai thành phố G1, G2, hỏi tội phạm có thể di chuyển từ A đến B nếu đường nối này bị chặn (nghĩa là tên tội phạm không thể sử dụng con đường này) không?
++ 2. Đối với 3 thành phố A, B, C, hỏi tội phạm có thể di chuyển từ A đến B nếu như toàn bộ thành phố C bị kiểm soát (nghĩa là tên tội phạm không thể đi vào thành phố này) không?
 
 #### Dữ liệu vào
 
@@ -71,7 +71,6 @@ yes
 yes
 no
 yes
-
 ```
 
 <!--more-->

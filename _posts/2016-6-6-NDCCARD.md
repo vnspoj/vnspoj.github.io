@@ -30,16 +30,17 @@ Ghi trên một dòng duy nhất là kết quả bài toán. Test luôn đảm b
 
 #### Ví dụ:
 
-**Dữ liệu:**
-
+```
+Dữ liệu
 6 20 7 9 6 2 1 5
 
-**Kết quả:** 20
+Kết quả
+20
+```
 
-\=> Giải thích: Chọn các lá bài mang số 9 , 6 , 5 ta có 9+6+5 = 20 <= M
+=> Giải thích: Chọn các lá bài mang số 9 , 6 , 5 ta có 9+6+5 = 20 <= M
 
 <!--more-->
-
 
 
 
