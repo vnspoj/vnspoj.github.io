@@ -36,7 +36,6 @@ Input
 
 Output
 35
-
 ```
 
 <!--more-->

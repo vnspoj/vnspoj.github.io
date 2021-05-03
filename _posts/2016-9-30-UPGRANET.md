@@ -18,19 +18,18 @@ Người ta muốn nâng cấp mạng bằng cách tăng thông lượng của m
 **Dữ liệu:**
 
 + Dòng thứ nhất: Chứa hai số nguyên dương n, m (n, m <= 10^5).
++ Dòng thứ i trong số m dòng tiếp theo chứa ba số nguyên dương ui, vi, wi (wi <= 10^6), i = 1, 2, …, m.
 
-+ Dòng thứ i trong số m dòng tiếp theo chứa ba số nguyên dương ui, vi, wi (wi <= 10^6),  
-    i = 1, 2, …, m.
+Các số trên cùng một dòng được ghi cách nhau ít nhất một dấu cách.
 
-    Các số trên cùng một dòng được ghi cách nhau ít nhất một dấu cách.
+**Kết quả:** 
 
-**Kết quả:** ghi ra một số nguyên duy nhất là tổng chi phí nâng cấp theo phương án tìm được.
+Ghi ra một số nguyên duy nhất là tổng chi phí nâng cấp theo phương án tìm được.
 
 **Ví dụ:**
 
-**Dữ liệu**
-
 ```
+Input
 6 7  
 1 2 6  
 1 3 5  
@@ -39,11 +38,8 @@ Người ta muốn nâng cấp mạng bằng cách tăng thông lượng của m
 4 5 4  
 4 6 8  
 5 6 7
-```
 
 Output
-
-```
 5
 ```
 

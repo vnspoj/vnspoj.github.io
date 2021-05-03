@@ -66,10 +66,6 @@ Output 3:
 <!--more-->
 
 
-```
-1 
-```
-
 Xem qua các lần thử cho bài toán này trong hình đưới đây
 
 <p align="center"><img src="https://i.imgur.com/3ILHzpL.png" width="90%"></p>

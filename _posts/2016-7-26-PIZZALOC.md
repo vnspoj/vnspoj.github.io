@@ -22,15 +22,11 @@ Xác định số khách hàng lớn nhất có thể phục vụ.
 
 #### Input
 
-Dòng đầu là hai số K, R : số nhà hàng có thể được mở và bán kính phục vụ của mỗi nhà hàng,1 ≤ K ≤ 10, 1 ≤ R ≤ 500.
-
-Dòng thứ hai là M, số địa điểm có thể đặt nhà hàng, K ≤ M ≤ 20.
-
-M dòng tiếp theo, mỗi dòng là 2 số nguyên X và Y, -1000 ≤ X,Y ≤ 1000.
-
-Dòng tiếp theo là N, số khu nhà, 1 ≤ N ≤ 100.
-
-Mỗi dòng trong N dòng tiếp theo là 3 số nguyên X, Y , S, là tọa độ và số người ở khu nhà đó, -1000 ≤ X,Y ≤ 1000, 1 ≤ S ≤ 100.
++ Dòng đầu là hai số K, R : số nhà hàng có thể được mở và bán kính phục vụ của mỗi nhà hàng,1 ≤ K ≤ 10, 1 ≤ R ≤ 500.
++ Dòng thứ hai là M, số địa điểm có thể đặt nhà hàng, K ≤ M ≤ 20.
++ M dòng tiếp theo, mỗi dòng là 2 số nguyên X và Y, -1000 ≤ X,Y ≤ 1000.
++ Dòng tiếp theo là N, số khu nhà, 1 ≤ N ≤ 100.
++ Mỗi dòng trong N dòng tiếp theo là 3 số nguyên X, Y , S, là tọa độ và số người ở khu nhà đó, -1000 ≤ X,Y ≤ 1000, 1 ≤ S ≤ 100.
 
 Khu nhà nằm trong bán kính của nhà hàng nếu khoảng cách giữa chúng <= R. Không có 2 khu nhà tại cùng 1 địa điểm.
 
@@ -55,11 +51,9 @@ pizza.in
 8 0 1 
  
 pizza.out 
- 
 18 
 
 pizza.in 
- 
 2 2 
 3 
 -2 0 
@@ -76,11 +70,9 @@ pizza.in
 4 0 2 
  
 pizza.out 
- 
 12 
 
 pizza.in 
- 
 3 3 
 5 
 0 0 
@@ -99,9 +91,7 @@ pizza.in
 8 6 3 
  
 pizza.out 
- 
 17 
-
 ```
 
 <!--more-->
