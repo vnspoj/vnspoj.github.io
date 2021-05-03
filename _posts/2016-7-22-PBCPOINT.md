@@ -16,12 +16,12 @@ Trên mặt phẳng toạ độ xét các điểm có toạ độ nguyên. Có N
 
 #### Input
 
-*   Dòng 1: chứa số nguyên dương N, N<=10^5.
-*   Dòng thứ i trong N dòng tiếp theo: chứa 2 số có giá trị tuyệt đối không quá 10^3 là toạ độ của 1 điểm đỏ. (Chú ý: trong bộ test các giá trị tọa độ của các điểm được cho có thể bị trùng nhau)
++ Dòng 1: chứa số nguyên dương N, N<=10^5.
++ Dòng thứ i trong N dòng tiếp theo: chứa 2 số có giá trị tuyệt đối không quá 10^3 là toạ độ của 1 điểm đỏ. (Chú ý: trong bộ test các giá trị tọa độ của các điểm được cho có thể bị trùng nhau)
 
 #### Output
 
-*   Gồm 1 dòng duy nhất là số điểm đỏ cuối cùng.
++ Gồm 1 dòng duy nhất là số điểm đỏ cuối cùng.
 
 #### Example
 

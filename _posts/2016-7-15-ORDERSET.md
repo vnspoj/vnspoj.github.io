@@ -20,18 +20,18 @@ codeforces: https://codeforces.com/group/FLVn1Sc504/contest/274512/problem/X
 
 Bạn cần quản lý một tập hợp động các số, hỗ trợ hai thao tác cơ bản:
 
-*   INSERT(S,x): nếu x không thuộc S, thêm x vào S
-*   DELETE(S,x): nếu x thuộc S, xóa x khỏi S
++ INSERT(S,x): nếu x không thuộc S, thêm x vào S
++ DELETE(S,x): nếu x thuộc S, xóa x khỏi S
 
 và hai loại truy vấn
 
-*   K-TH(S) : trả về số bé thứ k của S
-*   COUNT(S,x): đếm số lượng số thuộc S bé hơn x
++ K-TH(S) : trả về số bé thứ k của S
++ COUNT(S,x): đếm số lượng số thuộc S bé hơn x
 
 #### Dữ liệu
 
-*   Dòng 1: Q (1 ≤ Q ≤ 200000), số thao tác
-*   Q dòng sau, đầu mỗi dòng chứa ký tự I, D, K hoặc C cho biết thao tác tương ứng là INSERT, DELETE, K-TH hay COUNT. Tiếp theo là một khoảng trắng và một số nguyên là tham số cho thao tác đó.
++ Dòng 1: Q (1 ≤ Q ≤ 200000), số thao tác
++ Q dòng sau, đầu mỗi dòng chứa ký tự I, D, K hoặc C cho biết thao tác tương ứng là INSERT, DELETE, K-TH hay COUNT. Tiếp theo là một khoảng trắng và một số nguyên là tham số cho thao tác đó.
 
 Nếu tham số là giá trị x, dữ liệu bảo đảm 0 ≤ |x| ≤ 10^9. Nếu tham số là chỉ số k, dữ liệu bảo đảm 1 ≤ k ≤ 10^9.
 

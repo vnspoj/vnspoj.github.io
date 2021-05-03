@@ -9,21 +9,21 @@ codeforces: https://codeforces.com/group/FLVn1Sc504/contest/274834/problem/Z
 
 Cho một cây tam phân đầy đủ, mỗi nút có đúng 3 nút con: nút con trái, nút con giữa và nút con phải. Mỗi nút ghi một số nguyên theo quy tắc sau:
 
-*   Nút gốc ghi số 1.
-*   Nếu một nút ghi số X thì nút con trái của nó ghi số 3X, nút giữa ghi số 3X+1, nút phải ghi số 3X+2.
++ Nút gốc ghi số 1.
++ Nếu một nút ghi số X thì nút con trái của nó ghi số 3X, nút giữa ghi số 3X+1, nút phải ghi số 3X+2.
 
 ![](https://vn.spoj.com/content/treepath.jpg)
 
 Để di chuyển trên cây từ một nút người ta dùng một trong 4 lệnh sau:
 
-*   L: Di chuyển đến nút con trái,
-*   C: Di chuyển đến nút con giữa,
-*   R: Di chuyển đến nút con phải,
-*   S: Đứng nguyên tại nút hiện thời.
++ L: Di chuyển đến nút con trái,
++ C: Di chuyển đến nút con giữa,
++ R: Di chuyển đến nút con phải,
++ S: Đứng nguyên tại nút hiện thời.
 
-Một khuôn mẫu đường đi từ nút gốc là một xâu gồm các ký tự : ‘L’, ‘C’, ‘R’, ‘S’ và ‘\*’ trong đó dấu ‘\*’ có thể được thay thế bởi 1 trong 4 ký tự: ‘L’, ‘C’, ‘R’ và ‘S’.
+Một khuôn mẫu đường đi từ nút gốc là một xâu gồm các ký tự : ‘L’, ‘C’, ‘R’, ‘S’ và ‘*’ trong đó dấu ‘*’ có thể được thay thế bởi 1 trong 4 ký tự: ‘L’, ‘C’, ‘R’ và ‘S’.
 
-Với một cách thay thế dấu ‘\*’ ta nhận được một đường đi từ nút gốc tới một nút lá nào đó và tổng các số ghi trên các nút đi qua gọi là trọng số của đường đi đó.
+Với một cách thay thế dấu ‘*’ ta nhận được một đường đi từ nút gốc tới một nút lá nào đó và tổng các số ghi trên các nút đi qua gọi là trọng số của đường đi đó.
 
 #### Yêu cầu
 
@@ -31,7 +31,7 @@ Cho một khuôn mẫu đường đi, hãy tính tổng T trọng số các đư
 
 #### Dữ liệu
 
-Chứa một xâu không quá 2000 ký tự ‘L’, ‘C’, ‘R’, ‘S’ và ‘\*’.
+Chứa một xâu không quá 2000 ký tự ‘L’, ‘C’, ‘R’, ‘S’ và ‘*’.
 
 #### Kết quả
 
@@ -41,7 +41,7 @@ Ghi ra file văn bản số T tìm được.
 
 ```
 Input
-\*LS		
+*LS		
 
 Output
 55

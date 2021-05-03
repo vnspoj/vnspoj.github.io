@@ -16,11 +16,9 @@ Tham gia trò chơi nhảy lò cò, thật may mắn, Khuê đã giành giải n
 
 Ví dụ: thành phố có 5 nút giao thông và 6 tuyến xe buýt:
 
-Tuyến 1: 1-2 giá vé 10 đồng; Tuyến 2: 2-5 giá vé 10 đồng;
-
-Tuyến 3: 1-4 giá vé 3 đồng; Tuyến 4: 3-4 giá vé 5 đồng;
-
-Tuyến 5: 3-5 giá vé 3 đồng; Tuyến 6: 1-3 giá vé 20 đồng.
++ Tuyến 1: 1-2 giá vé 10 đồng; Tuyến 2: 2-5 giá vé 10 đồng;
++ Tuyến 3: 1-4 giá vé 3 đồng; Tuyến 4: 3-4 giá vé 5 đồng;
++ Tuyến 5: 3-5 giá vé 3 đồng; Tuyến 6: 1-3 giá vé 20 đồng.
 
 ![](https://vn.spoj.com/content/voj:FREEBUS)
 
@@ -30,9 +28,8 @@ Xuất phát từ nút 1 đến nút 5_,_ đi theo hành trình 1à4à3à5 hết
 
 #### Input
 
-\-          Dòng đầu tiên ghi năm số nguyên dương _n_, _m, k, s, t_; 
-
-\-          _m_ dòng sau, mỗi dòng 3 số nguyên _i, j, cij_ mô tả có tuyến xe buýt _i – j_ hết _cij_ đồng.
++ Dòng đầu tiên ghi năm số nguyên dương _n_, _m, k, s, t_; 
++ _m_ dòng sau, mỗi dòng 3 số nguyên _i, j, cij_ mô tả có tuyến xe buýt _i – j_ hết _cij_ đồng.
 
 #### Output
 
@@ -42,30 +39,23 @@ một số duy nhất là chi phí ít nhất để đi từ nút giao thông _s
 
 ```
 Input
-
-**5 6 1 1 5**
-
-**1 2 10**
-
-**2 5 10**
-
-**1 4 3**
-
-**3 4 5**
-
-**3 5 3**
-
-**1 3 20**
+5 6 1 1 5
+1 2 10
+2 5 10
+1 4 3
+3 4 5
+3 5 3
+1 3 20
 
 Output
-**3**
+3
 ```
 
 **Ghi chú:**
 
-*   Có 40% số test ứng với 40% số điểm có _n_ ≤ 100, _m_ ≤ 1000 và _k_ = 1;
-*   Có 20% số test ứng với 20% số điểm có _n_ ≤ 10^5, _m_ ≤ 10^5 và _k_ = 1;
-*   Có 40% số test còn lại ứng với 40% số điểm có _n_ ≤ 10^5, _m_ ≤ 10^5 và _k_ ≤ 5.
++ Có 40% số test ứng với 40% số điểm có _n_ ≤ 100, _m_ ≤ 1000 và _k_ = 1;
++ Có 20% số test ứng với 20% số điểm có _n_ ≤ 10^5, _m_ ≤ 10^5 và _k_ = 1;
++ Có 40% số test còn lại ứng với 40% số điểm có _n_ ≤ 10^5, _m_ ≤ 10^5 và _k_ ≤ 5.
 
 <!--more-->
 

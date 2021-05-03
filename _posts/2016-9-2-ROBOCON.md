@@ -22,8 +22,8 @@ Bắt đầu từ thời điểm xuất phát được tính là 0, hai Robot ph
 
 #### Input
 
-*   Dòng thứ nhất chứa hai số nguyên dương n, k (n ≤ 500, k ≤ 10000).
-*   Dòng thứ i trong số k dòng tiếp theo chứa 2 số nguyên dương ui, vi tương ứng là tọa độ hàng và cột của ô có đặt chướng ngại vật (i = 1, 2, ..., k).
++ Dòng thứ nhất chứa hai số nguyên dương n, k (n ≤ 500, k ≤ 10000).
++ Dòng thứ i trong số k dòng tiếp theo chứa 2 số nguyên dương ui, vi tương ứng là tọa độ hàng và cột của ô có đặt chướng ngại vật (i = 1, 2, ..., k).
 
 Các số trên cùng một dòng được ghi cách nhau ít nhất một dấu cách.
 

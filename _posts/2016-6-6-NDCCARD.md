@@ -21,8 +21,8 @@ Trong phiên bản trò chơi mới này các bạn đã viết lên mỗi lá b
 
 #### Dữ liệu:
 
-*   Dòng đầu ghi số nguyên dương N,M (N<=10000 , M<=500000).
-*   N dòng sau ghi N số nguyên dương đôi một khác nhau là các số được ghi trên N lá bài ( 1 ≤ a\[i\] ≤ 10000).
++ Dòng đầu ghi số nguyên dương N,M (N<=10000 , M<=500000).
++ N dòng sau ghi N số nguyên dương đôi một khác nhau là các số được ghi trên N lá bài ( 1 ≤ a\[i\] ≤ 10000).
 
 #### Kết quả:
 

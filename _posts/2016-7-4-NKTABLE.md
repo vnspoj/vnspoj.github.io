@@ -31,11 +31,11 @@ Cho bảng m \* n ô, mỗi ô có 1 trong 3 số: 0, 1, 2:
   
 Input 
 
-\- Dòng đầu tiên gồm 2 số m, n.
++ Dòng đầu tiên gồm 2 số m, n.
 
-\- m dòng tiếp theo, mỗi dòng gồm n số thuộc tập {0, 1, 2}. Số thứ j ở dòng i biểu diễn ô (i, j) trên bảng.
++ m dòng tiếp theo, mỗi dòng gồm n số thuộc tập {0, 1, 2}. Số thứ j ở dòng i biểu diễn ô (i, j) trên bảng.
 
-\- Các số cùng dòng trong input cách nhau một hoặc nhiều dấu cách.
++ Các số cùng dòng trong input cách nhau một hoặc nhiều dấu cách.
 
 Output
 

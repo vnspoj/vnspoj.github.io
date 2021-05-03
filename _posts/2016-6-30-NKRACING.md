@@ -26,8 +26,8 @@ Viết chương trính tìm cách đặt các camera theo dõi giao thông sao c
 
 #### Dữ liệu
 
-*   Dòng đầu tiên chứa 2 số nguyên n, m ( 1 ≤ n ≤ 10000, 1 ≤ m ≤ 100000) là số nút giao thông và số đường nối. Các nút giao thông được đánh số từ 1 đến n.
-*   m dòng tiếp theo mô tả các đường nối, mỗi dòng bao gồm 3 số nguyên dương cho biết hai đầu mút của tuyến đường và chi phí lắp đặt camera. Chi phí lắp đặt thuộc phạm vi \[1, 1000\].
++ Dòng đầu tiên chứa 2 số nguyên n, m ( 1 ≤ n ≤ 10000, 1 ≤ m ≤ 100000) là số nút giao thông và số đường nối. Các nút giao thông được đánh số từ 1 đến n.
++ m dòng tiếp theo mô tả các đường nối, mỗi dòng bao gồm 3 số nguyên dương cho biết hai đầu mút của tuyến đường và chi phí lắp đặt camera. Chi phí lắp đặt thuộc phạm vi \[1, 1000\].
 
 #### Kết qủa
 

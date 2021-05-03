@@ -27,15 +27,15 @@ Yêu cầu: hãy xác định xem có thể bổ sung đúng một kênh truyề
 
 #### Dữ liệu
 
-*   Dòng đầu tiên ghi 2 số nguyên n và m.
-*   Dòng thứ i trong số m dòng tiếp theo mô tả kênh nối thứ i bao gồm 2 số nguyên dương ui và vi cho biết kênh nối thứ i cho phép truyền tin từ máy ui đến máy vi, i=1,2,...,m.
++ Dòng đầu tiên ghi 2 số nguyên n và m.
++ Dòng thứ i trong số m dòng tiếp theo mô tả kênh nối thứ i bao gồm 2 số nguyên dương ui và vi cho biết kênh nối thứ i cho phép truyền tin từ máy ui đến máy vi, i=1,2,...,m.
 
 Các số trên cùng một dòng được ghi cách nhau bởi dấu cách.
 
 #### Kết qủa
 
-*   Dòng đầu tiên ghi 'YES' nếu câu trả lời là khẳng định, ghi 'NO' nếu câu trả lời là phủ định.
-*   Nếu câu trả lời là khẳng định thì dòng thứ hai ghi hai số nguyên dương u, v cách nhau bởi dấu cách cho biết cần bổ sung kênh truyền tin từ máy u đến máy v để biến mạng thành thông suốt.
++ Dòng đầu tiên ghi 'YES' nếu câu trả lời là khẳng định, ghi 'NO' nếu câu trả lời là phủ định.
++ Nếu câu trả lời là khẳng định thì dòng thứ hai ghi hai số nguyên dương u, v cách nhau bởi dấu cách cho biết cần bổ sung kênh truyền tin từ máy u đến máy v để biến mạng thành thông suốt.
 
 #### Hạn chế
 

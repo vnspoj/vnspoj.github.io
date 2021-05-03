@@ -26,9 +26,9 @@ Hãy xác định giá nhỏ nhất của một lượt chơi trong số các l�
 
 #### Dữ liệu
 
-*   Dòng đầu tiên chứa số nguyên dương n (n ≤ 10^5)
-*   Dòng thứ hai chứa dãy số nguyên b1, b2, ..., bn (|bi| ≤ 10^9, i=1, 2, ..., n)
-*   Dòng thứ hai chứa dãy số nguyên c1, c2, ..., cn (|ci| ≤ 10^9, i=1, 2, ..., n)
++ Dòng đầu tiên chứa số nguyên dương n (n ≤ 10^5)
++ Dòng thứ hai chứa dãy số nguyên b1, b2, ..., bn (|bi| ≤ 10^9, i=1, 2, ..., n)
++ Dòng thứ hai chứa dãy số nguyên c1, c2, ..., cn (|ci| ≤ 10^9, i=1, 2, ..., n)
 
 Hai số liên tiếp trên một dòng được ghi cách nhau bởi dấu cách.
 
@@ -38,7 +38,7 @@ Ghi ra giá nhỏ nhất tìm được.
 
 #### Ràng buộc
 
-*   60% số tests ứng với 60% số điểm của bài có 1 ≤ n ≤ 1000.
++ 60% số tests ứng với 60% số điểm của bài có 1 ≤ n ≤ 1000.
 
 #### Ví dụ
 

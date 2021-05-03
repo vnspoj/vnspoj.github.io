@@ -17,9 +17,9 @@ Người ta muốn nâng cấp mạng bằng cách tăng thông lượng của m
 
 **Dữ liệu:**
 
-*   Dòng thứ nhất: Chứa hai số nguyên dương n, m (n, m <= 10^5).
++ Dòng thứ nhất: Chứa hai số nguyên dương n, m (n, m <= 10^5).
 
-*   Dòng thứ i trong số m dòng tiếp theo chứa ba số nguyên dương ui, vi, wi (wi <= 10^6),  
++ Dòng thứ i trong số m dòng tiếp theo chứa ba số nguyên dương ui, vi, wi (wi <= 10^6),  
     i = 1, 2, …, m.
 
     Các số trên cùng một dòng được ghi cách nhau ít nhất một dấu cách.

@@ -18,13 +18,12 @@ Hãy giúp nông dân John tính xem đặt mức giá nhỏ nhất là bao nhi�
 
 #### Dữ liệu
 
-\* Dòng 1: Hai số nguyên cách nhau bởi dấu cách: N và M
-
-\* Dòng 2..M+1: Dòng i+1 chứa 1 số nguyên duy nhất: P\_i
++ Dòng 1: Hai số nguyên cách nhau bởi dấu cách: N và M
++ Dòng 2..M+1: Dòng i+1 chứa 1 số nguyên duy nhất: P\_i
 
 #### Kết quả
 
-\* Dòng 1: 2 số nguyên cách nhau bởi dấu cách: giá bán của John và số tiền mà John thu được
++ Dòng 1: 2 số nguyên cách nhau bởi dấu cách: giá bán của John và số tiền mà John thu được
 
 #### Ví dụ
 

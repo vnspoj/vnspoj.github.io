@@ -12,12 +12,12 @@ Cho một bảng số `5x5`. Nhiệm vụ của bạn là sẽ phải điền v�
 
 #### Input
 
-*   Dòng thứ nhất gồm 5 số là tổng của các số từ dòng thứ 1 đến dòng thứ 5 của bảng số.
-*   Dòng thứ hai gồm 5 số là tổng của các số từ cột thứ 1 đến cột thứ 5 của bảng số.
++ Dòng thứ nhất gồm 5 số là tổng của các số từ dòng thứ 1 đến dòng thứ 5 của bảng số.
++ Dòng thứ hai gồm 5 số là tổng của các số từ cột thứ 1 đến cột thứ 5 của bảng số.
 
 #### Output
 
-*   Gồm 5 dòng, mỗi dòng 5 số thể hiện bảng `5x5` là kết quả của bạn. Nếu có nhiều đáp án, hãy in ra một đáp án bất kì. Dữ liệu đầu vào luôn luôn có kết quả.
++ Gồm 5 dòng, mỗi dòng 5 số thể hiện bảng `5x5` là kết quả của bạn. Nếu có nhiều đáp án, hãy in ra một đáp án bất kì. Dữ liệu đầu vào luôn luôn có kết quả.
 
 #### Example
 

@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "COUNTCBG - "
-categories: []
+title:  "COUNTCBG - COUNT N"
+categories: [math]
 code: COUNTCBG
 src: COUNTCBG.cpp
 ---
@@ -42,7 +42,6 @@ Output
 5
 1
 5
-
 ```
 
 <!--more-->

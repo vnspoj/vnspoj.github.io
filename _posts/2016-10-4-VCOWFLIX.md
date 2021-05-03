@@ -13,12 +13,12 @@ Cho `N` (`1 <= N <= 16`) con bò và khối lượng `Wi` của từng con, hãy
 
 #### Dữ liệu
 
-*   Dòng 1: 2 số nguyên cách nhau bởi dấu cách: `C` và `N`
-*   Dòng `2..N+1`: Dòng `i+1` chứa `1` số nguyên: `Wi`
++ Dòng 1: 2 số nguyên cách nhau bởi dấu cách: `C` và `N`
++ Dòng `2..N+1`: Dòng `i+1` chứa `1` số nguyên: `Wi`
 
 #### Kết quả
 
-*   Dòng 1: Một số nguyên là tổng khối lượng bò lớn nhất mà John có thể mang đi xem phim.
++ Dòng 1: Một số nguyên là tổng khối lượng bò lớn nhất mà John có thể mang đi xem phim.
 
 #### Ví dụ
 

@@ -18,8 +18,8 @@ social:
     link: "//stackoverflow.com/users/8828489/huynhsamha"
   - icon: fa-github
     link: "//github.com/vnspoj"
-  - icon: fa-linkedin
-    link: "//www.linkedin.com/in/huynhsamha"
+  # - icon: fa-linkedin
+  #   link: "//www.linkedin.com/in/huynhsamha"
   - icon: fa-twitter
     link: "//twitter.com/huynhsamha"
 

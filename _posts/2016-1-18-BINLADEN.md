@@ -13,8 +13,8 @@ Bạn hãy tìm cách đi từ mặt đất xuống phòng của Bin Laden nhanh
 
 #### Dữ liệu
 
-*   Dòng 1 ghi M và N
-*   Dòng 2 đến 2M + 1, dòng chẵn ghi N số, dòng lẻ ghi N - 1 số là chi phí để phá cửa.
++ Dòng 1 ghi M và N
++ Dòng 2 đến 2M + 1, dòng chẵn ghi N số, dòng lẻ ghi N - 1 số là chi phí để phá cửa.
 
 #### Kết quả
 
@@ -60,9 +60,9 @@ Output
 
 #### Giới hạn
 
-*   1 <= M <= 2222
-*   1 <= N <= 10
-*   Chi phí của các cánh cửa thuộc \[0, 1000\].
++ 1 <= M <= 2222
++ 1 <= N <= 10
++ Chi phí của các cánh cửa thuộc \[0, 1000\].
 
 <!--more-->
 

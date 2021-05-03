@@ -18,17 +18,17 @@ Cho một xâu độ dài N chỉ gồm các kí tự ‘(‘ và ‘)’, các 
 
 Một dãy ngoặc đúng được định nghĩa như sau:
 
-\-     Xâu rỗng là 1 dãy ngoặc đúng.
++     Xâu rỗng là 1 dãy ngoặc đúng.
 
-\-     Nếu A là 1 dãy ngoặc đúng thì (A) là 1 dãy ngoặc đúng.
++     Nếu A là 1 dãy ngoặc đúng thì (A) là 1 dãy ngoặc đúng.
 
-\-     Nếu A và B là 2 dãy ngoặc đúng thì AB là 1 dãy ngoặc đúng.
++     Nếu A và B là 2 dãy ngoặc đúng thì AB là 1 dãy ngoặc đúng.
 
 Cho M truy vấn, mỗi truy vấn thuộc 1 trong 2 loại sau:
 
-\-     0 i ch: thay đổi kí tự ở vị trí i của xâu kí tự thành kí tự ch.
++     0 i ch: thay đổi kí tự ở vị trí i của xâu kí tự thành kí tự ch.
 
-\-    1 i j: in ra 1 nếu xâu con từ vị trí i đến vị trí j là một dãy ngoặc đúng, in ra 0 trong trường hợp ngược lại.
++    1 i j: in ra 1 nếu xâu con từ vị trí i đến vị trí j là một dãy ngoặc đúng, in ra 0 trong trường hợp ngược lại.
 
 **Giới hạn:**
 
@@ -42,15 +42,15 @@ Cho M truy vấn, mỗi truy vấn thuộc 1 trong 2 loại sau:
 
 Input
 
-\-     Dòng đầu tiên chứa 2 số N, M
++     Dòng đầu tiên chứa 2 số N, M
 
-\-     Dòng tiếp theo chứa N kí tự liên tiếp.
++     Dòng tiếp theo chứa N kí tự liên tiếp.
 
-\-     M dòng tiếp theo, mỗi dòng chứa 1 truy vấn thuộc 1 trong 2 loại trên.
++     M dòng tiếp theo, mỗi dòng chứa 1 truy vấn thuộc 1 trong 2 loại trên.
 
 Output
 
-\-     In ra 0 hoặc 1 tương ứng với mỗi truy vấn loại 2.
++     In ra 0 hoặc 1 tương ứng với mỗi truy vấn loại 2.
 
 **Ví dụ:**
 

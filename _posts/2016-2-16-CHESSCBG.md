@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "CHESSCBG - "
-categories: []
+title:  "CHESSCBG - Bàn cờ thế"
+categories: [bfs]
 code: CHESSCBG
 src: CHESSCBG.cpp
 ---
@@ -21,7 +21,7 @@ Gồm 1 dòng duy nhất là số bước chuyển quân ít nhất
 #### Ví dụ
 
 ```
-**Dữ liệu vào:**
+Dữ liệu vào
 1111
 0000
 1110
@@ -31,9 +31,8 @@ Gồm 1 dòng duy nhất là số bước chuyển quân ít nhất
 1010
 0101
 
-**Dữ liệu ra :**
+Dữ liệu ra
 4
-
 ```
 
 <!--more-->

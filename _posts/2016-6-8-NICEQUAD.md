@@ -16,8 +16,8 @@ Có N điểm tọa độ nguyên trên mặt phẳng, một tứ giác ABCD v�
 
 #### Dữ liệu
 
-*   Dòng đầu tiên là số bộ test T (T < 11).
-*   T nhóm dòng tiếp theo, mỗi nhóm dòng gồm số điểm N (N < 30001), sau đó là N dòng, mối dòng gồm tọa độ 1 điểm (x, y) (-3000 < x, y < 30000).
++ Dòng đầu tiên là số bộ test T (T < 11).
++ T nhóm dòng tiếp theo, mỗi nhóm dòng gồm số điểm N (N < 30001), sau đó là N dòng, mối dòng gồm tọa độ 1 điểm (x, y) (-3000 < x, y < 30000).
 
 #### Kết qủa
 

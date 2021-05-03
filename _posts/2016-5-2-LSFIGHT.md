@@ -22,13 +22,13 @@ Tuy nhiên ban tổ chức muốn biết trước xem có bao nhiêu người c�
 
 #### Dữ liệu
 
-\- Dòng đầu là số nguyên dương N (3 <= N <= 500)  
-\- N dòng sau là ma trận A\[i, j\], A\[i, j\] = 0 nếu thí sinh i thua thí sinh j và A\[i, j\] = 1 nếu ngược lại. Biết rằng luôn đảm bảo A\[i, i\]=1 với mọi i và A\[i, j\] + A\[j, i\] = 1 với i <> j. Các số viết cách nhau ít nhất 1 dấu cách.
++ Dòng đầu là số nguyên dương N (3 <= N <= 500)  
++ N dòng sau là ma trận A\[i, j\], A\[i, j\] = 0 nếu thí sinh i thua thí sinh j và A\[i, j\] = 1 nếu ngược lại. Biết rằng luôn đảm bảo A\[i, i\]=1 với mọi i và A\[i, j\] + A\[j, i\] = 1 với i <> j. Các số viết cách nhau ít nhất 1 dấu cách.
 
 #### Kết quả
 
-\- Dòng đầu là số nguyên dương M - số lượng thí sinh có khả năng thắng cuộc  
-\- M dòng sau mỗi dòng ghi một số là chỉ số của thí sinh có khả năng thắng cuộc theo thứ tự tăng dần của chỉ số.
++ Dòng đầu là số nguyên dương M - số lượng thí sinh có khả năng thắng cuộc  
++ M dòng sau mỗi dòng ghi một số là chỉ số của thí sinh có khả năng thắng cuộc theo thứ tự tăng dần của chỉ số.
 
 #### Ví dụ
 

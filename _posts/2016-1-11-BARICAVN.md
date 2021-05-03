@@ -10,8 +10,8 @@ codeforces: https://codeforces.com/group/FLVn1Sc504/contest/274766/problem/N
 
 Barica là một con cóc không bình thường. Barica sống trong một cái ao, nơi có N lá sen bềnh bồng trên mặt nước. Những lá sen được đánh số từ 1 đến N. Nhìn từ trên xuống, mỗi lá sen đc xem như một điểm trên hệ trục tọa độ Oxy. Barica có thể nhảy từ lá sen có tọa độ (x1;y1) đến tọa độ (x2,y2) nếu:  
   
-\_ x2 > x1 và y1 = y2 hoặc  
-\_ y2 > y1 và x1 = x2  
++ x2 > x1 và y1 = y2 hoặc  
++ y2 > y1 và x1 = x2  
   
 Với mỗi lá sen, chúng ta biết được số lượng ruồi gần đó. Barica có thể dùng lưỡi tóm gọn tất cả những con ruồi gần lá sen mà nó đang đứng.  
   
@@ -22,13 +22,13 @@ Hãy tìm năng lượng lớn nhất mà Barica có thể có được tại l�
 
 #### Input
 
-\_ Dòng đầu là số N và K (N<=300 000; K<=1000) cách nhau bởi khoảng trắng  
-\_ N dòng sau mỗi dòng chứa 3 số x\_i, y\_i, F\_i với x\_i và y\_i là tọa độ lá sen thứ i và F\_i là số ruồi ở lá sen i. (0 <= x\_i, y\_i <= 100 000; 0 <= F\_i <=1000)  
++ Dòng đầu là số N và K (N<=300 000; K<=1000) cách nhau bởi khoảng trắng  
++ N dòng sau mỗi dòng chứa 3 số x\_i, y\_i, F\_i với x\_i và y\_i là tọa độ lá sen thứ i và F\_i là số ruồi ở lá sen i. (0 <= x\_i, y\_i <= 100 000; 0 <= F\_i <=1000)  
 Lưu ý: không có hai lá sen nào trùng tọa độ và luôn tồn tại ít nhất một đường đi từ 1 tới N.
 
 #### Output
 
-\_ Một dòng duy nhất là năng lượng cao nhất mà Barica có thể có được khi kết thúc ở lá sen thứ N.
++ Một dòng duy nhất là năng lượng cao nhất mà Barica có thể có được khi kết thúc ở lá sen thứ N.
 
 #### Example
 

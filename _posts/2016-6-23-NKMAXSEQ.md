@@ -21,8 +21,8 @@ Yêu cầu: cho số nguyên p, trong số các dãy con của dãy số đã ch
 
 #### Dữ liệu vào
 
-*   Dòng đầu tiên ghi hai số nguyên n và p cách nhau bởi dấu cách.
-*   Dòng thứ i trong số n dòng tiếp theo chứa số nguyên ai là số hạng thứ i của dãy số đã cho, i = 1, 2, …, n.
++ Dòng đầu tiên ghi hai số nguyên n và p cách nhau bởi dấu cách.
++ Dòng thứ i trong số n dòng tiếp theo chứa số nguyên ai là số hạng thứ i của dãy số đã cho, i = 1, 2, …, n.
 
 #### Kết qủa
 

@@ -21,8 +21,8 @@ Trò chơi chẵn lẻ là trò chơi hai đối thủ được mô tả như sa
 
 **Dữ liệu:**
 
-*   Dòng thứ nhất chứa số nguyên dương k là số lượng bộ dữ liệu.
-*   Tiếp theo là k nhóm dòng, mỗi nhóm dòng tương ứng với một bộ dữ liệu có dạng:
++ Dòng thứ nhất chứa số nguyên dương k là số lượng bộ dữ liệu.
++ Tiếp theo là k nhóm dòng, mỗi nhóm dòng tương ứng với một bộ dữ liệu có dạng:
 
 o   Dòng thứ nhất chứa số nguyên dương n (n <= 500).
 

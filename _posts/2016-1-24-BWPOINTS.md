@@ -14,11 +14,11 @@ Trên trục số thực cho n điểm đen và n điểm trắng hoàn toàn ph
 
 **Dữ liệu:**
 
-*   Dòng thứ nhất chứa số nguyên dương n (n <= 10^5).  
-*   Dòng thứ hai chứa các số a1, a2, …, an (|ai| <= 10^9, i = 1, 2,…, n)
-*   Dòng thứ ba chứa các số b1, b2, …, bn (|bi| <= 10^9, i = 1, 2,…, n)
++ Dòng thứ nhất chứa số nguyên dương n (n <= 10^5).  
++ Dòng thứ hai chứa các số a1, a2, …, an (|ai| <= 10^9, i = 1, 2,…, n)
++ Dòng thứ ba chứa các số b1, b2, …, bn (|bi| <= 10^9, i = 1, 2,…, n)
 
-      Các số trên cùng một dòng được ghi cách nhau ít nhất một dấu cách.
+Các số trên cùng một dòng được ghi cách nhau ít nhất một dấu cách.
 
 **Kết quả:** Ghi ra một số nguyên duy nhất là số k lớn nhất tìm được
 
@@ -46,9 +46,7 @@ Kết quả
 <!--more-->
 
 
-
 Trộn hai màu lại thành một danh sách trên trục tọa độ và sort lại. Sau đó nhận thấy ta chỉ cần chọn các cặp điểm kề nhau khác màu trên trục này thì sẽ được nhiều cặp điểm nhất không giao nhau (tham lam).
-
 
 Ở đây tôi tạo biến Now lưu màu hiện tại khi duyệt, Now = -1 nếu như nút
 này đã dùng rồi.

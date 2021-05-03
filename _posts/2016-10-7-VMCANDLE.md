@@ -26,16 +26,16 @@ Cho `K`. Tìm số thứ tụ của cây nến đang cháy thứ `K` sau `N` l�
 
 #### Input
 
-*   Một số nguyên dương duy nhất `K`
++ Một số nguyên dương duy nhất `K`
 
 #### Giới hạn
 
-*   `K <= 10^18`
-*   33% số test có `K <= 4000`
++ `K <= 10^18`
++ 33% số test có `K <= 4000`
 
 #### Output
 
-*   Một số nguyên dương là số thứ tự của cây nến sáng thứ `K`.
++ Một số nguyên dương là số thứ tự của cây nến sáng thứ `K`.
 
 #### Example
 

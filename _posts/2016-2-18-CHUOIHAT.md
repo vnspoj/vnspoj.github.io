@@ -1,16 +1,11 @@
 ---
 layout: post
-title:  "CHUOIHAT - "
-categories: []
+title:  "CHUOIHAT - Chuỗi hạt"
+categories: [dp,bignum]
 code: CHUOIHAT
 src: CHUOIHAT.cpp
 codeforces: https://codeforces.com/group/FLVn1Sc504/contest/274485/problem/W
 ---
-
-
-
-  
-
 
 Khi tiến hành khai quật khảo cổ ở một vương quốc xa xưa nọ, các nhà khoa học khai quật được rất nhiều chuỗi hạt lạ. Sau khi quan sát, các nhà khoa học thấy rằng các chuỗi hạt có một số đặc điểm chung.
 
@@ -24,8 +19,8 @@ Manh mối đến đây thì dừng lại, vì các nhà khoa học không tìm 
 
 #### Yêu cầuBạn hãy viết chương trình giúp nhà khoa học xác định chuỗi hạt có thứ tự từ điển là X.#### Dữ liệu
 
-*   Dòng 1: chứa số nguyên dương N, là số hạt ngọc trong mỗi chuỗi hạt
-*   Dòng 2: chứa số nguyên dương X
++ Dòng 1: chứa số nguyên dương N, là số hạt ngọc trong mỗi chuỗi hạt
++ Dòng 2: chứa số nguyên dương X
 
 #### Kết qủa
 
@@ -35,8 +30,8 @@ Gồm 1 dòng duy nhất, chứa N số nguyên, cách nhau một khoảng trắ
 
 #### Giới hạn
 
-*   N là số nguyên dương trong phạm vi \[1, 250\]
-*   X là số nguyên dương trong phạm vi từ 1 đến số lượng tối đa các chuỗi hạt.
++ N là số nguyên dương trong phạm vi \[1, 250\]
++ X là số nguyên dương trong phạm vi từ 1 đến số lượng tối đa các chuỗi hạt.
 
 #### Ví dụ
 
@@ -45,20 +40,15 @@ Input
 2
 4
 
-**Kết qủa**
+Kết qủa
 2 3
+```
 
 **Giải thích**
 Các chuỗi hạt sắp theo thứ tự từ điển:
 1 2, 1 3, 1 4, 2 3, 2 4
 
 Chuỗi hạt thứ 4 là 2 3
-
-
-	
-
-
-```
 
 <!--more-->
 

@@ -38,15 +38,15 @@ Tổng độ dài là 1.414213562 + 1.414213562 = 2.828427124 .
 
 #### DỮ LIỆU
 
-*   Dòng 1: Hai số nguyên cách nhau bởi dấu cách: N và W
-*   Dòng 2: Một số thực: M
-*   Dòng 3..N+2: Mỗi dòng gồm 2 số nguyên cách nhau bởi dấu cách: x\_i và y\_i
-*   Dòng N+3..N+2+W: 2 số nguyên cách nhau bởi dấu cách: Pi và Pj
++ Dòng 1: Hai số nguyên cách nhau bởi dấu cách: N và W
++ Dòng 2: Một số thực: M
++ Dòng 3..N+2: Mỗi dòng gồm 2 số nguyên cách nhau bởi dấu cách: x\_i và y\_i
++ Dòng N+3..N+2+W: 2 số nguyên cách nhau bởi dấu cách: Pi và Pj
 
 #### KẾT QUẢ
 
-*   Dòng 1: Một số nguyên trên 1 dòng. Nếu không có phương án để cấp điện cho cột N từ cột 1 thì ghi ra -1. Ngược lại, ghi ra 1 số nguyên là tổng độ dài nhỏ nhất nhân với 1000.
-*   Chú ý không làm tròn, làm giảm tích thu được ở trên.
++ Dòng 1: Một số nguyên trên 1 dòng. Nếu không có phương án để cấp điện cho cột N từ cột 1 thì ghi ra -1. Ngược lại, ghi ra 1 số nguyên là tổng độ dài nhỏ nhất nhân với 1000.
++ Chú ý không làm tròn, làm giảm tích thu được ở trên.
 
 #### VÍ DỤ
 

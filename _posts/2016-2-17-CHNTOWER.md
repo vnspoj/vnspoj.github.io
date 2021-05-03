@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "CHNTOWER - "
-categories: []
+title:  "CHNTOWER - Tháp Hà Nội"
+categories: [dp]
 code: CHNTOWER
 src: CHNTOWER.cpp
 codeforces: https://codeforces.com/group/FLVn1Sc504/contest/274485/problem/V

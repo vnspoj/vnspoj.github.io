@@ -18,9 +18,9 @@ Bác John đã chuẩn bị một danh sách gồm Q (1 ≤ Q ≤ 200000) đoạ
 
 #### Dữ liệu
 
-*   Dòng đầu tiên chứa 2 số nguyên N và Q.
-*   Dòng thứ i trong số N dòng sau chứa 1 số nguyên duy nhất, là độ cao của con bò thứ i.
-*   Dòng thứ i trong số Q trong tiếp theo chứa 2 số nguyên A, B (1 ≤ A ≤ B ≤ N), cho biết đoạn các con bò từ A đến B.
++ Dòng đầu tiên chứa 2 số nguyên N và Q.
++ Dòng thứ i trong số N dòng sau chứa 1 số nguyên duy nhất, là độ cao của con bò thứ i.
++ Dòng thứ i trong số Q trong tiếp theo chứa 2 số nguyên A, B (1 ≤ A ≤ B ≤ N), cho biết đoạn các con bò từ A đến B.
 
 #### Kết qủa
 

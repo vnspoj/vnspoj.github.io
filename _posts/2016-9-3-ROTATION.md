@@ -16,9 +16,9 @@ Hình ở trên minh họa 2 cách đặt dây curoa giữa 2 bánh xe. Trong h�
 
 Cho danh sách các dạng của curoa nối các bánh xe với nhau. Biết rằng bánh xe 1 được động cơ quay theo chiều kim đồng hồ. Hãy xác định chiều quay của bánh xe N. Mỗi dây curoa được mô tả bởi 3 số nguyên:
 
-*   S\_i -- bánh xe tác động (nguồn)
-*   D\_i -- bánh xe bị tác động (đích)
-*   C\_i -- dạng của dây curoa (0=dây thẳng, 1=dây chéo)
++ S\_i -- bánh xe tác động (nguồn)
++ D\_i -- bánh xe bị tác động (đích)
++ C\_i -- dạng của dây curoa (0=dây thẳng, 1=dây chéo)
 
 Thật không may, FJ lại đưa ra danh sách các dây curoa theo 1 thứ tự ngẫu nhiên.
 
@@ -30,12 +30,12 @@ Dây curoa thẳng được nối tới bánh xe 2 và 3 bởi vậy mà chúng 
 
 #### DỮ LIỆU
 
-*   Dòng 1: Một số nguyên duy nhất: N
-*   Dòng 2..N: Mỗi dòng mô tả 1 dây curoa với 3 số nguyên: S\_i, D\_i, và C\_i
++ Dòng 1: Một số nguyên duy nhất: N
++ Dòng 2..N: Mỗi dòng mô tả 1 dây curoa với 3 số nguyên: S\_i, D\_i, và C\_i
 
 #### KẾT QUẢ
 
-*   Dòng 1: Một số nguyên duy nhất là chiều quay của bánh xe N. (0=cùng chiều kim đồng hồ, 1=ngược chiều kim đồng hồ)
++ Dòng 1: Một số nguyên duy nhất là chiều quay của bánh xe N. (0=cùng chiều kim đồng hồ, 1=ngược chiều kim đồng hồ)
 
 #### VÍ DỤ
 
