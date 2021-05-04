@@ -14,17 +14,17 @@ repo: vnspoj.github.io
 social:
   # - icon: fa-facebook
   # link: "//facebook.com/huynhsamha"
-  - icon: fa-stack-overflow
-    link: "//stackoverflow.com/users/8828489/huynhsamha"
-  - icon: fa-github
-    link: "//github.com/vnspoj"
+  # - icon: fa-stack-overflow
+  #   link: "//stackoverflow.com/users/8828489/huynhsamha"
+  # - icon: fa-github
+  #   link: "//github.com/vnspoj"
   # - icon: fa-linkedin
   #   link: "//www.linkedin.com/in/huynhsamha"
-  - icon: fa-twitter
-    link: "//twitter.com/huynhsamha"
+  # - icon: fa-twitter
+  #   link: "//twitter.com/huynhsamha"
 
 share:
-  twitter_username: huynhsamha
+  # twitter_username: huynhsamha
   # fb_appid: 1749788565247320
 
 urls:
@@ -48,8 +48,8 @@ urls:
 url: "//vnspoj.github.io"
 baseurl: ""
 permalink: /problems/:title:output_ext
-paginate: 30
-per_page: 30
+paginate: 20
+per_page: 20
 paginate_path: "/page/:num/"
 markdown: kramdown
 mathjax: true

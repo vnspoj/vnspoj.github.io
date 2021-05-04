@@ -199,41 +199,41 @@ footer {
             padding-right: 35px;
         }
     }
-    .social-links {
-        padding-top: 15px;
-        a {
-            color: $color-footer-white;
-            font-size: 16px;
-            margin-right: 10px;
-            span {
-                border: 2px solid $color-footer-white;
-                border-radius: 50%;
-                width: 40px;
-                height: 40px;
-                position: relative;
-                display: inline-block;
-                i {
-                    position: absolute;
-                    top: 50%;
-                    left: 50%;
-                    transform: translate(-50%, -50%);
-                }
-            }
-            &:hover {
-                span {
-                    border-color: $color-primary;
-                    transform: rotate(360deg);
-                    transition: 0.5s;
-                }
-            }
-        }
-    }
-    .external-links {
-        transition-duration: 0.3s;
-        &:hover {
-            padding-left: 10px;
-        }
-    }
+    // .social-links {
+    //     padding-top: 15px;
+    //     a {
+    //         color: $color-footer-white;
+    //         font-size: 16px;
+    //         margin-right: 10px;
+    //         span {
+    //             border: 2px solid $color-footer-white;
+    //             border-radius: 50%;
+    //             width: 40px;
+    //             height: 40px;
+    //             position: relative;
+    //             display: inline-block;
+    //             i {
+    //                 position: absolute;
+    //                 top: 50%;
+    //                 left: 50%;
+    //                 transform: translate(-50%, -50%);
+    //             }
+    //         }
+    //         &:hover {
+    //             span {
+    //                 border-color: $color-primary;
+    //                 transform: rotate(360deg);
+    //                 transition: 0.5s;
+    //             }
+    //         }
+    //     }
+    // }
+    // .external-links {
+    //     transition-duration: 0.3s;
+    //     &:hover {
+    //         padding-left: 10px;
+    //     }
+    // }
 }
 
 @media only screen and (max-width: 768px) {
@@ -305,42 +305,42 @@ div.sidebar-layout {
 
 /* Social Icons */
 
-.social {
-    display: block;
-    margin: 18px 0;
-    ul {
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-        li {
-            display: inline-block;
-            margin-right: 8px;
-            width: 36px;
-            height: 36px;
-            border-radius: 50%;
-            border: 2px solid $color-primary;
-            &:last-child {
-                margin-right: 0px
-            }
-            position: relative;
-        }
-    }
-    li {
-        a {
-            position: absolute;
-            font-size: 15px;
-            color: $color-primary;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-        }
-        &:hover {
-            cursor: pointer;
-            transition-duration: 0.5s;
-            transform: rotate(360deg);
-        }
-    }
-}
+// .social {
+//     display: block;
+//     margin: 18px 0;
+//     ul {
+//         list-style-type: none;
+//         margin: 0;
+//         padding: 0;
+//         li {
+//             display: inline-block;
+//             margin-right: 8px;
+//             width: 36px;
+//             height: 36px;
+//             border-radius: 50%;
+//             border: 2px solid $color-primary;
+//             &:last-child {
+//                 margin-right: 0px
+//             }
+//             position: relative;
+//         }
+//     }
+//     li {
+//         a {
+//             position: absolute;
+//             font-size: 15px;
+//             color: $color-primary;
+//             top: 50%;
+//             left: 50%;
+//             transform: translate(-50%, -50%);
+//         }
+//         &:hover {
+//             cursor: pointer;
+//             transition-duration: 0.5s;
+//             transform: rotate(360deg);
+//         }
+//     }
+// }
 
 .share-page {
     margin-top: 40px;
