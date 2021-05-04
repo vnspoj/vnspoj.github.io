@@ -103,14 +103,14 @@ a {
     li {
         margin: 0;
         list-style: none;
-        transition-duration: 0.3s;
+        // transition-duration: 0.3s;
         &::before {
             content: "»";
             margin-right: .5em;
         }
-        &:hover {
-            padding-left: 10px;
-        }
+        // &:hover {
+        //     padding-left: 10px;
+        // }
     }
 }
 
@@ -164,10 +164,10 @@ footer {
     }
     .navigation {
         div.link {
-            transition-duration: 0.3s;
-            &:hover {
-                padding-left: 10px;
-            }
+            // transition-duration: 0.3s;
+            // &:hover {
+            //     padding-left: 10px;
+            // }
             &::before {
                 content: "»";
                 margin-right: .5em;
@@ -543,4 +543,8 @@ input#js-page-search__input {
 	padding: 2px 4px;
 	color: #c7254e !important;
 	font-size: 90%;
+}
+
+.pt-15px {
+	padding-top: 15px;
 }
