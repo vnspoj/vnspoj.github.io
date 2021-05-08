@@ -18,7 +18,7 @@ layout: default
   {% for category in site.categories %}
     {% capture category_slug %}{{ category | first }}{% endcapture %}
     {% for c_slug in category_slug %}
-      {% assign nPosts = site.categories[page.categories].size %}
+      {% assign nPosts = site.categories[c_slug].size %}
       {% if c_slug == page.categories %}
         <button class="btn btn-sm btn-default active">{{ c_slug }} ({{ nPosts }})</button>
       {% else %}
