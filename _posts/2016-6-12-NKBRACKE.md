@@ -2,46 +2,48 @@
 layout: post
 title:  "NKBRACKE - Dãy ngoặc đúng"
 categories: [segment-tree, data-structure]
+level: medium
 code: NKBRACKE
 src: NKBRACKE.cpp
 codeforces: https://codeforces.com/group/FLVn1Sc504/contest/274512/problem/L
 ---
   
-Cho một xâu độ dài N chỉ gồm các kí tự ‘(‘ và ‘)’, các kí tự được đánh số từ 1 đến N theo chiều từ trái qua phải.
+Cho một xâu độ dài `N` chỉ gồm các kí tự `(` và `)`, các kí tự được đánh số từ `1` đến `N` theo chiều từ trái qua phải.
 
-Một dãy ngoặc đúng được định nghĩa như sau:
+Một **dãy ngoặc đúng** được định nghĩa như sau:
+
 + Xâu rỗng là 1 dãy ngoặc đúng.
-+ Nếu A là 1 dãy ngoặc đúng thì (A) là 1 dãy ngoặc đúng.
-+ Nếu A và B là 2 dãy ngoặc đúng thì AB là 1 dãy ngoặc đúng.
++ Nếu `A` là 1 dãy ngoặc đúng thì `(A)` là 1 dãy ngoặc đúng.
++ Nếu `A` và `B` là 2 dãy ngoặc đúng thì `AB` là 1 dãy ngoặc đúng.
 
-Cho M truy vấn, mỗi truy vấn thuộc 1 trong 2 loại sau:
+Cho `M` truy vấn, mỗi truy vấn thuộc 1 trong 2 loại sau:
 
-+ 0 i ch: thay đổi kí tự ở vị trí i của xâu kí tự thành kí tự ch.
-+ 1 i j: in ra 1 nếu xâu con từ vị trí i đến vị trí j là một dãy ngoặc đúng, in ra 0 trong trường hợp ngược lại.
++ `0 i ch`: thay đổi kí tự ở vị trí `i` của xâu kí tự thành kí tự `ch`.
++ `1 i j`: in ra `1` nếu xâu con từ vị trí `i` đến vị trí `j` là một dãy ngoặc đúng, in ra `0` trong trường hợp ngược lại.
 
-**Giới hạn:**
+#### Giới hạn
 
-+ 2 <= N <= 100000
-+ 1 <= M <= 200000
++ `2 <= N <= 100,000`
++ `1 <= M <= 200,000`
 
-Trong truy vấn loại 1:    
-+ 1 <= i <= N;              
-+ ch là ‘(‘ hoặc ‘)’
+Trong truy vấn loại 1:   
++ `1 <= i <= N`         
++ `ch` là `(` hoặc `)`
 
 Trong truy vấn loại 2:    
-+ 1 <= i <= j <= N;
++ `1 <= i <= j <= N`
 
-**Input**
+#### Input
 
-+ Dòng đầu tiên chứa 2 số N, M
-+ Dòng tiếp theo chứa N kí tự liên tiếp.
-+ M dòng tiếp theo, mỗi dòng chứa 1 truy vấn thuộc 1 trong 2 loại trên.
++ Dòng đầu tiên chứa 2 số `N`, `M`
++ Dòng tiếp theo chứa `N` kí tự liên tiếp.
++ `M` dòng tiếp theo, mỗi dòng chứa 1 truy vấn thuộc 1 trong 2 loại trên.
 
-**Output**
+#### Output
 
-+ In ra 0 hoặc 1 tương ứng với mỗi truy vấn loại 2.
++ In ra `0` hoặc `1` tương ứng với mỗi truy vấn loại 2.
 
-**Ví dụ:**
+#### Ví dụ
 
 ```
 Input

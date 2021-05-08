@@ -74,7 +74,7 @@ Lấy ý tưởng từ giải thuật Tarjan, DFS từ 1 đỉnh trên đồ th�
 
 <img src="/static/img/posts/NKPOLICE.01.jpg">
 
-##### Truy vấn 1: A, B, G1, G2
+### Truy vấn 1: A, B, G1, G2
 
 Đối với truy vấn này, cần kiểm tra tính liên thông từ `A` đến `B` trên đồ thị không chứa cạnh `(G1,G2)`. Giả sử trên đường đi duyệt DFS ở trên, `G1` duyệt trước `G2` (`num[G1] < num[G2]`), có 2 trường hợp xảy ra:
 
@@ -91,11 +91,13 @@ Sau cùng cần kiểm tra vị trí `A` và `B` so với `G2`, đảm bảo r�
 <img src="/static/img/posts/NKPOLICE.04.jpg">
 
 
-##### Truy vấn 2: A, B, C
+### Truy vấn 2: A, B, C
 
 
 Giả sử `A` được duyệt trước `B` trong quá trình DFS (`num[A] < num[B]`).
+
 Xét trường hợp `A,B` là 1 cạnh trực tiếp của đồ thị (`A` là cha trực tiếp của `B`).
+
 Xét trường hợp `B` được duyệt trong cây gốc `A` và ngược lại.
 
 Ở từng trường hợp, cần kiểm tra vị trí của `C` với `A`, `B`, kiểm tra cha chung và low link giữa các node.
