@@ -3,63 +3,69 @@ layout: compress
 ---
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="author" content="{{ site.author }}" />
-    <meta name="description" content="{% if page.title %}{{ page.title }}{% else %}{{ site.description }}{% endif %}" />
-    <meta name="keywords" content="{% if page.title %}{{ page.title }}, {{ site.title }}, {% for categ in page.categories %}{{ categ }}{% if forloop.last == false %}, {% endif %}{% endfor %}{% else %}{{ site.title }}, {% for category in site.categories %}{% capture categories_slug %}{{ category | first }}{% endcapture %}{% for categ in categories_slug %}{{ categ }}{% endfor %}{% if forloop.last == false %}, {% endif %}{% endfor %}{% endif %}" />
 
-    <title>{% if page.title %}{{ page.title }} - {{ site.title }}{% else %}{{ site.author }}{% endif %}</title>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="{{ site.author }}" />
+  <meta name="description" content="{% if page.title %}{{ page.title }}{% else %}{{ site.description }}{% endif %}" />
+  <meta name="keywords"
+    content="{% if page.title %}{{ page.title }}, {{ site.title }}, {% for categ in page.categories %}{{ categ }}{% if forloop.last == false %}, {% endif %}{% endfor %}{% else %}{{ site.title }}, {% for category in site.categories %}{% capture categories_slug %}{{ category | first }}{% endcapture %}{% for categ in categories_slug %}{{ categ }}{% endfor %}{% if forloop.last == false %}, {% endif %}{% endfor %}{% endif %}" />
 
-    <link rel="shortcut icon" href="{{ site.baseurl }}/static/img/favicon.png" />
-    <link rel="alternate" type="application/rss+xml" title="RSS" href="{{ site.baseurl }}/feed.xml">
+  <title>{% if page.title %}{{ page.title }} - {{ site.title }}{% else %}{{ site.author }}{% endif %}</title>
 
-    {% if page.noindex %}
-      <meta name="robots" content="noindex">
-    {% endif %}
+  <link rel="shortcut icon" href="{{ site.baseurl }}/static/img/favicon.png" />
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="{{ site.baseurl }}/feed.xml">
 
-    <!-- Facebook share -->
-    {% include meta-facebook.html %}
+  {% if page.noindex %}
+  <meta name="robots" content="noindex">
+  {% endif %}
 
-    <!-- Tweetter share -->
-    {% include meta-twitter.html %}
+  <!-- Facebook share -->
+  {% include meta-facebook.html %}
 
-    <!-- Stylesheets -->
-    {% include stylesheets.html %}
+  <!-- Tweetter share -->
+  {% include meta-twitter.html %}
 
-    <!-- Google Analytics -->
-    {% include google-analytics.html %}
+  <!-- Stylesheets -->
+  {% include stylesheets.html %}
 
-    <!-- Google Adsense -->
-    {% include google-adsense.html %}
+  <!-- Google Analytics -->
+  {% include google-analytics.html %}
 
-  </head>
+  <!-- Google Adsense -->
+  {% include google-adsense.html %}
 
-  <body>
-    <div id="js-top-element"></div>
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 sidebar-layout">
-          {% include header.html %}
-        </div>
+</head>
 
-        <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 main-layout">
-          {{ content }}
-        </div>
+<body>
+  <amp-auto-ads type="adsense" data-ad-client="ca-pub-4122425262126167">
+  </amp-auto-ads>
+
+  <div id="js-top-element"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 sidebar-layout">
+        {% include header.html %}
+      </div>
+
+      <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 main-layout">
+        {{ content }}
       </div>
     </div>
+  </div>
 
-    <!-- Footer -->
-    {% include footer.html %}
+  <!-- Footer -->
+  {% include footer.html %}
 
-    <button id="js-scroll-top" class="btn btn-warning">
-      <span><i class="fa fa-caret-up"></i></span>
-    </button>
+  <button id="js-scroll-top" class="btn btn-warning">
+    <span><i class="fa fa-caret-up"></i></span>
+  </button>
 
-    <!-- Scripts -->
-    {% include scripts.html %}
+  <!-- Scripts -->
+  {% include scripts.html %}
 
-  </body>
+</body>
+
 </html>
