@@ -59,7 +59,13 @@ layout: default
     {% endfor %} -->
     <ol class="posts">
       {% for post in site.categories[page.categories] %}
-        <li><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a> &raquo; <i><span>{{ post.date | date_to_string }}</span></i></li>
+        <li>
+          <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+          {% if post.level %}
+          &raquo; <a href="#">{{ post.level }}</a>
+          {% endif %}
+        </li>
+      <!-- <li><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a> &raquo; <i><span>{{ post.date | date_to_string }}</span></i></li> -->
       {% endfor %}
     </ol>
   {% else %}

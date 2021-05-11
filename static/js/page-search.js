@@ -168,17 +168,16 @@
       searchResultsEl.firstChild.innerHTML = matchingPosts
         .map(function (post) {
           let d = new Date(post.pubDate);
-          let dateFormat = d
-            .toUTCString()
-            .replace(/.*(\d{2})\s+(\w{3})\s+(\d{4}).*/, '$2 $1, $3');
+          // let dateFormat = d
+          //   .toUTCString()
+          //   .replace(/.*(\d{2})\s+(\w{3})\s+(\d{4}).*/, '$2 $1, $3');
           return (
-            '<li><a href="' +
-            post.link +
-            '">' +
-            post.title +
-            '</a> &raquo; <i><span>' +
-            dateFormat +
-            '</span></i></li>'
+            '<li><a href="' + post.link + '">' + post.title + '</a>'
+            + (post.level ? '&raquo; <a href="#">' + post.level + '</a>' : '')
+            + '</li>'
+            // '</a> &raquo; <i><span>' +
+            // dateFormat +
+            // '</span></i></li>'
           );
         })
         .join('');
