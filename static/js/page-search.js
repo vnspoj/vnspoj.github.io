@@ -173,7 +173,7 @@
           //   .replace(/.*(\d{2})\s+(\w{3})\s+(\d{4}).*/, '$2 $1, $3');
           return (
             '<li><a href="' + post.link + '">' + post.title + '</a>'
-            + (post.level ? '&raquo; <a href="#">' + post.level + '</a>' : '')
+            + (post.level ? '&raquo; Level: <a href="#">' + post.level + '</a>' : '')
             + '</li>'
             // '</a> &raquo; <i><span>' +
             // dateFormat +
