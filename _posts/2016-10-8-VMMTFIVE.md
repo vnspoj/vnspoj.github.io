@@ -2,6 +2,7 @@
 layout: post
 title:  "VMMTFIVE - Tổng trên ma trận!"
 categories: [brute-force]
+level: easy
 code: VMMTFIVE
 src: VMMTFIVE.cpp
 codeforces: https://codeforces.com/group/FLVn1Sc504/contest/274856/problem/O

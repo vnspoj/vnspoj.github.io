@@ -2,6 +2,7 @@
 layout: post
 title:  "VCOWFLIX - Đi xem phim"
 categories: [dp]
+level: easy
 code: VCOWFLIX
 src: VCOWFLIX.cpp
 codeforces: https://codeforces.com/group/FLVn1Sc504/contest/274854/problem/X
