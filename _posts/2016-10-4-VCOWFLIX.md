@@ -42,7 +42,7 @@ Output
 
 <!--more-->
 
-
+Sử dụng [Quy hoạch động](https://vnspoj.github.io/category/dp).
 
 Đây là bài toán cơ sở cho bài toán cái túi huyền thoại. Thay vì giá trị lớn nhất, bây giờ chỉ yêu cầu khối lượng lớn nhất.
 
