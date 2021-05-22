@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "UPGRANET - VOI 2011 Nâng cấp mạng"
-categories: [lca, dsu, tree, dfs, graph]
+categories: [mst, lca, dsu, tree, dfs, graph]
 level: hard
 code: UPGRANET
 src: UPGRANET.cpp
@@ -50,3 +50,4 @@ Output
 
 <!--more-->
 
+Gợi ý: tìm [cây khung cực đại](https://vnspoj.github.io/category/mst) của đồ thị bằng [Disjoint-set Union - DSU](https://vnspoj.github.io/category/dsu). Sau khi tìm được cây khung, với các cạnh `i` ko nằm trong cây khung, tính chi phí nâng cấp bằng cách tìm cạnh có trọng số nhỏ nhất từ `u[i]` đến `v[i]` trên cây bằng cách tìm cha chung của 2 node này (dùng [LCA](https://vnspoj.github.io/category/lca)).

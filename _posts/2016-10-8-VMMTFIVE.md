@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "VMMTFIVE - Tổng trên ma trận!"
-categories: [brute-force]
+categories: [brute-force, implementation]
 level: easy
 code: VMMTFIVE
 src: VMMTFIVE.cpp
@@ -9,7 +9,7 @@ codeforces: https://codeforces.com/group/FLVn1Sc504/contest/274856/problem/O
 ---
 
 
-Cho một bảng số `5x5`. Nhiệm vụ của bạn là sẽ phải điền vào ma trận sao cho tổng của các phần tử trên mỗi hàng và mỗi cột bằng một số nguyên cho trước. Mỗi phần tử trong bảng số từ `1` đến `25` và không có hai phần tử bất kì nào giống nhau.
+Cho một bảng số `5x5`. Nhiệm vụ của bạn là sẽ phải điền vào ma trận sao cho **tổng của các phần tử trên mỗi hàng và mỗi cột bằng một số nguyên cho trước**. Mỗi phần tử trong bảng số từ `1` đến `25` và **không có hai phần tử bất kì nào giống nhau**.
 
 #### Input
 
