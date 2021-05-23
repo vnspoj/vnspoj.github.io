@@ -87,6 +87,14 @@
     );
     node = node.children[0];
     posts = getPostsFromXml(node);
+    posts = posts.map((post) => {
+      if (post.category) {
+        post.tags = (post.category instanceof Array) ? [...post.category] : [post.category];
+      } else {
+        post.tags = [];
+      }
+      return post;
+    });
     // force search on load page
     startInitSearch();
   };
@@ -136,8 +144,9 @@
     if (posts.title === undefined) {
       matchingPosts = posts.filter((post) => {
         const text = removeVI(currentInputValue);
-        const { title } = post;
-        if (removeVI(title).indexOf(text) > -1) {
+        const { title, tags } = post;
+        const kw = `${title}|${tags.join('|')}`;
+        if (removeVI(kw).indexOf(text) > -1) {
           return true;
         }
         return false;
@@ -158,11 +167,9 @@
       searchResultsEl.classList.remove('is-hidden');
       searchResultsEl.firstChild.innerHTML = matchingPosts
         .map((post) => {
-          let tags = '';
-          if (post.category) {
-            const _tags = (post.category instanceof Array) ? [...post.category] : [post.category];
-            tags = `<i>&raquo; Tags: </i>${_tags.map(x => `<a href="/category/${x}">${x}</a>`).join(', ')}`;
-          }
+          const tags = (post.tags.length > 0)
+            ? `<i>&raquo; Tags: </i>${post.tags.map(x => `<a href="/category/${x}">${x}</a>`).join(', ')}`
+            : '';
           // const d = new Date(post.pubDate);
           // let dateFormat = d
           //   .toUTCString()
