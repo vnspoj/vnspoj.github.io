@@ -11,9 +11,9 @@ layout: default
   Tags: {% for category in page.categories %}<a
     href="{{ site.baseurl }}/category/{{ category }}">{{ category }}</a>{% if forloop.last == false %},
   {% endif %}{% endfor %}
-  {% if page.level %}
+  <!-- {% if page.level %}
   &raquo; Level: <a href="#">{{ page.level }}</a>
-  {% endif %}
+  {% endif %} -->
 </span>
 {% endif %}
 

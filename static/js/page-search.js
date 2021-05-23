@@ -7,14 +7,13 @@
   const { jsrmvi } = window;
   const { removeVI } = jsrmvi;
 
-  let isSearchOpen = false,
-    searchEl = document.querySelector('#js-page-search'),
-    searchInputEl = document.querySelector('#js-page-search__input'),
-    searchResultsEl = document.querySelector('#js-page-search__results'),
-    searchNoResultsEl = document.querySelector('#js-page-search__no_results'),
-    currentInputValue = '',
-    lastSearchResultHash,
-    posts = [];
+  const searchEl = document.querySelector('#js-page-search');
+  const searchInputEl = document.querySelector('#js-page-search__input');
+  const searchResultsEl = document.querySelector('#js-page-search__results');
+  const searchNoResultsEl = document.querySelector('#js-page-search__no_results');
+  let currentInputValue = '';
+  let lastSearchResultHash;
+  let posts = [];
 
   // Changes XML to JSON
   // Modified version from here: http://davidwalsh.name/convert-xml-json
@@ -39,13 +38,9 @@
 
     // do children
     // If all text nodes inside, get concatenated text from them.
-    var textNodes = [].slice.call(xml.childNodes).filter(function (node) {
-      return node.nodeType === 3;
-    });
+    var textNodes = [].slice.call(xml.childNodes).filter(node => node.nodeType === 3);
     if (xml.hasChildNodes() && xml.childNodes.length === textNodes.length) {
-      obj = [].slice.call(xml.childNodes).reduce(function (text, node) {
-        return text + node.nodeValue;
-      }, '');
+      obj = [].slice.call(xml.childNodes).reduce((text, node) => text + node.nodeValue, '');
     } else if (xml.hasChildNodes()) {
       for (var i = 0; i < xml.childNodes.length; i++) {
         var item = xml.childNodes.item(i);
@@ -107,26 +102,26 @@
       // while closing
       searchResultsEl.classList.add('is-hidden');
     }
-    setTimeout(function () {
+    setTimeout(() => {
       searchInputEl.focus();
     }, 210);
   };
 
-  window.addEventListener('keyup', function onKeyPress(e) {
+  window.addEventListener('keyup', (e) => {
     if (e.which === 27) {
-      togglePageSearch();
+      window.togglePageSearch();
     }
   });
-  window.addEventListener('keypress', function onKeyPress(e) {
+  window.addEventListener('keypress', (e) => {
     if (e.which === 47 && !searchEl.classList.contains('is-active')) {
-      togglePageSearch();
+      window.togglePageSearch();
     }
   });
 
   function handleInputChange() {
     var currentResultHash, d;
 
-    currentInputValue = (searchInputEl.value + '').toLowerCase();
+    currentInputValue = (`${searchInputEl.value}`).toLowerCase();
     if (!currentInputValue || currentInputValue.length < 2) {
       lastSearchResultHash = '';
       searchResultsEl.classList.add('is-hidden');
@@ -139,15 +134,13 @@
     // check the `posts` object is single or many objects.
     // if posts.title === undefined, so posts is many objects.
     if (posts.title === undefined) {
-      matchingPosts = posts.filter(function (post) {
+      matchingPosts = posts.filter((post) => {
         const text = removeVI(currentInputValue);
-        const { title, description } = post;
-        if (
-          removeVI(title).indexOf(text) > -1 ||
-          removeVI(description).indexOf(text) > -1
-        ) {
+        const { title } = post;
+        if (removeVI(title).indexOf(text) > -1) {
           return true;
         }
+        return false;
       });
     } else {
       matchingPosts = [posts]; // assign single object to Array
@@ -158,23 +151,24 @@
       searchResultsEl.classList.add('is-hidden');
     }
     // calc current hash result
-    currentResultHash = matchingPosts.reduce(function (hash, post) {
-      return post.title + hash;
-    }, '');
+    currentResultHash = matchingPosts.reduce((hash, post) => post.title + hash, '');
     // has results and results changed
     if (matchingPosts.length && currentResultHash !== lastSearchResultHash) {
       searchNoResultsEl.classList.add('is-hidden');
       searchResultsEl.classList.remove('is-hidden');
       searchResultsEl.firstChild.innerHTML = matchingPosts
-        .map(function (post) {
-          let d = new Date(post.pubDate);
+        .map((post) => {
+          const tags = post.category && post.category.length
+            ? (`<i>&raquo; Tags: </i>${post.category.map(x => `<a href="/category/${x}">${x}</a>`).join(', ')}`) : '';
+          // const d = new Date(post.pubDate);
           // let dateFormat = d
           //   .toUTCString()
           //   .replace(/.*(\d{2})\s+(\w{3})\s+(\d{4}).*/, '$2 $1, $3');
           return (
-            '<li><a href="' + post.link + '">' + post.title + '</a>'
-            + (post.level ? '&raquo; Level: <a href="#">' + post.level + '</a>' : '')
-            + '</li>'
+            `<li><a href="${post.link}">${post.title}</a>
+            ${tags}
+              ${post.level ? `&raquo; Level: <a href="#">${post.level}</a>` : ''}
+            </li>`
             // '</a> &raquo; <i><span>' +
             // dateFormat +
             // '</span></i></li>'
@@ -186,7 +180,7 @@
     lastSearchResultHash = currentResultHash;
   }
 
-  searchInputEl.addEventListener('input', function onInputChange() {
+  searchInputEl.addEventListener('input', () => {
     handleInputChange();
   });
-})();
+}());

@@ -10,8 +10,15 @@ layout: default
     {% for post in paginator.posts %}
     <li>
       <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
-      {% if post.level %}
+      <!-- {% if post.level %}
       <i>&raquo; Level:</i> <a href="#">{{ post.level }}</a>
+      {% endif %} -->
+      {% if post.categories %}
+        <i>&raquo; Tags: </i>
+        {% for category in post.categories %}
+          <a href="{{ site.baseurl }}/category/{{ category }}">{{ category }}</a>
+          {% if forloop.last == false %},{% endif %}
+          {% endfor %}
       {% endif %}
     </li>
     <!-- <li><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a> &raquo; <i><span>{{ post.date | date_to_string }}</span></i></li> -->
