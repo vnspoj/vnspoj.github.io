@@ -2,6 +2,7 @@
 layout: post
 title:  "QBAGENTS - Các đại lý"
 categories: [bfs, queue, dp]
+level: easy
 code: QBAGENTS
 src: QBAGENTS.cpp
 codeforces: https://codeforces.com/group/FLVn1Sc504/contest/274518/problem/H
@@ -24,17 +25,17 @@ Zone muốn nhân viên của mình không lãng phí thời gian. Bởi vậy �
 
 #### Input
 
-Dòng đầu ghi 2 số N, M là số đại lý và số tuyến đường trong mạng giao thông của công ty Fsoft. (N ≤ 250)
+Dòng đầu ghi 2 số `N`, `M` là số đại lý và số tuyến đường trong mạng giao thông của công ty Fsoft. (`N ≤ 250`)
 
-Dòng thứ 2 ghi S,T lần lượt là số thứ tự 2 đại lý có 2 sếp cần phải gặp nhau.
+Dòng thứ 2 ghi `S, T` lần lượt là số thứ tự 2 đại lý có 2 sếp cần phải gặp nhau.
 
-M dòng tiếp theo mỗi dòng ghi 2 số nguyên U, V thể hiện có đường đi một chiều từ U tới V.
+`M` dòng tiếp theo mỗi dòng ghi 2 số nguyên `U, V` thể hiện có đường đi một chiều từ `U` tới `V`.
 
 #### Output
 
 Gồm một dòng duy nhất ghi thời gian nhỏ nhất 2 sếp có thể gặp nhau.
 
-Nếu 2 sếp không thể gặp nhau ghi -1.
+Nếu 2 sếp không thể gặp nhau ghi `-1`.
 
 #### Example
 

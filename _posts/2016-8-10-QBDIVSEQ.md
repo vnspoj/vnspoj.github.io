@@ -2,6 +2,7 @@
 layout: post
 title:  "QBDIVSEQ - Chia dãy"
 categories: [lis, dp]
+level: easy
 code: QBDIVSEQ
 src: QBDIVSEQ.cpp
 codeforces: https://codeforces.com/group/FLVn1Sc504/contest/274518/problem/L
@@ -12,17 +13,17 @@ codeforces: https://codeforces.com/group/FLVn1Sc504/contest/274518/problem/L
   
 
 
-Dãy số M phần tử B được gọi là dãy con của dãy số A gồm N phần tử nếu tồn tại một mã chuyển C gồm M phần tử thoả mãn B\[i\]=A\[C\[i\]\] với mọi I = 1…M và 1 ≤ C\[1\] < C\[2\] < ... < C\[m\] ≤ N.
+Dãy số `M` phần tử `B` được gọi là **dãy con** của dãy số `A` gồm `N` phần tử nếu tồn tại một mã chuyển `C` gồm `M` phần tử thoả mãn `B[i] = A[C[i]]` với mọi `I = 1…M` và `1 ≤ C[1] < C[2] < ... < C[m] ≤ N`.
 
-Một cách chia dãy A thành các dãy con "được chấp nhận" nếu các dãy con này là các dãy không giảm và mỗi phần tử của dãy A thuộc đúng một dãy con.
+Một cách chia dãy `A` thành các dãy con **"được chấp nhận"** nếu các dãy con này là các dãy không giảm và mỗi phần tử của dãy `A` thuộc đúng một dãy con.
 
-**Yêu cầu:** Bạn hãy chia dãy con ban đầu thành ít dãy con nhất mà vẫn "được chấp nhận".
+**Yêu cầu:** Bạn hãy chia dãy con ban đầu thành **ít dãy con nhất** mà vẫn **"được chấp nhận"**.
 
 #### Input
 
-Dòng đầu tiên ghi số N là số phần tử của dãy A. ( N ≤ 10^5 )
+Dòng đầu tiên ghi số `N` là số phần tử của dãy `A`. ( `N ≤ 10^5` )
 
-N dòng tiếp theo ghi N số tự nhiên là các phần tử của dãy A. ( Ai ≤ 10^9 )
+`N` dòng tiếp theo ghi `N` số tự nhiên là các phần tử của dãy `A`. ( `Ai ≤ 10^9` )
 
 #### Output
 
@@ -45,4 +46,4 @@ Output
 <!--more-->
 
 
-Một bài chuỗi con tăng dài nhất để luyện tay.
+Một bài [chuỗi con tăng dài nhất - Longest Increasing Subsequence (LIS)](https://vnspoj.github.io/category/lis).
