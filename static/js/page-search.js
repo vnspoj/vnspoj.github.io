@@ -158,17 +158,20 @@
       searchResultsEl.classList.remove('is-hidden');
       searchResultsEl.firstChild.innerHTML = matchingPosts
         .map((post) => {
-          const tags = post.category && post.category.length
-            ? (`<i>&raquo; Tags: </i>${post.category.map(x => `<a href="/category/${x}">${x}</a>`).join(', ')}`) : '';
+          let tags = '';
+          if (post.category) {
+            const _tags = (post.category instanceof Array) ? [...post.category] : [post.category];
+            tags = `<i>&raquo; Tags: </i>${_tags.map(x => `<a href="/category/${x}">${x}</a>`).join(', ')}`;
+          }
           // const d = new Date(post.pubDate);
           // let dateFormat = d
           //   .toUTCString()
           //   .replace(/.*(\d{2})\s+(\w{3})\s+(\d{4}).*/, '$2 $1, $3');
           return (
             `<li><a href="${post.link}">${post.title}</a>
-            ${tags}
-              ${post.level ? `&raquo; Level: <a href="#">${post.level}</a>` : ''}
+              ${tags}
             </li>`
+            // ${post.level ? `&raquo; Level: <a href="#">${post.level}</a>` : ''}
             // '</a> &raquo; <i><span>' +
             // dateFormat +
             // '</span></i></li>'
