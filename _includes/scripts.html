@@ -15,7 +15,7 @@
 <script src="{{ site.baseurl }}/static/lib/js/jsrmvi.min.js" type="text/javascript"></script>
 
 <!-- Math Type -->
-{% if page.use_math %}
+{% if page.use_math or page.wiki %}
 <script src="{{ site.baseurl }}/static/lib/js/math-jax.js" type="text/javascript"></script>
 {% endif %}
 
@@ -29,7 +29,7 @@
 <script src="{{ site.baseurl }}/static/js/main.js" type="text/javascript"></script>
 
 <!-- highlight source code -->
-{% if page.src or page.highlight_code %}
+{% if page.src or page.wiki %}
 <!-- load prism -->
 <script src="{{ site.baseurl }}/static/lib/js/prism.js" type="text/javascript"></script>
 {% endif %}
