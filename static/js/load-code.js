@@ -16,7 +16,7 @@
     // fetch source from github
     $.ajax({
       url: `https://vnspoj.github.io/solution/src/${filename}`,
-      dataType: 'text',
+      dataType: 'text'
     })
       .done((code) => {
         sourceCode[lang] = code; // store source
@@ -26,7 +26,7 @@
           .addClass(`language-${lang}`)
           .html(highlightCode);
       })
-      .fail(function (err) {
+      .fail((err) => {
         console.log(err);
       });
 
@@ -46,7 +46,7 @@
     });
 
     // copy to clipboard
-    $src.find('.js-copy-code').click(function () {
+    $src.find('.js-copy-code').click(() => {
       const source = sourceCode[lang] || '';
       copyToClipboard(source);
     });

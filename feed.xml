@@ -25,11 +25,13 @@ layout: null
       </item>
     {% endfor %}
     {% for category in site.categories %}
+    {% capture category_slug %}{{ category | first }}{% endcapture %}
+    {% for c_slug in category_slug %}
       <category>
-        <id>{{ category.categories | xml_escape }}</id>
-        <title>{{ category.title | xml_escape }}</title>
-        <link>{{ category.permalink | prepend: site.baseurl | prepend: site.url }}</link>
+        <id>{{ c_slug }}</id>
+        <link>{{ site.baseurl }}/category/{{ c_slug }}</link>
       </category>
+    {% endfor %}
     {% endfor %}
   </channel>
 </rss>
