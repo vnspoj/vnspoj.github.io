@@ -28,16 +28,18 @@ share:
   # fb_appid: 1749788565247320
 
 urls:
-  - text: About Us
-    url: /about
   - text: Categories
     url: /category
   - text: Search
-    url: /search.html
+    url: /search
+  - text: Wiki
+    url: /wiki
   # - text: CodeLearn.io
   #   url: /code-learn
   # - text: Interview Questions
   #   url: /top-interview-questions
+  - text: About Us
+    url: /about
   - text: XML Feed
     url: /feed.xml
   # - text: XML Sitemap
