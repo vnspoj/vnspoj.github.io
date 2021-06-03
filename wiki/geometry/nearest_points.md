@@ -5,8 +5,6 @@ title: Finding the nearest pair of points
 ---
 
 
-# Finding the nearest pair of points
-
 ## Problem statement
 
 Given $n$ points on the plane. Each point $p_i$ is defined by its coordinates $(x_i,y_i)$. It is required to find among them two such points, such that the distance between them is minimal:

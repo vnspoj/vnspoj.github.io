@@ -5,8 +5,6 @@ title: Fenwick Tree
 ---
 
 
-# Fenwick Tree
-
 Let, $f$ be some _reversible_ function and $A$ be an array of integers of length $N$.
 
 Fenwick tree is a data structure which:

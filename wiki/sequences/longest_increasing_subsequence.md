@@ -4,7 +4,6 @@ wiki: true
 title: Longest increasing subsequence
 ---
 
-# Longest increasing subsequence
 
 We are given an array with $n$ numbers: $a[0 \dots n-1]$.
 The task is to find the longest, strictly increasing, subsequence in $a$.
@@ -220,7 +219,7 @@ then the problem of computing the value $d[i]$ is equivalent to finding the **ma
 $$d[i] = \max\left(t[0 \dots a[i] - 1] + 1\right)$$
 
 The problem of finding the maximum of a prefix of an array (which changes) is a standard problem that can be solved by many different data structures. 
-For instance we can use a [Segment tree](./data_structures/segment_tree.html) or a [Fenwick tree](./data_structures/fenwick.html).
+For instance we can use a [Segment tree](../data_structures/segment_tree) or a [Fenwick tree](../data_structures/fenwick).
 
 This method has obviously some **shortcomings**:
 in terms of length and complexity of the implementation this approach will be worse than the method using binary search.

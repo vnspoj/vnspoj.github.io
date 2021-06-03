@@ -4,7 +4,6 @@ wiki: true
 title: Counting labeled graphs
 ---
 
-# Counting labeled graphs
 
 ## Labeled graphs
 

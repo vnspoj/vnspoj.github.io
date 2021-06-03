@@ -4,7 +4,6 @@ wiki: true
 title: Delaunay triangulation and Voronoi diagram
 ---
 
-# Delaunay triangulation and Voronoi diagram
 
 Consider a set $\\{p_i\\}$ of points on the plane.
 A **Voronoi diagram** $V(\\{p_i\\})$ of $\\{p_i\\}$ is a partition of the plane into $n$ regions $V_i$, where $V_i = \\{p\in\mathbb{R}^2;\ \rho(p, p_i) = \min\ \rho(p, p_k)\\}$.

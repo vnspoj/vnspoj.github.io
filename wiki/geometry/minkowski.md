@@ -4,7 +4,6 @@ wiki: true
 title: Minkowski sum of convex polygons
 ---
 
-# Minkowski sum of convex polygons
 
 ## Definition
 Consider two sets $A$ and $B$ of points on a plane. Minkowski sum $A + B$ is defined as $\\{a + b| a \in A, b \in B\\}$.

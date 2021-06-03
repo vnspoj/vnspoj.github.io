@@ -3,13 +3,12 @@ layout: wiki
 wiki: true
 title: D´Esopo-Pape
 ---
-
-# D´Esopo-Pape algorithm
+ algorithm
 
 Given a graph with $n$ vertices and $m$ edges with weights $w_i$ and a starting vertex $v_0$.
 The task is to find the shortest path from the vertex $v_0$ to every other vertex.
 
-The algorithm from D´Esopo-Pape will work faster than [Dijkstra's algorithm](./graph/dijkstra.html) and the [Bellman-Ford algorithm](./graph/bellman_ford.html) in most cases, and will also work for negative edges.
+The algorithm from D´Esopo-Pape will work faster than [Dijkstra's algorithm](../graph/dijkstra) and the [Bellman-Ford algorithm](../graph/bellman_ford) in most cases, and will also work for negative edges.
 However not for negative cycles.
 
 ## Description

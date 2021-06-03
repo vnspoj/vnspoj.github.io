@@ -4,7 +4,6 @@ wiki: true
 title: Check if two segments intersect
 ---
 
-# Check if two segments intersect
 
 You are given two segments $(a, b)$ and $(c, d)$.
 You have to check if they intersect.

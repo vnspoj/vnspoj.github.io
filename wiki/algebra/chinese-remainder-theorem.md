@@ -5,8 +5,6 @@ title: Chinese Remainder Theorem
 ---
 
 
-# Chinese Remainder Theorem
-
 The Chinese Remainder Theorem (which will be referred to as CRT in the rest of this article) was discovered by Chinese mathematician Sun Zi.
 
 ## Formulation
@@ -49,7 +47,7 @@ Let $r_{ij}$ denote the inverse of $p_i$ modulo $p_j$
 $$
     r_{ij} = (p_i)^{-1} \pmod{p_j}
 $$
-which can be found using the algorithm described in [Modular Inverse](./algebra/module-inverse.html). Substituting $a$ from the mixed radix representation into the first congruence equation we obtain
+which can be found using the algorithm described in [Modular Inverse](../algebra/module-inverse). Substituting $a$ from the mixed radix representation into the first congruence equation we obtain
 $$
     a_1 \equiv x_1 \pmod{p_1}.
 $$

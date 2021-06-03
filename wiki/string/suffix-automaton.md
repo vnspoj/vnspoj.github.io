@@ -4,7 +4,6 @@ wiki: true
 title: Suffix Automaton
 ---
 
-# Suffix Automaton
 
 A **suffix automaton** is a powerful data structure that allows solving many string-related problems. 
 

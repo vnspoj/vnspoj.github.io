@@ -4,7 +4,6 @@ wiki: true
 title: Scheduling jobs on two machines
 ---
 
-# Scheduling jobs on two machines
 
 This task is about finding an optimal schedule for $n$ jobs on two machines.
 Every item must first be processed on the first machine, and afterwards on the second one.

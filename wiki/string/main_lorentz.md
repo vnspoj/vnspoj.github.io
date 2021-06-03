@@ -4,7 +4,6 @@ wiki: true
 title: Finding repetitions
 ---
 
-# Finding repetitions
 
 Given a string $s$ of length $n$.
 
@@ -136,7 +135,7 @@ To summarize:
   \end{align}$$
 
 Therefore the only remaining part is how we can compute the values $k_1$ and $k_2$ quickly for every position $cntr$.
-Luckily we can compute them in $O(1)$ using the [Z-function](./string/z-function.html):
+Luckily we can compute them in $O(1)$ using the [Z-function](../string/z-function):
 
 - To can find the value $k_1$ for each position by calculating the Z-function for the string $\overline{u}$ (i.e. the reversed string $u$).
   Then the value $k_1$ for a particular $cntr$ will be equal to the corresponding value of the array of the Z-function.

@@ -5,8 +5,6 @@ title: Basic Geometry
 ---
 
 
-# Basic Geometry
-
 In this article we will consider basic operations on points in Euclidean space which maintains the foundation of the whole analytical geometry.
 We will consider for each point $\mathbf r$ the vector $\vec{\mathbf r}$ directed from $\mathbf 0$ to $\mathbf r$.
 Later we will not distinguish between $\mathbf r$ and $\vec{\mathbf r}$ and use the term **point** as a synonym for **vector**.

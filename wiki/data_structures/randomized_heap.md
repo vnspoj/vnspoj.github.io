@@ -4,7 +4,6 @@ wiki: true
 title: Randomized Heap
 ---
 
-# Randomized Heap
 
 A randomized heap is a heap that, through using randomization, allows to perform all operations in expected logarithmic time.
 

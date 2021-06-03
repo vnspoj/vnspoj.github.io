@@ -4,9 +4,8 @@ wiki: true
 title: Maximum flow - Push-relabel method improved
 ---
 
-# Maximum flow - Push-relabel method improved
 
-We will modify the [push-relabel method](./graph/push-relabel.html) to achieve a better runtime.
+We will modify the [push-relabel method](../graph/push-relabel) to achieve a better runtime.
 
 ## Description
 

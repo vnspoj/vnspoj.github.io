@@ -4,7 +4,6 @@ wiki: true
 title: Intersection Point of Lines
 ---
 
-# Intersection Point of Lines
 
 You are given two lines, described via the equations $a_1 x + b_1 y + c_1 = 0$ and  $a_2 x + b_2 y + c_2 = 0$.
 We have to find the intersection point of the lines, or determine that the lines are parallel.
@@ -33,7 +32,7 @@ To do that we only have calculate the following determinants, and if they both e
 
 $$\begin{vmatrix}a_1 & c_1 \cr a_2 & c_2\end{vmatrix}, \begin{vmatrix}b_1 & c_1 \cr b_2 & c_2\end{vmatrix} $$
 
-Notice, a different approach for computing the intersection point is explained in the article [Basic Geometry](geometry/basic-geometry.html).
+Notice, a different approach for computing the intersection point is explained in the article [Basic Geometry](geometry/basic-geometry).
 
 ## Implementation
 

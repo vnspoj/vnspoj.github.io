@@ -5,8 +5,6 @@ title: Operations on polynomials and series
 ---
 
 
-# Operations on polynomials and series
-
 In this article we will cover common operations that you will probably have to do if you deal with polynomials.
 
 ## Basic Notion and Facts
@@ -58,7 +56,7 @@ The very core operation is the multiplication of two polynomials, that is, given
 $$A = a_0 + a_1 x + \dots + a_n x^n$$
 $$B = b_0 + b_1 x + \dots + b_m x^m$$
 You have to compute polynomial $C = A \cdot B$: $$\boxed{C = \sum\limits_{i=0}^n \sum\limits_{j=0}^m a_i b_j x^{i+j}}  = c_0 + c_1 x + \dots + c_{n+m} x^{n+m}$$
-It can be computed in $O(n \log n)$ via the [Fast Fourier transform](./algebra/fft.html) and almost all methods here will use it as subroutine.
+It can be computed in $O(n \log n)$ via the [Fast Fourier transform](../algebra/fft) and almost all methods here will use it as subroutine.
 
 ### Inverse series
 
@@ -213,7 +211,7 @@ You want to know if $A(x)$ and $B(x)$ have any roots in common. There are two in
 
 ### Euclidean algorithm
 
-Well, we already have an [article](./algebra/euclid-algorithm.html) about it. For an arbitrary euclidean domain you can write the Euclidean algorithm as easy as:
+Well, we already have an [article](../algebra/euclid-algorithm) about it. For an arbitrary euclidean domain you can write the Euclidean algorithm as easy as:
 
 ```cpp
 template<typename T>

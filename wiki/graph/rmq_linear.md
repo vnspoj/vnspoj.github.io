@@ -3,7 +3,6 @@ layout: wiki
 wiki: true
 title: Solve RMQ by finding LCA
 ---
-
 # Solve RMQ (Range Minimum Query) by finding LCA (Lowest Common Ancestor)
 
 Given an array `A[0..N-1]`.
@@ -12,7 +11,7 @@ We will assume that the array `A` doesn't change in the process, i.e. this artic
 
 Here is a description of an asymptotically optimal solution.
 It stands apart from other solutions for the RMQ problem, since it is very different from them:
-it reduces the RMQ problem to the LCA problem, and then uses the [Farach-Colton and Bender algorithm](./graph/lca_farachcoltonbender.html), which reduces the LCA problem back to a specialized RMQ problem and solves that.
+it reduces the RMQ problem to the LCA problem, and then uses the [Farach-Colton and Bender algorithm](../graph/lca_farachcoltonbender), which reduces the LCA problem back to a specialized RMQ problem and solves that.
 
 ## Algorithm
 

@@ -5,8 +5,6 @@ title: Primitive Root
 ---
 
 
-# Primitive Root
-
 ## Definition
 
 In modular arithmetic, a number $g$ is called a `primitive root modulo n` if every number coprime to $n$ is congruent to a power of $g$ modulo $n$. Mathematically, $g$ is a `primitive root modulo n` if and only if for any integer $a$ such that $\gcd(a, n) = 1$, there exists an integer $k$ such that:

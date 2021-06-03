@@ -4,7 +4,6 @@ wiki: true
 title: Lowest Common Ancestor - Tarjan's off-line algorithm
 ---
 
-# Lowest Common Ancestor - Tarjan's off-line algorithm
 
 We have a tree $G$ with $n$ nodes and we have $m$ queries of the form $(u, v)$.
 For each query $(u, v)$ we want to find the lowest common ancestor of the vertices $u$ and $v$, i.e. the node that is an ancestor of both $u$ and $v$ and has the greatest depth in the tree.
@@ -15,9 +14,9 @@ The following algorithm allows to answer all $m$ queries in $O(n + m)$ total tim
 
 ## Algorithm
 
-The algorithm is named after Robert Tarjan, who discovered it in 1979 and also made many other contributions to the [Disjoint Set Union](./data_structures/disjoint_set_union.html) data structure, which will be heavily used in this algorithm.
+The algorithm is named after Robert Tarjan, who discovered it in 1979 and also made many other contributions to the [Disjoint Set Union](../data_structures/disjoint_set_union) data structure, which will be heavily used in this algorithm.
 
-The algorithm answers all queries with one [DFS](./graph/depth-first-search.html) traversal of the tree.
+The algorithm answers all queries with one [DFS](../graph/depth-first-search) traversal of the tree.
 Namely a query $(u, v)$ is answered at node $u$, if node $v$ has already been visited previously, or vice versa.
 
 So let's assume we are currently at node $v$, we have already made recursive DFS calls, and also already visited the second node $u$ from the query $(u, v)$.

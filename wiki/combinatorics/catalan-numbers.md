@@ -3,8 +3,6 @@ layout: wiki
 wiki: true
 title: Catalan Numbers and its Applications
 ---
-
-
 # Catalan Numbers
 Catalan numbers is a number sequence, which is found useful in a number of combinatorial problems, often involving recursively-defined objects.
 

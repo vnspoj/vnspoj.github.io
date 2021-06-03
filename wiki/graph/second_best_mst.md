@@ -4,7 +4,6 @@ wiki: true
 title: Second Best Minimum Spanning Tree
 ---
 
-# Second Best Minimum Spanning Tree
 
 A Minimum Spanning Tree $T$ is a tree for the given graph $G$ which spans over all vertices of the given graph and has the minimum weight sum of all the edges, from all the possible spanning trees.
 A second best MST $T'$ is a spanning tree, that has the second minimum weight sum of all the edges, from all the possible spanning trees of the graph $G$.
@@ -48,7 +47,7 @@ The time complexity of the algorithm depends on how we compute the $k$s, which a
 One way to compute them efficiently in $O(E \log V)$ is to transform the problem into a Lowest Common Ancestor (LCA) problem.
 
 We will preprocess the LCA by rooting the MST and will also compute the maximum edge weights for each node on the paths to their ancestors. 
-This can be done using [Binary Lifting](graph/lca_binary_lifting.html) for LCA.
+This can be done using [Binary Lifting](graph/lca_binary_lifting) for LCA.
 
 The final time complexity of this approach is $O(E \log V)$.
 

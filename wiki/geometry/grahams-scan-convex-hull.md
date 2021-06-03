@@ -4,7 +4,6 @@ wiki: true
 title: Convex Hull construction using Graham's Scan
 ---
 
-# Convex Hull construction using Graham's Scan
 
 In this article we will discuss the problem of constructing a convex hull from a set of points.
 
@@ -30,7 +29,7 @@ constructs the upper set S1 and the lower set S2 and then combines them to obtai
 
 To get the upper set, we sort all points by the x-coordinate. For each point we check if either - the current point is the last point,
 (which we defined as B), or if the orientation between the line between A and the current point and the line between the current point and B is clockwise. In those cases the 
-current point belongs to the upper set S1. Checking for clockwise or anticlockwise nature can be done by checking the [orientation](./geometry/oriented-triangle-area.html).
+current point belongs to the upper set S1. Checking for clockwise or anticlockwise nature can be done by checking the [orientation](../geometry/oriented-triangle-area).
 
 If the given point belongs to the upper set, we check the angle made by the line connecting the second last point and the last point in the upper convex hull,
 with the line connecting the last point in the upper convex hull and the current point. If the angle is not clockwise, we remove the most recent point added

@@ -5,8 +5,6 @@ title: Prefix function. Knuth–Morris–Pratt algorithm
 ---
 
 
-# Prefix function. Knuth–Morris–Pratt algorithm
-
 ## Prefix function definition
 
 You are given a string $s$ of length $n$.

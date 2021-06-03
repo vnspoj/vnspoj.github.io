@@ -5,8 +5,6 @@ title: Dijkstra Algorithm
 ---
 
 
-# Dijkstra Algorithm
-
 You are given a directed or undirected weighted graph with $n$ vertices and $m$ edges. The weights of all edges are non-negative. You are also given a starting vertex $s$. This article discusses finding the lengths of the shortest paths from a starting vertex $s$ to all other vertices, and output the shortest paths themselves.
 
 This problem is also called **single-source shortest paths problem**.
@@ -89,7 +87,7 @@ For the simplest implementation of these operations on each iteration vertex sea
 $$O(n^2+m)$$ 
 
 This complexity is optimal for dense graph, i.e. when $m \approx n^2$.
-However in sparse graphs, when $m$ is much smaller than the maximal number of edges $n^2$, the problem can be solved in $O(n \log n + m)$ complexity. The algorithm and implementation can be found on the article [Dijkstra on sparse graphs](./graph/dijkstra_sparse.html).
+However in sparse graphs, when $m$ is much smaller than the maximal number of edges $n^2$, the problem can be solved in $O(n \log n + m)$ complexity. The algorithm and implementation can be found on the article [Dijkstra on sparse graphs](../graph/dijkstra_sparse).
 
 
 ```cpp dijkstra_dense

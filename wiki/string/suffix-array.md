@@ -4,7 +4,6 @@ wiki: true
 title: Suffix Array
 ---
 
-# Suffix Array
 
 ## Definition
 
@@ -258,7 +257,7 @@ $$\dots
 Here is the implementation of the comparison.
 Note that it is assumed that the function gets called with the already calculated $k$.
 $k$ can be computed with $\lfloor \log l \rfloor$, but it is more efficient to precompute all $k$ values for every $l$.
-See for instance the article about the [Sparse Table](./data_structures/sparse-table.html), which uses a similar idea and computes all $\log$ values.
+See for instance the article about the [Sparse Table](../data_structures/sparse-table), which uses a similar idea and computes all $\log$ values.
 
 ```cpp
 int compare(int i, int j, int l, int k) {
@@ -314,7 +313,7 @@ Then the answer for arbitrary two suffixes, not necessarily neighboring ones, ca
 In fact, let the request be to compute the LCP of the suffixes $p[i]$ and $p[j]$.
 Then the answer to this query will be $\min(lcp[i],~ lcp[i+1],~ \dots,~ lcp[j-1])$.
 
-Thus if we have such an array $\text{lcp}$, then the problem is reduced to the [RMQ](./sequences/rmq.html), which has many wide number of different solutions with different complexities.
+Thus if we have such an array $\text{lcp}$, then the problem is reduced to the [RMQ](../sequences/rmq), which has many wide number of different solutions with different complexities.
 
 So the main task is to **build** this array $\text{lcp}$.
 We will use **Kasai's algorithm**, which can compute this array in $O(n)$ time.

@@ -3,7 +3,6 @@ layout: wiki
 wiki: true
 title: Deleting from a data structure in O(T(n)log n)
 ---
-
 # Deleting from a data structure in $O(T(n)\log n)$
 
 Suppose you have a data structure which allows adding elements in **true** $O(T(n))$.

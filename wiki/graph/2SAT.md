@@ -3,8 +3,6 @@ layout: wiki
 wiki: true
 title: 2-SAT
 ---
-
-
 # 2 - SAT 
 
 SAT (Boolean satisfiability problem) is the problem of assigning Boolean values to variables to satisfy a given Boolean formula.

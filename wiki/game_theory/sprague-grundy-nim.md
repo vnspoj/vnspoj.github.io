@@ -4,7 +4,6 @@ wiki: true
 title: Sprague-Grundy theorem. Nim
 ---
 
-# Sprague-Grundy theorem. Nim
 
 ## Introduction
 

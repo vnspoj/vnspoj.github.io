@@ -4,9 +4,8 @@ wiki: true
 title: Dijkstra on sparse graphs
 ---
 
-# Dijkstra on sparse graphs
 
-For the statement of the problem, the algorithm with implementation and proof can be found on the article [Dijkstra's algorithm](./graph/dijkstra.html).
+For the statement of the problem, the algorithm with implementation and proof can be found on the article [Dijkstra's algorithm](../graph/dijkstra).
 
 ## Algorithm
 

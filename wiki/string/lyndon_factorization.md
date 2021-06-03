@@ -4,7 +4,6 @@ wiki: true
 title: Lyndon factorization
 ---
 
-# Lyndon factorization
 
 ## Lyndon factorization
 

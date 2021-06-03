@@ -4,8 +4,6 @@ wiki: true
 title: Vertical decomposition
 ---
 
-
-# Vertical decomposition
 ## Overview
 Vertical decomposition is a powerful technique used in various geometry problems. The general idea is to cut the plane into several vertical stripes
 with some "good" properties and solve the problem for these stripes independently. We will illustrate the idea on some examples.

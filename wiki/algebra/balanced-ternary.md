@@ -4,7 +4,6 @@ wiki: true
 title: Balanced Ternary
 ---
 
-# Balanced Ternary
 
 !["Setun computer using Balanced Ternary system"](http://ternary.3neko.ru/photo/setun1_small.jpg)
 

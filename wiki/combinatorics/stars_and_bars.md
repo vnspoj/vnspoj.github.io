@@ -4,7 +4,6 @@ wiki: true
 title: Stars and bars
 ---
 
-# Stars and bars
 
 Stars and bars is a mathematical technique for solving certain combinatorial problems.
 It occurs whenever you want to count the number of ways to group identical objects.
@@ -21,7 +20,7 @@ This is one way of dividing 5 objects into 4 boxes.
 
 It should be pretty obvious, that every partition can be represented using $n$ stars and $k - 1$ bars and every stars and bars permutation using $n$ stars and $k - 1$ bars represents one partition.
 Therefore the number of ways to divide $n$ identical objects into $k$ labeled boxes is the same number as there are permutations of $n$ stars and $k - 1$ bars.
-The [Binomial Coefficient](./combinatorics/binomial-coefficients.html) gives us the desired formula.
+The [Binomial Coefficient](../combinatorics/binomial-coefficients) gives us the desired formula.
 
 ## Number of non-negative integer sums
 

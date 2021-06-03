@@ -5,8 +5,6 @@ title: Depth First Search
 ---
 
 
-# Depth First Search
-
 Depth First Search is one of the main graph algorithms.
 
 Depth First Search finds the lexicographical first path in the graph from a source vertex $u$ to each vertex.
@@ -59,7 +57,7 @@ For more details check out the implementation.
 ## Classification of edges of a graph
 
 We can classify the edges using the entry and exit time of the end nodes $u$ and $v$ of the edges $(u,v)$.
-These classifications are often used for problems like [finding bridges](./graph/bridge-searching.html) and [finding articulation points](./graph/cutpoints.html).
+These classifications are often used for problems like [finding bridges](../graph/bridge-searching) and [finding articulation points](../graph/cutpoints).
 
 We perform a DFS and classify the encountered edges using the following rules:
 

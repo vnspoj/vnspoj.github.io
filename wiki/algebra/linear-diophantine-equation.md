@@ -4,7 +4,6 @@ wiki: true
 title: Linear Diophantine Equation
 ---
 
-# Linear Diophantine Equation
 
 A Linear Diophantine Equation (in two variables) is an equation of the general form:
 
@@ -25,7 +24,7 @@ A degenerate case that need to be taken care of is when $a = b = 0$. It is easy 
 
 ## Finding a solution
 
-To find one solution of the Diophantine equation with 2 unknowns, you can use the [Extended Euclidean algorithm](algebra/extended-euclid-algorithm.html). First, assume that $a$ and $b$ are non-negative. When we apply Extended Euclidean algorithm for $a$ and $b$, we can find their greatest common divisor $g$ and 2 numbers $x_g$ and $y_g$ such that:
+To find one solution of the Diophantine equation with 2 unknowns, you can use the [Extended Euclidean algorithm](algebra/extended-euclid-algorithm). First, assume that $a$ and $b$ are non-negative. When we apply Extended Euclidean algorithm for $a$ and $b$, we can find their greatest common divisor $g$ and 2 numbers $x_g$ and $y_g$ such that:
 
 $$a x_g + b y_g = g$$
 

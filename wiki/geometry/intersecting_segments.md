@@ -5,8 +5,6 @@ title: Search for a pair of intersecting segments
 ---
 
 
-# Search for a pair of intersecting segments
-
 Given $n$ line segments on the plane. It is required to check whether at least two of them intersect with each other.
 If the answer is yes, then print this pair of intersecting segments; it is enough to choose any of them among several answers.
 

@@ -5,8 +5,6 @@ title: Kuhn's Algorithm for Maximum Bipartite Matching
 ---
 
 
-# Kuhn's Algorithm for Maximum Bipartite Matching
-
 ## Problem
 You are given a bipartite graph $G$ containing $n$ vertices and $m$ edges. Find the maximum matching, i.e., select as many edges as possible so 
 that no selected edge shares a vertex with any other selected edge.
@@ -69,7 +67,7 @@ Kuhn's algorithm is a direct application of Berge's lemma. It is essentially des
 > First, we take an empty matching. Then, while the algorithm is able to find an augmenting path, we update the matching by alternating it along this path and 
 > repeat the process of finding the augmenting path.  As soon as it is not possible to find such a path, we stop the process - the current matching is the maximum. 
 
-It remains to detail the way to find augmenting paths. Kuhn's algorithm simply searches for any of these paths using [depth-first](./graph/depth-first-search.html) or [breadth-first](./graph/breadth-first-search.html) traversal. The algorithm 
+It remains to detail the way to find augmenting paths. Kuhn's algorithm simply searches for any of these paths using [depth-first](../graph/depth-first-search) or [breadth-first](../graph/breadth-first-search) traversal. The algorithm 
 looks through all the vertices of the graph in turn, starting each traversal from it, trying to find an augmenting path starting at this vertex.
 
 The algorithm is more convenient to describe if we assume that the input graph is already split into two parts (although, in fact, the algorithm can be implemented in such a way 

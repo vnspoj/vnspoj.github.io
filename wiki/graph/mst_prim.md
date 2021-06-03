@@ -4,7 +4,6 @@ wiki: true
 title: Minimum spanning tree - Prim's algorithm
 ---
 
-# Minimum spanning tree - Prim's algorithm
 
 Given a weighted, undirected graph $G$ with $n$ vertices and $m$ edges.
 You want to find a spanning tree of this graph which connects all vertices and has the least weight (i.e. the sum of weights of edges is minimal).
@@ -99,7 +98,7 @@ Thus we received a version of Prim's algorithm with the complexity $O(n^2)$.
 
 In particular this implementation is very convenient for the Euclidean Minimum Spanning Tree problem:
 we have $n$ points on a plane and the distance between each pair of points is the Euclidean distance between them, and we want to find a minimum spanning tree for this complete graph.
-This task can be solved by the described algorithm in $O(n^2)$ time and $O(n)$ memory, which is not possible with [Kruskal's algorithm](./graph/mst_kruskal.html).
+This task can be solved by the described algorithm in $O(n^2)$ time and $O(n)$ memory, which is not possible with [Kruskal's algorithm](../graph/mst_kruskal).
 
 ```cpp
 int n;

@@ -5,14 +5,12 @@ title: Segment Tree
 ---
 
 
-# Segment Tree
-
 A Segment Tree is a data structure that allows answering range queries over an array effectively, while still being flexible enough to allow modifying the array. 
 This includes finding the sum of consecutive array elements $a[l \dots r]$, or finding the minimum element in a such a range in $O(\log n)$ time. 
 Between answering such queries the Segment Tree allows modifying the array by replacing one element, or even change the elements of a whole subsegment (e.g. assigning all elements $a[l \dots r]$ to any value, or adding a value to all element in the subsegment). 
 
 In general a Segment Tree is a very flexible data structure, and a huge number of problems can be solved with it. 
-Additionally it is also possible to apply more complex operations and answer more complex queries (see [Advanced versions of Segment Trees](data_structures/segment_tree.html#advanced-versions-of-segment-trees)).
+Additionally it is also possible to apply more complex operations and answer more complex queries (see [Advanced versions of Segment Trees](data_structures/segment_tree#advanced-versions-of-segment-trees)).
 In particular the Segment Tree can be easily generalized to larger dimensions. 
 For instance with a two-dimensional Segment Tree you can answer sum or minimum queries over some subrectangle of a given matrix.
 However only in $O(\log^2 n)$ time. 
@@ -679,7 +677,7 @@ And you need to work very carefully, so that you increment or decrement the corr
 
 This technique implies a whole new class of possible applications. 
 Instead of storing a $\text{vector}$ or a $\text{multiset}$ in each vertex, other data structures can be used:
-other Segment Trees (somewhat discussed in [Generalization to higher dimensions](data_structures/segment_tree.html#generalization-to-higher-dimensions)), Fenwick Trees, Cartesian trees, etc.
+other Segment Trees (somewhat discussed in [Generalization to higher dimensions](data_structures/segment_tree#generalization-to-higher-dimensions)), Fenwick Trees, Cartesian trees, etc.
 
 ### Range updates (Lazy Propagation)
 
@@ -980,7 +978,7 @@ We still can answer the queries in $O(\log^2 n)$ time, we just have to make a bi
 But modification queries will be impossible with this structure:
 in fact if a new point appears, we have to add a new element in the middle of some Segment Tree along the second coordinate, which cannot be effectively done.
 
-In conclusion we note that the two-dimensional Segment Tree contracted in the described way becomes practically equivalent to the modification of the one-dimensional Segment Tree (see [Saving the entire subarrays in each vertex](data_structures/segment_tree.html#saving-the-entire-subarrays-in-each-vertex)).
+In conclusion we note that the two-dimensional Segment Tree contracted in the described way becomes practically equivalent to the modification of the one-dimensional Segment Tree (see [Saving the entire subarrays in each vertex](data_structures/segment_tree#saving-the-entire-subarrays-in-each-vertex)).
 In particular the two-dimensional Segment Tree is just a special case of storing a subarray in each vertex of the tree.
 It follows, that if you gave to abandon a two-dimensional Segment Tree due to the impossibility of executing a query, it makes sense to try to replace the nested Segment Tree with some more powerful data structure, for example a Cartesian tree.
 
@@ -1064,7 +1062,7 @@ But instead of creating all $n$ Segment Trees for every possible prefix, we will
 We will start with an empty Segment Tree (all counts will be $0$) pointed to by $root_0$, and add the elements $a[1]$, $a[2]$, $\dots$, $a[n]$ one after another.
 For each modification we will receive a new root vertex, let's call $root_i$ the root of the Segment Tree after inserting the first $i$ elements of the array $a$.
 The Segment Tree rooted at $root_i$ will contain the histogram of the prefix $a[1 \dots i]$.
-Using this Segment Tree we can find in $O(\log n)$ time the position of the $k$-th element using the same technique discussed in [Counting the number of zeros, searching for the $k$-th zero](data_structures/segment_tree.html#counting-zero-search-kth).
+Using this Segment Tree we can find in $O(\log n)$ time the position of the $k$-th element using the same technique discussed in [Counting the number of zeros, searching for the $k$-th zero](data_structures/segment_tree#counting-zero-search-kth).
 
 Now to the not-restricted version of the problem.
 

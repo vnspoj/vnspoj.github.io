@@ -4,7 +4,6 @@ wiki: true
 title: Sieve of Eratosthenes
 ---
 
-# Sieve of Eratosthenes
 
 Sieve of Eratosthenes is an algorithm for finding all the prime numbers in a segment $[1;n]$ using $O(n \log \log n)$ operations.
 
@@ -233,7 +232,7 @@ Obviously, the complexity is worse, which is $O((R - L + 1) \log (R) + \sqrt R)$
 ## Linear time modification
 
 We can modify the algorithm in a such a way, that it only has linear time complexity.
-This approach is described in the article [Sieve of Eratosthenes Having Linear Time Complexity](./algebra/prime-sieve-linear.html).
+This approach is described in the article [Sieve of Eratosthenes Having Linear Time Complexity](../algebra/prime-sieve-linear).
 However, this algorithm also has its own weaknesses.
 
 ## Practice Problems

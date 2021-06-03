@@ -5,8 +5,6 @@ title: Dynamic Programming on Broken Profile. Problem "Parquet"
 ---
 
 
-# Dynamic Programming on Broken Profile. Problem "Parquet"
-
 Common problems solved using DP on broken profile include:
 
 - finding number of ways to fully fill an area (e.g. chessboard/grid) with some figures (e.g. dominoes)
@@ -87,7 +85,7 @@ int main()
 
 ## References
 
-- [Blog by EvilBunny](https://web.archive.org/web/20180712171735/https://blog.evilbuggy.com/2018/05/broken-profile-dynamic-programming.html)
+- [Blog by EvilBunny](https://web.archive.org/web/20180712171735/https://blog.evilbuggy.com/2018/05/broken-profile-dynamic-programming)
 - [TopCoder Recipe by "syg96"](https://apps.topcoder.com/forums/?module=Thread&start=0&threadID=697369)
-- [Blogpost by sk765](http://sk765.blogspot.com/2012/02/dynamic-programming-with-profile.html)
+- [Blogpost by sk765](http://sk765.blogspot.com/2012/02/dynamic-programming-with-profile)
 

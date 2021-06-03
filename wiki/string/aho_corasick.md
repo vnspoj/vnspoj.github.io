@@ -4,7 +4,6 @@ wiki: true
 title: Aho-Corasick algorithm
 ---
 
-# Aho-Corasick algorithm
 
 Let there be a set of strings with the total length $m$ (sum of all lengths).
 The Aho-Corasick algorithm constructs a data structure similar to a trie with some additional links, and then constructs a finite state machine (automaton) in $O(m k)$ time, where $k$ is the size of the used alphabet.
@@ -210,7 +209,7 @@ Let's remember, that the vertices from which we can reach a $\text{leaf}$ vertex
 Since in this task we have to avoid matches, we are not allowed to enter such states.
 On the other hand we can enter all other vertices.
 Thus we delete all "bad" vertices from the machine, and in the remaining graph of the automaton we find the lexicographical smallest path of length $L$.
-This task can be solved in $O(L)$ for example by [depth first search](./graph/depth-first-search.html).
+This task can be solved in $O(L)$ for example by [depth first search](../graph/depth-first-search).
 
 ### Finding the shortest string containing all given strings
 
@@ -219,7 +218,7 @@ For each vertex we store a mask that denotes the strings which match at this sta
 Then the problem can be reformulated as follows:
 initially being in the state $(v = \text{root},~ \text{mask} = 0)$, we want to reach the state $(v,~ \text{mask} = 2^n - 1)$, where $n$ is the number of strings in the set.
 When we transition from one state to another using a letter, we update the mask accordingly.
-By running a [breadth first search](./graph/breadth-first-search.html) we can find a path to the state $(v,~ \text{mask} = 2^n - 1)$ with the smallest length.
+By running a [breadth first search](../graph/breadth-first-search) we can find a path to the state $(v,~ \text{mask} = 2^n - 1)$ with the smallest length.
 
 ### Finding the lexicographical smallest string of length $L$ containing $k$ strings
 

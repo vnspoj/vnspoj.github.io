@@ -4,7 +4,6 @@ wiki: true
 title: Prüfer code
 ---
 
-# Prüfer code
 
 In this article we will look at the so-called **Prüfer code** (or Prüfer sequence), which is a way of encoding a labeled tree into a sequence of numbers in a unique way.
 

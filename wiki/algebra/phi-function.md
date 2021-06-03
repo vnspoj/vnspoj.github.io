@@ -4,7 +4,6 @@ wiki: true
 title: Euler's totient function
 ---
 
-# Euler's totient function
 
 Euler's totient function, also known as **phi-function** $\phi (n)$, counts the number of integers between 1 and $n$ inclusive, which are coprime to $n$. Two numbers are coprime if their greatest common divisor equals $1$ ($1$ is considered to be coprime to any number).
 
@@ -28,7 +27,7 @@ The following properties of Euler totient function are sufficient to calculate i
 
   - If $a$ and $b$ are relatively prime, then:
     $$\phi(a b) = \phi(a) \cdot \phi(b).$$
-    This relation is not trivial to see. It follows from the [Chinese remainder theorem](../algebra/chinese-remainder-theorem.html). The Chinese remainder theorem guarantees, that for each $0 \le x < a$ and each $0 \le y < b$, there exists a unique $0 \le z < a b$ with $z \equiv x \pmod{a}$ and $z \equiv y \pmod{b}$. It's not hard to show that $z$ is coprime to $a b$ if and only if $x$ is coprime to $a$ and $y$ is coprime to $b$. Therefore the amount of integers coprime to $a b$ is equal to product of the amounts of $a$ and $b$.
+    This relation is not trivial to see. It follows from the [Chinese remainder theorem](../algebra/chinese-remainder-theorem). The Chinese remainder theorem guarantees, that for each $0 \le x < a$ and each $0 \le y < b$, there exists a unique $0 \le z < a b$ with $z \equiv x \pmod{a}$ and $z \equiv y \pmod{b}$. It's not hard to show that $z$ is coprime to $a b$ if and only if $x$ is coprime to $a$ and $y$ is coprime to $b$. Therefore the amount of integers coprime to $a b$ is equal to product of the amounts of $a$ and $b$.
 
   - In general, for not coprime $a$ and $b$, the equation $$\phi(ab) = \phi(a) \cdot \phi(b) \cdot \dfrac{d}{\phi(d)}$$ with $d = \gcd(a, b)$ holds.
 
@@ -65,7 +64,7 @@ int phi(int n) {
 ## Euler totient function from $1$ to $n$ in $O(n \log\log{n})$ ## {#etf_1_to_n}
 
 If we need all all the totient of all numbers between $1$ and $n$, then factorizing all $n$ numbers is not efficient.
-We can use the same idea as the [Sieve of Eratosthenes](algebra/sieve-of-eratosthenes.html).
+We can use the same idea as the [Sieve of Eratosthenes](algebra/sieve-of-eratosthenes).
 It is still based on the property shown above, but instead of updating the temporary result for each prime factor for each number, we find all prime numbers and for each one update the temporary results of all numbers that are divisible by that prime number.
 
 Since this approach is basically identical to the Sieve of Eratosthenes, the complexity will also be the same: $O(n \log \log n)$
@@ -126,7 +125,7 @@ $$a^{\phi(m)} \equiv 1 \pmod m$$ if $a$ and $m$ are relatively prime.
 In the particular case when $m$ is prime, Euler's theorem turns into **Fermat's little theorem**:
 $$a^{m - 1} \equiv 1 \pmod m$$
 
-Euler's theorem and Euler's totient function occur quite often in practical applications, for example both are used to compute the [modular multiplicative inverse](../algebra/module-inverse.html).
+Euler's theorem and Euler's totient function occur quite often in practical applications, for example both are used to compute the [modular multiplicative inverse](../algebra/module-inverse).
 
 As immediate consequence we also get the equivalence:
 $$a^n \equiv a^{n \bmod \phi(m)} \pmod m$$

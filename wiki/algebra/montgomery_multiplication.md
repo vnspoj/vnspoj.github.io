@@ -4,9 +4,8 @@ wiki: true
 title: Montgomery Multiplication
 ---
 
-# Montgomery Multiplication
 
-Many algorithms in number theory, like [prime testing](./algebra/primality_tests.html) or [integer factorization](./algebra/factorization.html), and in cryptography, like RSA, require lots of operations modulo a large number.
+Many algorithms in number theory, like [prime testing](../algebra/primality_tests) or [integer factorization](../algebra/factorization), and in cryptography, like RSA, require lots of operations modulo a large number.
 A multiplications like $x y \bmod{n}$ is quite slow to compute with the typical algorithms, since it requires a division to know how many times $n$ has to be subtracted from the product.
 And division is a really expensive operation, especially with big numbers.
 
@@ -53,7 +52,7 @@ This operation is called the **Montgomery reduction**, and is also known as the 
 
 Because $\gcd(n, r) = 1$, we know that there are two numbers $r^{-1}$ and $n^{\prime}$ with $0 < r^{-1}, n^{\prime} < n$ with
 $$r \cdot r^{-1} + n \cdot n^{\prime} = 1.$$
-Both $r^{-1}$ and $n^{\prime}$ can be computed using the [Extended Euclidean algorithm](./algebra/extended-euclid-algorithm.html).
+Both $r^{-1}$ and $n^{\prime}$ can be computed using the [Extended Euclidean algorithm](../algebra/extended-euclid-algorithm).
 
 Using this identity we can write $x \cdot r^{-1}$ as:
 $$\begin{aligned}

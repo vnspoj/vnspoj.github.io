@@ -5,8 +5,6 @@ title: Finding common tangents to two circles
 ---
 
 
-# Finding common tangents to two circles
-
 Given two circles. It is required to find all their common tangents, i.e. all such lines that touch both circles simultaneously.
 
 The described algorithm will also work in the case when one (or both) circles degenerate into points. Thus, this algorithm can also be used to find tangents to a circle passing through a given point.
