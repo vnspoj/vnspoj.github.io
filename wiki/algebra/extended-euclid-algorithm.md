@@ -54,7 +54,7 @@ y = x_1 - y_1 \cdot \left\lfloor \frac{a}{b} \right\rfloor
 
 ## Implementation
 
-```cpp extended_gcd
+```cpp
 int gcd(int a, int b, int& x, int& y) {
     if (b == 0) {
         x = 1;
@@ -78,7 +78,7 @@ This implementation of extended Euclidean algorithm produces correct results for
 It's also possible to write the Extended Euclidean algorithm in an iterative way.
 Because it avoids recursion, the code will run a little bit faster than the recursive one.
 
-```cpp extended_gcd_iter
+```cpp
 int gcd(int a, int b, int& x, int& y) {
     x = 1, y = 0;
     int x1 = 0, y1 = 1, a1 = a, b1 = b;

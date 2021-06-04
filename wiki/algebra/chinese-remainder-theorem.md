@@ -16,6 +16,8 @@ $$\begin{align}
       &\ldots \\\\
     a &\equiv a_k \pmod{p_k}
 \end{align}$$
+
+
 where $a_i$ are some given constants. The original form of CRT then states that the given set of congruence equations always has *one and exactly one* solution modulo $p$.
 
 ### Corollary
@@ -30,6 +32,8 @@ $$\begin{align}
       &\ldots \\\\
     x &\equiv a_k \pmod{p_k}
 \end{align}$$
+
+
 (As above, assume that $p = p_1 p_2 \cdots p_k$ and $p_i$ are pairwise relatively prime).
 
 ## Garner's Algorithm

@@ -90,7 +90,7 @@ At the same time the array $c[]$ is fixed, there can be no ambiguities.
 
 Let us now focus on the implementation of the algorithm.
 We will write a function that takes a string $s$ and returns the permutations of the sorted cyclic shifts.
-```cpp suffix_array_sort_cyclic1
+```cpp
 vector<int> sort_cyclic_shifts(string const& s) {
     int n = s.size();
     const int alphabet = 256;
@@ -100,7 +100,7 @@ At the beginning (in the **$0$-th iteration**) we must sort the cyclic substring
 This can be done trivially, for example, by using **counting sort**.
 For each character we count how many times it appears in the string, and then use this information to create the array $p[]$.
 After that we go through the array $p[]$ and construct $c[]$ by comparing adjacent characters.
-```cpp suffix_array_sort_cyclic2
+```cpp
     vector<int> p(n), c(n), cnt(max(alphabet, n), 0);
     for (int i = 0; i < n; i++)
         cnt[s[i]]++;
@@ -163,7 +163,7 @@ The only thing left is to compute the equivalence classes $c[]$, but as before t
 Here is the remaining implementation.
 We use temporary arrays $pn[]$ and $cn[]$ to store the permutation by the second elements and the new equivalent class indices.
 
-```cpp suffix_array_sort_cyclic3
+```cpp
     vector<int> pn(n), cn(n);
     for (int h = 0; (1 << h) < n; ++h) {
         for (int i = 0; i < n; i++) {
@@ -203,7 +203,7 @@ Also note, that this algorithm only sorts the cycle shifts.
 As mentioned at the beginning of this section we can generate the sorted order of the suffixes by appending a character that is smaller than all other characters of the string, and sorting this resulting string by cycle shifts, e.g. by sorting the cycle shifts of $s + \\$$.
 This will obviously give the suffix array of $s$, however prepended with $|s|$.
 
-```cpp suffix_array_construction
+```cpp
 vector<int> suffix_array_construction(string s) {
     s += "$";
     vector<int> sorted_shifts = sort_cyclic_shifts(s);
@@ -330,7 +330,7 @@ Now we already can implement the algorithm.
 We will iterate over the suffixes in order of their length. This way we can reuse the last value $k$, since going from suffix $i$ to the suffix $i+1$ is exactly the same as removing the first letter.
 We will need an additional array $\text{rank}$, which will give us the position of a suffix in the sorted list of suffixes.
 
-```cpp suffix_array_lcp_construction
+```cpp
 vector<int> lcp_construction(string const& s, vector<int> const& p) {
     int n = s.size();
     vector<int> rank(n, 0);

@@ -22,7 +22,7 @@ The smallest divisor has to be a prime number.
 We remove the factor from the number, and repeat the process.
 If we cannot find any divisor in the range $[2; \sqrt{n}]$, then the number itself has to be prime.
 
-```cpp factorization_trial_division1
+```cpp
 vector<long long> trial_division1(long long n) {
     vector<long long> factorization;
     for (long long d = 2; d * d <= n; d++) {
@@ -45,7 +45,7 @@ Once we know that the number is not divisible by 2, we don't need to check every
 This leaves us with only $50\%$ of the numbers to check.
 After checking 2, we can simply start with 3 and skip every other number.
 
-```cpp factorization_trial_division2
+```cpp
 vector<long long> trial_division2(long long n) {
     vector<long long> factorization;
     while (n % 2 == 0) {
@@ -76,7 +76,7 @@ We can extend this even further.
 Here is an implementation for the prime number 2, 3 and 5.
 It's convenient to use an array to store how much we have to skip.
 
-```cpp factorization_trial_division3
+```cpp
 vector<long long> trial_division3(long long n) {
     vector<long long> factorization;
     for (int d : {2, 3, 5}) {
@@ -109,7 +109,7 @@ However, also the skip lists will get a lot bigger.
 Extending the wheel factorization with more and more primes will leave exactly the primes to check.
 So a good way of checking is just to precompute all prime numbers with the [Sieve of Eratosthenes](../algebra/sieve-of-eratosthenes) until $\sqrt{n}$ and test them individually.
 
-```cpp factorization_trial_division4
+```cpp
 vector<long long> primes;
 
 vector<long long> trial_division4(long long n) {
@@ -194,7 +194,7 @@ We would have to choose $B >= 190.753$ to factorize the number.
 
 In the following implementation we start with $B = 10$ and increase $B$ after each each iteration.
 
-```cpp factorization_p_minus_1
+```cpp
 long long pollards_p_minus_1(long long n) {
     int B = 10;
     long long g = 1;
@@ -289,7 +289,7 @@ function floyd(f, x0):
 First here is a implementation using the **Floyd's cycle-finding algorithm**.
 The algorithm runs (usually) in $O(\sqrt[4]{n} \log(n))$ time.
 
-```cpp pollard_rho
+```cpp
 long long mult(long long a, long long b, long long mod) {
     return (__int128)a * b % mod;
 }
@@ -334,7 +334,7 @@ i & x_i \bmod n & x_{2i} \bmod n & x_i \bmod 317 & x_{2i} \bmod 317 & \gcd(x_i -
 The implementation uses a function `mult`, that multiplies two integers $\le 10^{18}$ without overflow by using a GCC's type `__int128` for 128-bit integer.
 If GCC is not available, you can using a similar idea as [binary exponentiation](../algebra/binary-exp).
 
-```cpp pollard_rho_mult2
+```cpp
 long long mult(long long a, long long b, long long mod) {
     long long result = 0;
     while (b) {
@@ -383,7 +383,7 @@ Brent's algorithm also runs in linear time, but is usually faster than Floyd's a
 The straightforward implementation using Brent's algorithms can be speeded up by noticing, that we can omit the terms $x_l - x_k$ if $k < \frac{3 \cdot l}{2}$.
 Also, instead of performing the $\gcd$ computation at every step, we multiply the terms and do it every few steps and backtrack if we overshoot.
 
-```cpp pollard_rho_brent
+```cpp
 long long brent(long long n, long long x0=2, long long c=1) {
     long long x = x0;
     long long g = 1;

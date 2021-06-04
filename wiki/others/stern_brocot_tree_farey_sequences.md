@@ -76,6 +76,8 @@ $$\begin{align}
     c(b+d) - d(a+c) &= 1
 \end{align}$$
 
+
+
 which, using that $bc-ad=1$, can be easily shown to be true.
 
 From this we see that the property is always maintained and thus all fractions are irreducible.

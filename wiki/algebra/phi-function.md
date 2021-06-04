@@ -41,6 +41,8 @@ $$\begin{align}
 &= n \cdot \left(1 - \frac{1}{p_1}\right) \cdot \left(1 - \frac{1}{p_2}\right) \cdots \left(1 - \frac{1}{p_k}\right)
 \end{align}$$
 
+
+
 ## Implementation
 
 Here is an implementation using factorization in $O(\sqrt{n})$:
@@ -150,6 +152,8 @@ $$\begin{align}x^n \bmod m &= \frac{x^k}{a}ax^{n-k}\bmod m \\\\
 &=\frac{x^k}{a} a \left(x^{n-k} \bmod \frac{m}{a}\right)\bmod m \\\\
 &= x^k\left(x^{n-k} \bmod \frac{m}{a}\right)\bmod m
 \end{align}$$
+
+
 
 The equivalence between the third and forth line follows from the fact that $ab \bmod ac = a(b \bmod c)$.
 Indeed if $b = cd + r$ with $r < c$, then $ab = acd + ar$ with $ar < ac$.

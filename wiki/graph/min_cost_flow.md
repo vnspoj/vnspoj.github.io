@@ -82,7 +82,7 @@ Instead we can use the [Bellman-Ford algorithm](../graph/bellman_ford). With it 
 
 Here is an implementation using the [SPFA algorithm](../graph/bellman_ford) for the simplest case.
 
-```cpp min_cost_flow_successive_shortest_path
+```cpp
 struct Edge
 {
     int from, to, capacity, cost;

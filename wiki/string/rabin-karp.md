@@ -18,7 +18,7 @@ So, compare each substring of length $|s|$ with the pattern. This will take a to
 Hence the final complexity of the algorithm is $O(|t| + |s|)$: $O(|s|)$ is required for calculating the hash of the pattern and $O(|t|)$ for comparing each substring of length $|s|$ with the pattern.
 
 ## Implementation
-```cpp rabin_karp
+```cpp
 vector<int> rabin_karp(string const& s, string const& t) {
     const int p = 31; 
     const int m = 1e9 + 9;

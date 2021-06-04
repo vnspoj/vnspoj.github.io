@@ -22,7 +22,7 @@ For example, prefix function of string "abcabcd" is $[0, 0, 0, 1, 2, 3, 0]$, and
 
 An algorithm which follows the definition of prefix function exactly is the following:
 
-```cpp prefix_slow
+```cpp
 vector<int> prefix_function(string s) {
     int n = (int)s.length();
     vector<int> pi(n);
@@ -102,7 +102,7 @@ If they are equal then we assign $\pi[i] = j + 1$, otherwise we reduce $j$ to $\
 
 The implementation ends up being surprisingly short and expressive.
 
-```cpp prefix_fast
+```cpp
 vector<int> prefix_function(string s) {
     int n = (int)s.length();
     vector<int> pi(n);
@@ -164,7 +164,7 @@ Given a prefix of length $j$ that is a suffix ending at position $i$, what is th
 Thus at the position $i$ ends the prefix of length $\pi[i]$, the prefix of length $\pi[\pi[i] - 1]$, the prefix $\pi[\pi[\pi[i] - 1] - 1]$, and so on, until the index becomes zero.
 Thus we can compute the answer in the following way.
 
-```cpp prefix_count_each_prefix
+```cpp
 vector<int> ans(n + 1);
 for (int i = 0; i < n; i++)
     ans[pi[i]]++;
@@ -257,7 +257,7 @@ In other words, we can construct an **automaton** (a finite state machine): the 
 
 Thus, even without having the string $t$, we can construct such a transition table $(\text{old}\\_\pi, c) \rightarrow \text{new}\\_\pi$ using the same algorithm as for calculating the transition table:
 
-```cpp prefix_automaton_slow
+```cpp
 void compute_automaton(string s, vector<vector<int>>& aut) {
     s += '#';
     int n = s.size();
@@ -280,7 +280,7 @@ However in this form the algorithm runs in $O(n^2 26)$ time for the lowercase le
 Note that we can apply dynamic programming and use the already calculated parts of the table.
 Whenever we go from the value $j$ to the value $\pi[j-1]$, we actually mean that the transition $(j, c)$ leads to the same state as the transition as $(\pi[j-1], c)$, and this answer is already accurately computed.
 
-```cpp prefix_automaton_fast
+```cpp
 void compute_automaton(string s, vector<vector<int>>& aut) {
     s += '#';
     int n = s.size();
@@ -321,6 +321,8 @@ g_3 &= "abacaba"\\\\
 g_4 &= "abacabadabacaba"
 \end{align}$$
 
+
+
 In such cases even constructing the string $t$ will be impossible, because of its astronomical length.
 The $k$-th Gray string is $2^k-1$ characters long.
 However we can calculate the value of the prefix function at the end of the string effectively, by only knowing the value of the prefix function at the start.
@@ -351,6 +353,8 @@ t_2 &= "abc" + t_1^{30} + "abd"\\\\
 t_3 &= t_2^{50} + t_1^{100}\\\\
 t_4 &= t_2^{10} + t_3^{100}
 \end{align}$$
+
+
 
 The recursive substitutions blow the string up, so that their lengths can reach the order of $100^{100}$.
 

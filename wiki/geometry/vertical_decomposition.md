@@ -53,7 +53,7 @@ vertex of each polygon. Then if we consider one of the input polygons and some s
 
 Below is the code that calculates area of the union of a set of triangles in $O(n^2\log n)$ time and $O(n)$ memory.
 
-```cpp triangle_union
+```cpp
 typedef double dbl;
 
 const dbl eps = 1e-9;

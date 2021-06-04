@@ -18,7 +18,7 @@ current combination, and find the rightmost element that has not yet reached its
 finding this element, we increment it by $1$, and assign the lowest valid value to all subsequent
 elements.
 
-```cpp next_combination
+```cpp
 bool next_combination(vector<int>& a, int n) {
     int k = (int)a.size();
     for (int i = k - 1; i >= 0; i--) {
@@ -72,7 +72,7 @@ This can be done, as we know the last mask of the first half and the first mask 
 The following is a naive implementation working by generating all $2^{n}$ possible subsets, and finding subsets of size
 $K$.
 
-```cpp generate_all_combinations_naive
+```cpp
 int gray_code (int n) {
     return n ^ (n >> 1);
 }
@@ -111,7 +111,7 @@ subsequence from appropriate elements.
 
 Its implementation is as follows:
 
-```cpp generate_all_combinations_fast
+```cpp
 vector<int> ans;
 
 void gen(int n, int k, int idx, bool rev) {

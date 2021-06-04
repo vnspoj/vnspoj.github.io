@@ -49,7 +49,7 @@ $$d[i] = \max\left(1, \max_{\substack{j = 0 \dots i-1 \\\\ a[j] < a[i]}} \left(d
 
 Here is an implementation of the algorithm described above, which computes the length of the longest increasing subsequence.
 
-```cpp lis_n2
+```cpp
 int lis(vector<int> const& a) {
     int n = a.size();
     vector<int> d(n, 1);
@@ -87,7 +87,7 @@ We will compute the array $p[]$ alongside $d[]$, and afterwards compute the subs
 For convenience we originally assign the ancestors with $p[i] = -1$.
 For elements with $d[i] = 1$, the ancestors value will remain $-1$, which will be slightly more convenient for restoring the subsequence.
 
-```cpp lis_n2_restore
+```cpp
 vector<int> lis(vector<int> const& a) {
     int n = a.size();
     vector<int> d(n, 1), p(n, -1);
@@ -139,7 +139,7 @@ We will again gradually process the numbers, first $a[0]$, then $a[1]$, etc, and
 
 After processing all the elements of $a[]$ the length of the desired subsequence is the largest $l$ with $d[l] < \infty$.
 
-```cpp lis_method2_n2
+```cpp
 int lis(vector<int> const& a) {
     int n = a.size();
     const int INF = 1e9;
@@ -173,7 +173,7 @@ In fact we are simply looking in the array $d[]$ for the first number that is st
 
 ### Implementation
 
-```cpp lis_method2_nlogn
+```cpp
 int lis(vector<int> const& a) {
     int n = a.size();
     const int INF = 1e9;

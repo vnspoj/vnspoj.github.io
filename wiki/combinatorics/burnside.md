@@ -150,6 +150,8 @@ $$\begin{align}
 &\dots\\\\
 \pi_{n-1} &= n 1 2 3\dots\end{align}$$
 
+
+
 Let us find an explicit formula for calculating $C(\pi_i)$.
 First we note, that the permutation $\pi_i$ has at the $j$-th position the value $i + j$ (taken modulo $n$).
 If we check the cycle structure for $\pi_i$.
@@ -198,7 +200,7 @@ It is obvious that all such permutations have the form $p_1^{i_1} p_2^{i_2} p_3^
 
 Thus we can write the implementations to this problem.
 
-```cpp burnside_tori
+```cpp
 using Permutation = vector<int>;
 
 void operator*=(Permutation& p, Permutation const& q) {

@@ -70,7 +70,7 @@ One way or another, it turns out that by Johnson's rule we can solve the problem
 
 Here we implement the second variation of the described algorithm.
 
-```cpp johnsons_rule
+```cpp
 struct Job {
     int a, b, idx;
 

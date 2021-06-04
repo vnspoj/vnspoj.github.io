@@ -74,7 +74,7 @@ So, we have proved that in a rectangle $2h \times h$ can not be more than $4 \cd
 
 We introduce a data structure to store a point (its coordinates and a number) and comparison operators required for two types of sorting:
 
-```cpp nearest_pair_def
+```cpp
 struct pt {
     int x, y, id;
 };
@@ -97,7 +97,7 @@ vector<pt> a;
 
 For a convenient implementation of recursion, we introduce an auxiliary function upd_ans(), which will calculate the distance between two points and check whether it is better than the current answer:
 
-```cpp nearest_pair_update
+```cpp
 double mindist;
 pair<int, int> best_pair;
  
@@ -116,7 +116,7 @@ To merge two sets of points received from recursive calls into one (ordered by $
 
 Finally, the set $B$ is stored in the same array $t$.
 
-```cpp nearest_pair_rec
+```cpp
 vector<pt> t;
 
 void rec(int l, int r) {
@@ -153,7 +153,7 @@ By the way, if all the coordinates are integer, then at the time of the recursio
 
 In the main program, recursion should be called as follows:
 
-```cpp nearest_pair_main
+```cpp
 t.resize(n);
 sort(a.begin(), a.end(), cmp_x());
 mindist = 1E20;

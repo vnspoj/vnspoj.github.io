@@ -175,7 +175,7 @@ There will be some elements in the sum array, that will not correspond to any ve
 
 So, we store the Segment Tree simply as an array $t[]$ with a size of four times the input size $n$:
 
-```cpp segment_tree_implementation_definition
+```cpp
 int n, t[4*MAXN];
 ```
 
@@ -183,7 +183,7 @@ The procedure for constructing the Segment Tree from a given array $a[]$ looks l
 it is a recursive function with the parameters $a[]$ (the input array), $v$ (the index of the current vertex), and the boundaries $tl$ and $tr$ of the current segment. 
 In the main program this function will be called with the parameters of the root vertex: $v = 1$, $tl = 0$, and $tr = n - 1$. 
 
-```cpp segment_tree_implementation_build
+```cpp
 void build(int a[], int v, int tl, int tr) {
     if (tl == tr) {
         t[v] = a[tl];
@@ -199,7 +199,7 @@ void build(int a[], int v, int tl, int tr) {
 Further the function for answering sum queries is also a recursive function, which receives as parameters information about the current vertex/segment (i.e. the index $v$ and the boundaries $tl$ and $tr$) and also the information about the boundaries of the query, $l$ and $r$. 
 In order to simplify the code, this function always does two recursive calls, even if only one is necessary - in that case the superfluous recursive call will have $l > r$, and this can easily be caught using an additional check at the beginning of the function.
 
-```cpp segment_tree_implementation_sum
+```cpp
 int sum(int v, int tl, int tr, int l, int r) {
     if (l > r) 
         return 0;
@@ -214,7 +214,7 @@ int sum(int v, int tl, int tr, int l, int r) {
 
 Finally the update query. The function will also receive information about the current vertex/segment, and additionally also the parameter of the update query (i.e. the position of the element and its new value).
 
-```cpp segment_tree_implementation_update
+```cpp
 void update(int v, int tl, int tr, int pos, int new_val) {
     if (tl == tr) {
         t[v] = new_val;
@@ -278,7 +278,7 @@ In addition to the maximum we also store the number of occurrences of it in the 
 Determining the correct pair to store at $t[v]$ can still be done in constant time using the information of the pairs stored at the child vertices. 
 Combining two such pairs should be done in a separate function, since this will be an operation that we will do while building the tree, while answering maximum queries and while performing modifications.
 
-```cpp segment_tree_maximum_and_count
+```cpp
 pair<int, int> t[4*MAXN];
 
 pair<int, int> combine(pair<int, int> a, pair<int, int> b) {
@@ -348,7 +348,7 @@ Notice, if we chose the right child, we have to subtract the number of zeros of 
 
 In the implementation we can handle the special case, $a[]$ containing less than $k$ zeros, by returning -1.
 
-```cpp segment_tree_kth_zero
+```cpp
 int find_kth(int v, int tl, int tr, int k) {
     if (k > t[v])
         return -1;
@@ -386,7 +386,7 @@ Instead, we can use the same idea as in the previous sections, and find the posi
 by moving each time to the left or the right, depending on the maximum value of the left child.
 Thus finding the answer in $O(\log n)$ time.
 
-```cpp segment_tree_first_greater
+```cpp
 int get_first(int v, int lv, int rv, int l, int r, int x) {
     if(lv > r || rv < l) return -1;
     if(l <= lv && rv <= r) {
@@ -435,7 +435,7 @@ Hence the answer to the current vertex is the maximum of these three values.
 Computing the maximum prefix / suffix sum is even easier. 
 Here is the implementation of the $\text{combine}$ function, which receives only data from the left and right child, and returns the data of the current vertex. 
 
-```cpp segment_tree_maximal_sum_subsegments1
+```cpp
 struct data {
     int sum, pref, suff, ans;
 };
@@ -454,7 +454,7 @@ Using the $\text{combine}$ function it is easy to build the Segment Tree.
 We can implement it in exactly the same way as in the previous implementations.
 To initialize the leaf vertices, we additionally create the auxiliary function $\text{make_data}$, which will return a $\text{data}$ object holding the information of a single value.
 
-```cpp segment_tree_maximal_sum_subsegments2
+```cpp
 data make_data(int val) {
     data res;
     res.sum = val;
@@ -491,7 +491,7 @@ It only remains, how to compute the answer to a query.
 To answer it, we go down the tree as before, breaking the query into several subsegments that coincide with the segments of the Segment Tree, and combine the answers in them into a single answer for the query.
 Then it should be clear, that the work is exactly the same as in the simple Segment Tree, but instead of summing / minimizing / maximizing the values, we use the $\text{combine}$ function.
 
-```cpp segment_tree_maximal_sum_subsegments3
+```cpp
 data query(int v, int tl, int tr, int l, int r) {
     if (l > r) 
         return make_data(0);
@@ -537,7 +537,7 @@ The C++ STL already has an implementation of this algorithm.
 
 Because this structure of the Segment Tree and the similarities to the merge sort algorithm, the data structure is also often called "Merge Sort Tree".
 
-```cpp segment_tree_smallest_number_greater1
+```cpp
 vector<int> t[4*MAXN];
 
 void build(int a[], int v, int tl, int tr) {
@@ -566,7 +566,7 @@ Since the vertex contains the list of elements in sorted order, we can simply pe
 
 Thus the answer to the query in one segment of the tree takes $O(\log n)$ time, and the entire query is processed in $O(\log^2 n)$.
 
-```cpp segment_tree_smallest_number_greater2
+```cpp
 int query(int v, int tl, int tr, int l, int r, int x) {
     if (l > r)
         return INF;
@@ -1075,7 +1075,7 @@ In the implementation of the $\text{find_kth}$ function this can be handled by p
 
 Here are the modified $\text{build}$, $\text{update}$  and $\text{find_kth}$ functions
 
-```cpp kth_smallest_persistent_segment_tree
+```cpp
 Vertex* build(int tl, int tr) {
     if (tl == tr)
         return new Vertex(0);
@@ -1106,7 +1106,7 @@ int find_kth(Vertex* vl, Vertex *vr, int tl, int tr, int k) {
 As already written above, we need to store the root of the initial Segment Tree, and also all the roots after each update.
 Here is the code for building a persistent Segment Tree over an vector `a` with elements in the range `[0, MAX_VALUE]`.
 
-```cpp kth_smallest_persistent_segment_tree_build
+```cpp
 int tl = 0, tr = MAX_VALUE + 1;
 std::vector<Vertex*> roots;
 roots.push_back(build(tl, tr));

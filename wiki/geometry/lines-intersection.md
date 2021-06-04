@@ -36,7 +36,7 @@ Notice, a different approach for computing the intersection point is explained i
 
 ## Implementation
 
-```cpp line_intersection
+```cpp
 struct pt {
     double x, y;
 };

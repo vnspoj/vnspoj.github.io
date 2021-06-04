@@ -90,7 +90,7 @@ This complexity is optimal for dense graph, i.e. when $m \approx n^2$.
 However in sparse graphs, when $m$ is much smaller than the maximal number of edges $n^2$, the problem can be solved in $O(n \log n + m)$ complexity. The algorithm and implementation can be found on the article [Dijkstra on sparse graphs](../graph/dijkstra_sparse).
 
 
-```cpp dijkstra_dense
+```cpp
 const int INF = 1000000000;
 vector<vector<pair<int, int>>> adj;
 
@@ -133,7 +133,7 @@ First of all, the code initializes arrays: distances $d[]$, labels $u[]$ and pre
 
 After performing all the iterations array $d[]$ stores the lengths of the shortest paths to all vertices, and array $p[]$ stores the predecessors of all vertices (except starting vertex $s$). The path to any vertex $t$ can be restored in the following way:
 
-```cpp dijkstra_restore_path
+```cpp
 vector<int> restore_path(int s, int t, vector<int> const& p) {
     vector<int> path;
 

@@ -90,6 +90,8 @@ g(14) = g(1110_2) = 1110_2 &= 14 \\\\
 g(15) = g(1111_2) = 0000_2 &= 0 \\\\
 \end{align}$$
 
+
+
 There exists a simple implementation using bitwise operations for the non-trivial operation described above:
 $$g(i) = i ~\&~ (i+1),$$
 where $\&$ is the bitwise AND operator. It is not hard to convince yourself that this solution does the same thing as the operation described above.
@@ -108,6 +110,8 @@ h(15) = 31 &= 0011111_2 \\\\
 h(31) = 63 &= 0111111_2 \\\\
 \vdots &
 \end{align}$$
+
+
 
 Unsurprisingly, there also exists a simple way to perform $h$ using bitwise operations:
 $$h(j) = j ~\|~ (j+1),$$
@@ -130,7 +134,7 @@ This is handled in the `sum(int l, int r)` method.
 Also this implementation supports two constructors.
 You can create a Fenwick tree initialized with zeros, or you can convert an existing array into the Fenwick form.
 
-```cpp fenwick_sum
+```cpp
 struct FenwickTree {
     vector<int> bit;  // binary indexed tree
     int n;
@@ -169,7 +173,7 @@ It is obvious that there is no easy way of finding minimum of range $[l, r]$ usi
 Additionally, each time a value is `update`'d, the new value has to be smaller than the current value (because the $min$ function is not reversible).
 These, of course, are significant limitations.
 
-```cpp fenwick_min
+```cpp
 struct FenwickTreeMin {
     vector<int> bit;
     int n;
@@ -259,6 +263,8 @@ g(6) = g(110_2) = 100_2 &= 4 \\\\
 g(4) = g(100_2) = 000_2 &= 0 \\\\
 \end{align}$$
 
+
+
 The last set bit can be extracted using $i ~\&~ (-i)$, so the operation can be expressed as:
 $$g(i) = i - (i ~\&~ (-i)).$$
 
@@ -269,7 +275,7 @@ As you can see, the main benefit of this approach is that the binary operations 
 
 The following implementation can be used like the other implementations, however it uses one-based indexing internally.
 
-```cpp fenwick_sum_onebased
+```cpp
 struct FenwickTreeOneBasedIndexing {
     vector<int> bit;  // binary indexed tree
     int n;

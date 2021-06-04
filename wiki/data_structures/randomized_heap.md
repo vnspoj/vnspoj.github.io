@@ -26,7 +26,7 @@ A randomized heap can perform all these operations in expected $O(\log n)$ time 
 
 We can immediately describe the structure of the binary heap:
 
-```cpp randomized_heap_structure
+```cpp
 struct Tree {
     int value;
     Tree * l = nullptr;
@@ -62,7 +62,7 @@ To achieve logarithmic complexity on average, we need to specify a method for ch
 It is not difficult to guess, that we will make this decision **randomly**.
 Thus the implementation of the merging operation is as follows:
 
-```cpp randomized_heap_merge
+```cpp
 Tree* merge(Tree* t1, Tree* t2) {
     if (!t1 || !t2)
         return t1 ? t1 : t2;
@@ -101,6 +101,8 @@ $$\begin{align}
 &= 1 + \log\sqrt{(n_L + 1)(n_R + 1)} = \log 2\sqrt{(n_L + 1)(n_R + 1)} \\\\
 &\le \log \frac{2\left((n_L + 1) + (n_R + 1)\right)}{2} = \log(n_L + n_R + 2) = \log(n+1)
 \end{align}$$
+
+
 
 ### Exceeding the expected value
 

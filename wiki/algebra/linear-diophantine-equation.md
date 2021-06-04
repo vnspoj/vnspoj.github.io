@@ -43,7 +43,7 @@ The above idea still works when $a$ or $b$ or both of them are negative. We only
 
 Finally, we can implement this idea as follows (note that this code does not consider the case $a = b = 0$):
 
-```cpp linear_diophantine_any
+```cpp
 int gcd(int a, int b, int& x, int& y) {
     if (b == 0) {
         x = 1;
@@ -113,7 +113,7 @@ Following is the code implementing this idea.
 Notice that we divide $a$ and $b$ at the beginning by $g$.
 Since the equation $a x + b y = c$ is equivalent to the equation $\frac{a}{g} x + \frac{b}{g} y = \frac{c}{g}$, we can use this one instead and have $\gcd(\frac{a}{g}, \frac{b}{g}) = 1$, which simplifies the formulas.
 
-```cpp linear_diophantine_all
+```cpp
 void shift_solution(int & x, int & y, int a, int b, int cnt) {
     x += cnt * b;
     y -= cnt * a;

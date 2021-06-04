@@ -21,7 +21,7 @@ This modification was proposed by Cheriyan and Maheshwari in 1989.
 
 ## Implementation
 
-```cpp push_relabel_faster
+```cpp
 const int inf = 1000000000;
 
 int n;

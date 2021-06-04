@@ -127,7 +127,7 @@ The function `maxflow` will return the value of the maximal flow.
 During the algorithm the matrix `capacity` will actually store the residual capacity of the network.
 The value of the flow in each edge will actually not be stored, but it is easy to extend the implementation - by using an additional matrix - to also store the flow and return it.
 
-```cpp edmondskarp
+```cpp
 int n;
 vector<vector<int>> capacity;
 vector<vector<int>> adj;

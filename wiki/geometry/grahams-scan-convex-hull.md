@@ -48,7 +48,7 @@ The final convex hull is obtained from the union of the upper and lower convex h
 
 ## Implementation
 
-```cpp grahams_scan
+```cpp
 struct pt {
     double x, y;
 };

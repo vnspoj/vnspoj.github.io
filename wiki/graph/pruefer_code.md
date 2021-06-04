@@ -32,7 +32,7 @@ Thus the Prüfer code for a given tree is a sequence of $n - 2$ numbers, where e
 
 The algorithm for computing the Prüfer code can be implemented easily with $O(n \log n)$ time complexity, simply by using a data structure to extract the minimum (for instance `set` or `priority_queue` in C++), which contains a list of all the current leafs.
 
-```cpp pruefer_code_slow
+```cpp
 vector<vector<int>> adj;
 
 vector<int> pruefer_code() {
@@ -94,7 +94,7 @@ But then we also know that it has to be bigger than $\text{ptr}$, and can start 
 
 Even though we might have to perform multiple linear searches for the next leaf vertex, the pointer $\text{ptr}$ only increases and therefore the time complexity in total is $O(n)$.
 
-```cpp pruefer_code_fast
+```cpp
 vector<vector<int>> adj;
 vector<int> parent;
 
@@ -179,7 +179,7 @@ This algorithm can be **implemented** easily in $O(n \log n)$: we use a data str
 
 The following implementation returns the list of edges corresponding to the tree.
 
-```cpp pruefer_decode_slow
+```cpp
 vector<pair<int, int>> pruefer_decode(vector<int> const& code) {
     int n = code.size() + 2;
     vector<int> degree(n, 1);
@@ -214,7 +214,7 @@ We don't need a data structure to extract the minimum.
 Instead we can notice that, after processing the current edge, only one vertex becomes a leaf.
 Therefore we can either continue with this vertex, or we find a smaller one with a linear search by moving a pointer.
 
-```cpp pruefer_decode_fast
+```cpp
 vector<pair<int, int>> pruefer_decode(vector<int> const& code) {
     int n = code.size() + 2;
     vector<int> degree(n, 1);

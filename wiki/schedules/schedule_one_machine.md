@@ -30,6 +30,8 @@ $$\begin{align}
 &= c_{\pi_i} \cdot t_{\pi_{i+1}} - c_{\pi_{i+1}} \cdot t_{\pi_i}
 \end{align}$$
 
+
+
 It is easy to see, that if the schedule $\pi$ is optimal, than any change in it leads to an increased penalty (or to the identical penalty), therefore for the optimal schedule we can write down the following condition:
 $$c \cdot t_{\pi_{i+1}} - c_{\pi_{i+1}} \cdot t_{\pi_i} \ge 0 \quad \forall i = 1 \dots n-1$$
 And after rearranging we get:

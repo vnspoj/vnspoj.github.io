@@ -27,7 +27,7 @@ We now describe how to construct a trie for a given set of strings in linear tim
 
 We introduce a structure for the vertices of the tree.
 
-```cpp aho_corasick_trie_definition
+```cpp
 const int K = 26;
 
 struct Vertex {
@@ -52,7 +52,7 @@ we start at the root node, and as long as there are edges corresponding to the c
 If there is no edge for one character, we simply generate a new vertex and connect it via an edge.
 At the end of the process we mark the last vertex with flag $\text{leaf}$.
 
-```cpp aho_corasick_trie_add
+```cpp
 void add_string(string const& s) {
     int v = 0;
     for (char ch : s) {
@@ -112,7 +112,7 @@ Let's move to the implementation.
 Note that we now will store the ancestor $p$ and the character $pch$ of the edge from $p$ to $v$ for each vertex $v$.
 Also at each vertex we will store the suffix link $\text{link}$ (or $-1$ if it hasn't been calculated yet), and in the array $\text{go}[k]$ the transitions in the machine for each symbol (again $-1$ if it hasn't been calculated yet).
 
-```cpp aho_corasick_automaton
+```cpp
 const int K = 26;
 
 struct Vertex {

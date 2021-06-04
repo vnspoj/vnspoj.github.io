@@ -37,6 +37,8 @@ $$\begin{align}
 &= (A(w_n^0), A(w_n^1), \dots, A(w_n^{n-1}))
 \end{align}$$
 
+
+
 Similarly the **inverse discrete Fourier transform** is defined:
 The inverse DFT of values of the polynomial $(y_0, y_1, \dots, y_{n-1})$ are the coefficients of the polynomial $(a_0, a_1, \dots, a_{n-1})$.
 $$\text{InverseDFT}(y_0, y_1, \dots, y_{n-1}) = (a_0, a_1, \dots, a_{n-1})$$
@@ -84,6 +86,8 @@ A_0(x) &= a_0 x^0 + a_2 x^1 + \dots + a_{n-2} x^{\frac{n}{2}-1} \\\\
 A_1(x) &= a_1 x^0 + a_3 x^1 + \dots + a_{n-1} x^{\frac{n}{2}-1}
 \end{align}$$
 
+
+
 It is easy to see that
 $$A(x) = A_0(x^2) + x A_1(x^2).$$
 
@@ -106,6 +110,8 @@ y_{k+n/2} &= A\left(w_n^{k+n/2}\right) \\\\
 &= A_0\left(w_n^{2k}\right) - w_n^k A_1\left(w_n^{2k}\right) \\\\
 &= y_k^0 - w_n^k y_k^1
 \end{align}$$
+
+
 Here we used again $A(x) = A_0(x^2) + x A_1(x^2)$ and the two identities $w_n^n = 1$ and $w_n^{n/2} = -1$.
 
 Therefore we get the desired formulas for computing the whole vector $(y_k)$:
@@ -113,6 +119,8 @@ $$\begin{align}
 y_k &= y_k^0 + w_n^k y_k^1, &\quad k = 0 \dots \frac{n}{2} - 1, \\\\
 y_{k+n/2} &= y_k^0 - w_n^k y_k^1, &\quad k = 0 \dots \frac{n}{2} - 1.
 \end{align}$$
+
+
 (This pattern $a + b$ and $a - b$ is sometimes called a **butterfly**.)
 
 Thus we learned how to compute the DFT in $O(n \log n)$ time.
@@ -182,7 +190,7 @@ Thus the computation of the inverse DFT is almost the same as the calculation of
 Here we present a simple recursive **implementation of the FFT** and the inverse FFT, both in one function, since the difference between the forward and the inverse FFT are so minimal.
 To store the complex numbers we use the complex type in the C++ STL.
 
-```cpp fft_recursive
+```cpp
 using cd = complex<double>;
 const double PI = acos(-1);
 
@@ -224,7 +232,7 @@ If the flag $\text{invert}$ is set, then we replace $wn$ with $wn^{-1}$, and eac
 
 Using this function we can create a function for **multiplying two polynomials**:
 
-```cpp fft_multiply
+```cpp
 vector<int> multiply(vector<int> const& a, vector<int> const& b) {
     vector<cd> fa(a.begin(), a.end()), fb(b.begin(), b.end());
     int n = 1;
@@ -301,7 +309,7 @@ In the next step we divide the vector into vectors of size $4$, and again apply 
 And so on.
 Finally in the last step we obtained the result of the DFTs of both halves of $a$, and by applying the butterfly transform we obtain the DFT for the complete vector $a$.
 
-```cpp fft_implementation_iterative
+```cpp
 using cd = complex<double>;
 const double PI = acos(-1);
 
@@ -362,7 +370,7 @@ Equivalently in the "reversed" number system, we flip all leading ones, and the 
 
 Thus we get the following implementation:
 
-```cpp fft_implementation_iterative_opt
+```cpp
 using cd = complex<double>;
 const double PI = acos(-1);
 
@@ -422,6 +430,8 @@ $$\begin{align}
 (w_n)^n &= 1 \pmod{p}, \\\\
 (w_n)^k &\ne 1 \pmod{p}, \quad 1 \le k < n.
 \end{align}$$
+
+
 The other $n-1$ roots can be obtained as powers of the root $w_n$.
 
 To apply it in the fast Fourier transform algorithm, we need a root to exist for some $n$, which is a power of $2$, and also for all smaller powers.
@@ -430,6 +440,8 @@ $$\begin{align}
 (w_n^2)^m = w_n^n &= 1 \pmod{p}, \quad \text{with } m = \frac{n}{2}\\\\
 (w_n^2)^k = w_n^{2k} &\ne 1 \pmod{p}, \quad 1 \le k < m.
 \end{align}$$
+
+
 Thus if $w_n$ is a $n$-th root of unity, then $w_n^2$ is a $\frac{n}{2}$-th root of unity.
 And consequently for all smaller powers of two there exist roots of the required degree, and they can be computed using $w_n$.
 
@@ -443,7 +455,7 @@ If this module is not enough, we need to find a different pair.
 We can use that fact that for modules of the form $p = c 2^k + 1$ (and $p$ is prime), there always exists the $2^k$-th root of unity.
 It can be shown that $g^c$ is such a $2^k$-th root of unity, where $g$ is a [primitive root](../algebra/primitive-root) of $p$.
 
-```cpp fft_implementation_modular_arithmetic
+```cpp
 const int mod = 7340033;
 const int root = 5;
 const int root_1 = 4404020;
@@ -505,6 +517,8 @@ $$\begin{align}
 A(x) &= A_1(x) + A_2(x) \cdot C \\\\
 B(x) &= B_1(x) + B_2(x) \cdot C
 \end{align}$$
+
+
 with $C \approx \sqrt{M}$.
 
 Then the product of $A(x)$ and $B(x)$ can then be represented as:
@@ -586,6 +600,8 @@ $$\begin{align}
 c_{m-1+i} &= \sum_{j = 0}^{m-1}  \left(\cos(\alpha_{i+j}) + i \sin(\alpha_{i+j})\right) \cdot \left(\cos(\alpha_{i+j}) - i \sin(\alpha_{i+j})\right) \\\\
 &= \sum_{j = 0}^{m-1} \cos(\alpha_{i+j})^2 + \sin(\alpha_{i+j})^2 = \sum_{j = 0}^{m-1} 1 = m
 \end{align}$$
+
+
 
 If there isn't a match, then at least a character is different, which leads that one of the products $a_{i+1} \cdot b_{m-1-j}$ is not equal to $1$, which leads to the coefficient $c_{m-1+i} \ne m$.
 

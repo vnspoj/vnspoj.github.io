@@ -337,7 +337,7 @@ First we describe a data structure that will store all information about a speci
 If necessary you can add a terminal flag here, as well as other information.
 We will store the list of transitions in the form of a $map$, which allows us to achieve total $O(n)$ memory and $O(n \log k)$ time for processing the entire string.
 
-```cpp suffix_automaton_struct
+```cpp
 struct state {
     int len, link;
     map<char, int> next;
@@ -347,7 +347,7 @@ struct state {
 The suffix automaton itself will be stored in an array of these structures $state$.
 We store the current size $sz$ and also the variable $last$, the state corresponding to the entire string at the moment.
 
-```cpp suffix_automaton_def
+```cpp
 const int MAXLEN = 100000;
 state st[MAXLEN * 2];
 int sz, last;
@@ -355,7 +355,7 @@ int sz, last;
 
 We give a function that initializes a suffix automaton (creating a suffix automaton with a single state).
 
-```cpp suffix_automaton_init
+```cpp
 void sa_init() {
     st[0].len = 0;
     st[0].link = -1;
@@ -366,7 +366,7 @@ void sa_init() {
 
 And finally we give the implementation of the main function - which adds the next character to the end of the current line, rebuilding the machine accordingly.
 
-```cpp suffix_automaton_extend
+```cpp
 void sa_extend(char c) {
     int cur = sz++;
     st[cur].len = st[last].len + 1;

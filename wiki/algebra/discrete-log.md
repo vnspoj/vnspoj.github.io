@@ -130,7 +130,7 @@ Instead of a `map`, we can also use a hash table (`unordered_map` in C++) which 
 Problems often ask for the minimum $x$ which satisfies the solution.  
 It is possible to get all answers and take the minimum, or reduce the first found answer using [Euler's theorem](../algebra/phi-function#toc-tgt-2), but we can be smart about the order in which we calculate values and ensure the first answer we find is the minimum.
 
-```cpp discrete_log
+```cpp
 // Returns minimum x for which a ^ x % m = b % m, a and m are coprime.
 int solve(int a, int b, int m) {
     a %= m, b %= m;
@@ -175,7 +175,7 @@ $$
 
 The baby-step giant-step algorithm can be easily extended to solve $ka^{x} \equiv b \pmod m$ for $x$.
 
-```cpp discrete_log_extended
+```cpp
 // Returns minimum x for which a ^ x % m = b % m.
 int solve(int a, int b, int m) {
     a %= m, b %= m;

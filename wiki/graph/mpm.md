@@ -19,6 +19,8 @@ p_{in}(v) &= \sum\limits_{(u, v)\in L}(c(u, v) - f(u, v)) \\\\
 p_{out}(v) &= \sum\limits_{(v, u)\in L}(c(v, u) - f(v, u))
 \end{align}$$
 
+
+
 Also we set $p_{in}(s) = p_{out}(t) = \infty$.
 Given $p_{in}$ and $p_{out}$ we define the _potential_ as $p(v) = min(p_{in}(v), p_{out}(v))$.
 We call a node $r$ a _reference node_ if $p(r) = min\\{p(v)\\}$.
@@ -38,7 +40,7 @@ Since there are less than $V$ phases (see the proof [here](../graph/dinic)), MPM
 
 ## Implementation
 
-```cpp mpm
+```cpp
 struct MPM{
     struct FlowEdge{
         int v, u;

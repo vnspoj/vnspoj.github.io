@@ -74,7 +74,7 @@ The input to the function `gauss` is the system matrix $a$. The last column of t
 
 The function returns the number of solutions of the system $(0, 1,\textrm{or } \infty)$. If at least one solution exists, then it is returned in the vector $ans$.
 
-```cpp gauss
+```cpp
 const double EPS = 1e-9;
 const int INF = 2; // it doesn't actually have to be infinity or a big number
 

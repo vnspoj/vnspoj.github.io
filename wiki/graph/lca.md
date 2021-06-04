@@ -53,7 +53,7 @@ Since there will almost never be any update to the stored values, a [Sparse Tabl
 
 In the following implementation of the LCA algorithm a Segment Tree is used.
 
-```cpp lca
+```cpp
 struct LCA {
     vector<int> height, euler, first, segtree;
     vector<bool> visited;

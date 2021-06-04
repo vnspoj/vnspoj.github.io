@@ -13,7 +13,7 @@ Later we will not distinguish between $\mathbf r$ and $\vec{\mathbf r}$ and use 
 
 Both 2D and 3D points maintain linear space, which means that for them sum of points and multiplication of point by some number are defined. Here are those basic implementations for 2D:
 
-```cpp point2d
+```cpp
 struct point2d {
     ftype x, y;
     point2d() {}
@@ -56,7 +56,7 @@ point2d operator*(ftype a, point2d b) {
 }
 ```
 And 3D points:
-```cpp point3d
+```cpp
 struct point3d {
     ftype x, y, z;
     point3d() {}
@@ -133,7 +133,7 @@ $$\mathbf a\cdot \mathbf b = (x_1 \cdot \mathbf e_x + y_1 \cdot\mathbf e_y + z_1
 That is also the algebraic definition of the dot product.
 From this we can write functions which calculate it.
 
-```cpp dotproduct
+```cpp
 ftype dot(point2d a, point2d b) {
     return a.x * b.x + a.y * b.y;
 }
@@ -157,7 +157,7 @@ For example
 
 Note that all these functions do not depend on the number of dimensions, hence they will be the same for the 2D and 3D case:
 
-```cpp dotproperties
+```cpp
 ftype norm(point2d a) {
     return dot(a, a);
 }
@@ -233,7 +233,7 @@ Note that it also equals $|\mathbf a| \cdot |\mathbf b| \sin \theta$ where $\the
 
 Let's implement all this stuff!
 
-```cpp crossproduct
+```cpp
 point3d cross(point3d a, point3d b) {
     return point3d(a.y * b.z - a.z * b.y,
                    a.z * b.x - a.x * b.z,
@@ -274,7 +274,7 @@ $$(\mathbf a_1 + t \cdot \mathbf d_1 - \mathbf a_2)\times \mathbf d_2=0 \quad\Ri
 
 Let's implement function to intersect two lines.
 
-```cpp basic_line_intersection
+```cpp
 point2d intersect(point2d a1, point2d d1, point2d a2, point2d d2) {
     return a1 + cross(a2 - a1, d2) / cross(d1, d2) * d1;
 }
@@ -291,7 +291,7 @@ $$\begin{cases}\mathbf r\cdot \mathbf n_1 = \mathbf a_1\cdot \mathbf n_1, \\\ \m
 Instead of thinking on geometric approach, you can work out an algebraic one which can be obtained immediately.
 For example, given that you already implemented a point class, it will be easy for you to solve this system using Cramer's rule because the triple product is simply the determinant of the matrix obtained from the vectors being its columns:
 
-```cpp plane_intersection
+```cpp
 point3d intersect(point3d a1, point3d n1, point3d a2, point3d n2, point3d a3, point3d n3) {
     point3d x(n1.x, n2.x, n3.x);
     point3d y(n1.y, n2.y, n3.y);

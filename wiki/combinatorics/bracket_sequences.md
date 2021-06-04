@@ -79,7 +79,7 @@ We change the symbol, compute the number of opening and closing brackets that we
 
 If we find do suitable position, then this sequence is already the maximal possible one, and there is no answer.
 
-```cpp next_balanced_brackets_sequence
+```cpp
 bool next_balanced_sequence(string & s) {
     int n = s.size();
     int depth = 0;
@@ -165,7 +165,7 @@ To have to put an opening bracket character, it $d[2n - i - 1][\text{depth}+1] \
 We increment the counter $\text{depth}$, and move on to the next character.
 Otherwise we decrement $k$ by $d[2n - i - 1][\text{depth}+1]$, put a closing bracket and move on.
 
-```cpp kth_balances_bracket
+```cpp
 string kth_balanced(int n, int k) {
     vector<vector<int>> d(2*n+1, vector<int>(n+1, 0));
     d[0][0] = 1;
@@ -198,7 +198,7 @@ The solution will only differ slightly in that we have to multiply the value $d[
 
 Here is an implementation using two types of brackets: round and square:
 
-```cpp kth_balances_bracket_multiple
+```cpp
 string kth_balanced2(int n, int k) {
     vector<vector<int>> d(2*n+1, vector<int>(n+1, 0));
     d[0][0] = 1;

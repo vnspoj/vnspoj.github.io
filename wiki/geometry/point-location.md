@@ -71,7 +71,7 @@ The following code is implemented for integers, but it can be easily modified to
 This implementation assumes that the subdivision is correctly stored inside a [DCEL](https://en.wikipedia.org/wiki/Doubly_connected_edge_list) and the outer face is numbered $-1$.<br>
 For each query a pair $(1, i)$ is returned if the point lies strictly inside the face number $i$, and a pair $(0, i)$ is returned if the point lies on the edge number $i$.
 
-```cpp point-location
+```cpp
 typedef long long ll;
 
 bool ge(const ll& a, const ll& b) { return a >= b; }

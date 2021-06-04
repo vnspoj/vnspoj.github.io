@@ -49,7 +49,7 @@ After we processed the entire string, some operators might still be in the stack
 
 Here is the implementation of this method for the four operators $+$ $-$ $*$ $/$:
 
-```cpp expression_parsing_simple
+```cpp
 bool delim(char c) {
     return c == ' ';
 }
@@ -161,7 +161,7 @@ where `left_assoc` is a function that decides if an operator is left_associative
 
 Here is an implementation for the binary operators $+$ $-$ $*$ $/$ and the unary  operators $+$ and $-$.
 
-```cpp expression_parsing_unary
+```cpp
 bool delim(char c) {
     return c == ' ';
 }

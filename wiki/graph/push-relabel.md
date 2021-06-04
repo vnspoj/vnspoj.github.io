@@ -88,7 +88,7 @@ If we pick a data structure that allows us to find the next vertex with excess i
 
 ## Implementation
 
-```cpp push_relabel
+```cpp
 const int inf = 1000000000;
 
 int n;

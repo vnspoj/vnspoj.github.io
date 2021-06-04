@@ -53,6 +53,8 @@ Also, here are some more interesting results related to the number of repetition
   t_1 &= b, \\\\
   t_i &= t_{i-1} + t_{i-2},
   \end{align}$$
+
+
   are "strongly" periodic.
   The number of repetitions in the Fibonacci string $f_i$, even in the compressed with Crochemore triples, is $O(f_n \log f_n)$.
   The number of primitive repetitions is also $O(f_n \log f_n)$.
@@ -121,6 +123,8 @@ Let us generate **necessary and sufficient** conditions for such a repetition at
   l_2 &\le k_2. \\\\
   \end{align}$$
 
+
+
 To summarize:
 
 - We fixate a specific position $cntr$.
@@ -133,6 +137,8 @@ To summarize:
   l_1 &\le k_1, \\\\
   l_2 &\le k_2. \\\\
   \end{align}$$
+
+
 
 Therefore the only remaining part is how we can compute the values $k_1$ and $k_2$ quickly for every position $cntr$.
 Luckily we can compute them in $O(1)$ using the [Z-function](../string/z-function):
@@ -164,7 +170,7 @@ If you only want to find the number of repetitions in a string, or only want to 
 Notice that if you want to expand these tuples to get the starting and end position of each repetition, then the runtime will be the runtime will be $O(n^2)$ (remember that there can be $O(n^2)$ repetitions).
 In this implementation we will do so, and store all found repetition in a vector of pairs of start and end indices.
 
-```cpp main_lorentz
+```cpp
 vector<int> z_function(string const& s) {
     int n = s.size();
     vector<int> z(n);
