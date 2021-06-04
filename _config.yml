@@ -59,6 +59,12 @@ gems:
   - jekyll-paginate
   - jekyll-gist
 
+collections:
+  category:
+    output: true
+  wiki:
+    output: true
+
 compress_html:
   clippings: all
   comments: ["<!-- ", " -->"]

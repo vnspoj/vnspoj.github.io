@@ -1,7 +1,7 @@
 ---
 layout: wiki
 wiki: true
-title: 15 Puzzle Game: Existence Of The Solution
+title: "15 Puzzle Game: Existence Of The Solution"
 ---
 
 

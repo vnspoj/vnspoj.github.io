@@ -2,9 +2,10 @@
 layout: default
 ---
 <header class="post-header">
+  {% assign pcate = page.categories[0] %}
   <h1 class="post-title">
-    {% if page.categories %}
-    Problems by category: {{ page.categories }}
+    {% if pcate %}
+    Problems by category: {{ pcate }}
     {% else %}
     Categories
     {% endif %}
@@ -19,7 +20,7 @@ layout: default
   {% capture category_slug %}{{ category | first }}{% endcapture %}
   {% for c_slug in category_slug %}
   {% assign nPosts = site.categories[c_slug].size %}
-  {% if c_slug == page.categories %}
+  {% if c_slug == pcate %}
   <button class="btn btn-sm btn-default active">{{ c_slug }} ({{ nPosts }})</button>
   {% else %}
   <a href="{{ site.baseurl }}/category/{{ c_slug }}" class="btn btn-sm btn-default">{{ c_slug }} ({{ nPosts }})</a>
@@ -29,11 +30,11 @@ layout: default
 
   <hr />
 
-  {% if page.categories %}
+  {% if pcate %}
   <!-- Specific category -->
   <h3>{{ page.title }}</h3>
   <hr />
-  {% if site.categories[page.categories] %}
+  {% if site.categories[pcate] %}
   <!-- {% for post in site.categories[page.categories] %}
       {% capture post_year %}{{ post.date | date: '%Y' }}{% endcapture %}
       {% if forloop.first %}
@@ -58,15 +59,15 @@ layout: default
       {% endif %}
     {% endfor %} -->
   <ol class="posts">
-    {% for post in site.categories[page.categories] %}
+    {% for post in site.categories[pcate] %}
     <li>
       <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
       {% if post.categories %}
-        <i>&raquo; Tags: </i>
-        {% for category in post.categories %}
-          <a href="{{ site.baseurl }}/category/{{ category }}">{{ category }}</a>
-          {% if forloop.last == false %}, {% endif %}
-        {% endfor %}
+      <i>&raquo; Tags: </i>
+      {% for category in post.categories %}
+      <a href="{{ site.baseurl }}/category/{{ category }}">{{ category }}</a>
+      {% if forloop.last == false %}, {% endif %}
+      {% endfor %}
       {% endif %}
       <!-- {% if post.level %}
       <i>&raquo; Level:</i> <a href="#">{{ post.level }}</a>
