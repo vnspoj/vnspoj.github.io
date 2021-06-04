@@ -1,7 +1,7 @@
 ---
 layout: wiki
 wiki: true
-title: Operations on polynomials and series
+title: "Operations on polynomials and series"
 ---
 
 

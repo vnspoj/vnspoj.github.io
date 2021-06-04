@@ -1,7 +1,7 @@
 ---
 layout: wiki
 wiki: true
-title: Linear Congruence Equation
+title: "Linear Congruence Equation"
 ---
 
 

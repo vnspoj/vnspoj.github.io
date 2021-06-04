@@ -1,7 +1,7 @@
 ---
 layout: wiki
 wiki: true
-title: Placing Bishops on a Chessboard
+title: "Placing Bishops on a Chessboard"
 ---
 
 

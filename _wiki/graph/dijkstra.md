@@ -1,7 +1,7 @@
 ---
 layout: wiki
 wiki: true
-title: Dijkstra Algorithm
+title: "Dijkstra Algorithm"
 ---
 
 

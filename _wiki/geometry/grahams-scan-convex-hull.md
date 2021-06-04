@@ -1,7 +1,7 @@
 ---
 layout: wiki
 wiki: true
-title: Convex Hull construction using Graham's Scan
+title: "Convex Hull construction using Graham's Scan"
 ---
 
 

@@ -1,7 +1,7 @@
 ---
 layout: wiki
 wiki: true
-title: Sprague-Grundy theorem. Nim
+title: "Sprague-Grundy theorem. Nim"
 ---
 
 

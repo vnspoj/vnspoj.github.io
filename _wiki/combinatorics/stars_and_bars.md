@@ -1,7 +1,7 @@
 ---
 layout: wiki
 wiki: true
-title: Stars and bars
+title: "Stars and bars"
 ---
 
 

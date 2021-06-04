@@ -1,9 +1,9 @@
 ---
 layout: wiki
 wiki: true
-title: Sieve of Eratosthenes With Linear Time Complexity
+title: "Sieve of Eratosthenes With Linear Time Complexity"
 ---
-# Sieve of Eratosthenes Having Linear Time Complexity
+
 
 Given a number $n$, find all prime numbers in a segment $[2;n]$.
 

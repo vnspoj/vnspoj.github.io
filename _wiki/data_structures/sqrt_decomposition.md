@@ -1,7 +1,7 @@
 ---
 layout: wiki
 wiki: true
-title: Sqrt Decomposition
+title: "Sqrt Decomposition"
 ---
 
 

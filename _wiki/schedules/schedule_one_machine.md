@@ -1,7 +1,7 @@
 ---
 layout: wiki
 wiki: true
-title: Scheduling jobs on one machine
+title: "Scheduling jobs on one machine"
 ---
 
 

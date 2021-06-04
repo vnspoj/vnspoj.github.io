@@ -1,9 +1,9 @@
 ---
 layout: wiki
 wiki: true
-title: D´Esopo-Pape
+title: "D´Esopo-Pape"
 ---
- algorithm
+
 
 Given a graph with $n$ vertices and $m$ edges with weights $w_i$ and a starting vertex $v_0$.
 The task is to find the shortest path from the vertex $v_0$ to every other vertex.

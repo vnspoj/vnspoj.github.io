@@ -1,7 +1,7 @@
 ---
 layout: wiki
 wiki: true
-title: 0-1 BFS
+title: "0-1 BFS"
 ---
 
 

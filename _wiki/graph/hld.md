@@ -1,7 +1,7 @@
 ---
 layout: wiki
 wiki: true
-title: Heavy-light decomposition
+title: "Heavy-light decomposition"
 ---
 
 

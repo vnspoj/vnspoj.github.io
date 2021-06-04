@@ -1,7 +1,7 @@
 ---
 layout: wiki
 wiki: true
-title: K-th order statistic in O(N)
+title: "K-th order statistic in O(N)"
 ---
 
 

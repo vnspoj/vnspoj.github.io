@@ -1,7 +1,7 @@
 ---
 layout: wiki
 wiki: true
-title: Maximum flow - Push-relabel algorithm
+title: "Maximum flow - Push-relabel algorithm"
 ---
 
 

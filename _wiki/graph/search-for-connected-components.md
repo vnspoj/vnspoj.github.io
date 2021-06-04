@@ -1,7 +1,7 @@
 ---
 layout: wiki
 wiki: true
-title: Search for connected components in a graph
+title: "Search for connected components in a graph"
 ---
 
 

@@ -1,9 +1,9 @@
 ---
 layout: wiki
 wiki: true
-title: Factorial modulo P
+title: "Factorial modulo P"
 ---
-# Factorial modulo $p$
+
 
 In some cases it is necessary to consider complex formulas modulo some prime $p$, containing factorials in both numerator and denominator, like such that you encounter in the formula for Binomial coefficients.
 We consider the case when $p$ is relatively small.

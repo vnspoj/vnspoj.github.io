@@ -1,9 +1,9 @@
 ---
 layout: wiki
 wiki: true
-title: The Stern-Brocot Tree and Farey Sequences
+title: "The Stern-Brocot Tree and Farey Sequences"
 ---
-# The Stern-Brocot tree and Farey sequences
+
 
 ## Stern-Brocot tree
 

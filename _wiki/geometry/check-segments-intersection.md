@@ -1,7 +1,7 @@
 ---
 layout: wiki
 wiki: true
-title: Check if two segments intersect
+title: "Check if two segments intersect"
 ---
 
 

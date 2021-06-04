@@ -1,7 +1,7 @@
 ---
 layout: wiki
 wiki: true
-title: Linear Diophantine Equation
+title: "Linear Diophantine Equation"
 ---
 
 

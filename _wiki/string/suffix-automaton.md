@@ -1,7 +1,7 @@
 ---
 layout: wiki
 wiki: true
-title: Suffix Automaton
+title: "Suffix Automaton"
 ---
 
 

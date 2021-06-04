@@ -1,7 +1,7 @@
 ---
 layout: wiki
 wiki: true
-title: Finding Intersection of Two Segments
+title: "Finding Intersection of Two Segments"
 ---
 
 

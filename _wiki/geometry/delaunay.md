@@ -1,7 +1,7 @@
 ---
 layout: wiki
 wiki: true
-title: Delaunay triangulation and Voronoi diagram
+title: "Delaunay triangulation and Voronoi diagram"
 ---
 
 

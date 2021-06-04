@@ -1,9 +1,9 @@
 ---
 layout: wiki
 wiki: true
-title: Assignment problem solution using min-cost-flo<
+title: "Assignment problem solution using min-cost-flo<"
 ---
-# Solving assignment problem using min-cost-flow
+
 
 The **assignment problem** has two equivalent statements:
 

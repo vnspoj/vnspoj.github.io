@@ -1,7 +1,7 @@
 ---
 layout: wiki
 wiki: true
-title: Minimum spanning tree - Kruskal with Disjoint Set Union
+title: "Minimum spanning tree - Kruskal with Disjoint Set Union"
 ---
 
 

@@ -1,7 +1,7 @@
 ---
 layout: wiki
 wiki: true
-title: Lowest Common Ancestor - Binary Lifting
+title: "Lowest Common Ancestor - Binary Lifting"
 ---
 
 

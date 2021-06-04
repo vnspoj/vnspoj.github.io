@@ -1,7 +1,7 @@
 ---
 layout: wiki
 wiki: true
-title: Discrete Root
+title: "Discrete Root"
 ---
 
 

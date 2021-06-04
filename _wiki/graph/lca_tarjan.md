@@ -1,7 +1,7 @@
 ---
 layout: wiki
 wiki: true
-title: Lowest Common Ancestor - Tarjan's off-line algorithm
+title: "Lowest Common Ancestor - Tarjan's off-line algorithm"
 ---
 
 

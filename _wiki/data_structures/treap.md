@@ -1,9 +1,9 @@
 ---
 layout: wiki
 wiki: true
-title: Treap
+title: "Treap"
 ---
- (Cartesian tree)
+
 
 Treap is a data structure which combines binary tree and binary heap (hence the name: tree + heap $\Rightarrow$ Treap).
 

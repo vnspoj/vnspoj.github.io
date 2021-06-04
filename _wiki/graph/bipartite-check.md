@@ -1,7 +1,7 @@
 ---
 layout: wiki
 wiki: true
-title: Check whether a graph is bipartite
+title: "Check whether a graph is bipartite"
 ---
 
 

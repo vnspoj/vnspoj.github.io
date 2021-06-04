@@ -1,9 +1,9 @@
 ---
 layout: wiki
 wiki: true
-title: Generating all K-combinations
+title: "Generating all K-combinations"
 ---
-# Generating all $K$-combinations
+
 
 In this article we will discuss the problem of generating all $K$-combinations.
 Given the natural numbers $N$ and $K$, and considering a set of numbers from $1$ to $N$.

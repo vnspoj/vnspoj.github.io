@@ -1,7 +1,7 @@
 ---
 layout: wiki
 wiki: true
-title: Finding the equation of a line for a segment
+title: "Finding the equation of a line for a segment"
 ---
 
 

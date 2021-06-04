@@ -1,7 +1,7 @@
 ---
 layout: wiki
 wiki: true
-title: Josephus Problem
+title: "Josephus Problem"
 ---
 
 

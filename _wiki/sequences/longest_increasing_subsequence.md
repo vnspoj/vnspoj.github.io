@@ -1,7 +1,7 @@
 ---
 layout: wiki
 wiki: true
-title: Longest increasing subsequence
+title: "Longest increasing subsequence"
 ---
 
 

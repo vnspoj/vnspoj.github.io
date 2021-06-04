@@ -1,7 +1,7 @@
 ---
 layout: wiki
 wiki: true
-title: Finding repetitions
+title: "Finding repetitions"
 ---
 
 

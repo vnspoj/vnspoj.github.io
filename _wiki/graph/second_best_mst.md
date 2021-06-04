@@ -1,7 +1,7 @@
 ---
 layout: wiki
 wiki: true
-title: Second Best Minimum Spanning Tree
+title: "Second Best Minimum Spanning Tree"
 ---
 
 

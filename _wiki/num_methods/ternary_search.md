@@ -1,9 +1,9 @@
 ---
 layout: wiki
 wiki: true
-title: Ternary Search and its Applications
+title: "Ternary Search and its Applications"
 ---
-# Ternary Search
+
 
 We are given a function $f(x)$ which is unimodal on an interval $[l, r]$. By unimodal function, we mean one of two behaviors of the function: 
 

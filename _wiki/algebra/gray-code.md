@@ -1,9 +1,9 @@
 ---
 layout: wiki
 wiki: true
-title: Gray Code
+title: "Gray Code"
 ---
-# Gray code
+
 
 Gray code is a binary numeral system where two successive values differ in only one bit. 
 

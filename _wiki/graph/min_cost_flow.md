@@ -1,7 +1,7 @@
 ---
 layout: wiki
 wiki: true
-title: Minimum-cost flow - Successive shortest path algorithm
+title: "Minimum-cost flow - Successive shortest path algorithm"
 ---
 
 

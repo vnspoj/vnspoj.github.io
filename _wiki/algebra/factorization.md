@@ -1,7 +1,7 @@
 ---
 layout: wiki
 wiki: true
-title: Integer factorization
+title: "Integer factorization"
 ---
 
 

@@ -1,7 +1,7 @@
 ---
 layout: wiki
 wiki: true
-title: Search for a pair of intersecting segments
+title: "Search for a pair of intersecting segments"
 ---
 
 

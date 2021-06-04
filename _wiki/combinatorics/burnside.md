@@ -1,7 +1,7 @@
 ---
 layout: wiki
 wiki: true
-title: Burnside's lemma / Pólya enumeration theorem
+title: "Burnside's lemma / Pólya enumeration theorem"
 ---
 
 

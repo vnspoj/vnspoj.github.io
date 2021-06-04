@@ -1,7 +1,7 @@
 ---
 layout: wiki
 wiki: true
-title: Finding the nearest pair of points
+title: "Finding the nearest pair of points"
 ---
 
 

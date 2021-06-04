@@ -1,7 +1,7 @@
 ---
 layout: wiki
 wiki: true
-title: Maximum flow - Ford-Fulkerson and Edmonds-Karp
+title: "Maximum flow - Ford-Fulkerson and Edmonds-Karp"
 ---
 
 

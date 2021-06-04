@@ -1,9 +1,9 @@
 ---
 layout: wiki
 wiki: true
-title: Number of paths with fixed length. Shortest Path of fixed length.
+title: "Number of paths with fixed length. Shortest Path of fixed length."
 ---
-# Number of paths of fixed length / Shortest paths of fixed length
+
 
 The following article describes solutions to these two problems built on the same idea:
 reduce the problem to the construction of matrix and compute the solution with the usual matrix multiplication or with a modified multiplication.

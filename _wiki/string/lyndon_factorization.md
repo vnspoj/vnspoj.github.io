@@ -1,7 +1,7 @@
 ---
 layout: wiki
 wiki: true
-title: Lyndon factorization
+title: "Lyndon factorization"
 ---
 
 

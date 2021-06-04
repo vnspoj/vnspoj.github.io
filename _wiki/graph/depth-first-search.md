@@ -1,7 +1,7 @@
 ---
 layout: wiki
 wiki: true
-title: Depth First Search
+title: "Depth First Search"
 ---
 
 

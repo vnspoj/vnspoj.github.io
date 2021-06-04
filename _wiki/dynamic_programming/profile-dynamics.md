@@ -1,7 +1,7 @@
 ---
 layout: wiki
 wiki: true
-title: Dynamic Programming on Broken Profile. Problem "Parquet"
+title: "Dynamic Programming on Broken Profile. Problem "Parquet""
 ---
 
 

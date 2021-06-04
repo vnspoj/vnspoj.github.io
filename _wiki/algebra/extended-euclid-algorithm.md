@@ -1,7 +1,7 @@
 ---
 layout: wiki
 wiki: true
-title: Extended Euclidean Algorithm
+title: "Extended Euclidean Algorithm"
 ---
 
 

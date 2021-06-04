@@ -1,7 +1,7 @@
 ---
 layout: wiki
 wiki: true
-title: Kuhn's Algorithm for Maximum Bipartite Matching
+title: "Kuhn's Algorithm for Maximum Bipartite Matching"
 ---
 
 

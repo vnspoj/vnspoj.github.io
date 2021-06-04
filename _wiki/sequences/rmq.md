@@ -1,7 +1,7 @@
 ---
 layout: wiki
 wiki: true
-title: Range Minimum Query
+title: "Range Minimum Query"
 ---
 
 

@@ -1,7 +1,7 @@
 ---
 layout: wiki
 wiki: true
-title: Suffix Array
+title: "Suffix Array"
 ---
 
 

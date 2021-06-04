@@ -1,9 +1,9 @@
 ---
 layout: wiki
 wiki: true
-title: Lowest Common Ancestor - Farach-Colton and Bender algorithm
+title: "Lowest Common Ancestor - Farach-Colton and Bender algorithm"
 ---
-# Lowest Common Ancestor - Farach-Colton and Bender Algorithm
+
 
 Let $G$ be a tree.
 For every query of the form $(u, v)$ we want to find the lowest common ancestor of the nodes $u$ and $v$, i.e. we want to find a node $w$ that lies on the path from $u$ to the root node, that lies on the path from $v$ to the root node, and if there are multiple nodes we pick the one that is farthest away from the root node.

@@ -1,7 +1,7 @@
 ---
 layout: wiki
 wiki: true
-title: Sieve of Eratosthenes
+title: "Sieve of Eratosthenes"
 ---
 
 

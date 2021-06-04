@@ -1,7 +1,7 @@
 ---
 layout: wiki
 wiki: true
-title: Binary Exponentiation
+title: "Binary Exponentiation"
 ---
 
 

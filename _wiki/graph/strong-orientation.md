@@ -1,7 +1,7 @@
 ---
 layout: wiki
 wiki: true
-title: Strong Orientation
+title: "Strong Orientation"
 ---
 
 

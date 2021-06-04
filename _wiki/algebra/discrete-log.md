@@ -1,7 +1,7 @@
 ---
 layout: wiki
 wiki: true
-title: Discrete Logarithm
+title: "Discrete Logarithm"
 ---
 
 

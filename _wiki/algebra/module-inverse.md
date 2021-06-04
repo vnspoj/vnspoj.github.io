@@ -1,9 +1,9 @@
 ---
 layout: wiki
 wiki: true
-title: Modular Inverse
+title: "Modular Inverse"
 ---
-# Modular Multiplicative Inverse
+
 
 ## Definition
 

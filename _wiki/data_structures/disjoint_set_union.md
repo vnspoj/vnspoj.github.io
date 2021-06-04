@@ -1,7 +1,7 @@
 ---
 layout: wiki
 wiki: true
-title: Disjoint Set Union
+title: "Disjoint Set Union"
 ---
 
 

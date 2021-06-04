@@ -1,7 +1,7 @@
 ---
 layout: wiki
 wiki: true
-title: String Hashing
+title: "String Hashing"
 ---
 
 

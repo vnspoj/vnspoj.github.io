@@ -1,7 +1,7 @@
 ---
 layout: wiki
 wiki: true
-title: Finding Power of Factorial Divisor
+title: "Finding Power of Factorial Divisor"
 ---
 
 

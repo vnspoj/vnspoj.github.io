@@ -1,9 +1,9 @@
 ---
 layout: wiki
 wiki: true
-title: Calculating Determinant of Matrix by Gauss
+title: "Calculating Determinant of Matrix by Gauss"
 ---
-# Calculating the determinant of a matrix by Gauss
+
 
 Problem: Given a matrix $A$ of size $N x N$. Compute its determinant.
 

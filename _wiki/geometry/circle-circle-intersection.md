@@ -1,7 +1,7 @@
 ---
 layout: wiki
 wiki: true
-title: Circle-Circle Intersection
+title: "Circle-Circle Intersection"
 ---
 
 

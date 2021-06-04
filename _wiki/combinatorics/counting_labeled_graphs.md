@@ -1,7 +1,7 @@
 ---
 layout: wiki
 wiki: true
-title: Counting labeled graphs
+title: "Counting labeled graphs"
 ---
 
 

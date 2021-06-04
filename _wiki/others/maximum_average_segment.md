@@ -1,7 +1,7 @@
 ---
 layout: wiki
 wiki: true
-title: Search the subarray with the maximum/minimum sum
+title: "Search the subarray with the maximum/minimum sum"
 ---
 
 

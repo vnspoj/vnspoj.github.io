@@ -1,9 +1,9 @@
 ---
 layout: wiki
 wiki: true
-title: Floyd-Warshall algorithm
+title: "Floyd-Warshall algorithm"
 ---
-# Floyd-Warshall Algorithm
+
 
 Given a directed or an undirected weighted graph $G$ with $n$ vertices.
 The task is to find the length of the shortest path $d_{ij}$ between each pair of vertices $i$ and $j$.

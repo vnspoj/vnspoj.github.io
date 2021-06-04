@@ -1,7 +1,7 @@
 ---
 layout: wiki
 wiki: true
-title: Pick's Theorem
+title: "Pick's Theorem"
 ---
 
 

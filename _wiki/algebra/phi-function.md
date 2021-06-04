@@ -1,7 +1,7 @@
 ---
 layout: wiki
 wiki: true
-title: Euler's totient function
+title: "Euler's totient function"
 ---
 
 

@@ -1,7 +1,7 @@
 ---
 layout: wiki
 wiki: true
-title: Arbitrary-Precision Arithmetic
+title: "Arbitrary-Precision Arithmetic"
 ---
 
 

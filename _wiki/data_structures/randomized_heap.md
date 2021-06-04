@@ -1,7 +1,7 @@
 ---
 layout: wiki
 wiki: true
-title: Randomized Heap
+title: "Randomized Heap"
 ---
 
 

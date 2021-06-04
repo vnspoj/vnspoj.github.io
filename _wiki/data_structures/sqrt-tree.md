@@ -1,7 +1,7 @@
 ---
 layout: wiki
 wiki: true
-title: Sqrt Tree
+title: "Sqrt Tree"
 ---
 
 

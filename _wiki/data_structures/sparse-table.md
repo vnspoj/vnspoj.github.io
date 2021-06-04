@@ -1,7 +1,7 @@
 ---
 layout: wiki
 wiki: true
-title: Sparse Table
+title: "Sparse Table"
 ---
 
 

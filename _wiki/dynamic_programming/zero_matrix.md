@@ -1,7 +1,7 @@
 ---
 layout: wiki
 wiki: true
-title: Finding the largest zero submatrix
+title: "Finding the largest zero submatrix"
 ---
 
 

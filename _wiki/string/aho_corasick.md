@@ -1,7 +1,7 @@
 ---
 layout: wiki
 wiki: true
-title: Aho-Corasick algorithm
+title: "Aho-Corasick algorithm"
 ---
 
 

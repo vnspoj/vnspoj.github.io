@@ -1,9 +1,9 @@
 ---
 layout: wiki
 wiki: true
-title: Bellman-Ford Algorithm - shortest paths with negative weights
+title: "Bellman-Ford Algorithm - shortest paths with negative weights"
 ---
-# Bellman-Ford Algorithm
+
 
 **Single source shortest path with negative weight edges**
 

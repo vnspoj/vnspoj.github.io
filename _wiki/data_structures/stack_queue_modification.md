@@ -1,7 +1,7 @@
 ---
 layout: wiki
 wiki: true
-title: Minimum stack / Minimum queue
+title: "Minimum stack / Minimum queue"
 ---
 
 

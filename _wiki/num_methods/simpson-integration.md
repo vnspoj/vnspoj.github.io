@@ -1,9 +1,9 @@
 ---
 layout: wiki
 wiki: true
-title: Simpson integration
+title: "Simpson integration"
 ---
-# Integration by Simpson's formula
+
 
 We are going to calculate the value of a definite integral
 

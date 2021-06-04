@@ -1,7 +1,7 @@
 ---
 layout: wiki
 wiki: true
-title: Minimum spanning tree - Kruskal's algorithm
+title: "Minimum spanning tree - Kruskal's algorithm"
 ---
 
 

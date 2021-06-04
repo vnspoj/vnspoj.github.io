@@ -1,7 +1,7 @@
 ---
 layout: wiki
 wiki: true
-title: Euclidean algorithm for computing the greatest common divisor
+title: "Euclidean algorithm for computing the greatest common divisor"
 ---
 
 

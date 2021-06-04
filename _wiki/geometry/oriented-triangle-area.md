@@ -1,7 +1,7 @@
 ---
 layout: wiki
 wiki: true
-title: Oriented area of a triangle
+title: "Oriented area of a triangle"
 ---
 
 

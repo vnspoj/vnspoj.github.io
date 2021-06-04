@@ -1,7 +1,7 @@
 ---
 layout: wiki
 wiki: true
-title: Balanced Ternary
+title: "Balanced Ternary"
 ---
 
 

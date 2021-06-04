@@ -1,7 +1,7 @@
 ---
 layout: wiki
 wiki: true
-title: Chinese Remainder Theorem
+title: "Chinese Remainder Theorem"
 ---
 
 

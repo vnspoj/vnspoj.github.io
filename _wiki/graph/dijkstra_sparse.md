@@ -1,7 +1,7 @@
 ---
 layout: wiki
 wiki: true
-title: Dijkstra on sparse graphs
+title: "Dijkstra on sparse graphs"
 ---
 
 

@@ -1,7 +1,7 @@
 ---
 layout: wiki
 wiki: true
-title: Intersection Point of Lines
+title: "Intersection Point of Lines"
 ---
 
 

@@ -1,7 +1,7 @@
 ---
 layout: wiki
 wiki: true
-title: Prüfer code
+title: "Prüfer code"
 ---
 
 

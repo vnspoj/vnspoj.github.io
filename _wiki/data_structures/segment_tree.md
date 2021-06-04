@@ -1,7 +1,7 @@
 ---
 layout: wiki
 wiki: true
-title: Segment Tree
+title: "Segment Tree"
 ---
 
 

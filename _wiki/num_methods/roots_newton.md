@@ -1,9 +1,9 @@
 ---
 layout: wiki
 wiki: true
-title: Newton's method for finding roots
+title: "Newton's method for finding roots"
 ---
- 
+
 
 This is an iterative method invented by Isaac Newton around 1664. However, this method is also sometimes called the Raphson method, since Raphson invented the same algorithm a few years after Newton, but his article was published much earlier.
 

@@ -1,7 +1,7 @@
 ---
 layout: wiki
 wiki: true
-title: Number of divisors / sum of divisors
+title: "Number of divisors / sum of divisors"
 ---
 
 

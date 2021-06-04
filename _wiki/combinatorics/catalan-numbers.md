@@ -1,9 +1,9 @@
 ---
 layout: wiki
 wiki: true
-title: Catalan Numbers and its Applications
+title: "Catalan Numbers and its Applications"
 ---
-# Catalan Numbers
+
 Catalan numbers is a number sequence, which is found useful in a number of combinatorial problems, often involving recursively-defined objects.
 
 This sequence was named after the Belgian mathematician [Catalan](https://en.wikipedia.org/wiki/Eug%C3%A8ne_Charles_Catalan), who lived in the 19th century. (In fact it was known before to Euler, who lived a century before Catalan).

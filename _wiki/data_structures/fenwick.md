@@ -1,7 +1,7 @@
 ---
 layout: wiki
 wiki: true
-title: Fenwick Tree
+title: "Fenwick Tree"
 ---
 
 

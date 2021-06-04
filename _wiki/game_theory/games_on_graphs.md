@@ -1,7 +1,7 @@
 ---
 layout: wiki
 wiki: true
-title: Games on arbitrary graphs
+title: "Games on arbitrary graphs"
 ---
 
 

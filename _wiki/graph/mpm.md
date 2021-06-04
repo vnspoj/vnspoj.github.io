@@ -1,7 +1,7 @@
 ---
 layout: wiki
 wiki: true
-title: Maximum flow - MPM algorithm
+title: "Maximum flow - MPM algorithm"
 ---
 
 

@@ -1,7 +1,7 @@
 ---
 layout: wiki
 wiki: true
-title: Minkowski sum of convex polygons
+title: "Minkowski sum of convex polygons"
 ---
 
 

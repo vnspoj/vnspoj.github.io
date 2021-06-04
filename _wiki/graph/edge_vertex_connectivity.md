@@ -1,7 +1,7 @@
 ---
 layout: wiki
 wiki: true
-title: Edge connectivity / Vertex connectivity
+title: "Edge connectivity / Vertex connectivity"
 ---
 
 

@@ -1,9 +1,9 @@
 ---
 layout: wiki
 wiki: true
-title: Solve RMQ by finding LCA
+title: "Solve RMQ by finding LCA"
 ---
-# Solve RMQ (Range Minimum Query) by finding LCA (Lowest Common Ancestor)
+
 
 Given an array `A[0..N-1]`.
 For each query of the form `[L, R]` we want to find the minimum in the array `A` starting from position `L` and ending with position `R`.

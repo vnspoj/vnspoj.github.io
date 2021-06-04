@@ -1,7 +1,7 @@
 ---
 layout: wiki
 wiki: true
-title: Prefix function. Knuth–Morris–Pratt algorithm
+title: "Prefix function. Knuth–Morris–Pratt algorithm"
 ---
 
 

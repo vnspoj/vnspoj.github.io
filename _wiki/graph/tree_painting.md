@@ -1,7 +1,7 @@
 ---
 layout: wiki
 wiki: true
-title: Paint the edges of the tree
+title: "Paint the edges of the tree"
 ---
 
 
