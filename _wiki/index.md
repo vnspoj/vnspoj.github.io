@@ -70,7 +70,7 @@ title: E-Maxx Algorithms in English from CP-Algorithms
     - [String Hashing](./string/string-hashing) \| [Translation into Vietnamese 🇻🇳](../wikivn/string/string-hashing)
     - [Rabin-Karp for String Matching](./string/rabin-karp) \| [Translation into Vietnamese 🇻🇳](../wikivn/string/rabin-karp)
     - [Prefix function - Knuth-Morris-Pratt](./string/prefix-function)
-    - [Z-function](./string/z-function)
+    - [Z-function](./string/z-function) \| [Translation into Vietnamese 🇻🇳](../wikivn/string/z-function)
     - [Suffix Array](./string/suffix-array)
     - [Aho-Corasick algorithm](./string/aho_corasick)
 - **Advanced**
