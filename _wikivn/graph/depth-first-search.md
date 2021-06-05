@@ -17,6 +17,8 @@ Giải thuật DFS tìm ra các đường đi theo thứ tự từ đỉnh ngu�
 
 Hiện thực giải thuật bằng kỹ thuật đệ quy quay lui đơn giản hoặc sử dụng stack.
 
+<p align="center"><img src="https://i.imgur.com/p51NejL.png" width="60%"></p>
+
 ## Implementation
 
 Hiện thực đơn giản nhất cho DFS như sau:

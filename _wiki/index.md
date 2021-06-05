@@ -148,7 +148,7 @@ title: E-Maxx Algorithms in English from CP-Algorithms
 ### Graphs
 
 - **Graph traversal**
-    - [Breadth First Search](./graph/breadth-first-search)
+    - [Breadth First Search](./graph/breadth-first-search) \| [Translation into Vietnamese 🇻🇳](../wikivn/graph/breadth-first-search)
     - [Depth First Search](./graph/depth-first-search) \| [Translation into Vietnamese 🇻🇳](../wikivn/graph/depth-first-search)
 - **Connected components, bridges, articulations points**
     - [Finding Connected Components](./graph/search-for-connected-components)
