@@ -19,11 +19,15 @@ To compute the size of a union of multiple sets, it is necessary to sum the size
 
 The above definition can be expressed mathematically as follows:
 
+
 $$\left| \bigcup_{i=1}^n A_i \right| = \sum_{i=1}^n|A_i| - \sum_{1\leq i<j\leq n} |A_i \cap A_j| + \sum _{1\leq i<j<k\leq n}|A_i \cap A_j \cap A_k| - \cdots + (-1)^{n-1} | A_1 \cap \cdots \cap A_n |$$
+
 
 And in a more compact way:
 
+
 $$\left|\bigcup_{i=1}^n A_i \right| = \sum_{\emptyset \neq J\subseteq \\{1,2,\ldots ,n\\}} (-1)^{|J|-1}{\Biggl |}\bigcap_{j\in J}A_{j}{\Biggr |}$$
+
 
 ### The formulation using Venn diagrams
 
@@ -33,7 +37,9 @@ Let the diagram show three sets $A$, $B$ and $C$:
 
 Then the area of their union $A \cup B \cup C$ is equal to the sum of the areas $A$, $B$ and $C$ less double-covered areas $A \cap B$, $A \cap C$, $B \cap C$, but with the addition of the area covered by three sets $A \cap B \cap C$:
 
+
 $$S(A \cup B \cup C) = S(A) + S(B) + S(C) - S(A \cap B) - S(A \cap C) - S(B \cap C) + S(A \cap B \cap C)$$
+
 
 It can also be generalized for an association of $n$ sets.
 
@@ -41,20 +47,28 @@ It can also be generalized for an association of $n$ sets.
 
 If $A_i$ $(i = 1,2...n)$ are events and ${\cal P}(A_i)$ the probability of an event from $A_i$ to occur, then the probability of their union (i.e. the probability that at least one of the events occur) is equal to:
 
+
+
 $$\begin{eqnarray}
 {\cal P} \left( \bigcup_{i=1}^n A_i \right) &=& \sum_{i=1}^n{\cal P}(A_i)\ - \sum_{1\leq i<j\leq n} {\cal P}(A_i \cap A_j)\  + \\\\\\
 &+& \sum _{1\leq i<j<k\leq n}{\cal P}(A_i \cap A_j \cap A_k) - \cdots + (-1)^{n-1} {\cal P}( A_1 \cap \cdots \cap A_n )
 \end{eqnarray}$$
 
+
+
 And in a more compact way:
 
+
 $${\cal P} \left(\bigcup_{i=1}^n A_i \right) = \sum_{\emptyset \neq J\subseteq \\{1,2,\ldots ,n\\}} (-1)^{|J|-1}\ {\cal P}{\Biggl (}\bigcap_{j\in J}A_{j}{\Biggr )}$$
+
 
 ## Proof
 
 For the proof it is convenient to use the mathematical formulation in terms of set theory:
 
+
 $$\left|\bigcup_{i=1}^n A_i \right| = \sum_{\emptyset \neq J\subseteq \\{1,2,\ldots ,n\\}} (-1)^{|J|-1}{\Biggl |}\bigcap_{j\in J}A_{j}{\Biggr |}$$
+
 
 We want to prove that any element contained in at least one of the sets $A_i$ will occur in the formula only once (note that elements which are not present in any of the sets $A_i$ will never be considered on the right part of the formula).
 
@@ -69,11 +83,15 @@ Consider an element $x$ occurring in $k \geq 1$ sets $A_i$. We will show it is c
 
 This leads us to the following sum of [binomial coefficients](../combinatorics/binomial-coefficients):
 
+
 $$ T = \binom{k}{1} - \binom{k}{2} + \binom{k}{3} - \cdots + (-1)^{i-1}\cdot \binom{k}{i} + \cdots + (-1)^{k-1}\cdot \binom{k}{k}$$
+
 
 This expression is very similar to the binomial expansion of $(1 - x)^k$:
 
+
 $$ (1 - x)^k = \binom{k}{0} - \binom{k}{1} \cdot x + \binom{k}{2} \cdot x^2 - \binom{k}{3} \cdot x^3 + \cdots + (-1)^k\cdot \binom{k}{k} \cdot x^k $$
+
 
 When $x = 1$, $(1 - x)^k$ looks a lot like $T$. However, the expression has an additional $\binom{k}{0} = 1$, and it is multiplied by $-1$. That leads us to $(1 - 1)^k = 1 - T$. Therefore $T = 1 - (1 - 1)^k = 1$, what was required to prove. The element is counted only once.
 
@@ -81,15 +99,21 @@ When $x = 1$, $(1 - x)^k$ looks a lot like $T$. However, the expression has an a
 
 Inclusion-exclusion principle can be rewritten to calculate number of elements which are present in zero sets:
 
+
 $$\left|\bigcap_{i=1}^n \overline{A_i}\right|=\sum_{m=0}^n (-1)^m \sum_{|X|=m} \left|\bigcap_{i\in X} A_{i}\right|$$
+
 
 Consider its generalization to calculate number of elements which are present in exactly $r$ sets:
 
+
 $$\left|\bigcup_{|B|=r}\left[\bigcap_{i \in B} A_i \cap \bigcap_{j \not\in B} \overline{A_j}\right]\right|=\sum_{m=r}^n (-1)^{m-r}\dbinom{m}{r} \sum_{|X|=m} \left|\bigcap_{i \in X} A_{i}\right|$$
+
 
 To prove this formula, consider some particular $B$. Due to basic inclusion-exclusion principle we can say about it that:
 
+
 $$\left|\bigcap_{i \in B} A_i \cap \bigcap_{j \not \in B} \overline{A_j}\right|=\sum_{m=r}^{n} (-1)^{m-r} \sum_{\substack{|X|=m \newline B \subset X}}\left|\bigcap_{i\in X} A_{i}\right|$$
+
 
 The sets on the left side do not intersect for different $B$, thus we can sum them up directly. Also one should note that any set $X$ will always have coefficient $(-1)^{m-r}$ if it occurs and it will occur for exactly $\dbinom{m}{r}$ sets $B$. 
 
@@ -109,11 +133,15 @@ Let's count the number of "bad" permutations, that is, permutations in which the
 
 We will denote by $X$ the set of permutations in which the first element is $\leq 1$ and $Y$ the set of permutations in which the last element is $\geq 8$. Then the number of "bad" permutations, as on the inclusion-exclusion formula, will be:
 
+
 $$ |X \cup Y| = |X| + |Y| - |X \cap Y| $$
+
 
 After a simple combinatorial calculation, we will get to:
 
+
 $$ 2 \cdot 9! + 2 \cdot 9! - 2 \cdot 2 \cdot 8! $$
+
 
 The only thing left is to subtract this number from the total of $10!$ to get the number of "good" permutations.
 
@@ -126,7 +154,9 @@ Again let us turn to the inverse problem, i.e. we calculate the number of sequen
 Let's denote by $A_i (i = 0,1,2)$ the set of sequences in which the digit $i$ does **not** occur.
 The formula of inclusion-exclusion on the number of "bad" sequences will be:
 
+
 $$ |A_0 \cup A_1 \cup A_2| = |A_0| + |A_1| + |A_2| - |A_0 \cap A_1| - |A_0 \cap A_2| - |A_1 \cap A_2| + |A_0 \cap A_1 \cap A_2| $$
+
 
 * The size of each $A_i$ is $2^n$, as each sequence can only contain two of the digits.
 * The size of each pairwise intersection $A_i \cap A_j$  is equal to $1$, as there will be only one digit to build the sequence.
@@ -134,35 +164,47 @@ $$ |A_0 \cup A_1 \cup A_2| = |A_0| + |A_1| + |A_2| - |A_0 \cap A_1| - |A_0 \cap 
 
 As we solved the inverse problem, we subtract it from the total of $3^n$ sequences:
 
+
 $$3^n - (3 \cdot 2^n - 3 \cdot 1 + 0)$$
+
 
 ### The number of integer solutions to the equation
 
 Consider the following equation:
+
 $$x_1 + x_2 + x_3 + x_4 + x_5 + x_6 = 20$$
+
 where $0 \le x_i \le 8 (i = 1,2,\ldots 6)$.
 
 Task: count the number of solutions to the equation.
 
 Forget the restriction on $x_i$ for a moment and just count the number of nonnegative solutions to this equation. This is easily done using [binomial coefficients](../combinatorics/binomial-coefficients): we want to break a sequence of $20$ units into $6$ groups, which is the same as distributing $5$ "walls" over $25$ slots:
 
+
 $$N_0 = \binom{25}{5}$$
+
 
 We will now calculate the number of "bad" solutions with the inclusion-exclusion principle. The "bad" solutions will be those in which one or more $x_i$ are greater than $9$.
 
 Denote by $A_k (k = 1,2\ldots 6)$ the set of solutions where $x_k \ge 9$, and all other $x_i \ge 0 (i \ne k)$ (they may be $\ge 9$ or not). To calculate the size of $A_k$, note that we have essentially the same combinatorial problem that was solved in the two paragraphs above, but now $9$ of the units are excluded from the slots and definitely belong to the first group. Thus:
 
+
 $$ | A_k | = \binom{16}{5} $$
+
 
 Similarly, the size of the intersection between sets $A_k$ and $A_p$ is equal to:
 
+
 $$ \left| A_k \cap A_p \right| = \binom{7}{5}$$
+
 
 The size of each intersection of three sets is zero, since $20$ units will not be enough for three or more variables greater than or equal to $9$.
 
 Combining all this into the formula of inclusions-exceptions and given that we solved the inverse problem, we finally get the answer:
 
+
 $$\binom{25}{5} - \left(\binom{6}{1} \cdot \binom{16}{5} - \binom{6}{2} \cdot \binom{7}{5}\right) $$
+
 
 ### The number of relative primes in a given interval
 
@@ -174,7 +216,9 @@ We will denote the prime factors of $n$ as $p_i (i = 1\cdots k)$.
 
 How many numbers in the interval $[1;r]$ are divisible by $p_i$? The answer to this question is:
 
+
 $$ \left\lfloor \frac{ r }{ p_i } \right\rfloor $$
+
 
 However, if we simply sum these numbers, some numbers will be summarized several times (those that share multiple $p_i$ as their factors). Therefore, it is necessary to use the inclusion-exclusion principle.
 
@@ -235,7 +279,9 @@ Learn now to solve the first version of the problem: when the string must satisf
 
 To solve it, iterate and fix a specific subset $X$ from the set of patterns consisting of $k$ patterns. Then we have to count the number of strings that satisfy this set of patterns, and only matches it, that is, they don't match any other pattern. We will use the inclusion-exclusion principle in a slightly different manner: we sum on all supersets $Y$ (subsets from the original set of strings that contain $X$), and either add to the current answer or subtract it from the number of strings:
 
+
 $$ ans(X) = \sum_{Y \supseteq X} (-1)^{|Y|-k} \cdot f(Y) $$
+
 
 Where $f(Y)$ is the number of strings that match $Y$ (at least $Y$).
 
@@ -243,13 +289,17 @@ Where $f(Y)$ is the number of strings that match $Y$ (at least $Y$).
 
 If we sum up on all $ans(X)$, we will get the final answer:
 
+
 $$ ans = \sum_{X ~ : ~ |X| = k} ans(X) $$
+
 
 However, asymptotics of this solution is $O(3^k \cdot k)$. To improve it, notice that different $ans(X)$ computations very often share $Y$ sets.
 
 We will reverse the formula of inclusion-exclusion and sum in terms of $Y$ sets. Now it becomes clear that the same set $Y$ would be taken into account in the computation of $ans(X)$ of $\binom{|Y|}{k}$ sets with the same sign $(-1)^{|Y| - k}$.
 
+
 $$ ans = \sum_{Y ~ : ~ |Y| \ge k} (-1)^{|Y|-k} \cdot \binom{|Y|}{k} \cdot f(Y) $$
+
 
 Now our solution has asymptotics $O(2^k \cdot k)$.
 
@@ -258,19 +308,27 @@ We will now solve the second version of the problem: find the number of strings 
 Of course, we can just use the solution to the first version of the problem and add the answers for sets with size greater than $k$. However, you may notice that in this problem, a set |Y| is considered in the formula for all sets with size $\ge k$ which are contained in $Y$. That said, we can write the part of the expression that is being multiplied by $f(Y)$ as:
 
 
+
 $$ (-1)^{|Y|-k} \cdot \binom{|Y|}{k} + (-1)^{|Y|-k-1} \cdot \binom{|Y|}{k+1} + (-1)^{|Y|-k-2} \cdot \binom{|Y|}{k+2} + \cdots + (-1)^{|Y|-|Y|} \cdot \binom{|Y|}{|Y|} $$
+
 
 Looking at Graham's (Graham, Knuth, Patashnik. "Concrete mathematics" [1998] ), we see a well-known formula for [binomial coefficients](../combinatorics/binomial-coefficients):
 
+
 $$ \sum_{k=0}^m (-1)^k \cdot \binom{n}{k} = (-1)^m \cdot \binom{n-1}{m} $$
+
 
 Applying it here, we find that the entire sum of binomial coefficients is minimized:
 
+
 $$ (-1)^{|Y|-k} \cdot \binom{|Y|-1}{|Y|-k} $$
+
 
 Thus, for this task, we also obtained a solution with the asymptotics $O(2^k \cdot k)$:
 
+
 $$ ans = \sum_{Y ~ : ~ |Y| \ge k} (-1)^{|Y|-k} \cdot \binom{|Y|-1}{|Y|-k} \cdot f(Y) $$
+
 
 ### The number of ways of going from a cell to another
 
@@ -282,7 +340,9 @@ For now, sort the obstacles by their coordinate $x$, and in case of equality —
 
 Also just learn how to solve a problem without obstacles: i.e. learn how to count the number of ways to get from one cell to another. In one axis, we need to go through $x$ cells, and on the other, $y$ cells. From simple combinatorics, we get a formula using [binomial coefficients](../combinatorics/binomial-coefficients):
 
+
 $$\binom{x+y}{x}$$
+
 
 Now to count the number of ways to get from one cell to another, avoiding all obstacles, you can use inclusion-exclusion to solve the inverse problem: count the number of ways to walk through the board stepping at a subset of obstacles (and subtract it from the total number of ways).
 
@@ -308,7 +368,9 @@ We will solve the inverse problem — compute the number of "bad" quadruples, i.
 
 We will use the inclusion-exclusion principle while summing over all possible groups of four numbers divisible by a divisor $d$.
 
+
 $$ans = \sum_{d \ge 2} (-1)^{deg(d)-1} \cdot f(d)$$
+
 
 where $deg(d)$ is the number of primes in the factorization of the number $d$ and $f(d)$ the number of quadruples divisible by $d$.
 
@@ -386,17 +448,23 @@ The asymptotics of our solution is $O(n \log n)$, as for almost every number up 
 
 Prove that the number of permutations of length $n$ without fixed points (i.e. no number $i$ is in position $i$ - also called a derangement) is equal to the following number:
 
+
 $$n! - \binom{n}{1} \cdot (n-1)! + \binom{n}{2} \cdot (n-2)! - \binom{n}{3} \cdot (n-3)! + \cdots \pm \binom{n}{n} \cdot (n-n)! $$
+
 
 and approximately equal to:
 
+
 $$ \frac{ n! }{ e } $$
+
 
 (if you round this expression to the nearest whole number — you get exactly the number of permutations without fixed points)
 
 Denote by $A_k$ the set of permutations of length $n$ with a fixed point at position $k$ ($1 \le k \le n$) (i.e. element $k$ is at position $k$).
 
 We now use the formula of inclusion-exclusion to count the number of permutations with at least one fixed point. For this we need to learn to count sizes of an intersection of sets $A_i$, as follows:
+
+
 
 $$\begin{eqnarray}
 \left| A_p \right| &=& (n-1)!\ , \\\\\\
@@ -405,19 +473,27 @@ $$\begin{eqnarray}
 \cdots ,
 \end{eqnarray}$$
 
+
+
 because if we know that the number of fixed points is equal $x$, then we know the position of $x$ elements of the permutation, and all other $(n-x)$ elements can be placed anywhere.
 
 Substituting this into the formula of inclusion-exclusion, and given that the number of ways to choose a subset of size $x$ from the set of $n$ elements is equal to $\binom{n}{x}$, we obtain a formula for the number of permutations with at least one fixed point:
 
+
 $$\binom{n}{1} \cdot (n-1)! - \binom{n}{2} \cdot (n-2)! + \binom{n}{3} \cdot (n-3)! - \cdots \pm \binom{n}{n} \cdot (n-n)! $$
+
 
 Then the number of permutations without fixed points is equal to:
 
+
 $$n! - \binom{n}{1} \cdot (n-1)! + \binom{n}{2} \cdot (n-2)! - \binom{n}{3} \cdot (n-3)! + \cdots \pm \binom{n}{n} \cdot (n-n)! $$
+
 
 Simplifying this expression, we obtain **exact and approximate expressions for the number of permutations without fixed points**:
 
+
 $$ n! \left( 1 - \frac{1}{1!} + \frac{1}{2!} - \frac{1}{3!} + \cdots \pm \frac{1}{n!} \right ) \approx \frac{n!}{e} $$
+
 
 (because the sum in brackets are the first $n+1$ terms of the expansion in Taylor series $e^{-1}$)
 

@@ -14,7 +14,9 @@ By definition, $\pi[0] = 0$.
 
 Mathematically the definition of the prefix function can be written as follows:
 
+
 $$\pi[i] = \max_ {k = 0 \dots i} \\{k : s[0 \dots k-1] = s[i-(k-1) \dots i] \\}$$
+
 
 For example, prefix function of string "abcabcd" is $[0, 0, 0, 1, 2, 3, 0]$, and prefix function of string "aabaaab" is $[0, 1, 0, 1, 2, 2, 3]$.
 
@@ -51,7 +53,9 @@ We end up with a suffix ending in position $i$ with the length $\pi[i + 1] - 1$,
 The following illustration shows this contradiction.
 The longest proper suffix at position $i$ that also is a prefix is of length $2$, and at position $i+1$ it is of length $4$.
 Therefore the string $s_0 ~ s_1 ~ s_2 ~ s_3$ is equal to the string $s_{i-2} ~ s_{i-1} ~ s_i ~ s_{i+1}$, which means that also the strings $s_0 ~ s_1 ~ s_2$ and $s_{i-2} ~ s_{i-1} ~ s_i$ are equal, therefore $\pi[i]$ has to be $3$.
+
 $$\underbrace{\overbrace{s_0 ~ s_1}^{\pi[i] = 2} ~ s_2 ~ s_3}\_{\pi[i+1] = 4} ~ \dots ~ \underbrace{s_{i-2} ~ \overbrace{s_{i-1} ~ s_{i}}^{\pi[i] = 2} ~ s_{i+1}}\_{\pi[i+1] = 4}$$
+
 
 Thus when moving to the next position, the value of the prefix function can either increase by one, stay the same, or decrease by some amount.
 This fact already allows us to reduce the complexity of the algorithm to $O(n^2)$, because in one step the prefix function can grow at most by one.
@@ -66,11 +70,15 @@ To accomplish this, we have to use all the information computed in the previous 
 So let us compute the value of the prefix function $\pi$ for $i + 1$.
 If $s[i+1] = s[\pi[i]]$, then we can say with certainty that $\pi[i+1] = \pi[i] + 1$, since we already know that the suffix at position $i$ of length $\pi[i]$ is equal to the prefix of length $\pi[i]$.
 This is illustrated again with an example.
+
 $$\underbrace{\overbrace{s_0 ~ s_1 ~ s_2}^{\pi[i]} ~ \overbrace{s_3}^{s_3 = s_{i+1}}}\_{\pi[i+1] = \pi[i] + 1} ~ \dots ~ \underbrace{\overbrace{s_{i-2} ~ s_{i-1} ~ s_{i}}^{\pi[i]} ~ \overbrace{s_{i+1}}^{s_3 = s_{i + 1}}}\_{\pi[i+1] = \pi[i] + 1}$$
+
 
 If this is not the case, $s[i+1] \neq s[\pi[i]]$, then we need to try a shorter string.
 In order to speed things up, we would like to immediately move to the longest length $j \lt \pi[i]$, such that the prefix property in the position $i$ holds, i.e. $s[0 \dots j-1] = s[i-j+1 \dots i]$:
+
 $$\overbrace{\underbrace{s_0 ~ s_1}\_j ~ s_2 ~ s_3}^{\pi[i]} ~ \dots ~ \overbrace{s_{i-3} ~ s_{i-2} ~ \underbrace{s_{i-1} ~ s_{i}}\_j}^{\pi[i]} ~ s_{i+1}$$
+
 
 Indeed, if we find such a length $j$, then we again only need to compare the characters $s[i+1]$ and $s[j]$.
 If they are equal, then we can assign $\pi[i+1] = j + 1$.
@@ -82,7 +90,9 @@ So we already have a general scheme of the algorithm.
 The only question left is how do we effectively find the lengths for $j$.
 Let's recap:
 for the current length $j$ at the position $i$ for which the prefix property holds, i.e. $s[0 \dots j-1] = s[i-j+1 \dots i]$, we want to find the greatest $k \lt j$, for which the prefix property holds.
+
 $$\overbrace{\underbrace{s_0 ~ s_1}\_k ~ s_2 ~ s_3}^j ~ \dots ~ \overbrace{s_{i-3} ~ s_{i-2} ~ \underbrace{s_{i-1} ~ s_{i}}\_k}^j ~s_{i+1}$$
+
 
 The illustration shows, that this has to be the value of $\pi[j-1]$, which we already calculated earlier.
 
@@ -240,16 +250,22 @@ Since the prefix is equal with the suffix, and both the prefix and the suffix co
 But then the string consists of only one character repeated over and over, hence we can compress it to a string of size $1$, which gives $k = 1$, and $k$ divides $n$.
 Contradiction.
 
+
 $$\overbrace{s_0 ~ s_1 ~ s_2 ~ s_3}^p ~ \overbrace{s_4 ~ s_5 ~ s_6 ~ s_7}^p$$
+
 $$s_0 ~ s_1 ~ s_2 ~ \underbrace{\overbrace{s_3 ~ s_4 ~ s_5 ~ s_6}^p ~ s_7}_{\pi[7] = 5}$$
+
 $$s_4 = s_3, ~ s_5 = s_4, ~ s_6 = s_5, ~ s_7 = s_6 ~ \Rightarrow ~ s_0 = s_1 = s_2 = s_3$$
+
 
 ### Building an automaton according to the prefix function
 
 Let's return to the concatenation to the two strings through a separator, i.e. for the strings $s$ and $t$ we compute the prefix function for the string $s + \\# + t$.
 Obviously, since $\\#$ is a separator, the value of the prefix function will never exceed $|s|$.
 It follows, that it is sufficient to only store the string $s + \\#$ and the values of the prefix function for it, and we can compute the prefix function for all subsequent character on the fly:
+
 $$\underbrace{s_0 ~ s_1 ~ \dots ~ s_{n-1} ~ \\#}\_{\text{need to store}} ~ \underbrace{t_0 ~ t_1 ~ \dots ~ t_{m-1}}\_{\text{do not need to store}}$$
+
 
 Indeed, in such a situation, knowing the next character $c \in t$ and the value of the prefix function of the previous position is enough information to compute the next value of the prefix function, without using any previous characters of the string $t$ and the value of the prefix function in them.
 
@@ -339,10 +355,14 @@ First the basic values are $G[0][j] = j$ and $K[0][j] = 0$.
 And all subsequent values can be calculated from the previous values and using the automaton.
 To calculate the value for some $i$ we remember that the string $g_i$ consists of $g_{i-1}$, the $i$ character of the alphabet, and $g_{i-1}$.
 Thus the automaton will go into the state:
+
 $$\text{mid} = \text{aut}[G[i-1][j]][i]$$
+
 $$G[i][j] = G[i-1][\text{mid}]$$
 The values for $K[i][j]$ can also be easily counted.
+
 $$K[i][j] = K[i-1][j] + (\text{mid} == |s|) + K[i-1][\text{mid}]$$
+
 
 So we can solve the problem for Gray strings, and similarly also a huge number of other similar problems.
 For example the exact same method also solves the following problem:

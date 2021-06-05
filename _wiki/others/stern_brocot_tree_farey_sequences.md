@@ -29,6 +29,8 @@ $$
     \end{array}
 $$
 
+
+
 Continuing this process to infinity this covers *all* positive fractions. Additionally, all fractions will be *unique* and *irreducible*. Finally, the fractions will also appear in ascending order.
 
 Before proving these properties, let us actually show a visualization of the Stern-Brocot tree, rather than the list representation. Every fraction in the tree has two children. Each child is the mediant of the closest ancestor on the left and closest ancestor to the right.
@@ -96,12 +98,18 @@ $$
 
 which (using the fact than an integer $z \gt 0 \iff z \ge 1$) can be rewritten as
 
+
+
+
+
 $$
 \begin{align}
     bx - ay &\ge 1 \\\\
     cy - dx &\ge 1.
 \end{align}
 $$
+
+
 
 Now multiply the first inequality by $c+d$ and the second with $a+b$ and add them to get
 

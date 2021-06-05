@@ -7,7 +7,9 @@ title: "Simpson integration"
 
 We are going to calculate the value of a definite integral
 
+
 $$\int_a ^ b f (x) dx$$
+
 
 The solution described here was published in one of the dissertations of **Thomas Simpson** in 1743.
 
@@ -15,7 +17,9 @@ The solution described here was published in one of the dissertations of **Thoma
 
 Let $n$ be some natural number. We divide the integration segment $[a, b]$ into $2n$ equal parts:
 
+
 $$x_i = a + i h, ~~ i = 0 \ldots 2n,$$
+
 $$h = \frac {b-a} {2n}.$$
 
 Now we calculate the integral separately on each of the segments $[x_ {2i-2}, x_ {2i}]$, $i = 1 \ldots n$, and then add all the values.
@@ -25,16 +29,22 @@ For instance we could construct it using the Lagrange polynomial interpolation.
 The only remaining thing left to do is to integrate this polynomial.
 If you do this for a general function $f$, you receive a remarkably simple expression:
 
+
 $$\int_{x_ {2i-2}} ^ {x_ {2i}} f (x) ~dx \approx \int_{x_ {2i-2}} ^ {x_ {2i}} P (x) ~dx = \left(f(x_{2i-2}) + 4f(x_{2i-1})+(f(x_{2i})\right)\frac {h} {3} $$
+
 
 Adding these values over all segments, we obtain the final **Simpson's formula**:
 
+
 $$\int_a ^ b f (x) dx \approx \left(f (x_0) + 4 f (x_1) + 2 f (x_2) + 4f(x_3) + 2 f(x_4) + \ldots + 4 f(x_{2N-1}) + f(x_{2N}) \right)\frac {h} {3} $$
+
 
 ## Error
 The error in approximating an integral by Simpson's formula is
 
+
 $$ -\tfrac{1}{90} \left(\tfrac{b-a}{2}\right)^5 f^{(4)}(\xi)$$
+
 
 where $\xi$ is some number between $a$ and $b$.
 

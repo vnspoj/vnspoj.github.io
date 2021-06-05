@@ -26,6 +26,8 @@ We will try to find a pattern expressing the answer for the problem $J_{n, k}$ t
 
 Using brute force modeling we can construct a table of values, for example, the following:
 
+
+
 $$\begin{array}{ccccccccccc}
 n\setminus k & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 \\\\
 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 \\\\
@@ -40,14 +42,20 @@ n\setminus k & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 \\\\
 10 & 10 & 5 & 4 & 5 & 3 & 3 & 9 & 1 & 7 & 8 \\\\
 \end{array}$$
 
+
+
 And here we can clearly see the following **pattern**:
 
+
 $$J_ {n, k} = (J _ {(n-1), k} + k - 1) \ \bmod n + 1 $$
+
 $$J_ {1, k} = 1 $$
 
 Here, 1-indexing makes for a somewhat messy formula; if you instead number the positions from 0, you get a very elegant formula:
 
+
 $$J_ {n, k} = (J _ {(n-1), k} + k) \ \bmod n$$
+
 
 So, we found a solution to the problem of Josephus, working in $O(n)$ operations.
 
@@ -112,16 +120,22 @@ int josephus(int n, int k) {
 
 Let us estimate the **complexity** of this algorithm. Immediately note that the case $n < k$ is analyzed by the old solution, which will work in this case for $O(k)$. Now consider the algorithm itself. In fact, after every iteration, instead of $n$ numbers, we are left with $n \left( 1 - \frac{1}{k} \right)$ numbers, so the total number of iterations $x$ of the algorithm can be found roughly from the following equation:
 
+
 $$ n \left(1 - \frac{1}{k} \right) ^ x = 1, $$
+
 
 on taking logarithm on both sides, we obtain:
 
 $$\ln n + x \ln \left(1 - \frac{1}{k} \right) = 0,$$ 
+
 $$x = - \frac{\ln n}{\ln \left(1 - \frac{1}{k} \right)},$$
+
 
 using the decomposition of the logarithm into Taylor series, we obtain an approximate estimate:
 
+
 $$x \approx k \ln n$$
+
 
 Thus, the complexity of the algorithm is actually $O (k \log n)$.
 
@@ -131,15 +145,21 @@ In this particular case (in which this task was set by Josephus Flavius) the pro
 
 In the case of even $n$ we get that all even numbers will be crossed out, and then there will be a problem remaining for $\frac{n}{2}$, then the answer for $n$ will be obtained from the answer for $\frac{n}{2}$ by multiplying by two and subtracting one (by shifting positions):
 
+
 $$ J_{2n, 2} = 2 J_{n, 2} - 1 $$
+
 
 Similarly, in the case of an odd $n$, all even numbers will be crossed out, then the first number, and the problem for $\frac{n-1}{2}$ will remain, and taking into account the shift of positions, we obtain the second formula:
 
+
 $$J_{2n+1,2} = 2 J_{n, 2} + 1 $$
+
 
 We can use this recurrent dependency directly in our implementation. This pattern can be translated into another form: $J_{n, 2}$ represents a sequence of all odd numbers, "restarting" from one whenever $n$ turns out to be a power of two. This can be written as a single formula:
 
+
 $$J_{n, 2} = 1 + 2 \left(n-2^{\lfloor \log_2 n \rfloor} \right)$$
+
 
 ## Analytical solution for $k > 2$
 

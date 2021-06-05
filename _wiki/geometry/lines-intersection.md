@@ -13,24 +13,38 @@ We have to find the intersection point of the lines, or determine that the lines
 If two lines are not parallel, they intersect.
 To find their intersection point, we need to solve the following system of linear equations:
 
+
+
 $$\begin{cases} a_1 x + b_1 y + c_1 = 0 \\\\
 a_2 x + b_2 y + c_2 = 0
 \end{cases}$$
 
+
+
 Using Cramer's rule, we can immediately write down the solution for the system, which will give us the required intersection point of the lines:
 
+
 $$x = - \frac{\begin{vmatrix}c_1 & b_1 \cr c_2 & b_2\end{vmatrix}}{\begin{vmatrix}a_1 & b_1 \cr a_2 & b_2\end{vmatrix} } = - \frac{c_1 b_2 - c_2 b_1}{a_1 b_2 - a_2 b_1},$$
+
 $$y = - \frac{\begin{vmatrix}a_1 & c_1 \cr a_2 & c_2\end{vmatrix}}{\begin{vmatrix}a_1 & b_1 \cr a_2 & b_2\end{vmatrix}} = - \frac{a_1 c_2 - a_2 c_1}{a_1 b_2 - a_2 b_1}.$$
 
 If the denominator equals $0$, i.e.
 
+
+
+
 $$\begin{vmatrix}a_1 & b_1 \cr a_2 & b_2\end{vmatrix} = a_1 b_2 - a_2 b_1 = 0 $$
+
 
 then either the system has no solutions (the lines are parallel and distinct) or there are infinitely many solutions (the lines overlap).
 If we need to distinguish these two cases, we have to check if coefficients $c$ are proportional with the same ratio as the coefficients $a$ and $b$.
 To do that we only have calculate the following determinants, and if they both equal $0$, the lines overlap:
 
+
+
+
 $$\begin{vmatrix}a_1 & c_1 \cr a_2 & c_2\end{vmatrix}, \begin{vmatrix}b_1 & c_1 \cr b_2 & c_2\end{vmatrix} $$
+
 
 Notice, a different approach for computing the intersection point is explained in the article [Basic Geometry](geometry/basic-geometry).
 

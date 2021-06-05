@@ -8,11 +8,15 @@ title: "Euler's totient function"
 Euler's totient function, also known as **phi-function** $\phi (n)$, counts the number of integers between 1 and $n$ inclusive, which are coprime to $n$. Two numbers are coprime if their greatest common divisor equals $1$ ($1$ is considered to be coprime to any number).
 
 Here are values of $\phi(n)$ for the first few positive integers:
+
+
 $$\begin{array}{|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|}
 \hline
 n & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 & 11 & 12 & 13 & 14 & 15 & 16 & 17 & 18 & 19 & 20 & 21 \\\\ \hline
 \phi(n) & 1 & 1 & 2 & 2 & 4 & 2 & 6 & 4 & 6 & 4 & 10 & 4 & 12 & 6 & 8 & 8 & 16 & 6 & 18 & 8 & 12 \\\\ \hline
 \end{array}$$
+
+
 
 ## Properties
 
@@ -95,7 +99,9 @@ void phi_1_to_n(int n) {
 
 This interesting property was established by Gauss:
 
+
 $$ \sum_{d|n} \phi{(d)} = n$$
+
 
 Here the sum is over all positive divisors $d$ of $n$.
 
@@ -127,19 +133,25 @@ The most famous and important property of Euler's totient function is expressed 
 $$a^{\phi(m)} \equiv 1 \pmod m$$ if $a$ and $m$ are relatively prime.
 
 In the particular case when $m$ is prime, Euler's theorem turns into **Fermat's little theorem**:
+
 $$a^{m - 1} \equiv 1 \pmod m$$
+
 
 Euler's theorem and Euler's totient function occur quite often in practical applications, for example both are used to compute the [modular multiplicative inverse](../algebra/module-inverse).
 
 As immediate consequence we also get the equivalence:
+
 $$a^n \equiv a^{n \bmod \phi(m)} \pmod m$$
+
 This allows computing $x^n \bmod m$ for very big $n$, especially if $n$ is the result of another computation, as it allows to compute $n$ under a modulo.
 
 ## Generalization
 
 There is a less known version of the last equivalence, that allows computing $x^n \bmod m$ efficiently for not coprime $x$ and $m$.
 For arbitrary $x, m$ and $n \geq \log_2 m$:
+
 $$x^{n}\equiv x^{\phi(m)+[n \bmod \phi(m)]} \mod m$$
+
 
 Proof:
 
@@ -163,12 +175,16 @@ The equivalence between the third and forth line follows from the fact that $ab 
 Indeed if $b = cd + r$ with $r < c$, then $ab = acd + ar$ with $ar < ac$.
 
 Since $x$ and $\frac{m}{a}$ are coprime, we can apply Euler's theorem and get the efficient (since $k$ is very small; in fact $k \le \log_2 m$) formula:
+
 $$x^n \bmod m = x^k\left(x^{n-k \bmod \phi(\frac{m}{a})} \bmod \frac{m}{a}\right)\bmod m.$$
+
 
 This formula is difficult to apply, but we can use it to analyze the behavior of $x^n \bmod m$. We can see that the sequence of powers $(x^1 \bmod m, x^2 \bmod m, x^3 \bmod m, \dots)$ enters a cycle of length $\phi\left(\frac{m}{a}\right)$ after the first $k$ (or less) elements. 
 $\phi\left(\frac{m}{a}\right)$ divides $\phi(m)$ (because $a$ and $\frac{m}{a}$ are coprime we have $\phi(a) \cdot \phi\left(\frac{m}{a}\right) = \phi(m)$), therefore we can also say that the period has length $\phi(m)$.
 And since $\phi(m) \ge \log_2 m \ge k$, we can conclude the desired, much simpler, formula:
+
 $$ x^n \equiv x^{\phi(m)} x^{(n - \phi(m)) \bmod \phi(m)} \bmod m \equiv x^{\phi(m)+[n \bmod \phi(m)]} \mod m.$$
+
 
 ## Practice Problems  
 

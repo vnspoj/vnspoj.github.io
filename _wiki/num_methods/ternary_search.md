@@ -36,7 +36,9 @@ Thus, based on the comparison of the values in the two inner points, we can repl
 
 We didn't impose any restrictions on the choice of points $m_1$ and $m_2$. This choice will define the convergence rate and the accuracy of the implementation. The most common way is to choose the points so that they divide the interval $[l, r]$ into three equal parts. Thus, we have
 
+
 $$m_1 = l + \frac{(r - l)}{3}$$
+
 
 $$m_2 = r - \frac{(r - l)}{3}$$ 
 
@@ -44,7 +46,9 @@ If $m_1$ and $m_2$ are chosen to be closer to each other, the convergence rate w
 
 ### Run time analysis
 
+
 $$T(n) = T({2n}/{3}) + 1 = \Theta(\log n)$$
+
 
 It can be visualized as follows: every time after evaluating the function at points $m_1$ and $m_2$, we are essentially ignoring about one third of the interval, either the left or right one. Thus the size of the search space is ${2n}/{3}$ of the original one. 
 

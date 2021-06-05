@@ -15,9 +15,13 @@ The algorithm was designed by Andrew Goldberg and Robert Tarjan in 1985.
 
 During the algorithm we will have to handle a **preflow** - i.e. a function $f$ that is similar to the flow function, but does not necessarily satisfies the flow conservation constraint.
 For it only the constraints
+
 $$0 \le f(e) \le c(e)$$
+
 and
+
 $$\sum_{(v, u) \in E} f((v, u)) \ge \sum_{(u, v) \in E} f((u, v))$$
+
 have to hold.
 
 So it is possible for some vertex to receive more flow than it distributes.

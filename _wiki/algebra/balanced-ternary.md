@@ -48,7 +48,9 @@ such digits are not present in the number initially but they can be encountered 
 
 **Example 1:** Let us convert `64` to balanced ternary. At first we use normal ternary to rewrite the number:
 
+
 $$ 64_{10} = 02101_{3} $$
+
 
 Let us process it from the least significant (rightmost) digit:
 
@@ -58,11 +60,15 @@ Let us process it from the least significant (rightmost) digit:
 The final result is `1Z101`.
 
 Let us convert it back to the decimal system by adding the weighted positional values:
+
 $$ 1Z101 = 81 \cdot 1 + 27 \cdot (-1) + 9 \cdot 1 + 3 \cdot 0 + 1 \cdot 1 = 64_{10} $$
+
 
 **Example 2:** Let us convert `237` to balanced ternary. At first we use normal ternary to rewrite the number:
 
+
 $$ 237_{10} = 22210_{3} $$
+
 
 Let us process it from the least significant (rightmost) digit:
 
@@ -74,7 +80,9 @@ Let us process it from the least significant (rightmost) digit:
 The final result is `100Z10`.
 
 Let us convert it back to the decimal system by adding the weighted positional values:
+
 $$ 100Z10 = 243 \cdot 1 + 81 \cdot 0 + 27 \cdot 0 + 9 \cdot (-1) + 3 \cdot 1 + 1 \cdot 0 = 237_{10} $$
+
 
 ## Practice Problems
 

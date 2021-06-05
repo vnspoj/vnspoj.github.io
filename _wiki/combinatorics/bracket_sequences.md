@@ -45,10 +45,14 @@ Otherwise it is.
 
 The number of balanced bracket sequences with only one bracket type can be calculated using the [Catalan numbers](../combinatorics/catalan-numbers).
 The number of balanced bracket sequences of length $2n$ ($n$ pairs of brackets) is:
+
 $$\frac{1}{n+1} \binom{2n}{n}$$
 
+
 If we allow $k$ types of brackets, then each pair be of any of the $k$ types (independently of the others), thus the number of balanced bracket sequences is:
+
 $$\frac{1}{n+1} \binom{2n}{n} k^n$$
+
 
 ### Dynamic programming
 
@@ -59,7 +63,9 @@ And somewhere later is the corresponding closing bracket of the pair.
 It is clear that inside this pair there is a balanced bracket sequence, and similarly after this pair there is a balanced bracket sequence.
 So to compute $d[n]$, we will look at how many balanced sequences of $i$ pairs of brackets are inside this first bracket pair, and how many balanced sequences with $n-1-i$ pairs are after this pair.
 Consequently the formula has the form:
+
 $$d[n] = \sum_{i=0}^{n-1} d[i] \cdot d[n-1-i]$$
+
 The initial value for this recurrence is $d[0] = 1$.
 
 ## Finding the lexicographical next balanced sequence
@@ -128,7 +134,9 @@ For the start value $i = 0$ the answer is obvious: $d[0][0] = 1$, and $d[0][j] =
 Now let $i > 0$, and we look at the last character in the sequence.
 If the last character was an opening bracket $($, then the state before was $(i-1, j-1)$, if it was a closing bracket $)$, then the previous state was $(i-1, j+1)$.
 Thus we obtain the recursion formula:
+
 $$d[i][j] = d[i-1][j-1] + d[i-1][j+1]$$
+
 $d[i][j] = 0$ holds obviously for negative $j$.
 Thus we can compute this array in $O(n^2)$.
 
@@ -142,7 +150,9 @@ If the current character $s[i]$ is equal to $)$, then we must add $d[2n-i-1][\te
 New let there be $k$ different bracket types.
 
 Thus, when we look at the current character $s[i]$ before recomputing $\text{depth}$, we have to go through all bracket types that are smaller than the current character, and try to put this bracket into the current position (obtaining a new balance $\text{ndepth} = \text{depth} \pm 1$), and add the number of ways to finish the sequence (length $2n-i-1$, balance $ndepth$) to the answer:
+
 $$d[2n - i - 1][\text{ndepth}] \cdot k^{\frac{2n - i - 1 - ndepth}{2}}$$
+
 This formula can be derived as follows:
 First we "forget" that there are multiple bracket types, and just take the answer $d[2n - i - 1][\text{ndepth}]$.
 Now we consider how the answer will change is we have $k$ types of brackets.

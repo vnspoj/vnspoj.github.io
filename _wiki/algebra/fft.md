@@ -22,7 +22,9 @@ And recently (in 2019) Harvey and van der Hoeven published an algorithm that run
 ## Discrete Fourier transform
 
 Let there be a polynomial of degree $n - 1$:
+
 $$A(x) = a_0 x^0 + a_1 x^1 + \dots + a_{n-1} x^{n-1}$$
+
 Without loss of generality we assume that $n$ - the number of coefficients - is a power of $2$.
 If $n$ is not a power of $2$, then we simply add the missing terms $a_i x^i$ and set the coefficients $a_i$ to $0$.
 
@@ -43,7 +45,9 @@ $$\begin{align}
 
 Similarly the **inverse discrete Fourier transform** is defined:
 The inverse DFT of values of the polynomial $(y_0, y_1, \dots, y_{n-1})$ are the coefficients of the polynomial $(a_0, a_1, \dots, a_{n-1})$.
+
 $$\text{InverseDFT}(y_0, y_1, \dots, y_{n-1}) = (a_0, a_1, \dots, a_{n-1})$$
+
 
 Thus, if a direct DFT computes the values of the polynomial at the points at the $n$-th roots, the inverse DFT can restore the coefficients of the polynomial using those values.
 
@@ -54,13 +58,19 @@ We compute the DFT for each of them: $\text{DFT}(A)$ and $\text{DFT}(B)$.
 
 What happens if we multiply these polynomials?
 Obviously at each point the values are simply multiplied, i.e.
+
 $$(A \cdot B)(x) = A(x) \cdot B(x).$$
 
+
 This means that if we multiply the vectors $\text{DFT}(A)$ and $\text{DFT}(B)$ - by multiplying each element of one vector by the corresponding element of the other vector - then we get nothing other than the DFT of the polynomial $\text{DFT}(A \cdot B)$:
+
 $$\text{DFT}(A \cdot B) = \text{DFT}(A) \cdot \text{DFT}(B)$$
 
+
 Finally, applying the inverse DFT, we obtain:
+
 $$A \cdot B = \text{InverseDFT}(\text{DFT}(A) \cdot \text{DFT}(B))$$
+
 
 On the right the product of the two DFTs we mean the pairwise product of the vector elements.
 This can be computed in $O(n)$ time.
@@ -80,7 +90,9 @@ The basic idea of the FFT is to apply divide and conquer.
 We divide the coefficient vector of the polynomial into two vectors, recursively compute the DFT for each of them, and combine the results to compute the DFT of the complete polynomial.
 
 So let there be a polynomial $A(x)$ with degree $n - 1$, where $n$ is a power of $2$, and $n > 1$:
+
 $$A(x) = a_0 x^0 + a_1 x^1 + \dots + a_{n-1} x^{n-1}$$
+
 
 We divide it into two smaller polynomials, the one containing only the coefficients of the even positions, and the one containing the coefficients of the odd positions:
 
@@ -93,7 +105,9 @@ A_1(x) &= a_1 x^0 + a_3 x^1 + \dots + a_{n-1} x^{\frac{n}{2}-1}
 
 
 It is easy to see that
+
 $$A(x) = A_0(x^2) + x A_1(x^2).$$
+
 
 The polynomials $A_0$ and $A_1$ are only half as much coefficients as the polynomial $A$.
 If we can compute the $\text{DFT}(A)$ in linear time using $\text{DFT}(A_0)$ and $\text{DFT}(A_1)$, then we get the recurrence $T_{\text{DFT}}(n) = 2 T_{\text{DFT}}\left(\frac{n}{2}\right) + O(n)$ for the time complexity, which results in $T_{\text{DFT}}(n) = O(n \log n)$ by the **master theorem**.
@@ -104,7 +118,9 @@ Suppose we have computed the vectors $\left(y_k^0\right)\_{k=0}^{n/2-1} = \text{
 Let us find a expression for $\left(y_k\right)_{k=0}^{n-1} = \text{DFT}(A)$.
 
 For the first $\frac{n}{2}$ values we can just use the previously noted equation $A(x) = A_0(x^2) + x A_1(x^2)$:
+
 $$y_k = y_k^0 + w_n^k y_k^1, \quad k = 0 \dots \frac{n}{2} - 1.$$
+
 
 However for the second $\frac{n}{2}$ values we need to find a slightly, different expression:
 
@@ -141,6 +157,10 @@ This known problem is called **interpolation**, and there are general algorithms
 But in this special case (since we know the values of the points at the roots of unity), we can obtains a much simpler algorithm (that is practically the same as the direct FFT).
 
 We can write the DFT, according to its definition, in the matrix form:
+
+
+
+
 $$
 \begin{pmatrix}
 w_n^0 & w_n^0 & w_n^0 & w_n^0 & \cdots & w_n^0 \\\\
@@ -155,9 +175,15 @@ a_0 \\\\ a_1 \\\\ a_2 \\\\ a_3 \\\\ \vdots \\\\ a_{n-1}
 y_0 \\\\ y_1 \\\\ y_2 \\\\ y_3 \\\\ \vdots \\\\ y_{n-1}
 \end{pmatrix}
 $$
+
+
 This matrix is called the **Vandermonde matrix**.
 
 Thus we can compute the vector $(a_0, a_1, \dots, a_{n-1})$ by multiplying the vector $(y_0, y_1, \dots y_{n-1})$ from the left with the inverse of the matrix:
+
+
+
+
 $$
 \begin{pmatrix}
 a_0 \\\\ a_1 \\\\ a_2 \\\\ a_3 \\\\ \vdots \\\\ a_{n-1}
@@ -173,7 +199,11 @@ y_0 \\\\ y_1 \\\\ y_2 \\\\ y_3 \\\\ \vdots \\\\ y_{n-1}
 \end{pmatrix}
 $$
 
+
+
 A quick check can verify that the inverse of the matrix has the following form:
+
+
 $$
 \frac{1}{n}
 \begin{pmatrix}
@@ -185,10 +215,16 @@ w_n^0 & w_n^{-3} & w_n^{-6} & w_n^{-9} & \cdots & w_n^{-3(n-1)} \\\\
 w_n^0 & w_n^{-(n-1)} & w_n^{-2(n-1)} & w_n^{-3(n-1)} & \cdots & w_n^{-(n-1)(n-1)}
 \end{pmatrix}
 $$
+
+
 Thus we obtain the formula:
+
 $$a_k = \frac{1}{n} \sum_{j=0}^{n-1} y_j w_n^{-k j}$$
+
 Comparing this to the formula for $y_k$
+
 $$y_k = \sum_{j=0}^{n-1} a_j w_n^{k j},$$
+
 we notice that these problems are almost the same, so the coefficients $a_k$ can be found by the same divide and conquer algorithm, as well as the direct FFT, only instead of $w_n^k$ we have to use $w_n^{-k}$, and at the end we need to divide the resulting coefficients by $n$.
 
 Thus the computation of the inverse DFT is almost the same as the calculation of the direct DFT, and it also can be performed in $O(n \log n)$ time.
@@ -290,21 +326,29 @@ In the second recursion level the same thing happens, but with the second lowest
 Therefore if we reverse the bits of the position of each coefficient, and sort them by these reversed values, we get the desired order (it is called the bit-reversal permutation).
 
 For example the desired order for $n = 8$ has the form:
+
 $$a = \left\\{ \left[ (a_0, a_4), (a_2, a_6) \right], \left[ (a_1, a_5), (a_3, a_7) \right] \right\\}$$
+
 Indeed in the first recursion level (surrounded by curly braces), the vector gets divided into two parts $[a_0, a_2, a_4, a_6]$ and $[a_1, a_3, a_5, a_7]$.
 As we see, in the bit-reversal permutation this corresponds to simply dividing the vector into two halves: the first $\frac{n}{2}$ elements and the last $\frac{n}{2}$ elements.
 Then there is a recursive call for each halve.
 Let the resulting DFT for each of them be returned in place of the elements themselves (i.e. the first half and the second half of the vector $a$ respectively.
+
 $$a = \left\\{[y_0^0, y_1^0, y_2^0, y_3^0], [y_0^1, y_1^1, y_2^1, y_3^1]\right\\}$$
+
 
 Now we want to combine the two DFTs into one for the complete vector.
 The order of the elements is ideal, and we can also perform the union directly in this vector.
 We can take the elements $y_0^0$ and $y_0^1$ and perform the butterfly transform.
 The place of the resulting two values is the same as the place of the two initial values, so we get:
+
 $$a = \left\\{[y_0^0 + w_n^0 y_0^1, y_1^0, y_2^0, y_3^0], [y_0^0 - w_n^0 y_0^1, y_1^1, y_2^1, y_3^1]\right\\}$$
+
 Similarly we can compute the butterfly transform of $y_1^0$ and $y_1^1$ and put the results in their place, and so on.
 As a result we get:
+
 $$a = \left\\{[y_0^0 + w_n^0 y_0^1, y_1^0 + w_n^1 y_1^1, y_2^0 + w_n^2 y_2^1, y_3^0 + w_n^3 y_3^1], [y_0^0 - w_n^0 y_0^1, y_1^0 - w_n^1 y_1^1, y_2^0 - w_n^2 y_2^1, y_3^0 - w_n^3 y_3^1]\right\\}$$
+
 Thus we computed the required DFT from the vector $a$.
 
 Here we described the process of computing the DFT only at the first recursion level, but the same works obviously also for all other levels.
@@ -536,7 +580,9 @@ B(x) &= B_1(x) + B_2(x) \cdot C
 with $C \approx \sqrt{M}$.
 
 Then the product of $A(x)$ and $B(x)$ can then be represented as:
+
 $$A(x) \cdot B(x) = A_1(x) \cdot B_1(x) + \left(A_1(x) \cdot B_2(x) + A_2(x) \cdot B_1(x)\right)\cdot C + \left(A_2(x) \cdot B_2(x)\right)\cdot C^2$$
+
 
 The polynomials $A_1(x)$, $A_2(x)$, $B_1(x)$ and $B_2(x)$ contain only coefficients smaller than $\sqrt{M}$, therefore the coefficients of all the appearing products are smaller than $M \cdot n$, which is usually small enough to handle with typical floating point types.
 
@@ -559,7 +605,9 @@ The numbers of the array will act as the exponents in the polynomial ($a[i] \Rig
 
 Then, by multiplying these two polynomials in $O(n \log n)$ time, we get a polynomial $C$, where the exponents will tell us which sums can be obtained, and the coefficients tell us how often.
 To demonstrate this on the example:
+
 $$(1 x^1 + 1 x^2 + 1 x^3) (1 x^2 + 1 x^4) = 1 x^3 + 1 x^4 + 2 x^5 + 1 x^6 + 1 x^7$$
+
 
 ### All possible scalar products
 
@@ -570,9 +618,13 @@ We generate two new arrays of size $2n$:
 We reverse $a$ and append $n$ zeros to it.
 And we just append $b$ to itself.
 When we multiply these two arrays as polynomials, and look at the coefficients $c[n-1],~ c[n],~ \dots,~ c[2n-2]$ of the product $c$, we get:
+
 $$c[k] = \sum_{i+j=k} a[i] b[j]$$
+
 And since all the elements $a[i] = 0$ for $i \ge n$:
+
 $$c[k] = \sum_{i=0}^{n-1} a[i] b[k-i]$$
+
 It is easy to see that this sum is just the scalar product of the vector $a$ with the $(k - (n - 1))$-th cyclic left shift of $b$.
 Thus these coefficients are the answer to the problem, and we were still able to obtain it in $O(n \log n)$ time.
 Note here that $c[2n-1]$ also gives us the $n$-th cyclic shift but that is the same as the $0$-th cyclic shift so we don't need to consider that separately into our answer.
@@ -591,14 +643,22 @@ We are given two strings, a text $T$ and a pattern $P$, consisting of lowercase 
 We have to compute all the occurrences of the pattern in the text.
 
 We create a polynomial for each string ($T[i]$ and $P[I]$ are numbers between $0$ and $25$ corresponding to the $26$ letters of the alphabet):
+
 $$A(x) = a_0 x^0 + a_1 x^1 + \dots + a_{n-1} x^{n-1}, \quad n = |T|$$
+
 with
+
 $$a_i = \cos(\alpha_i) + i \sin(\alpha_i), \quad \alpha_i = \frac{2 \pi T[i]}{26}.$$
 
+
 And
+
 $$B(x) = b_0 x^0 + b_1 x^1 + \dots + b_{m-1} x^{m-1}, \quad m = |P|$$
+
 with
+
 $$b_i = \cos(\beta_i) - i \sin(\beta_i), \quad \beta_i = \frac{2 \pi P[m-i-1]}{26}.$$
+
 
 Notice that with the expression $P[m-i-1]$ explicitly reverses the pattern.
 

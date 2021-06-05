@@ -96,7 +96,9 @@ E.g. we can split the range $[1, 6]$ into the ranges $[1, 4]$ and $[3, 6]$.
 The range minimum of $[1, 6]$ is clearly the same as the minimum of the range minimum of $[1, 4]$ and the range minimum of $[3, 6]$.
 So we can compute the minimum of the range $[L, R]$ with:
 
+
 $$\min(\text{st}[L][j], \text{st}[R - 2^j + 1][j]) \quad \text{ where } j = \log_2(R - L + 1)$$
+
 
 This requires that we are able to compute $\log_2(R - L + 1)$ fast.
 You can accomplish that by precomputing all logarithms:

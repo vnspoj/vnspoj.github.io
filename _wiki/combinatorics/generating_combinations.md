@@ -52,7 +52,9 @@ Let us prove this:
 For the proof, we recall the fact that the sequence $G(N)$ (representing the $N$<sup>th</sup> Gray Code) can 
 be obtained as follows:
 
+
 $$G(N) = 0G(N-1) \cup 1G(N-1)^\text{R}$$
+
 
 That is, consider the Gray Code sequence for $N-1$, and prefix $0$ before every term. And consider the 
 reversed Gray Code sequence for $N-1$ and prefix a $1$ before every mask, and
@@ -104,7 +106,9 @@ than the previous solution.
 
 The implementation is derived from the formula:
 
+
 $$G(N, K) = 0G(N-1, K) \cup 1G(N-1, K-1)^\text{R}$$
+
 
 This formula is obtained by modifying the general equation to determine the Gray code, and works by selecting the
 subsequence from appropriate elements.

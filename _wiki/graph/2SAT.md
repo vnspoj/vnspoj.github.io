@@ -11,7 +11,9 @@ The Boolean formula will usually be given in CNF (conjunctive normal form), whic
 Here is an example of such a 2-SAT problem.
 Find an assignment of $a, b, c$ such that the following formula is true:
 
+
 $$(a \lor \lnot b) \land (\lnot a \lor b) \land (\lnot a \lor \lnot b) \land (a \lor \lnot c)$$
+
 
 SAT is NP-complete, there is no known efficient solution known for it.
 However 2SAT can be solved efficiently in $O(n + m)$ where $n$ is the number of variables and $m$ is the number of clauses.
@@ -27,14 +29,20 @@ The edges will correspond to the implications.
 
 Let's look at the example in 2-CNF form:
 
+
 $$(a \lor \lnot b) \land (\lnot a \lor b) \land (\lnot a \lor \lnot b) \land (a \lor \lnot c)$$
 
+
 The oriented graph will contain the following vertices and edges:
+
+
 
 $$\begin{array}{cccc}
 \lnot a \Rightarrow \lnot b & a \Rightarrow b & a \Rightarrow \lnot b & \lnot a \Rightarrow \lnot c\\\\
 b \Rightarrow a & \lnot b \Rightarrow \lnot a & b \Rightarrow \lnot a & c \Rightarrow a\\\\
 \end{array}$$
+
+
 
 You can see the implication graph in the following image:
 

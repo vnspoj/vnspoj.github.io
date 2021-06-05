@@ -53,7 +53,9 @@ There are two fundamentally different cases:
 
 Combining these two cases we find that we can recalculate the length of all pairs $(i, j)$ in the $k$-th phase in the following way:
 
+
 $$d_{\text{new}}[i][j] = min(d[i][j], d[i][k] + d[k][j])$$
+
 
 Thus, all the work that is required in the $k$-th phase is to iterate over all pairs of vertices and recalculate the length of the shortest path between them.
 As a result, after the $n$-th phase, the value $d[i][j]$ in the distance matrix is the length of the shortest path between $i$ and $j$, or is $\infty$ if the path between the vertices $i$ and $j$ does not exist.

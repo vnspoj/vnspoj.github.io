@@ -7,7 +7,9 @@ title: "Discrete Logarithm"
 
 The discrete logarithm is an integer $x$ satisfying the equation
 
+
 $$a^x \equiv b \pmod m$$
+
 
 for given integers $a$, $b$ and $m$.
 
@@ -19,7 +21,9 @@ In this article, we describe the **Baby-step giant-step** algorithm, an algorith
 
 Consider the equation:
 
+
 $$a^x \equiv b \pmod m,$$
+
 
 where $a$ and $m$ are relatively prime.
 
@@ -29,15 +33,21 @@ Obviously, any number $x$ in the interval $[0; m)$ can be represented in this fo
 
 Then, the equation becomes:
 
+
 $$a^{np - q} \equiv b \pmod m.$$
+
 
 Using the fact that $a$ and $m$ are relatively prime, we obtain:
 
+
 $$a^{np} \equiv ba^q \pmod m$$
+
 
 This new equation can be rewritten in a simplified form:
 
+
 $$f_1(p) = f_2(q).$$
+
 
 This problem can be solved using the meet-in-the-middle method as follows:
 
@@ -50,19 +60,27 @@ We can calculate $f_1(p)$ in $O(\log m)$ using the [binary exponentation algorit
 
 In the first step of the algorithm, we need to calculate $f_1$ for every possible argument $p$ and then sort the values. Thus, this step has complexity:
 
+
 $$O\left(\left\lceil \frac{m}{n} \right\rceil \left(\log m + \log \left\lceil \frac{m}{n} \right\rceil \right)\right) = O\left( \left\lceil \frac {m}{n} \right\rceil \log m\right)$$
+
 
 In the second step of the algorithm, we need to calculate $f_2(q)$ for every possible argument $q$ and then do a binary search on the array of values of $f_1$, thus this step has complexity:
 
+
 $$O\left(n \left(\log m + \log \frac{m}{n} \right) \right) = O\left(n \log m\right).$$
+
 
 Now, when we add these two complexities, we get $\log m$ multiplied by the sum of $n$ and $m/n$, which is minimal when $n = m/n$, which means, to achieve optimal performance, $n$ should be chosen such that:
 
+
 $$n = \sqrt{m}.$$
+
 
 Then, the complexity of the algorithm becomes:
 
+
 $$O(\sqrt {m} \log m).$$
+
 
 ## Implementation
 
@@ -165,6 +183,10 @@ Let $g = \gcd(a, m)$, and $g > 1$. Clearly $a^x \bmod m$ for every $x \ge 1$ wil
 If $g \nmid b$, there is no solution for $x$.
 
 If $g \mid b$, let $a = g \alpha, b = g \beta, m = g \nu$.
+
+
+
+
 $$
 \begin{aligned}
 a^x & \equiv b \mod m \\\
@@ -172,6 +194,8 @@ a^x & \equiv b \mod m \\\
 \alpha a^{x-1} & \equiv \beta \mod \nu
 \end{aligned}
 $$
+
+
 
 The baby-step giant-step algorithm can be easily extended to solve $ka^{x} \equiv b \pmod m$ for $x$.
 

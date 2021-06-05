@@ -17,11 +17,15 @@ Let's create an array $d[]$ where for each vertex $v$ we store the current lengt
 Initially $d[s] = 0$, and for all other vertices this length equals infinity.
 In the implementation a sufficiently large number (which is guaranteed to be greater than any possible path length) is chosen as infinity.
 
+
 $$d[v] = \infty,~ v \ne s$$
+
 
 In addition, we maintain a Boolean array $u[]$ which stores for each vertex $v$ whether it's marked. Initially all vertices are unmarked:
 
+
 $$u[v] = {\rm false}$$
+
 
 The Dijkstra's algorithm runs for $n$ iterations. At each iteration a vertex $v$ is chosen as unmarked vertex which has the least value $d[v]$:
 
@@ -29,7 +33,9 @@ Evidently, in the first iteration the starting vertex $s$ will be selected.
 
 The selected vertex $v$ is marked. Next, from vertex $v$ **relaxations** are performed: all edges of the form $(v,\text{to})$ are considered, and for each vertex $\text{to}$ the algorithm tries to improve the value $d[\text{to}]$. If the length of the current edge equals $len$, the code for relaxation is:
 
+
 $$d[\text{to}] = \min (d[\text{to}], d[v] + len)$$
+
 
 After all such edges are considered, the current iteration ends. Finally, after $n$ iterations, all vertices will be marked, and the algorithm terminates. We claim that the found values $d[v]$ are the lengths of shortest paths from $s$ to all vertices $v$.
 
@@ -39,11 +45,15 @@ Note that if some vertices are unreachable from the starting vertex $s$, the val
 
 Usually one needs to know not only the lengths of shortest paths but also the shortest paths themselves. Let's see how to maintain sufficient information to restore the shortest path from $s$ to any vertex. We'll maintain an array of predecessors $p[]$ in which for each vertex $v \ne s$ $p[v]$ is the penultimate vertex in the shortest path from $s$ to $v$. Here we use the fact that if we take the shortest path to some vertex $v$ and remove $v$ from this path, we'll get a path ending in at vertex $p[v]$, and this path will be the shortest for the vertex $p[v]$. This array of predecessors can be used to restore the shortest path to any vertex: starting with $v$, repeatedly take the predecessor of the current vertex until we reach the starting vertex $s$ to get the required shortest path with vertices listed in reverse order. So, the shortest path $P$ to the vertex $v$ is equal to:
 
+
 $$P = (s, \ldots, p[p[p[v]]], p[p[v]], p[v], v)$$
+
 
 Building this array of predecessors is very simple: for each successful relaxation, i.e. when for some selected vertex $v$, there is an improvement in the distance to some vertex $\text{to}$, we update the predecessor vertex for $\text{to}$ with vertex $v$:
 
+
 $$p[\text{to}] = v$$
+
 
 ## Proof
 
@@ -61,15 +71,21 @@ Since (by virtue of the choice of vertex $p$) the shortest path to $p$ is the sh
 
 Since the edges' weights are non-negative, the length of the shortest path $l[p]$ (which we just proved to be equal to $d[p]$) does not exceed the length $l[v]$ of the shortest path to the vertex $v$. Given that $l[v] \le d[v]$ (because Dijkstra's algorithm could not have found a shorter way than the shortest possible one), we get the inequality:
 
+
 $$d[p] = l[p] \le l[v] \le d[v]$$
+
 
 On the other hand, since both vertices $p$ and $v$ are unmarked, and the current iteration chose vertex $v$, not $p$, we get another inequality:
 
+
 $$d[p] \ge d[v]$$
+
 
 From these two inequalities we conclude that $d[p] = d[v]$, and then from previously found equations we get:
 
+
 $$d[v] = l[v]$$
+
 
 Q.E.D.
 

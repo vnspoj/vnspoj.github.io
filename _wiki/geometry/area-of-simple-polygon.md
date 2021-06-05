@@ -11,7 +11,9 @@ Let a simple polygon (i.e. without self intersection, not necessarily convex) be
 
 This is easy to do if we go through all edges and add trapezoid areas bounded by each edge and x-axis. The area needs to be taken with sign so that the extra area will be reduced. Hence, the formula is as follows:
 
+
 $$A = \sum_{(p,q)\in \text{edges}} \frac{(p_x - q_x) \cdot (p_y + q_y)}{2}$$
+
 
 Code:
 

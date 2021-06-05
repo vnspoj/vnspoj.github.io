@@ -65,7 +65,9 @@ As there are a total of $n$ bits, there will be $3^n$ different combinations.
 
 **Second proof**: Note that if mask $m$ has $k$ enabled bits, then it will have $2^k$ submasks. As we have a total of $\binom{n}{k}$ masks with $k$ enabled bits (see [binomial coefficients](../combinatorics/binomial-coefficients)), then the total number of combinations for all masks will be:
 
+
 $$\sum_{k=0}^n \binom{n}{k} \cdot 2^k$$
+
 
 To calculate this number, note that the sum above is equal to the expansion of $(1+2)^n$ using the binomial theorem. Therefore, we have $3^n$ combinations, as we wanted to prove.
 

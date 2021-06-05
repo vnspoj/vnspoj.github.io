@@ -7,7 +7,9 @@ title: "Linear Diophantine Equation"
 
 A Linear Diophantine Equation (in two variables) is an equation of the general form:
 
+
 $$ax + by = c$$
+
 
 where $a$, $b$, $c$ are given integers, and $x$, $y$ are unknown integers.
 
@@ -26,17 +28,23 @@ A degenerate case that need to be taken care of is when $a = b = 0$. It is easy 
 
 To find one solution of the Diophantine equation with 2 unknowns, you can use the [Extended Euclidean algorithm](algebra/extended-euclid-algorithm). First, assume that $a$ and $b$ are non-negative. When we apply Extended Euclidean algorithm for $a$ and $b$, we can find their greatest common divisor $g$ and 2 numbers $x_g$ and $y_g$ such that:
 
+
 $$a x_g + b y_g = g$$
+
 
 If $c$ is divisible by $g = \gcd(a, b)$, then the given Diophantine equation has a solution, otherwise it does not have any solution. The proof is straight-forward: a linear combination of two numbers is divisible by their common divisor.
 
 Now supposed that $c$ is divisible by $g$, then we have:
 
+
 $$a \cdot x_g \cdot \frac{c}{g} + b \cdot y_g \cdot \frac{c}{g} = c$$
+
 
 Therefore one of the solutions of the Diophantine equation is:
 
+
 $$x_0 = x_g \cdot \frac{c}{g},$$
+
 $$y_0 = y_g \cdot \frac{c}{g}.$$
 
 The above idea still works when $a$ or $b$ or both of them are negative. We only need to change the sign of $x_0$ and $y_0$ when necessary.
@@ -77,15 +85,21 @@ From one solution $(x_0, y_0)$, we can obtain all the solutions of the given equ
 
 Let $g = \gcd(a, b)$ and let $x_0, y_0$ be integers which satisfy the following:
 
+
 $$a \cdot x_0 + b \cdot y_0 = c$$
+
 
 Now, we should see that adding $b / g$ to $x_0$, and, at the same time subtracting $a / g$ from $y_0$ will not break the equality:
 
+
 $$a \cdot \left(x_0 + \frac{b}{g}\right) + b \cdot \left(y_0 - \frac{a}{g}\right) = a \cdot x_0 + b \cdot y_0 + a \cdot \frac{b}{g} - b \cdot \frac{a}{g} = c$$
+
 
 Obviously, this process can be repeated again, so all the numbers of the form:
 
+
 $$x = x_0 + k \cdot \frac{b}{g}$$
+
 $$y = y_0 - k \cdot \frac{a}{g}$$
 
 are solutions of the given Diophantine equation.
@@ -174,12 +188,16 @@ The idea is similar to previous section: We find any solution of the Diophantine
 
 Finally, use the knowledge of the set of all solutions to find the minimum:
 
+
 $$x' = x + k \cdot \frac{b}{g},$$
+
 $$y' = y - k \cdot \frac{a}{g}.$$
 
 Note that $x + y$ change as follows:
 
+
 $$x' + y' = x + y + k \cdot \left(\frac{b}{g} - \frac{a}{g}\right) = x + y + k \cdot \frac{b-a}{g}$$
+
 
 If $a < b$, we need to select smallest possible value of $k$. If $a > b$, we need to select the largest possible value of $k$. If $a = b$, all solution will have the same sum $x + y$.
 

@@ -64,11 +64,15 @@ $$
     a_2 \equiv x_1 + x_2 p_1 \pmod{p_2}.
 $$
 which can be rewritten by subtracting $x_1$ and dividing by $p_1$ to get
+
+
 $$\begin{array}{rclr}
     a_2 - x_1 &\equiv& x_2 p_1 &\pmod{p_2} \\\\
     (a_2 - x_1) r_{12} &\equiv& x_2 &\pmod{p_2} \\\\
     x_2 &\equiv& (a_2 - x_1) r_{12} &\pmod{p_2}
 \end{array}$$
+
+
 Similarly we get that
 $$
     x_3 \equiv ((a_3 - x_1) r_{13} - x_2) r_{23} \pmod{p_3}.

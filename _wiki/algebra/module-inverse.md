@@ -9,7 +9,9 @@ title: "Modular Inverse"
 
 A [modular multiplicative inverse](http://en.wikipedia.org/wiki/Modular_multiplicative_inverse) of an integer $a$ is an integer $x$ such that $a \cdot x$ is congruent to $1$ modular some modulus $m$.
 To write it in a formal way: we want to find an integer $x$ so that 
+
 $$a \cdot x \equiv 1 \mod m.$$
+
 We will also denote $x$ simply with $a^{-1}$.
 
 We should note that the modular inverse does not always exist. For example, let $m = 4$, $a = 2$. 
@@ -22,7 +24,9 @@ In this article, we present two methods for finding the modular inverse in case 
 
 Consider the following equation (with unknown $x$ and $y$):
 
+
 $$a \cdot x + m \cdot y = 1$$
+
 
 This is a [Linear Diophantine equation in two variables](../algebra/linear-diophantine-equation).
 As shown in the linked article, when $\gcd(a, m) = 1$, the equation has a solution which can be found using the [extended Euclidean algorithm](http://en.wikipedia.org/wiki/Extended_Euclidean_algorithm).
@@ -30,7 +34,9 @@ Note that $\gcd(a, m) = 1$ is also the condition for the modular inverse to exis
 
 Now, if we take modulo $m$ of both sides, we can get rid of $m \cdot y$, and the equation becomes:
 
+
 $$a \cdot x \equiv 1 \mod m$$
+
 
 Thus, the modular inverse of $a$ is $x$.
 
@@ -55,14 +61,18 @@ The resulting `x` from the extended Euclidean algorithm may be negative, so `x %
 
 Another method for finding modular inverse is to use Euler's theorem, which states that the following congruence is true if $a$ and $m$ are relatively prime:
 
+
 $$a^{\phi (m)} \equiv 1 \mod m$$
+
 
 $\phi$ is [Euler's Totient function](../algebra/phi-function).
 Again, note that $a$ and $m$ being relative prime was also the condition for the modular inverse to exist.
 
 If $m$ is a prime number, this simplifies to [Fermat's little theorem](http://en.wikipedia.org/wiki/Fermat's_little_theorem):
 
+
 $$a^{m - 1} \equiv 1 \mod m$$
+
 
 Multiply both sides of the above equations by $a^{-1}$, and we get:
 
@@ -85,7 +95,9 @@ However for this specific algorithm we require that the modulus $m$ is prime.
 
 We denote by $\text{inv}[i]$ the modular inverse of $i$. Then for $i > 1$ the following equation is valid:
 
+
 $$\text{inv}[i] = - \left\lfloor \frac{m}{i} \right\rfloor \cdot \text{inv}[m \bmod i] \bmod m$$
+
 
 Thus the implementation is very simple:
 
@@ -98,13 +110,21 @@ for(int i = 2; i < m; ++i)
 ### Proof
 
 We have:
+
 $$m \bmod i = m -  \left\lfloor \frac{m}{i} \right\rfloor \cdot i$$
+
 Taking both sides modulo $m$ yields:
+
 $$m \bmod i \equiv - \left\lfloor \frac{m}{i} \right\rfloor \cdot i \mod m$$
+
 Multiply both sides by $i^{-1} \cdot (m \bmod i)^{-1}$ yields
+
 $$(m \bmod i) \cdot i^{-1} \cdot (m \bmod i)^{-1} \equiv -\left\lfloor \frac{m}{i} \right\rfloor \cdot i \cdot i^{-1} \cdot (m \bmod i)^{-1} \mod m,$$
+
 which simplifies to:
+
 $$i^{-1} \equiv -\left\lfloor \frac{m}{i} \right\rfloor \cdot (m \bmod i)^{-1} \mod m,$$
+
 
 
 

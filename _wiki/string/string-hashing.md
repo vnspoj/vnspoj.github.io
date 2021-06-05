@@ -117,7 +117,9 @@ vector<vector<int>> group_identical_strings(vector<string> const& s) {
 Problem: Given a string $s$ and indices $i$ and $j$, find the hash of the substring $s [i \dots j]$.
 
 By definition, we have:
+
 $$\text{hash}(s[i \dots j]) = \sum_{k = i}^j s[k] \cdot p^{k-i} \mod m$$
+
 Multiplying by $p^i$ gives:
 
 

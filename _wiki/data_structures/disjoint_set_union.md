@@ -378,7 +378,9 @@ The path contains the of the three parts:
 from $B$ to $b$, from $b$ to $a$, which is connected by one edge and therefore has parity $1$, and from $a$ to $A$.
 Therefore we receive the formula ($\oplus$ denotes the XOR operation):
 
+
 $$t = x \oplus y \oplus 1$$
+
 
 Thus regardless of how many joins we perform, the parity of the edges is carried from on leader to another.
 

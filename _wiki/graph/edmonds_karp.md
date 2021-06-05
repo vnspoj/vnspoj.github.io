@@ -18,14 +18,20 @@ A **flow** in a flow network is function $f$, that again assigns each edge $e$ a
 The function has to fulfill the following two conditions:
 
 The flow of an edge cannot exceed the capacity.
+
 $$f(e) \le c(e)$$
 
+
 And the sum of the incoming flow of a vertex $u$ has to be equal to the sum of the outgoing flow of $u$ except in the source and sink vertices.
+
 $$\sum_{(v, u) \in E} f((v, u)) = \sum_{(u, v) \in E} f((u, v))$$
+
 The source vertex $s$ only has an outgoing flow, and the sink vertex $t$ has only incoming flow.
 
 It is easy to see that the following equation holds:
+
 $$\sum_{(s, u) \in E} f((s, u)) = \sum_{(u, t) \in E} f((u, t))$$
+
 
 A good analogy for a flow network is the following visualization:
 We represent edges as water pipes, the capacity of an edge is the maximal amount of water that can flow through the pipe per second, and the flow of an edge is the amount of water that currently flows through the pipe per second.

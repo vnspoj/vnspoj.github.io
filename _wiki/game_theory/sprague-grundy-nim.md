@@ -77,7 +77,9 @@ If $s \neq 0$, we have to prove that there is a move leading to a state with $t 
 This move reduces the size of a pile $x$ to a size $y$.
 Using elementary properties of $\oplus$, we have
 
+
 $$t = s \oplus x \oplus y = 0 \oplus x \oplus y = x \oplus y$$
+
 
 Since $y < x$, $y \oplus x$ can't be zero, so $t \neq 0$.
 That means any reachable state is a winning one (by the assumption of induction), so we are in a losing position.
@@ -91,7 +93,9 @@ All bits at positions greater than $d$ in $x$ and $y$ match and bit $d$ is set i
 Therefore, $y < x$, which is all we need for a move to be legal.
 Now we have:
 
+
 $$ t = s \oplus x \oplus y = s \oplus x \oplus (s \oplus x) = 0$$
+
 
 This means we found a reachable losing state (by the assumption of induction) and the current state is winning.
 
@@ -124,7 +128,9 @@ The number $x$ is called the Grundy value or nim-value of state $v$.
 
 Moreover, this number can be found in the following recursive way:
 
+
 $$ x = \text{mex}\ \\{ x_1, \ldots, x_k \\}, $$
+
 
 where $x_i$ is the Grundy value for state $v_i$ and the function $\text{mex}$ (*minimum excludant*) is the smallest non-negative integer not found in the given set.
 
@@ -193,7 +199,9 @@ For the edge case of the cross being marked on position $1$ or $n$, we go to the
 
 Thus, the Grundy value $g(n)$ has the form:
 
+
 $$g(n) = \text{mex} \Bigl( \\{ g(n-2) \\} \cup \\{g(i-2) \oplus g(n-i-1) \mid 2 \leq i \leq n-1\\} \Bigr) .$$
+
 
 So we've got a $O(n^2)$ solution.
 

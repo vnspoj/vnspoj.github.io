@@ -7,7 +7,9 @@ title: "Extended Euclidean Algorithm"
 
 While the [Euclidean algorithm](../algebra/euclid-algorithm) calculates only the greatest common divisor (GCD) of two integers $a$ and $b$, the extended version also finds a way to represent GCD in terms of $a$ and $b$, i.e. coefficients $x$ and $y$ for which:
 
+
 $$a \cdot x + b \cdot y = \gcd(a, b)$$
+
 
 It's important to note, that we can always find such a representation, for instance $\gcd(55, 80) = 5$ therefore we can represent $5$ as a linear combination with the terms $55$ and $80$: $55 \cdot 3 + 80 \cdot (-2) = 5$ 
 
@@ -27,25 +29,37 @@ All we need to do is to figure out how the coefficients $x$ and $y$ change durin
 
 Let us assume we found the coefficients $(x_1, y_1)$ for $(b, a \bmod b)$:
 
+
 $$b \cdot x_1 + (a \bmod b) \cdot y_1 = g$$
+
 
 and we want to find the pair $(x, y)$ for $(a, b)$:
 
+
 $$ a \cdot x + b \cdot y = g$$
+
 
 We can represent $a \bmod b$ as:
 
+
 $$ a \bmod b = a - \left\lfloor \frac{a}{b} \right\rfloor \cdot b$$
+
 
 Substituting this expression in the coefficient equation of $(x_1, y_1)$ gives:
 
+
 $$ g = b \cdot x_1 + (a \bmod b) \cdot y_1 = b \cdot x_1 + \left(a - \left\lfloor \frac{a}{b} \right\rfloor \cdot b \right) \cdot y_1$$
+
 
 and after rearranging the terms:
 
+
 $$g = a \cdot y_1 + b \cdot \left( x_1 - y_1 \cdot \left\lfloor \frac{a}{b} \right\rfloor \right)$$
 
+
 We found the values of $x$ and $y$:
+
+
 
 $$\begin{cases}
 x = y_1 \\\\

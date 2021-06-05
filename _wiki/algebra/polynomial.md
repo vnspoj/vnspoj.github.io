@@ -53,7 +53,9 @@ Other useful functions:
 ### Multiplication
 
 The very core operation is the multiplication of two polynomials, that is, given polynomial $A$ and $B$:
+
 $$A = a_0 + a_1 x + \dots + a_n x^n$$
+
 $$B = b_0 + b_1 x + \dots + b_m x^m$$
 You have to compute polynomial $C = A \cdot B$: $$\boxed{C = \sum\limits_{i=0}^n \sum\limits_{j=0}^m a_i b_j x^{i+j}}  = c_0 + c_1 x + \dots + c_{n+m} x^{n+m}$$
 It can be computed in $O(n \log n)$ via the [Fast Fourier transform](../algebra/fft) and almost all methods here will use it as subroutine.
@@ -68,7 +70,9 @@ It may be reasonable for us to calculate first $k$ coefficients of $A^{-1}$:
 2. We want to find $B_{k+1} \equiv B_k + x^{a}C \pmod{x^{2a}}$ such that $A B_{k+1} \equiv 1 \pmod{x^{2a}}$: $$A(B_k + x^{a}C) \equiv 1 \pmod{x^{2a}}$$
 3. Note that since $A B_k \equiv 1 \pmod{x^{a}}$ it also holds that $A B_k \equiv 1 + x^a D \pmod{x^{2a}}$. Thus: $$x^a(D+AC) \equiv 0 \pmod{x^{2a}} \implies D \equiv -AC \pmod{x^a} \implies C \equiv -B_k D \pmod{x^a}$$
 4. From this we obtain that:
+
 $$x^a C \equiv -B_k x^a D  \equiv B_k(1-AB_k) \pmod{x^{2a}} \implies \boxed{B_{k+1} \equiv B_k(2-AB_k) \pmod{x^{2a}}}$$
+
 
 Thus starting with $B_0 \equiv a_0^{-1} \pmod x$ we will compute the sequence $B_k$ such that $AB_k \equiv 1 \pmod{x^{2^k}}$ with the complexity: $$T(n) = T(n/2) + O(n \log n) = O(n \log n)$$
 
@@ -76,24 +80,34 @@ Thus starting with $B_0 \equiv a_0^{-1} \pmod x$ we will compute the sequence $B
 
 Consider two polynomials $A(x)$ and $B(x)$ of degrees $n$ and $m$. As it was said earlier you can rewrite $A(x)$ as:
 
+
 $$A(x) = B(x) D(x) + R(x), \deg R < \deg B$$
+
 
 Let $n \geq m$, then you can immediately find out that $\deg D = n - m$ and that leading $n-m+1$ coefficients of $A$ don't influence $R$.
 
 That means that you can recover $D(x)$ from the largest $n-m+1$ coefficients of $A(x)$ and $B(x)$ if you consider it as a system of equations.
 
 The formal way to do it is to consider the reversed polynomials:
+
 $$A^R(x) = x^nA(x^{-1})= a_n + a_{n-1} x + \dots + a_0 x^n$$
+
 $$B^R(x) = x^m B(x^{-1}) = b_m + b_{m-1} x + \dots + b_0 x^m$$
+
 $$D^R(x) = x^{n-m}D(x^{-1}) = d_{n-m} + d_{n-m-1} x + \dots + d_0 x^{n-m}$$
+
 
 Using these terms you can rewrite that statement about the largest $n-m+1$ coefficients as:
 
+
 $$A^R(x) \equiv B^R(x) D^R(x) \pmod{x^{n-m+1}}$$
+
 
 From which you can unambiguously recover all coefficients of $D(x)$:
 
+
 $$\boxed{D^R(x) \equiv A^R(x) (B^R(x))^{-1} \pmod{x^{n-m+1}}}$$
+
 
 And from this in turn you can easily recover $R(x)$ as $R(x) = A(x) - B(x)D(x)$.
 
@@ -102,10 +116,14 @@ And from this in turn you can easily recover $R(x)$ as $R(x) = A(x) - B(x)D(x)$.
 ### Newton's method
 Let's generalize the inverse series approach.
 You want to find a polynomial $P(x)$ satisfying $F(P) = 0$ where $F(x)$ is some function represented as:
+
 $$F(x) = \sum\limits_{i=0}^\infty \alpha_i (x-\beta)^k$$
 
+
 Where $\beta$ is some constant. It can be proven that if we introduce a new formal variable $y$, we can express $F(x)$ as:
+
 $$F(x) = F(y) + (x-y)F'(y) + (x-y)^2 G(x,y)$$
+
 
 Where $F'(x)$ is the derivative formal power series defined as $F'(x) = \sum\limits_{i=0}^\infty (k+1)\alpha_{i+1}(x-\beta)^k$ and $G(x, y)$ is some formal power series of $x$ and $y$.
 
@@ -129,9 +147,13 @@ Thus we can calculate $n$ coefficients of $\ln P(x)$ in $O(n \log n)$.
 
 Turns out, we can get the formula for $A^{-1}$ using Newton's method.
 For this we take the equation $A=Q^{-1}$, thus:
+
 $$F(Q) = Q^{-1} - A$$
+
 $$F'(Q) = -Q^{-2}$$
+
 $$\boxed{Q_{k+1} \equiv Q_k(2-AQ_k) \pmod{x^{2^{k+1}}}}$$
+
 
 ### Exponent
 
@@ -140,7 +162,9 @@ Let's learn to calculate $e^{P(x)}=Q(x)$. It should hold that $\ln Q = P$, thus:
 ### $k$-th power
 
 Now we need to calculate $P^k(x)=Q$. This may be done via the following formula:
+
 $$Q = \exp\left[k \ln P(x)\right]$$
+
 Note though, that you can calculate the logarithms and the exponents correctly only if you can find some initial $Q_0$.
 
 To find it, you should calculate the logarithm or the exponent of the constant coefficient of the polynomial.
@@ -148,7 +172,9 @@ To find it, you should calculate the logarithm or the exponent of the constant c
 But the only reasonable way to do it is if $P(0)=1$ for $Q = \ln P$ so $Q(0)=0$ and if $P(0)=0$ for $Q = e^P$ so $Q(0)=1$.
 
 Thus you can use formula above only if $P(0) = 1$. Otherwise if $P(x) = \alpha x^t T(x)$ where $T(0)=1$ you can write that:
+
 $$\boxed{P^k(x) = \alpha^kx^{kt} \exp[k \ln T(x)]}$$
+
 Note that you also can calculate some $k$-th root of a polynomial if you can calculate $\sqrt[k]{\alpha}$, for example for $\alpha=1$.
 
 ## Evaluation and Interpolation
@@ -157,11 +183,15 @@ Note that you also can calculate some $k$-th root of a polynomial if you can cal
 
 For the particular case when you need to evaluate a polynomial in the points $x_r = z^{2r}$ you can do the following:
 
+
 $$A(z^{2r}) = \sum\limits_{k=0}^n a_k z^{2kr}$$
+
 
 Let's substitute $2kr = r^2+k^2-(r-k)^2$. Then this sum rewrites as:
 
+
 $$\boxed{A(z^{2r}) = z^{r^2}\sum\limits_{k=0}^n (a_k z^{k^2}) z^{-(r-k)^2}}$$
+
 
 Which is up to the factor $z^{r^2}$ equal to the convolution of the sequences $u_k = a_k z^{k^2}$ and $v_k = z^{-k^2}$.
 
@@ -186,7 +216,9 @@ The whole procedure will run in $O(n \log^2 n)$.
 
 There's a direct formula by Lagrange to interpolate a polynomial, given set of pairs $(x_i, y_i)$:
 
+
 $$\boxed{A(x) = \sum\limits_{i=1}^n y_i \prod\limits_{j \neq i}\dfrac{x-x_j}{x_i - x_j}}$$
+
 
 Computing it directly is a hard thing but turns out, we may compute it in $O(n \log^2 n)$ with a divide and conquer approach:
 
@@ -228,7 +260,9 @@ It can be proven that for polynomials $A(x)$ and $B(x)$ it will work in $O(nm)$.
 Let's calculate the product $A(\mu_0)\cdots A(\mu_m)$. It will be equal to zero if and only if some $\mu_i$ is the root of $A(x)$.
 
 For symmetry we can also multiply it with $b_m^n$ and rewrite the whole product in the following form:
+
 $$\boxed{\mathcal{R}(A, B) = b_m^n\prod\limits_{j=0}^m A(\mu_j) = b_m^n a_m^n \prod\limits_{i=0}^n \prod\limits_{j=0}^m (\mu_j - \lambda_i)= (-1)^{mn}a_n^m \prod\limits_{i=0}^n B(\lambda_i)}$$
+
 
 The value defined above is called the resultant of the polynomials $A(x)$ and $B(x)$. From the definition you may find the following properties:
 

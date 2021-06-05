@@ -9,9 +9,13 @@ Given a system of $n$ linear algebraic equations (SLAE) with $m$ unknowns. You a
 
 Formally, the problem is formulated as follows: solve the system:
 
+
 $$a_{11} x_1 + a_{12} x_2 + \dots + a_{1m} x_m = b_1$$
+
 $$a_{21} x_1 + a_{22} x_2 + \dots + a_{2m} x_m = b_2$$
+
 $$\dots$$
+
 $$a_{n1} x_1 + a_{n2} x_2 + \dots + a_{nm} x_m = b_n$$
 
 where the coefficients $a_{ij}$ (for $i$ from 1 to $n$, $j$ from 1 to $m$) and $b_i$ ($i$ from 1 to $n$ are known and variables $x_i$ ($i$ from 1 to $m$) are unknowns.
@@ -22,9 +26,13 @@ where $A$ is a matrix of size $n \times m$ of coefficients $a_{ij}$ and $b$ is t
 
 It is worth noting that the method presented in this article can also be used to solve the equation modulo any number p, i.e.:
 
+
 $$a_{11} x_1 + a_{12} x_2 + \dots + a_{1m} x_m \equiv b_1 \pmod p$$
+
 $$a_{21} x_1 + a_{22} x_2 + \dots + a_{2m} x_m \equiv b_2 \pmod p$$
+
 $$\dots$$
+
 $$a_{n1} x_1 + a_{n2} x_2 + \dots + a_{nm} x_m \equiv b_n \pmod p$$
 
 ## Gauss

@@ -7,7 +7,9 @@ title: "Linear Congruence Equation"
 
 This equation is of the form:
 
+
 $$a \cdot x = b \pmod n,$$
+
 
 where $a$, $b$ and $n$ are given integers and $x$ is an unknown integer.
 
@@ -18,7 +20,9 @@ It is required to find the value $x$ from the interval $[0, n-1]$ (clearly, on t
 Let us first consider a simpler case where $a$ and $n$ are **coprime** ($\gcd(a, n) = 1$).
 Then one can find the [inverse](../algebra/module-inverse) of $a$, and multiplying both sides of the equation with the inverse, and we can get a **unique** solution.
 
+
 $$x = b \cdot a ^ {- 1} \pmod n$$
+
 
 Now consider the case where $a$ and $n$ are **not coprime** ($\gcd(a, n) \ne 1$).
 Then the solution will not always exist (for example $2 \cdot x = 1 \pmod 4$ has no solution).
@@ -29,7 +33,9 @@ Then, if $b$ is not divisible by $g$, there is no solution. In fact, for any $x$
 
 If $g$ divides $b$, then by dividing both sides of the equation by $g$ (i.e. dividing $a$, $b$ and $n$ by $g$), we receive a new equation:
 
+
 $$a^\prime \cdot x = b^\prime \pmod{n^\prime}$$
+
 
 in which $a^\prime$ and $n^\prime$ are already relatively prime, and we have already learned how to handle such an equation.
 We get $x^\prime$ as solution for $x$.
@@ -38,7 +44,9 @@ It is clear that this $x^\prime$ will also be a solution of the original equatio
 However it will **not be the only solution**.
 It can be shown that the original equation has exactly $g$ solutions, and they will look like this:
 
+
 $$x_i = (x^\prime + i\cdot n^\prime) \pmod n \quad \text{for } i = 0 \ldots g-1$$
+
 
 Summarizing, we can say that the **number of solutions** of the linear congruence equation is equal to either $g = \gcd(a, n)$ or to zero.
 
@@ -46,7 +54,9 @@ Summarizing, we can say that the **number of solutions** of the linear congruenc
 
 We can rewrite the linear congruence to the following Diophantine equation:
 
+
 $$a \cdot x + n \cdot k = b,$$
+
 
 where $x$ and $k$ are unknown integers.
 

@@ -9,7 +9,9 @@ Binomial coefficients $\binom n k$ are the number of ways to select a set of $k$
 
 Binomial coefficients are also the coefficients in the expansion of $(a + b) ^ n$ (so-called binomial theorem):
 
+
 $$ (a+b)^n = \binom n 0 a^n + \binom n 1 a^{n-1} b + \binom n 2 a^{n-2} b^2 + \cdots + \binom n k a^{n-k} b^k + \cdots + \binom n n b^n $$
+
 
 It is believed that this formula, as well as the triangle which allows efficient calculation of the coefficients, was discovered by Blaise Pascal in the 17th century. Nevertheless, it was known to the Chinese mathematician Yang Hui, who lived in the 13th century. Perhaps it was discovered by a Persian scholar Omar Khayyam. Moreover, Indian mathematician Pingala, who lived  earlier in the 3rd. BC, got similar results. The merit of the Newton is that he generalized this formula for exponents that are not natural.
 
@@ -17,13 +19,17 @@ It is believed that this formula, as well as the triangle which allows efficient
 
 **Analytic formula** for the calculation:
 
+
 $$ \binom n k = \frac {n!} {k!(n-k)!} $$
+
 
 This formula can be easily deduced from the problem of ordered arrangement (number of ways to select $k$ different elements from $n$ different elements). First, let's count the number of ordered selections of $k$ elements. There are $n$ ways to select the first element, $n-1$ ways to select the second element, $n-2$ ways to select the third element, and so on. As a result, we get the formula of the number of ordered arrangements: $n (n-1) (n-2) \cdots (n - k + 1) = \frac {n!} {(n-k)!}$. We can easily move to unordered arrangements, noting that each unordered arrangement corresponds to exactly $k!$ ordered arrangements ($k!$ is the number of possible permutations of $k$ elements). We get the final formula by dividing $\frac {n!} {(n-k)!}$ by $k!$.
 
 **Recurrence formula** (which is associated with the famous "Pascal's Triangle"):
 
+
 $$ \binom n k = \binom {n-1} {k-1} + \binom {n-1} k $$
+
 
 It is easy to deduce this using the analytic formula.
 
@@ -34,21 +40,37 @@ Note that for $n \lt k$ the value of $\binom n k$ is assumed to be zero.
 Binomial coefficients have many different properties. Here are the simplest of them:
 
 *   Symmetry rule:
+
 $$ \binom n k = \binom n {n-k} $$
+
 *   Factoring in:
+
 $$ \binom n k = \frac n k \binom {n-1} {k-1} $$
+
 *   Sum over $k$:
+
 $$ \sum_{k = 0}^n \binom n k = 2 ^ n $$
+
 *   Sum over $n$:
+
 $$ \sum_{m = 0}^n \binom m k = \binom {n + 1} {k + 1} $$
+
 *   Sum over $n$ and $k$:
+
 $$ \sum_{k = 0}^m  \binom {n + k} k = \binom {n + m + 1} m $$
+
 *   Sum of the squares:
+
 $$ {\binom n 0}^2 + {\binom n 1}^2 + \cdots + {\binom n n}^2 = \binom {2n} n $$
+
 *   Weighted sum:
+
 $$ 1 \binom n 1 + 2 \binom n 2 + \cdots + n \binom n n = n 2^{n-1} $$
+
 *   Connection with the [Fibonacci numbers](../algebra/fibonacci-numbers):
+
 $$ \binom n 0 + \binom {n-1} 1 + \cdots + \binom {n-k} k + \cdots + \binom 0 n = F_{n+1} $$
+
 
 ## Calculation
 
@@ -117,9 +139,13 @@ The previously discussed approach of Pascal's triangle can be used to calculate 
 ### Binomial coefficient modulo large prime
 
 The formula for the binomial coefficients is
+
 $$\binom n k = \frac {n!} {k!(n-k)!},$$
+
 so if we want to compute it modulo some prime $m > n$ we get
+
 $$\binom n k \equiv n! \cdot (k!)^{-1} \cdot ((n-k)!)^{-1} \mod m.$$
+
 
 First we precompute all factorials modulo $m$ up to $\text{MAXN}!$ in $O(\text{MAXN})$ time.
 
@@ -158,7 +184,9 @@ We compute for each $x!$ the biggest exponent $c$ such that $p^c$ divides $x!$, 
 Let $c(x)$ be that number.
 And let $g(x) := \frac{x!}{p^{c(x)}}$.
 Then we can write the binomial coefficient as:
+
 $$\binom n k = \frac {g(n) p^{c(n)}} {g(k) p^{c(k)} g(n-k) p^{c(n-k)}} = \frac {g(n)} {g(k) g(n-k)}p^{c(n) - c(k) - c(n-k)}$$
+
 
 The interesting thing is, that $g(x)$ is now free from the prime divisor $p$.
 Therefore $g(x)$ is coprime to m, and we can compute the modular inverses of $g(k)$ and $g(n-k)$.

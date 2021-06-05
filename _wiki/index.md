@@ -67,7 +67,7 @@ title: E-Maxx Algorithms in English from CP-Algorithms
 ### String Processing
 
 - **Fundamentals**
-    - [String Hashing](./string/string-hashing) | [Translation into Vietnamese 🇻🇳](../wikivn/string/string-hashing)
+    - [String Hashing](./string/string-hashing) \| [Translation into Vietnamese 🇻🇳](../wikivn/string/string-hashing)
     - [Rabin-Karp for String Matching](./string/rabin-karp)
     - [Prefix function - Knuth-Morris-Pratt](./string/prefix-function)
     - [Z-function](./string/z-function)

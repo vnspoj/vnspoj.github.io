@@ -13,6 +13,8 @@ A **suffix array** will contain integers that represent the **starting indexes**
 
 As an example look at the string $s = abaab$.
 All suffixes are as follows
+
+
 $$\begin{array}{ll}
 0. & abaab \\\\
 1. & baab \\\\
@@ -21,7 +23,11 @@ $$\begin{array}{ll}
 4. & b
 \end{array}$$
 
+
+
 After sorting these strings:
+
+
 $$\begin{array}{ll}
 2. & aab \\\\
 3. & ab \\\\
@@ -29,6 +35,8 @@ $$\begin{array}{ll}
 4. & b \\\\
 1. & baab
 \end{array}$$
+
+
 
 Therefore the suffix array for $s$ will be $(2,~ 3,~ 0,~ 4,~ 1)$.
 
@@ -50,6 +58,8 @@ it is enough to append an arbitrary character to the end of the string which is 
 It is common to use the symbol $\\$$.
 Then the order of the sorted cyclic shifts is equivalent to the order of the sorted suffixes, as demonstrated here with the string $dabbb$.
 
+
+
 $$\begin{array}{lll}
 1. & abbb\\$d & abbb \\\\
 4. & b\\$dabb & b \\\\
@@ -57,6 +67,8 @@ $$\begin{array}{lll}
 2. & bbb\\$da & bbb \\\\
 0. & dabbb\\$ & dabbb
 \end{array}$$
+
+
 
 Since we are going to sort cyclic shifts, we will consider **cyclic substrings**.
 We will use the notation $s[i \dots j]$ for the substring of $s$ even if $i > j$.
@@ -77,11 +89,15 @@ The number of equivalence classes will be stored in a variable $\text{classes}$.
 Let's look at an example.
 Consider the string $s = aaba$.
 The cyclic substrings and the corresponding arrays $p[]$ and $c[]$ are given for each iteration:
+
+
 $$\begin{array}{cccc}
 0: & (a,~ a,~ b,~ a) & p = (0,~ 1,~ 3,~ 2) & c = (0,~ 0,~ 1,~ 0)\\\\
 1: & (aa,~ ab,~ ba,~ aa) & p = (0,~ 3,~ 1,~ 2) & c = (0,~ 1,~ 2,~ 0)\\\\
 2: & (aaba,~ abaa,~ baaa,~ aaab) & p = (3,~ 0,~ 1,~ 2) & c = (1,~ 2,~ 3,~ 0)\\\\
 \end{array}$$
+
+
 It is worth noting that the values of $p[]$ can be different.
 For example in the $0$-th iteration the array could also be $p = (3,~ 1,~ 0,~ 2)$ or $p = (3,~ 0,~ 1,~ 2)$.
 All these options permutation the substrings into a sorted order.
@@ -371,7 +387,9 @@ Because the suffixes are sorted, it is clear that the current suffix $p[i]$ will
 Thus, all its prefixes except the first $\text{lcp}[i-1]$ one.
 Since the length of the current suffix is $n - p[i]$, $n - p[i] - \text{lcp}[i-1]$ new suffixes start at $p[i]$.
 Summing over all the suffixes, we get the final answer:
+
 $$\sum_{i=0}^{n-1} (n - p[i]) - \sum_{i=0}^{n-2} \text{lcp}[i] = \frac{n^2 + n}{2} - \sum_{i=0}^{n-2} \text{lcp}[i]$$
+
 
 ## Practice Problems
 

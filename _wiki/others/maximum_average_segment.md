@@ -11,7 +11,9 @@ Here, we consider the problem of finding a subarray with maximum sum, as well as
 
 Given an array of numbers $a[1 \ldots n]$. It is required to find a subarray $a[l \ldots r]$ with the maximal sum:
 
+
 $$ \max_{ 1 \le l \le r \le n } \sum_{i=l}^{r} a[i].$$
+
 
 For example, if all integers in array $a[]$ were non-negative, then the answer would be the array itself.
 However, the solution is non-trivial when the array can contain both positive and negative numbers.
@@ -148,7 +150,9 @@ This algorithm by Chan, as well as many other results in this area, actually des
 
 This problem lies in finding such a segment $a[l, r]$, such that the average value is maximal:
 
+
 $$ \max_{l \le r} \frac{ 1 }{ r-l+1 } \sum_{i=l}^{r} a[i].$$
+
 
 Of course, if no other conditions are imposed on the required segment $[l, r]$, then the solution will always be a segment of length $1$ at the maximum element of the array. 
 The problem only makes sense, if there are additional restrictions (for example, the length of the desired segment is bounded below).

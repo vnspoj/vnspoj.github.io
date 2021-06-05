@@ -19,16 +19,22 @@ The basic idea of sqrt decomposition is preprocessing. We'll divide the array $a
 
 We can assume that both the size of the block and the number of blocks are equal to $\sqrt n$ rounded up:
 
+
 $$ s = \lceil \sqrt n \rceil $$
+
 
 Then the array $a$ is divided into blocks in the following way:
 
+
 $$ \underbrace{a[0], a[1], \dots, a[s-1]}\_{\text{b[0]}}, \underbrace{a[s], \dots, a[2s-1]}\_{\text{b[1]}}, \dots, \underbrace{a[(s-1) \cdot s], \dots, a[n-1]}\_{\text{b[s-1]}} $$
+
 
 The last block may have fewer elements than the others (if $n$ not a multiple of $s$), it is not important to the discussion (as it can be handled easily).
 Thus, for each block $k$, we know the sum of elements on it $b[k]$:
 
+
 $$ b[k] = \sum\limits_{i=k\cdot s}^{\min {(n-1,(k+1)\cdot s - 1})} a[i] $$
+
 
 So, we have calculated the values of $b[k]$ (this required $O(n)$ operations). How can they help us to answer each query $[l, r]$ ?
 Notice that if the interval $[l, r]$ is long enough, it will contain several whole blocks, and for those blocks we can find the sum of elements in them in a single operation. As a result, the interval $[l, r]$ will contain parts of only two blocks, and we'll have to calculate the sum of elements in these parts trivially.
@@ -36,7 +42,9 @@ Notice that if the interval $[l, r]$ is long enough, it will contain several who
 Thus, in order to calculate the sum of elements on the interval $[l, r]$ we only need to sum the elements of the two "tails":
 $[l\dots (k + 1)\cdot s-1]$ and $[p\cdot s\dots r]$ , and sum the values $b[i]$ in all the blocks from $k + 1$ to $p-1$:
 
+
 $$ \sum\limits\_{i=l}^r a[i] = \sum\limits\_{i=l}^{(k+1) \cdot s-1} a[i] + \sum\limits\_{i=k+1}^{p-1} b[i] + \sum\limits\_{i=p\cdot s}^r a[i] $$
+
 
 _Note: When $k = p$, i.e. $l$ and $r$ belong to the same block, the formula can't be applied, and the sum should be calculated trivially._
 
@@ -97,7 +105,9 @@ else {
 
 So far we were discussing the problem of finding the sum of elements of a continuous subarray. This problem can be extended to allow to **update individual array elements**. If an element $a[i]$ changes, it's sufficient to update the value of $b[k]$ for the block to which this element belongs ($k = i / s$) in one operation:
 
+
 $$ b[k] += a_{new}[i] - a_{old}[i] $$
+
 
 On the other hand, the task of finding the sum of elements can be replaced with the task of finding minimal/maximal element of a subarray. If this problem has to address individual elements' updates as well, updating the value of $b[k]$ is also possible, but it will require iterating through all values of block $k$ in $O(s) = O(\sqrt{n})$ operations.
 

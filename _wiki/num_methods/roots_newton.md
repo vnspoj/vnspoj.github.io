@@ -9,7 +9,9 @@ This is an iterative method invented by Isaac Newton around 1664. However, this 
 
 The task is as follows. Given the following equation:
 
+
 $$f(x) = 0$$
+
 
 We want to solve the equation. More precisely, we want to find one of its roots (it is assumed that the root exists). It is assumed that $f(x)$ is continuous and differentiable on an interval $[a, b]$.
 
@@ -21,7 +23,9 @@ Suppose we have already calculated $x_i$, calculate $x_{i+1}$ as follows. Draw t
 
 It is not difficult to obtain the following formula:
 
+
 $$ x_{i+1} = x_i - \frac{f(x_i)}{f^\prime(x_i)} $$
+
 
 It is intuitively clear that if the function $f(x)$ is "good" (smooth), and $x_i$ is close enough to the root, then $x_{i+1}$ will be even closer to the desired root.
 
@@ -33,7 +37,9 @@ Let's use the calculation of square root as an example of Newton's method.
 
 If we substitute $f(x) = x^2 - n$, then after simplifying the expression, we get:
 
+
 $$ x_{i+1} = \frac{x_i + \frac{n}{x_i}}{2} $$
+
 
 The first typical variant of the problem is when a rational number $n$ is given, and its root must be calculated with some accuracy `eps`:
 

@@ -19,13 +19,17 @@ If a prime factor $p$ appears $e$ times in the prime factorization of $n$, then 
 Which means we have $e+1$ choices.
 
 Therefore if the prime factorization of $n$ is $p_1^{e_1} \cdot p_2^{e_2} \cdots p_k^{e_k}$, where $p_i$ are distinct prime numbers, then the number of divisors is:
+
 $$d(n) = (e_1 + 1) \cdot (e_2 + 1) \cdots (e_k + 1)$$
+
 
 A way of thinking about it is the following:
 
 * If there is only one distinct prime divisor $n = p_1^{e_1}$, then there are obviously $e_1 + 1$ divisors ($1, p_1, p_1^2, \dots, p_1^{e_1}$).
 
 * If there are two distinct prime divisors $n = p_1^{e_1} \cdot p_2^{e_2}$, then you can arrange all divisors in form of a tabular.
+
+
 $$\begin{array}{c|ccccc}
 & 1 & p_2 & p_2^2 & \dots & p_2^{e_2} \\\\
 \hline
@@ -35,6 +39,8 @@ p_1^2 & p_1^2 & p_1^2 \cdot p_2 & p_1^2 \cdot p_2^2 & \dots & p_1^2 \cdot p_2^{e
 \vdots & \vdots & \vdots & \vdots & \ddots & \vdots \\\\
 p_1^{e_1} & p_1^{e_1} & p_1^{e_1} \cdot p_2 & p_1^{e_1} \cdot p_2^2 & \dots & p_1^{e_1} \cdot p_2^{e_2} \\\\
 \end{array}$$
+
+
   So the number of divisors is trivially $(e_1 + 1) \cdot (e_2 + 1)$.
 
 * A similar argument can be made if there are more then two distinct prime factors.
@@ -58,7 +64,9 @@ We can use the same argument of the previous section.
 ## Multiplicative functions
 
 A multiplicative function is a function $f(x)$ which satisfies
+
 $$f(a \cdot b) = f(a) \cdot f(b)$$
+
 if $a$ and $b$ are coprime.
 
 Both $d(n)$ and $\sigma(n)$ are multiplicative functions.

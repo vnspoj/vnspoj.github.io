@@ -38,7 +38,9 @@ This is a probabilistic test.
 
 Fermat's little theorem (see also [Euler's totient function](https://cp-algorithms.com/algebra/phi-function)) states, that for a prime number $p$ and a coprime integer $a$ the following equation holds:
 
+
 $$a^{p-1} \equiv 1 \bmod p$$
+
 
 In general this theorem doesn't hold for composite numbers.
 
@@ -87,9 +89,13 @@ The Miller-Rabin test extends the ideas from the Fermat test.
 
 For an odd number $n$, $n-1$ is even and we can factor out all powers of 2.
 We can write:
+
 $$n - 1 = 2^s \cdot d,~\text{with}~d~\text{odd}.$$
 
+
 This allows us to factorize the equation of Fermat's little theorem:
+
+
 $$\begin{array}{rl}
 a^{n-1} \equiv 1 \bmod n &\Longleftrightarrow a^{2^s d} - 1 \equiv 0 \bmod n \\\\
 &\Longleftrightarrow (a^{2^{s-1} d} + 1) (a^{2^{s-1} d} - 1) \equiv 0 \bmod n \\\\
@@ -98,12 +104,18 @@ a^{n-1} \equiv 1 \bmod n &\Longleftrightarrow a^{2^s d} - 1 \equiv 0 \bmod n \\\
 &\Longleftrightarrow (a^{2^{s-1} d} + 1) (a^{2^{s-2} d} + 1) \cdots (a^{d} + 1) (a^{d} - 1) \equiv 0 \bmod n \\\\
 \end{array}$$
 
+
+
 If $n$ is prime, then $n$ has to divide one of these factors.
 And in the Miller-Rabin primality test we check exactly that statement, which is a more stricter version of the statement of the Fermat test.
 For a base $2 \le a \le n-2$ we check if either
+
 $$a^d \equiv 1 \bmod n$$
+
 holds or
+
 $$a^{2^r d} \equiv -1 \bmod n$$
+
 holds for some $0 \le r \le s - 1$.
 
 If we found a base $a$ which doesn't satisfy any of the above equalities, than we found a *witness* for the compositeness of $n$.

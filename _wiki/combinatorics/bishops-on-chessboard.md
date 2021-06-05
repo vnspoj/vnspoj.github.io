@@ -13,6 +13,8 @@ This problem can be solved using dynamic programming.
 
 Let's enumerate the diagonals of the chessboard as follows: black diagonals have odd indices, white diagonals have even indices, and the diagonals are numbered in non-decreasing order of the number of squares in them. Here is an example for a $5 \times 5$ chessboard.
 
+
+
 $$\begin{matrix}
 \bf{1} & 2 & \bf{5} & 6 & \bf{9} \\\
 2 & \bf{5} & 6 & \bf{9} & 8 \\\
@@ -20,6 +22,8 @@ $$\begin{matrix}
 6 & \bf{9} & 8 & \bf{7} & 4 \\\
 \bf{9} & 8 & \bf{7} & 4 & \bf{3} \\\
 \end{matrix}$$
+
+
 
 Let `D[i][j]` denote the number of ways to place `j` bishops on diagonals with indices up to `i` which have the same color as diagonal `i`.
 Then `i = 1...2N-1` and `j = 0...K`.
