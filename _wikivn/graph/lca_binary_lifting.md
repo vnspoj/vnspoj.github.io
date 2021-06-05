@@ -18,9 +18,7 @@ Từ đây cho phép ta jump lên các cha của bất kì node nào trong $O(\l
 Việc tính $up[i][j]$ sử dụng [DFS](../../wiki/graph/depth-first-search) như sau:
 
 
-<p align="center">
-![lca_tree](https://i.imgur.com/jt5taOA.png)
-</p>
+<p align="center"><img src="https://i.imgur.com/jt5taOA.png" width="50%"></p>
 
 
 Khi duyệt đến node $i$, ta thực hiện update lại các giá trị $up[i][j]$ với $j = 0..L$:
@@ -32,9 +30,9 @@ Chi phí tính $up[i]$ cho 1 node trong $O(L) = O(\log N)$. Tổng chi phí duy�
 
 ### Time in / out khi duyệt node
 
-Khi duyệt đến node $i$, ta ghi nhận lại time lần đầu duyệt đến $time\_in[i]$, và sau khi duyệt xong node $i$, ta ghi nhận thời gian rời khỏi node $i$ là $time\_out[i]$.
+Khi duyệt đến node $i$, ta ghi nhận lại time lần đầu duyệt đến $timein[i]$, và sau khi duyệt xong node $i$, ta ghi nhận thời gian rời khỏi node $i$ là $timeout[i]$.
 
-Việc sử dụng $time\_in$ và $time\_out$ cho ta biết được 1 node có phải là cha của 1 node khác hay không.
+Việc sử dụng $timein$ và $timeout$ cho ta biết được 1 node có phải là cha của 1 node khác hay không.
 
 ### Tìm cha chung gần nhất của $u, v$: $lca(u,v)$
 
@@ -42,7 +40,7 @@ Xét vị trí 2 node $u$, $v$ trên cây:
 
 **Trường hợp 1 trong 2 node đã là cha của node còn lại**
 
-Dựa vào $time\_in$, $time\_out$ ta biết được vị trí này của 2 node.
+Dựa vào $timein$, $timeout$ ta biết được vị trí này của 2 node.
 
 **Trường hợp 2 node không là cha của nhau**
 
