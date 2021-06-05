@@ -179,7 +179,7 @@ title: E-Maxx Algorithms in English from CP-Algorithms
     - [Eulerian Path](./graph/euler_path)
 - **Lowest common ancestor**
     - [Lowest Common Ancestor](./graph/lca)
-    - [Lowest Common Ancestor - Binary Lifting](./graph/lca_binary_lifting)
+    - [Lowest Common Ancestor - Binary Lifting](./graph/lca_binary_lifting) \| [Translation into Vietnamese 🇻🇳](../wikivn/graph/lca_binary_lifting.md)
     - [Lowest Common Ancestor - Farach-Colton and Bender algorithm](./graph/lca_farachcoltonbender)
     - [Solve RMQ by finding LCA](./graph/rmq_linear)
     - [Lowest Common Ancestor - Tarjan's off-line algorithm](./graph/lca_tarjan)

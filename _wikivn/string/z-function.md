@@ -1,5 +1,5 @@
 ---
-layout: wiki
+layout: wiki_vn
 wiki: true
 title: "Z-function | 🇻🇳"
 title_en: "Z-function and its calculation"
@@ -26,7 +26,7 @@ Giải thích với ví dụ `aaabaab`:
 + $i = 0$: bỏ qua vị trí $i = 0$, $z[i] = 0$
 + $i = 1$: LCS của `aaabaab` và `aabaab` là `aa`, $z[i] = 2$
 + $i = 2$: LCS của `aaabaab` và `abaab` là `a`, $z[i] = 1$
-+ $i = 3$: LCS của `aaabaab` và `baab` là ``, $z[i] = 0$
++ $i = 3$: LCS của `aaabaab` và `baab` là *empty**, $z[i] = 0$
 + $i = 4$: LCS của `aaabaab` và `aab` là `aa`, $z[i] = 2$
 + tương tự cho các vị trí còn lại
 
