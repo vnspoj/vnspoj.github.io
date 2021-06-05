@@ -12,7 +12,11 @@ The spanning tree with the least weight is called a minimum spanning tree.
 
 In the left image you can see a weighted undirected graph, and in the right image you can see the corresponding minimum spanning tree.
 
-<center>![Random graph](/static/wiki/img/MST_before.png) ![MST of this graph](/static/wiki/img/MST_after.png)</center>
+
+
+![Random graph](/static/wiki/img/MST_before.png) ![MST of this graph](/static/wiki/img/MST_after.png)
+
+
 
 It is easy to see that any spanning tree will necessarily contain $n-1$ edges.
 

@@ -14,7 +14,11 @@ This problem may arise when you need to locate some points in a Voronoi diagram 
 Firstly, for each query point $p\ (x\_0, y\_0)$ we want to find such an edge that if the point belongs to any edge, the point lies on the edge we found, otherwise this edge must intersect the line $x = x\_0$ at some unique point $(x\_0, y)$ where $y < y\_0$ and this $y$ is maximum among all such edges.
 The following image shows both cases.
 
-<center>![Image of Goal](/static/wiki/img/point_location_goal.png)</center>
+
+
+![Image of Goal](/static/wiki/img/point_location_goal.png)
+
+
 
 We will solve this problem offline using the sweep line algorithm. Let's iterate over x-coordinates of query points and edges' endpoints in increasing order and keep a set of edges $s$. For each x-coordinate we will add some events beforehand.
 
@@ -26,7 +30,11 @@ Finally, for each query point we will add one _get_ event for its x-coordinate.
 For each x-coordinate we will sort the events by their types in order (_vertical_, _get_, _remove_, _add_).
 The following image shows all events in sorted order for each x-coordinate.
 
-<center>![Image of Events](/static/wiki/img/point_location_events.png)</center>
+
+
+![Image of Events](/static/wiki/img/point_location_events.png)
+
+
 
 We will keep two sets during the sweep-line process.
 A set $t$ for all non-vertical edges, and one set $vert$ especially for the vertical ones.

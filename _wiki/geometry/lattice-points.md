@@ -41,7 +41,11 @@ Now we are interested only in points $(x;y)$ such that $\lfloor k \rfloor \cdot 
 This amount is the same as the number of points such that $0 < y \leq (k - \lfloor k \rfloor) \cdot x + (b - \lfloor b \rfloor)$.
 So we reduced our problem to $k'= k - \lfloor k \rfloor$, $b' = b - \lfloor b \rfloor$ and both $k'$ and $b'$ less than $1$ now.
 Here is a picture, we just summed up blue points and subtracted the blue linear function from the black one to reduce problem to smaller values for $k$ and $b$:
-<center>![Subtracting floored linear function](/static/wiki/img/lattice.png)</center>
+
+
+![Subtracting floored linear function](/static/wiki/img/lattice.png)
+
+
 
 - $k < 1$ and $b < 1$.
 If $\lfloor k \cdot n + b\rfloor$ equals $0$, we can safely return $0$.
@@ -53,7 +57,11 @@ $$\left\\{(x;y)~\bigg|~0 \leq x < \lfloor k \cdot n + b\rfloor,~ 0 < y \leq \dfr
 
 which returns us back to the case $k>1$.
 You can see new reference point $O'$ and axes $X'$ and $Y'$ in the picture below:
-<center>![New reference and axes](/static/wiki/img/mirror.png)</center>
+
+
+![New reference and axes](/static/wiki/img/mirror.png)
+
+
 As you see, in new reference system linear function will have coefficient $\tfrac 1 k$ and its zero will be in the point $\lfloor k\cdot n + b \rfloor-(k\cdot n+b)$ which makes formula above correct.
 
 ## Complexity analysis

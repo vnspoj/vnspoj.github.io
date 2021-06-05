@@ -29,7 +29,11 @@ So the $\text{LCA}(v_1, v_2)$ can be uniquely determined by finding the vertex w
 
 Let's illustrate this idea.
 Consider the following graph and the Euler tour with the corresponding heights:
-<center>![LCA_Euler_Tour](/static/wiki/img/LCA_Euler.png)</center>
+
+
+![LCA_Euler_Tour](/static/wiki/img/LCA_Euler.png)
+
+
 
 
 $$\begin{array}{|l|c|c|c|c|c|c|c|c|c|c|c|c|c|}

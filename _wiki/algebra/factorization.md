@@ -252,7 +252,11 @@ If $p$ is smaller than $\sqrt{n}$, the repetition will start very likely in $O(\
 Here is a visualization of such a sequence $\{x_i \bmod p\}$ with $n = 2206637$, $p = 317$, $x_0 = 2$ and $f(x) = x^2 + 1$.
 From the form of the sequence you can see very clearly why the algorithm is called Pollard's $\rho$ algorithm.
 
-<center>![Pollard's rho visualization](/static/wiki/img/pollard_rho.png)</center>
+
+
+![Pollard's rho visualization](/static/wiki/img/pollard_rho.png)
+
+
 
 There is still one big open question.
 We don't know $p$ yet, so how can we argue about the sequence $\{x_i \bmod p\}$?

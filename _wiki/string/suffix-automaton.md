@@ -53,31 +53,59 @@ We will denote the initial state with blue and the terminal states with green.
 
 For the string $s =~ ""$:
 
+
+
 ![Suffix automaton for ""](/static/wiki/img/SA.png)
+
+
 
 For the string $s =~ "a"$:
 
+
+
 ![Suffix automaton for "a"](/static/wiki/img/SAa.png)
+
+
 
 For the string $s =~ "aa"$:
 
+
+
 ![Suffix automaton for "aa"](/static/wiki/img/SAaa.png)
+
+
 
 For the string $s =~ "ab"$:
 
+
+
 ![Suffix automaton for "ab"](/static/wiki/img/SAab.png)
+
+
 
 For the string $s =~ "aba"$:
 
+
+
 ![Suffix automaton for "aba"](/static/wiki/img/SAaba.png)
+
+
 
 For the string $s =~ "abb"$:
 
+
+
 ![Suffix automaton for "abb"](/static/wiki/img/SAabb.png)
+
+
 
 For the string $s =~ "abbb"$:
 
+
+
 ![Suffix automaton for "abbb"](/static/wiki/img/SAabbb.png)
+
+
 
 ## Construction in linear time
 
@@ -185,7 +213,11 @@ the tree of suffix links is essentially a tree of sets $endpos$.
 Here is an **example** of a tree of suffix links in the suffix automaton build for the string $"abcbc"$.
 The nodes are labeled with the longest substring from the corresponding equivalence class.
 
+
+
 ![Suffix automaton for "abcbc" with suffix links](/static/wiki/img/SA_suffix_links.png)
+
+
 
 ### Recap
 

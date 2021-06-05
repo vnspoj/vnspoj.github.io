@@ -92,7 +92,11 @@ Assume we're in some vertex corresponding to half-segment $[l,r)$ and the functi
 
 Here is the illustration of what is going on in the vertex when we add new function:
 
-<center>![Li Chao Tree vertex](/static/wiki/img/li_chao_vertex.png)</center>
+
+
+![Li Chao Tree vertex](/static/wiki/img/li_chao_vertex.png)
+
+
 
 Let's go to implementation now. Once again we will use complex numbers to keep linear functions.
 

@@ -18,7 +18,11 @@ For the entire article, we will make some assumptions (unless specified otherwis
 3. We will assume that the resulting intersection is always either bounded or empty. If we need to handle the unbounded case, we can simply add 4 half-planes that define a large-enough bounding box. 
 4. We will assume, for simplicity, that there are no parallel half-planes in the given set. Towards the end of the article we will discuss how to deal with such cases.
 
-![](/static/wiki/img/halfplanes_rep.png) 
+
+
+![](/static/wiki/img/halfplanes_rep.png)
+
+ 
 
 The half-plane $y \geq 2x - 2$ can be represented as the point $P = (1, 0)$ with direction vector $PQ = Q - P = (1, 2)$
 
@@ -52,11 +56,19 @@ Here's a small example with an illustration:
 
 Let $H = \\{ A, B, C, D, E \\}$ be the set of half-planes currently present in the intersection. Additionally, let $P = \\{ p, q, r, s \\}$ be the set of intersection points of adjacent half-planes in H. Now, suppose we wish to intersect it with the half-plane $F$, as seen in the illustration below:
 
+
+
 ![](/static/wiki/img/halfplanes_hp1.png)
+
+
 
 Notice the half-plane $F$ makes $A$ and $E$ redundant in the intersection. So we remove both $A$ and $E$ from the front and back of the intersection, respectively, and add $F$ at the end. And we finally obtain the new intersection $H = \\{ B, C, D, F\\}$ with $P = \\{ q, r, t, u \\}$.
 
+
+
 ![](/static/wiki/img/halfplanes_hp2.png)
+
+
 
 With all of this in mind, we have almost everything we need to actually implement the algorithm, but we still need to talk about some special cases. At the beginning of the article we said we would add a bounding box to take care of the cases where the intersection could be unbounded, so the only tricky case we actually need to handle is parallel half-planes. We can have two sub-cases: two half-planes can be parallel with the same direction or with opposite direction. The reason this case needs to be handled separately is because we will need to compute intersection points of half-plane lines to be able to check if a half-plane is redundant or not, and two parallel lines have no intersection point, so we need a special way to deal with them.
 

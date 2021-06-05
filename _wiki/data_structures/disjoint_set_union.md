@@ -35,7 +35,11 @@ And the root of the tree will be the representative/leader of the set.
 
 In the following image you can see the representation of such trees.
 
+
+
 ![Example-image of the set representation with trees](/static/wiki/img/DSU_example.png)
+
+
 
 In the beginning, every element starts as a single set, therefore each vertex is its own tree.
 Then we combine the set containing the element 1 and the set containing the element 2.
@@ -97,7 +101,11 @@ The trick is to make the paths for all those nodes shorter, by setting the paren
 You can see the operation in the following image.
 On the left there is a tree, and on the right side there is the compressed tree after calling `find_set(7)`, which shortens the paths for the visited nodes 7, 5, 3 and 2.
 
+
+
 ![Path compression of call `find_set(7)`](/static/wiki/img/DSU_path_compression.png)
+
+
 
 The new implementation of `find_set` is as follows:
 
