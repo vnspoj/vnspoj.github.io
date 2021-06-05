@@ -64,6 +64,8 @@ collections:
     output: true
   wiki:
     output: true
+  wikivn:
+    output: true
 
 compress_html:
   clippings: all
