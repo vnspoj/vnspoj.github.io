@@ -11,13 +11,17 @@ Giải thuật tìm Cha (tổ tiên) chung gần nhất (LCA) trên cây với �
 
 ### Cha thứ $2^j$ của node $i$: $up[i][j]$
 
-Với mỗi node trên cây, tính sẵn các cha của node này theo các level $2^j$. Cụ thể gọi $up[i][j]$ là cha thứ $2^j$-th của node $i$ với $i=1...N$, $j=0...L$, với $L = \lceil \log(N) \rceil$ là max level của cây.
+Với mỗi node trên cây, tính sẵn các cha của node này theo các level $2^j$. Cụ thể gọi $up[i][j]$ là cha thứ $2^j$-th của node $i$ với $i=1...N$, $j=0...L$, với $L = \lceil \log N \rceil$ là max level của cây.
 
 Từ đây cho phép ta jump lên các cha của bất kì node nào trong $O(\log N)$.
 
 Việc tính $up[i][j]$ sử dụng [DFS](../../wiki/graph/depth-first-search) như sau:
 
+
+<p align="center">
 ![lca_tree](https://i.imgur.com/jt5taOA.png)
+</p>
+
 
 Khi duyệt đến node $i$, ta thực hiện update lại các giá trị $up[i][j]$ với $j = 0..L$:
 
@@ -26,11 +30,11 @@ Khi duyệt đến node $i$, ta thực hiện update lại các giá trị $up[i
 
 Chi phí tính $up[i]$ cho 1 node trong $O(L) = O(\log N)$. Tổng chi phí duyệt DFS và tính $up[i][j]$ là $O(N \log N)$.
 
-### Time in/out khi duyệt node
+### Time in / out khi duyệt node
 
-Khi duyệt đến node $i$, ta ghi nhận lại time lần đầu duyệt đến $time_in[i]$, và sau khi duyệt xong node $i$, ta ghi nhận thời gian rời khỏi node $i$ là $time_out[i]$.
+Khi duyệt đến node $i$, ta ghi nhận lại time lần đầu duyệt đến $time\_in[i]$, và sau khi duyệt xong node $i$, ta ghi nhận thời gian rời khỏi node $i$ là $time\_out[i]$.
 
-Việc sử dụng $time_in$ và $time_out$ cho ta biết được 1 node có phải là cha của 1 node khác hay không.
+Việc sử dụng $time\_in$ và $time\_out$ cho ta biết được 1 node có phải là cha của 1 node khác hay không.
 
 ### Tìm cha chung gần nhất của $u, v$: $lca(u,v)$
 
@@ -38,7 +42,7 @@ Xét vị trí 2 node $u$, $v$ trên cây:
 
 **Trường hợp 1 trong 2 node đã là cha của node còn lại**
 
-Dựa vào $time_in$, $time_out$ ta biết được vị trí này của 2 node.
+Dựa vào $time\_in$, $time\_out$ ta biết được vị trí này của 2 node.
 
 **Trường hợp 2 node không là cha của nhau**
 

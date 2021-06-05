@@ -65,9 +65,9 @@ $i$ nằm ngoài biên phải $r$ đã duyệt đến, do đó thực hiện duy
   
 Ta có: $s[0..r-l] = s[l..r]$
 
-
+<p align="center">
 ![z_function](https://i.imgur.com/d4HHNdK.png)
-
+</p>
 
 Như hình trên, ta thấy đoạn $s[i-l..r-l] = s[i..r]$, do đó ta ko cần duyệt lại đoạn $s[i..r]$ mà lấy lại $z[i-l]$ đã tính trước đó. Lưu ý thêm $z[i-l]$ có thể lớn hơn $r-i+1$ (vượt qua biên $r$ đã duyệt), do đó ta chỉ lấy
 
