@@ -101,3 +101,8 @@ void preprocess(int root) {
 }
 ```
 
+
+## Practice Problems
+
+[Xem một số bài trên vnspoj](https://vnspoj.github.io/category/lca)
+

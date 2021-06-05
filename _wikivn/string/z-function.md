@@ -113,6 +113,8 @@ Apply hàm Z trên chuỗi $s$ này, dễ dàng ta thấy được nếu $z[i] =
 
 ## Practice Problems
 
+[Xem một số bài trên vnspoj](https://vnspoj.github.io/category/z-function)
+
 * [Codeforces - Password [Difficulty: Easy]](http://codeforces.com/problemset/problem/126/B)
 * [UVA # 455 "Periodic Strings" [Difficulty: Medium]](http://uva.onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=396)
 * [UVA # 11022 "String Factoring" [Difficulty: Medium]](http://uva.onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=1963)
