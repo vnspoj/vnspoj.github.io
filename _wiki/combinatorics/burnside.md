@@ -76,7 +76,7 @@ We denote by $I(\pi)$ the **number of fixed points** for the permutation $\pi$.
 Then **Burnside's lemma** goes as follows:
 the number of equivalence classes is equal to the sum of the numbers of fixed points with respect to all permutations from the group $G$, divided by the size of this group:
 
-$$\|\text{Classes}\| = \frac{1}{\|G\|} \sum_{\pi \in G} I(\pi)$$
+$$|\text{Classes}| = \frac{1}{|G|} \sum_{\pi \in G} I(\pi)$$
 
 
 Although Burnside's lemma itself is not so convenient to use in practice (it is unclear how to quickly look for the value $I(\pi)$, it most clearly reveals the mathematical essence on which the idea of calculating equivalence classes is based.
@@ -90,14 +90,14 @@ The proof was published by Kenneth P. Bogart in 1991.
 
 We need to prove the following statement:
 
-$$\|\text{Classes}\| \cdot \|G\| = \sum_{\pi \in G} I(\pi)$$
+$$|\text{Classes}| \cdot |G| = \sum_{\pi \in G} I(\pi)$$
 
 
 The value on the right side is nothing more than the number of "invariant pairs" $(f, \pi)$, i.e. pairs such that $f \pi \equiv f$.
 It is obvious that we can change the order of summation.
 We let the sum iterate over all elements $f$ and sum over the values $J(f)$ - the number of permutations for which $f$ is a fixed point.
 
-$$\|\text{Classes}\| \cdot \|G\| = \sum_{f} J(f)$$
+$$|\text{Classes}| \cdot |G| = \sum_{f} J(f)$$
 
 
 To prove this formula we will compose a table with columns labeled with all functions $f_i$ and rows labeled with all permutations $\pi_j$.
@@ -120,7 +120,7 @@ Therefore within each column of a given equivalence class any element $g$ occurs
 
 Thus if we arbitrarily take one column from each equivalence class, and sum the number of elements in them, we obtain on one hand $\|\text{Classes}\| \cdot \|G\|$ (simply by multiplying the number of columns by the number of rows), and on the other hand the sum of the quantities $J(f)$ for all $f$ (this follows from all the previous arguments):
 
-$$\|\text{Classes}\| \cdot \|G\| = \sum_{f} J(f)$$
+$$|\text{Classes}| \cdot |G| = \sum_{f} J(f)$$
 
 
 ## Pólya enumeration theorem
@@ -135,7 +135,7 @@ The general formula of the theorem will not be discussed.
 We denote by $C(\pi)$ the number of cycles in the permutation $\pi$.
 Then the following formula (a **special case of the Pólya enumeration theorem**) holds:
 
-$$\|\text{Classes}\| = \frac{1}{\|G\|} \sum_{\pi \in G} k^{C(\pi)}$$
+$$|\text{Classes}| = \frac{1}{|G|} \sum_{\pi \in G} k^{C(\pi)}$$
 
 $k$ is the number of values that each representation element can take, in the case of the coloring of a binary tree this would be $k = 2$.
 
@@ -190,7 +190,7 @@ Let transfer the sum so that it iterates over all divisors of $n$.
 In the original sum there will be many equivalent terms: if $i$ is not a divisor of $n$, then such a divisor can be found after computing $\gcd(i, n)$.
 Therefore for each divisor $d ~\|~ n$ its term $k^{\gcd(d, n)} = k^d$ will appear in the sum multiple times, i.e. the answer to the problem can be rewritten as
 
-$$\frac{1}{n} \sum_{d ~\|~ n} C_d k^d,$$
+$$\frac{1}{n} \sum_{d ~|~ n} C_d k^d,$$
 
 where $C_d$ is the number of such numbers $i$ with $\gcd(i, n) = d$.
 We can find an explicit expression for this value.
@@ -198,7 +198,7 @@ Any such number $i$ has the form $i = d j$ with $\gcd(j, n / d) = 1$ (otherwise 
 So we can count the number of $j$ with this behavior.
 [Euler's phi function](../algebra/phi-function) gives us the result $C_d = \phi(n / d)$, and therefore we get the answer:
 
-$$\frac{1}{n} \sum_{d ~\|~ n} \phi\left(\frac{n}{d}\right) k^d$$
+$$\frac{1}{n} \sum_{d ~|~ n} \phi\left(\frac{n}{d}\right) k^d$$
 
 
 ## Application: Coloring a torus

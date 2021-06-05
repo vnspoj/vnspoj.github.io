@@ -100,7 +100,7 @@ void phi_1_to_n(int n) {
 This interesting property was established by Gauss:
 
 
-$$ \sum_{d\|n} \phi{(d)} = n$$
+$$ \sum_{d|n} \phi{(d)} = n$$
 
 
 Here the sum is over all positive divisors $d$ of $n$.

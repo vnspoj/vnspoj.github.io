@@ -53,7 +53,7 @@ If this is not the case, we can say that there are no lattice points such that $
 That means that we will have the same answer if we consider new reference system in which $O'=(n;\lfloor k\cdot n + b\rfloor)$, axis $x'$ is directed down and axis $y'$ is directed to the left.
 For this reference system we are interested in lattice points on the set
 
-$$\left\\{(x;y)~\bigg\|~0 \leq x < \lfloor k \cdot n + b\rfloor,~ 0 < y \leq \dfrac{x+(k\cdot n+b)-\lfloor k\cdot n + b \rfloor}{k}\right\\}$$
+$$\left\\{(x;y)~\bigg|~0 \leq x < \lfloor k \cdot n + b\rfloor,~ 0 < y \leq \dfrac{x+(k\cdot n+b)-\lfloor k\cdot n + b \rfloor}{k}\right\\}$$
 
 which returns us back to the case $k>1$.
 You can see new reference point $O'$ and axes $X'$ and $Y'$ in the picture below:

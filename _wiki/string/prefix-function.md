@@ -361,7 +361,7 @@ $$\text{mid} = \text{aut}[G[i-1][j]][i]$$
 $$G[i][j] = G[i-1][\text{mid}]$$
 The values for $K[i][j]$ can also be easily counted.
 
-$$K[i][j] = K[i-1][j] + (\text{mid} == \|s\|) + K[i-1][\text{mid}]$$
+$$K[i][j] = K[i-1][j] + (\text{mid} == |s|) + K[i-1][\text{mid}]$$
 
 
 So we can solve the problem for Gray strings, and similarly also a huge number of other similar problems.
