@@ -110,7 +110,7 @@ Từ đó dễ dàng tính được mỗi truy vấn trong $O(1)$.
 
 Một số ứng dụng của hashing:
 
-* [Rabin-Karp algorithm](../../wiki/string/rabin-karp): pattern matching trong $O(n)$.
+* [Rabin-Karp algorithm](../string/rabin-karp): pattern matching trong $O(n)$.
 * Đếm số lượng substrings phân biệt của 1 chuỗi trong $O(n^2 \log n)$.
 * Đếm số palindrom substrings trong 1 chuỗi.
 
