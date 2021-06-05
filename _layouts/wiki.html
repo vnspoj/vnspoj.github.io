@@ -6,6 +6,18 @@ layout: default
 </header>
 
 <div class="content">
+
+  {% assign url_vn = page.url | replace: '/wiki/', '/wikivn/' %}
+  {% for post in site.wikivn %}
+  {% if post.url == url_vn %}
+  <div style="margin-top: 25px;">
+    <i>Translation into Vietnamese at <a href="{{ site.url }}{{ post.url }}">
+        {{ post.title }}</a></i>
+  </div>
+  {% break %}
+  {% endif %}
+  {% endfor %}
+
   <div style="margin-top: 25px;">
     {{ content }}
   </div>

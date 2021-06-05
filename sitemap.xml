@@ -36,5 +36,11 @@ layout: null
         <link>{{ post.url | prepend: site.baseurl | prepend: site.url }}</link>
       </wiki>
     {% endfor %}
+    {% for post in site.wikivn %}
+      <wikivi>
+        <title>{{ post.title | xml_escape }}</title>
+        <link>{{ post.url | prepend: site.baseurl | prepend: site.url }}</link>
+      </wikivi>
+    {% endfor %}
   </channel>
 </rss>

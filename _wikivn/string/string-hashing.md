@@ -9,9 +9,9 @@ Hashing là một trong những kỹ thuật xử lý chuỗi thường được
 
 **Điều kiện cần**: để 2 chuỗi $s = t$ thì giá trị hash của chúng bằng nhau $\text{hash}(s) = \text{hash}(t)$.
 
-Tuy nhiên nếu $\text{hash}(s) = \text{hash}(t)$ thì đây chưa phải là **điều kiện đủ** để $s = t$, nhưng nếu giá trị hash là khác nhau, nó giúp ta xác định được chắc chắn $s \neq t$.
+Tuy nhiên nếu $\text{hash}(s) = \text{hash}(t)$ thì đây **chưa phải** là **điều kiện đủ** để $s = t$, nhưng nếu giá trị hash là khác nhau, nó giúp ta xác định được chắc chắn $s \neq t$.
 
-Do đó, ta có thể dùng 2-3 hàm hash khác nhau để **tăng xác suất** $s == t$ nếu **tất cả** hàm hash cho giá trị giống nhau.
+Do đó, ta có thể dùng 2-3 hàm hash khác nhau để **tăng xác suất** $s = t$ nếu **tất cả** hàm hash cho giá trị giống nhau.
 
 ## Lựa chọn hàm hash - Hash Function
 
@@ -47,7 +47,7 @@ long long compute_hash(string const& s) {
 }
 ```
 
-Tips: Precompute $p^i$ để tăng performance.
+**Tips:** Precompute $p^i$ để tăng performance.
 
 ## Examples
 
@@ -86,7 +86,7 @@ vector<vector<int>> group_identical_strings(vector<string> const& s) {
 Ta có hàm hash cần tìm cho mỗi truy vấn $i$, $j$ là
 
 $$\begin{align}
-$$\text{hash}(s[i \dots j]) = \sum_{k = i}^j s[k] \cdot p^{k-i} \mod m$$
+\text{hash}(s[i \dots j]) = \sum_{k = i}^j s[k] \cdot p^{k-i} \mod m
 \end{align}$$
 
 
