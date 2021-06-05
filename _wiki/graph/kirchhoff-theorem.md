@@ -28,7 +28,7 @@ The proof of this theorem is quite difficult and is not presented here; for an o
 Kirchhoff's matrix tree theorem and Kirchhoff's laws for electrical circuit are related in a beautiful way. It is possible to show (using Ohm's law and Kirchhoff's first law) that resistance $R_{ij}$ between two points of the circuit $i$ and $j$ is
 
 
-$$R_{ij} = \frac{ \left| L^{(i,j)} \right| }{ | L^j | }.$$
+$$R_{ij} = \frac{ \left\| L^{(i,j)} \right\| }{ \| L^j \| }.$$
 
 
 Here the matrix $L$ is obtained from the matrix of inverse resistances $A$ ($A_{i,j}$ is inverse of the resistance of the conductor between points $i$ and $j$) using the procedure described in Kirchhoff's matrix tree theorem.

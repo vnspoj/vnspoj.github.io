@@ -110,7 +110,7 @@ Here `ftype` is some type used for coordinates, usually `int`, `double` or `long
 ### Definition
 The dot (or scalar) product $\mathbf a \cdot \mathbf b$ for vectors $\mathbf a$ and $\mathbf b$ can be defined in two identical ways.
 Geometrically it is product of the length of the first vector by the length of the projection of the second vector onto the first one.
-As you may see from the image below this projection is nothing but $|\mathbf a| \cos \theta$ where $\theta$ is the angle between $\mathbf a$ and $\mathbf b$. Thus $\mathbf a\cdot  \mathbf b = |\mathbf a| \cos \theta \cdot |\mathbf b|$.
+As you may see from the image below this projection is nothing but $\|\mathbf a\| \cos \theta$ where $\theta$ is the angle between $\mathbf a$ and $\mathbf b$. Thus $\mathbf a\cdot  \mathbf b = \|\mathbf a\| \cos \theta \cdot \|\mathbf b\|$.
 
 
 
@@ -157,10 +157,10 @@ When solving problems one should use algebraic definition to calculate dot produ
 We can define many geometrical properties via the dot product.
 For example 
 
-1. Norm of $\mathbf a$ (squared length): $|\mathbf a|^2 = \mathbf a\cdot \mathbf a$
-2. Length of $\mathbf a$: $|\mathbf a| = \sqrt{\mathbf a\cdot \mathbf a}$
-3. Projection of $\mathbf a$ onto $\mathbf b$: $\dfrac{\mathbf a\cdot\mathbf b}{|\mathbf b|}$
-4. Angle between vectors: $\arccos \left(\dfrac{\mathbf a\cdot \mathbf b}{|\mathbf a| \cdot |\mathbf b|}\right)$
+1. Norm of $\mathbf a$ (squared length): $\|\mathbf a\|^2 = \mathbf a\cdot \mathbf a$
+2. Length of $\mathbf a$: $\|\mathbf a\| = \sqrt{\mathbf a\cdot \mathbf a}$
+3. Projection of $\mathbf a$ onto $\mathbf b$: $\dfrac{\mathbf a\cdot\mathbf b}{\|\mathbf b\|}$
+4. Angle between vectors: $\arccos \left(\dfrac{\mathbf a\cdot \mathbf b}{\|\mathbf a\| \cdot \|\mathbf b\|}\right)$
 5. From the previous point we may see that the dot product is positive if the angle between them is acute, negative if it is obtuse and it equals zero if they are orthogonal, i.e. they form a right angle.
 
 Note that all these functions do not depend on the number of dimensions, hence they will be the same for the 2D and 3D case:
@@ -181,7 +181,7 @@ double angle(point2d a, point2d b) {
 ```
 
 To see the next important property we should take a look at the set of points $\mathbf r$ for which $\mathbf r\cdot \mathbf a = C$ for some fixed constant $C$.
-You can see that this set of points is exactly the set of points for which the projection onto $\mathbf a$ is the point $C \cdot \dfrac{\mathbf a}{|\mathbf a|}$ and they form a hyperplane orthogonal to $\mathbf a$.
+You can see that this set of points is exactly the set of points for which the projection onto $\mathbf a$ is the point $C \cdot \dfrac{\mathbf a}{\|\mathbf a\|}$ and they form a hyperplane orthogonal to $\mathbf a$.
 You can see the vector $\mathbf a$ alongside with several such vectors having same dot product with it in 2D on the picture below:
 
 
@@ -207,7 +207,7 @@ Assume you have three vectors $\mathbf a$, $\mathbf b$ and $\mathbf c$ in 3D spa
 
 How would you calculate its volume?
 From school we know that we should multiply the area of the base with the height, which is projection of $\mathbf a$ onto direction orthogonal to base.
-That means that if we define $\mathbf b \times \mathbf c$ as the vector which is orthogonal to both $\mathbf b$ and $\mathbf c$ and which length is equal to the area of the parallelogram formed by $\mathbf b$ and $\mathbf c$ then $|\mathbf a\cdot (\mathbf b\times\mathbf c)|$ will be equal to the volume of the parallelepiped.
+That means that if we define $\mathbf b \times \mathbf c$ as the vector which is orthogonal to both $\mathbf b$ and $\mathbf c$ and which length is equal to the area of the parallelogram formed by $\mathbf b$ and $\mathbf c$ then $\|\mathbf a\cdot (\mathbf b\times\mathbf c)\|$ will be equal to the volume of the parallelepiped.
 For integrity we will say that $\mathbf b\times \mathbf c$ will be always directed in such way that the rotation from the vector $\mathbf b$ to the vector $\mathbf c$ from the point of $\mathbf b\times \mathbf c$ is always counter-clockwise (see the picture below).
 
 
@@ -230,7 +230,7 @@ Indeed for all vectors $\mathbf r$ the chain of equations holds:
 $$\mathbf r\cdot( (\mathbf a + \mathbf b)\times \mathbf c) = (\mathbf a + \mathbf b) \cdot (\mathbf c\times \mathbf r) =  \mathbf a \cdot(\mathbf c\times \mathbf r) + \mathbf b\cdot(\mathbf c\times \mathbf r) = \mathbf r\cdot (\mathbf a\times \mathbf c) + \mathbf r\cdot(\mathbf b\times \mathbf c) = \mathbf r\cdot(\mathbf a\times \mathbf c + \mathbf b\times \mathbf c)$$
 
 Which proves $(\mathbf a + \mathbf b)\times \mathbf c = \mathbf a\times \mathbf c + \mathbf b\times \mathbf c$ due to point 3.
-6. $|\mathbf a\times \mathbf b|=|\mathbf a| \cdot |\mathbf b| \sin \theta$ where $\theta$ is angle between $\mathbf a$ and $\mathbf b$, since $|\mathbf a\times \mathbf b|$ equals to the area of the parallelogram formed by $\mathbf a$ and $\mathbf b$. 
+6. $\|\mathbf a\times \mathbf b\|=\|\mathbf a\| \cdot \|\mathbf b\| \sin \theta$ where $\theta$ is angle between $\mathbf a$ and $\mathbf b$, since $\|\mathbf a\times \mathbf b\|$ equals to the area of the parallelogram formed by $\mathbf a$ and $\mathbf b$. 
 
 Given all this and that the following equation holds for the unit vectors
 $$\mathbf e_x\times \mathbf e_x = \mathbf e_y\times \mathbf e_y = \mathbf e_z\times \mathbf e_z = \mathbf 0,\\\
@@ -248,16 +248,16 @@ $$\mathbf a\times \mathbf b = \begin{vmatrix}\mathbf e_x & \mathbf e_y & \mathbf
 
 
 
-Here $| \cdot |$ stands for the determinant of a matrix. 
+Here $\| \cdot \|$ stands for the determinant of a matrix. 
 
 Some kind of cross product (namely the pseudo-scalar product) can also be implemented in the 2D case.
-If we would like to calculate the area of parallelogram formed by vectors $\mathbf a$ and $\mathbf b$ we would compute $|\mathbf e_z\cdot(\mathbf a\times \mathbf b)| = |x_1 y_2 - y_1 x_2|$.
-Another way to obtain the same result is to multiply $|\mathbf a|$ (base of parallelogram) with the height, which is the projection of vector $\mathbf b$ onto vector $\mathbf a$ rotated by $90^\circ$ which in turn is $\widehat{\mathbf a}=(-y_1;x_1)$.
-That is, to calculate $|\widehat{\mathbf a}\cdot\mathbf b|=|x_1y_2 - y_1 x_2|$. 
+If we would like to calculate the area of parallelogram formed by vectors $\mathbf a$ and $\mathbf b$ we would compute $\|\mathbf e_z\cdot(\mathbf a\times \mathbf b)\| = \|x_1 y_2 - y_1 x_2\|$.
+Another way to obtain the same result is to multiply $\|\mathbf a\|$ (base of parallelogram) with the height, which is the projection of vector $\mathbf b$ onto vector $\mathbf a$ rotated by $90^\circ$ which in turn is $\widehat{\mathbf a}=(-y_1;x_1)$.
+That is, to calculate $\|\widehat{\mathbf a}\cdot\mathbf b\|=\|x_1y_2 - y_1 x_2\|$. 
 
 If we will take the sign into consideration then the area will be positive if the rotation from $\mathbf a$ to $\mathbf b$ (i.e. from the view of the point of $\mathbf e_z$) is performed counter-clockwise and negative otherwise.
 That defines the pseudo-scalar product.
-Note that it also equals $|\mathbf a| \cdot |\mathbf b| \sin \theta$ where $\theta$ is angle from $\mathbf a$ to $\mathbf b$ count counter-clockwise (and negative if rotation is clockwise).
+Note that it also equals $\|\mathbf a\| \cdot \|\mathbf b\| \sin \theta$ where $\theta$ is angle from $\mathbf a$ to $\mathbf b$ count counter-clockwise (and negative if rotation is clockwise).
 
 Let's implement all this stuff!
 

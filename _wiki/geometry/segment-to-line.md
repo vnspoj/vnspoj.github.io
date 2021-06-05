@@ -38,7 +38,7 @@ $$C = - A P_x - B P_y.$$
 An important advantage of this method of constructing a straight line is that if the coordinates of the ends were integer, then the coefficients obtained will also be **integer** . In some cases, this allows one to perform geometric operations without resorting to real numbers at all.
 
 However, there is a small drawback: for the same straight line different triples of coefficients can be obtained.
-To avoid this, but do not go away from the integer coefficients, you can apply the following technique, often called **rationing**. Find the [greatest common divisor](../algebra/euclid-algorithm) of numbers $| A | , | B | , | C |$ , we divide all three coefficients by it, and then we make the normalization of the sign: if $A <0$ or $A = 0, B <0$ then multiply all three coefficients by $-1$ .
+To avoid this, but do not go away from the integer coefficients, you can apply the following technique, often called **rationing**. Find the [greatest common divisor](../algebra/euclid-algorithm) of numbers $\| A \| , \| B \| , \| C \|$ , we divide all three coefficients by it, and then we make the normalization of the sign: if $A <0$ or $A = 0, B <0$ then multiply all three coefficients by $-1$ .
 As a result, we will come to the conclusion that for identical straight lines, identical triples of coefficients will be obtained, which makes it easy to check straight lines for equality.
 
 ### Real case
@@ -58,7 +58,7 @@ and divide all three coefficients $A , B , C$ by it.
 Thus, the order of the coefficients $A$ and $B$ will not depend on the order of the input coordinates, and the coefficient $C$ will be of the same order as the input coordinates. In practice, this leads to a significant improvement in the accuracy of calculations.
 
 Finally, we mention the **comparison** of straight lines - in fact, after such a normalization, for the same straight line, only two triples of coefficients can be obtained: up to multiplication by $-1$.
-Accordingly, if we make an additional normalization taking into account the sign (if $A < -\varepsilon$  or $| A | < \varepsilon$, $B <- \varepsilon$ then multiply by $-1$ ), the resulting coefficients will be unique.
+Accordingly, if we make an additional normalization taking into account the sign (if $A < -\varepsilon$  or $\| A \| < \varepsilon$, $B <- \varepsilon$ then multiply by $-1$ ), the resulting coefficients will be unique.
 
 ### Three-dimensional and multidimensional case
 

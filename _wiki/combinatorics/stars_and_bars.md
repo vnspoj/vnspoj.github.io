@@ -16,7 +16,7 @@ $$\binom{n + k - 1}{n}.$$
 
 
 The proof involves turning the objects into stars and separating the boxes using bars (therefore the name).
-E.g. we can represent with $\bigstar | \bigstar \bigstar |~| \bigstar \bigstar$ the following situation:
+E.g. we can represent with $\bigstar \| \bigstar \bigstar \|~\| \bigstar \bigstar$ the following situation:
 in the first box is one object, in the second box are two objects, the third one is empty and in the last box are two objects.
 This is one way of dividing 5 objects into 4 boxes.
 
@@ -35,7 +35,7 @@ $$x_1 + x_2 + \dots + x_k = n$$
 with $x_i \ge 0$.
 
 Again we can represent a solution using stars and bars.
-E.g. the solution $1 + 3 + 0 = 4$ for $n = 4$, $k = 3$ can be represented using $\bigstar | \bigstar \bigstar \bigstar |$.
+E.g. the solution $1 + 3 + 0 = 4$ for $n = 4$, $k = 3$ can be represented using $\bigstar \| \bigstar \bigstar \bigstar \|$.
 
 It is easy to see, that this is exactly the stars an bars theorem.
 Therefore the solution is $\binom{n + k - 1}{n}$.

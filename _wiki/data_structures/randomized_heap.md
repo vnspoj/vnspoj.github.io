@@ -121,10 +121,10 @@ $$P\\{h(T > (c+1) \log n\\} < \frac{1}{n^c}$$
 for any positive constant $c$.
 
 Here we denote by $P$ the set of paths from the root of the heap to the leaves where the length exceeds $(c+1) \log n$.
-Note that for any path $p$ of length $|p|$ the probability that it will be chosen as random path is $2^{-|p|}$.
+Note that for any path $p$ of length $\|p\|$ the probability that it will be chosen as random path is $2^{-\|p\|}$.
 Therefore we get:
 
-$$P\\{h(T > (c+1) \log n\\} = \sum_{p \in P} 2^{-|p|} < \sum_{p \in P} 2^{-(c+1) \log n} = |P| n^{-(c+1)} \le n^{-c}$$
+$$P\\{h(T > (c+1) \log n\\} = \sum_{p \in P} 2^{-\|p\|} < \sum_{p \in P} 2^{-(c+1) \log n} = \|P\| n^{-(c+1)} \le n^{-c}$$
 
 
 ### Complexity of the algorithm

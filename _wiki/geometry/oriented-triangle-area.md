@@ -16,7 +16,7 @@ This is analog to the definition of the cross product in 2D (see [Basic Geometry
 By dividing this area by two we get the area of a triangle that we are interested in.
 We will use $\vec{p_1p_2}$ and $\vec{p_2p_3}$ as the column vectors and calculate a $2\times 2$ determinant:
 
-$$2S=\left|\begin{matrix}x_2-x_1 & x_3-x_2\\\\y_2-y_1 & y_3-y_2\end{matrix}\right|=(x_2-x_1)(y_3-y_2)-(x_3-x_2)(y_2-y_1)$$
+$$2S=\left\|\begin{matrix}x_2-x_1 & x_3-x_2\\\\y_2-y_1 & y_3-y_2\end{matrix}\right\|=(x_2-x_1)(y_3-y_2)-(x_3-x_2)(y_2-y_1)$$
 
 
 ## Implementation

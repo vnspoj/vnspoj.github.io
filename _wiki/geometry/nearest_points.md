@@ -39,21 +39,21 @@ $$p_i < p_j \Longleftrightarrow (x_i < x_j) \lor \Big(\left(x_i = x_j\right) \we
 Then take the middle point after sorting $p_m (m = \lfloor n/2 \rfloor)$, and all the points before it and the $p_m$ itself are assigned to the first half, and all the points after it - to the second half:
 
 
-$$A_1 = \{p_i \ | \ i = 0 \ldots m \}$$
+$$A_1 = \{p_i \ \| \ i = 0 \ldots m \}$$
 
-$$A_2 = \{p_i \ | \ i = m + 1 \ldots n-1 \}.$$ 
+$$A_2 = \{p_i \ \| \ i = m + 1 \ldots n-1 \}.$$ 
 
 Now, calling recursively on each of the sets $A_1$ and $A_2$, we will find the answers $h_1$ and $h_2$ for each of the halves. And take the best of them: $h = \min(h_1, h_2)$.
 
 Now we need to make a **merge stage**, i.e. we try to find such pairs of points, for which the distance between which is less than $h$ and one point is lying in $A_1$ and the other in $A_2$.
 It is obvious that it is sufficient to consider only those points that are separated from the vertical line by a distance less than $h$, i.e. the set $B$ of the points considered at this stage is equal to:
 
-$$B = \{ p_i\ | \ | x_i - x_m\ | < h \}.$$ 
+$$B = \{ p_i\ \| \ \| x_i - x_m\ \| < h \}.$$ 
 
 For each point in the set $B$, we try to find the points that are closer to it than $h$. For example, it is sufficient to consider only those points whose $y$-coordinate differs by no more than $h$. Moreover, it makes no sense to consider those points whose $y$-coordinate is greater than the $y$-coordinate of the current point. Thus, for each point $p_i$ we define the set of considered points $C(p_i)$ as follows:
 
 
-$$C(p_i) = \{ p_j\ |\ p_j \in B,\ \ y_i - h < y_j \le y_i \}.$$
+$$C(p_i) = \{ p_j\ \|\ p_j \in B,\ \ y_i - h < y_j \le y_i \}.$$
 
 
 If we sort the points of the set $B$ by $y$-coordinate, it will be very easy to find $C(p_i)$: these are several points in a row ahead to the point $p_i$.
@@ -66,7 +66,7 @@ Finally, we pay attention to the sorting, which the above algorithm contains: fi
 
 ## Evaluation of the asymptotics
 
-To show that the above algorithm is actually executed in $O(n \log n)$, we need to prove the following fact: $|C(p_i)| = O(1)$.
+To show that the above algorithm is actually executed in $O(n \log n)$, we need to prove the following fact: $\|C(p_i)\| = O(1)$.
 
 So, let us consider some point $p_i$; recall that the set $C(p_i)$ is a set of points whose $y$-coordinate lies in the segment $[y_i-h; y_i]$, and, moreover, along the $x$ coordinate, the point $p_i$ itself, and all the points of the set $C(p_i)$ lie in the band width $2h$. In other words, the points we are considering $p_i$ and $C(p_i)$ lie in a rectangle of size $2h \times h$.
 

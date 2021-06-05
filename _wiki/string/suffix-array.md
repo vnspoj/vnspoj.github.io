@@ -217,7 +217,7 @@ However not by much, since the alphabet size only appears with a factor of $O(\l
 
 Also note, that this algorithm only sorts the cycle shifts.
 As mentioned at the beginning of this section we can generate the sorted order of the suffixes by appending a character that is smaller than all other characters of the string, and sorting this resulting string by cycle shifts, e.g. by sorting the cycle shifts of $s + \\$$.
-This will obviously give the suffix array of $s$, however prepended with $|s|$.
+This will obviously give the suffix array of $s$, however prepended with $\|s\|$.
 
 ```cpp
 vector<int> suffix_array_construction(string s) {
@@ -237,11 +237,11 @@ The algorithm above sorts all cyclic shifts (without appending a character to th
 ### Finding a substring in a string
 
 The task is to find a string $s$ inside some text $t$ online - we know the text $t$ beforehand, but not the string $s$.
-We can create the suffix array for the text $t$ in $O(|t| \log |t|)$ time.
+We can create the suffix array for the text $t$ in $O(\|t\| \log \|t\|)$ time.
 Now we can look for the substring $s$ in the following way.
 The occurrence of $s$ must be a prefix of some suffix from $t$.
 Since we sorted all the suffixes we can perform a binary search for $s$ in $p$.
-Comparing the current suffix and the substring $s$ within the binary search can be done in $O(|s|)$ time, therefore the complexity for finding the substring is $O(|s| \log |t|)$.
+Comparing the current suffix and the substring $s$ within the binary search can be done in $O(\|s\|)$ time, therefore the complexity for finding the substring is $O(\|s\| \log \|t\|)$.
 Also notice that if the substring occurs multiple times in $t$, then all occurrences will be next to each other in $p$.
 Therefore the number of occurrences can be found with a second binary search, and all occurrences can be printed easily.
 
@@ -249,7 +249,7 @@ Therefore the number of occurrences can be found with a second binary search, an
 
 We want to be able to compare two substrings of the same length of a given string $s$ in $O(1)$ time, i.e. checking if the first substring is smaller than the second one.
 
-For this we construct the suffix array in $O(|s| \log |s|)$ time and store all the intermediate results of the equivalence classes $c[]$.
+For this we construct the suffix array in $O(\|s\| \log \|s\|)$ time and store all the intermediate results of the equivalence classes $c[]$.
 
 Using this information we can compare any two substring whose length is equal to a power of two in O(1):
 for this it is sufficient to compare the equivalence classes of both substrings.
@@ -287,10 +287,10 @@ int compare(int i, int j, int l, int k) {
 
 For a given string $s$ we want to compute the longest common prefix (**LCP**)  of two arbitrary suffixes with position $i$ and $j$.
 
-The method described here uses $O(|s| \log |s|)$ additional memory.
+The method described here uses $O(\|s\| \log \|s\|)$ additional memory.
 A completely different approach that will only use a linear amount of memory is described in the next section.
 
-We construct the suffix array in $O(|s| \log |s|)$ time, and remember the intermediate results of the arrays $c[]$ from each iteration.
+We construct the suffix array in $O(\|s\| \log \|s\|)$ time, and remember the intermediate results of the arrays $c[]$ from each iteration.
 
 Let's compute the LCP for two suffixes starting at $i$ and $j$.
 We can compare any two substrings with a length equal to a power of two in $O(1)$.
@@ -317,7 +317,7 @@ Here `log_n` denotes a constant that is equal to the logarithm of $n$ in base $2
 We have the same task as in the previous section.
 We have compute the longest common prefix (**LCP**) for two suffixes of a string $s$.
 
-Unlike the previous method this one will only use $O(|s|)$ memory.
+Unlike the previous method this one will only use $O(\|s\|)$ memory.
 The result of the preprocessing will be an array (which itself is an important source of information about the string, and therefore also used to solve other tasks).
 LCP queries can be answered by performing RMQ queries (range minimum queries) in this array, so for different implementations it is possible to achieve logarithmic and even constant query time. 
 

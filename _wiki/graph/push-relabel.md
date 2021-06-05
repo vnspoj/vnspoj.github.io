@@ -40,11 +40,11 @@ First, how do we guarantee that this actually terminates?
 And secondly, how do we guarantee that this will actually give us a maximum flow, and not just any random flow?
 
 To solve these problems we need the help of another function, namely the **labeling** functions $h$, often also called **height** function, which assigns each vertex an integer.
-We call a labeling is valid, if $h(s) = |V|$, $h(t) = 0$, and $h(u) \le h(v) + 1$ if there is an edge $(u, v)$ in the residual graph - i.e. the edge $(u, v)$ has a positive capacity in the residual graph.
+We call a labeling is valid, if $h(s) = \|V\|$, $h(t) = 0$, and $h(u) \le h(v) + 1$ if there is an edge $(u, v)$ in the residual graph - i.e. the edge $(u, v)$ has a positive capacity in the residual graph.
 In other words, if it is possible to increase the flow from $u$ to $v$, then the height of $v$ can be at most one smaller than the height of $u$, but it can be equal or even higher.
 
 It is important to note, that if there exists a valid labeling function, then there doesn't exist an augmenting path from $s$ to $t$ in the residual graph.
-Because such a path will have a length of at most $|V| - 1$ edges, and each edge can decrease the height only by at most by one, which is impossible if the first height is $h(s) = |V|$ and the last height is $h(t) = 0$.
+Because such a path will have a length of at most $\|V\| - 1$ edges, and each edge can decrease the height only by at most by one, which is impossible if the first height is $h(s) = \|V\|$ and the last height is $h(t) = 0$.
 
 Using this labeling function we can state the strategy of the push-relabel algorithm:
 We start with a valid preflow and a valid labeling function.
@@ -63,7 +63,7 @@ First we have to initialize the graph with a valid preflow and labeling function
 Using the empty preflow - like it is done in the Ford-Fulkerson algorithm - is not possible, because then there will be an augmenting path and this implies that there doesn't exists a valid labeling.
 Therefore we will initialize each edges outgoing from $s$ with its maximal capacity: $f((s, u)) = c((s, u))$.
 And all other edges with zero.
-In this case there exists a valid labeling, namely $h(s) = |V|$ for the source vertex and $h(u) = 0$ for all other.
+In this case there exists a valid labeling, namely $h(s) = \|V\|$ for the source vertex and $h(u) = 0$ for all other.
 
 Now let's describe the two operations in more detail.
 
@@ -83,7 +83,7 @@ Afterwards the preflow is actually a flow and we return it.
 
 ## Complexity
 
-It is easy to show, that the maximal label of a vertex is $2|V| - 1$.
+It is easy to show, that the maximal label of a vertex is $2\|V\| - 1$.
 At this point all remaining excess can and will be pushed back to the source.
 This gives at most $O(V^2)$ relabel operations.
 

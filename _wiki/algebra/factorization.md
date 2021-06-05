@@ -152,7 +152,7 @@ int fermat(int n) {
 ```
 
 Notice, this factorization method can be very fast, if the difference between the two factors $p$ and $q$ is small.
-The algorithm runs in $O(|p - q|)$ time.
+The algorithm runs in $O(\|p - q\|)$ time.
 However since it is very slow, once the factors are far apart, it is rarely used in practice.
 
 However there are still a huge number of optimizations for this approach.
@@ -181,8 +181,8 @@ This also means that
 $$a^{(p - 1)^k} \equiv a^{k \cdot (p - 1)} \equiv 1 \pmod{p}.$$
 
 
-So for any $M$ with $p - 1 ~|~ M$ we know that $a^M \equiv 1$.
-This means that $a^M - 1 = p \cdot r$, and because of that also $p ~|~ \gcd(a^M - 1, n)$.
+So for any $M$ with $p - 1 ~\|~ M$ we know that $a^M \equiv 1$.
+This means that $a^M - 1 = p \cdot r$, and because of that also $p ~\|~ \gcd(a^M - 1, n)$.
 
 Therefore, if $p - 1$ for a factor $p$ of $n$ divides $M$, we can extract a factor using [Euclid's algorithm](../algebra/euclid-algorithm).
 
@@ -263,7 +263,7 @@ We don't know $p$ yet, so how can we argue about the sequence $\{x_i \bmod p\}$?
 
 It's actually quite easy.
 There is a cycle in the sequence $\\{x_i \bmod p\\}_{i \le j}$ if and only if there are two indices $s, t \le j$ and $t$ with $x_s \equiv x_t \bmod p$.
-This equation can be rewritten as $x_s - x_t \equiv 0 \bmod p$ which is the same as $p ~|~ \gcd(x_s - x_t, n)$.
+This equation can be rewritten as $x_s - x_t \equiv 0 \bmod p$ which is the same as $p ~\|~ \gcd(x_s - x_t, n)$.
 
 Therefore, if we find two indices $s$ and $t$ with $g = \gcd(x_s - x_t, n) > 1$, we have found a cycle and also a factor $g$ of $n$.
 Notice that it is possible that $g = n$.

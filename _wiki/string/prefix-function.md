@@ -211,7 +211,7 @@ Now the task is transformed into computing how many prefixes there are that don'
 If we compute the maximal value of the prefix function $\pi_{\text{max}}$ of the reversed string $t$, then the longest prefix that appears in $s$ is $\pi_{\text{max}}$ long.
 Clearly also all prefixes of smaller length appear in it.
 
-Therefore the number of new substrings appearing when we add a new character $c$ is $|s| + 1 - \pi_{\text{max}}$.
+Therefore the number of new substrings appearing when we add a new character $c$ is $\|s\| + 1 - \pi_{\text{max}}$.
 
 So for each character appended we can compute the number of new substrings in $O(n)$ times, which gives a time complexity of $O(n^2)$ in total.
 
@@ -261,7 +261,7 @@ $$s_4 = s_3, ~ s_5 = s_4, ~ s_6 = s_5, ~ s_7 = s_6 ~ \Rightarrow ~ s_0 = s_1 = s
 ### Building an automaton according to the prefix function
 
 Let's return to the concatenation to the two strings through a separator, i.e. for the strings $s$ and $t$ we compute the prefix function for the string $s + \\# + t$.
-Obviously, since $\\#$ is a separator, the value of the prefix function will never exceed $|s|$.
+Obviously, since $\\#$ is a separator, the value of the prefix function will never exceed $\|s\|$.
 It follows, that it is sufficient to only store the string $s + \\#$ and the values of the prefix function for it, and we can compute the prefix function for all subsequent character on the fly:
 
 $$\underbrace{s_0 ~ s_1 ~ \dots ~ s_{n-1} ~ \\#}\_{\text{need to store}} ~ \underbrace{t_0 ~ t_1 ~ \dots ~ t_{m-1}}\_{\text{do not need to store}}$$
@@ -347,7 +347,7 @@ However we can calculate the value of the prefix function at the end of the stri
 
 In addition to the automaton itself, we also compute values $G[i][j]$ - the value of the automaton after processing the string $g_i$ starting with the state $j$.
 And additionally we compute values $K[i][j]$ - the number of occurrences of $s$ in $g_i$, before during the processing of $g_i$ starting with the state $j$.
-Actually $K[i][j]$ is the number of times that the prefix function took the value $|s|$ while performing the operations.
+Actually $K[i][j]$ is the number of times that the prefix function took the value $\|s\|$ while performing the operations.
 The answer to the problem will then be $K[k][0]$.
 
 How can we compute these values?
@@ -361,7 +361,7 @@ $$\text{mid} = \text{aut}[G[i-1][j]][i]$$
 $$G[i][j] = G[i-1][\text{mid}]$$
 The values for $K[i][j]$ can also be easily counted.
 
-$$K[i][j] = K[i-1][j] + (\text{mid} == |s|) + K[i-1][\text{mid}]$$
+$$K[i][j] = K[i-1][j] + (\text{mid} == \|s\|) + K[i-1][\text{mid}]$$
 
 
 So we can solve the problem for Gray strings, and similarly also a huge number of other similar problems.

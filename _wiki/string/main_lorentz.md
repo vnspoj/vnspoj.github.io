@@ -95,20 +95,20 @@ We will now discuss how to find **all left repetitions**.
 Finding all right repetitions can be done in the same way.
 
 Let us denote the length of the left repetition by $2l$ (i.e. each half of the repetition has length $l$).
-Consider the first character of the repetition falling into the string $v$ (it is at position $|u|$ in the string $s$).
+Consider the first character of the repetition falling into the string $v$ (it is at position $\|u\|$ in the string $s$).
 It coincides with the character $l$ positions before it, let's denote this position $cntr$.
 
 We will fixate this position $cntr$, and **look for all repetitions at this position** $cntr$.
 
 For example:
 
-$$c ~ \underset{cntr}{a} ~ c ~ | ~ a ~ d ~ a$$
+$$c ~ \underset{cntr}{a} ~ c ~ \| ~ a ~ d ~ a$$
 
 The vertical lines divides the two halves.
 Here we fixated the position $cntr = 1$, and at this position we find the repetition $caca$.
 
-It is clear, that if we fixate the position $cntr$, we simultaneously fixate the length of the possible repetitions: $l = |u| - cntr$.
-Once we know how to find these repetitions, we will iterate over all possible values for $cntr$ from $0$ to $|u|-1$, and find all left crossover repetitions of length $l = |u|,~ |u|-1,~ \dots, 1$.
+It is clear, that if we fixate the position $cntr$, we simultaneously fixate the length of the possible repetitions: $l = \|u\| - cntr$.
+Once we know how to find these repetitions, we will iterate over all possible values for $cntr$ from $0$ to $\|u\|-1$, and find all left crossover repetitions of length $l = \|u\|,~ \|u\|-1,~ \dots, 1$.
 
 ### Criterion for left crossing repetitions
 
@@ -117,16 +117,16 @@ Keep in mind that there still can be multiple such repetitions.
 
 Let's again look at a visualization, this time for the repetition $abcabc$:
 
-$$\overbrace{a}^{l_1} ~ \overbrace{\underset{cntr}{b} ~ c}^{l_2} ~ \overbrace{a}^{l_1} ~ | ~ \overbrace{b ~ c}^{l_2}$$
+$$\overbrace{a}^{l_1} ~ \overbrace{\underset{cntr}{b} ~ c}^{l_2} ~ \overbrace{a}^{l_1} ~ \| ~ \overbrace{b ~ c}^{l_2}$$
 
 Here we denoted the lengths of the two pieces of the repetition with $l_1$ and $l_2$:
 $l_1$ is the length of the repetition up to the position $cntr-1$, and $l_2$ is the length of the repetition from $cntr$ to the end of the half of the repetition.
 We have $2l = l_1 + l_2 + l_1 + l_2$ as the total length of the repetition.
 
-Let us generate **necessary and sufficient** conditions for such a repetition at position $cntr$ of length $2l = 2(l_1 + l_2) = 2(|u| - cntr)$:
+Let us generate **necessary and sufficient** conditions for such a repetition at position $cntr$ of length $2l = 2(l_1 + l_2) = 2(\|u\| - cntr)$:
 
 - Let $k_1$ be the largest number such that the first $k_1$ characters before the position $cntr$ coincide with the last $k_1$ characters in the string $u$:
-  $$u[cntr - k_1 \dots cntr - 1] = u[|u| - k_1 \dots |u| - 1]$$
+  $$u[cntr - k_1 \dots cntr - 1] = u[\|u\| - k_1 \dots \|u\| - 1]$$
 - Let $k_2$ be the largest number such that the $k_2$ characters starting at position $cntr$ coincide with the first $k_2$ characters in the string $v$:
   $$u[cntr \dots cntr + k_2 - 1] = v[0 \dots k_2 - 1]$$
 - Then we have a repetition exactly for any pair $(l_1,~ l_2)$ with
@@ -142,7 +142,7 @@ $$\begin{align}
 To summarize:
 
 - We fixate a specific position $cntr$.
-- All repetition which we will find now have length $2l = 2(|u| - cntr)$.
+- All repetition which we will find now have length $2l = 2(\|u\| - cntr)$.
   There might be multiple such repetitions, they depend on the lengths $l_1$ and $l_2 = l - l_1$.
 - We find $k_1$ and $k_2$ as described above.
 - Then all suitable repetitions are the ones for which the lengths of the pieces $l_1$ and $l_2$ satisfy the conditions:

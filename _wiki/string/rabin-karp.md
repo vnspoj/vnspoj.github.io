@@ -9,13 +9,13 @@ This algorithm is based on the concept of hashing, so if you are not familiar wi
  
 This algorithm was authored by Rabin and Karp in 1987.
 
-Problem: Given two strings - a pattern $s$ and a text $t$, determine if the pattern appears in the text and if it does, enumerate all its occurrences in $O(|s| + |t|)$ time.
+Problem: Given two strings - a pattern $s$ and a text $t$, determine if the pattern appears in the text and if it does, enumerate all its occurrences in $O(\|s\| + \|t\|)$ time.
 
 Algorithm: Calculate the hash for the pattern $s$.
 Calculate hash values for all the prefixes of the text $t$.
-Now, we can compare a substring of length $|s|$ with $s$ in constant time using the calculated hashes.
-So, compare each substring of length $|s|$ with the pattern. This will take a total of $O(|t|)$ time.
-Hence the final complexity of the algorithm is $O(|t| + |s|)$: $O(|s|)$ is required for calculating the hash of the pattern and $O(|t|)$ for comparing each substring of length $|s|$ with the pattern.
+Now, we can compare a substring of length $\|s\|$ with $s$ in constant time using the calculated hashes.
+So, compare each substring of length $\|s\|$ with the pattern. This will take a total of $O(\|t\|)$ time.
+Hence the final complexity of the algorithm is $O(\|t\| + \|s\|)$: $O(\|s\|)$ is required for calculating the hash of the pattern and $O(\|t\|)$ for comparing each substring of length $\|s\|$ with the pattern.
 
 ## Implementation
 ```cpp

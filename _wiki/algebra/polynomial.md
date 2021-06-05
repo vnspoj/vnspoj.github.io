@@ -40,7 +40,7 @@ Other useful functions:
 - `pow(size_t k, size_t n)`: calculate the first $n$ coefficients for $P^{k}(x)$ in $O(n \log nk)$.
 - `deg()`: returns the degree of $P(x)$.
 - `lead()`: returns the coefficient of $x^{\deg P(x)}$.
-- `resultant(poly<T> a, poly<T> b)`: computes the resultant of $a$ and $b$ in $O(|a| \cdot |b|)$.
+- `resultant(poly<T> a, poly<T> b)`: computes the resultant of $a$ and $b$ in $O(\|a\| \cdot \|b\|)$.
 - `bpow(T x, size_t n)`: computes $x^n$.
 - `bpow(T x, size_t n, T m)`: computes $x^n \pmod{m}$.
 - `chirpz(T z, size_t n)`: computes $P(1), P(z), P(z^2), \dots, P(z^{n-1})$ in $O(n \log n)$.

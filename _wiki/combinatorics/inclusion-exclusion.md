@@ -20,13 +20,13 @@ To compute the size of a union of multiple sets, it is necessary to sum the size
 The above definition can be expressed mathematically as follows:
 
 
-$$\left| \bigcup_{i=1}^n A_i \right| = \sum_{i=1}^n|A_i| - \sum_{1\leq i<j\leq n} |A_i \cap A_j| + \sum _{1\leq i<j<k\leq n}|A_i \cap A_j \cap A_k| - \cdots + (-1)^{n-1} | A_1 \cap \cdots \cap A_n |$$
+$$\left\| \bigcup_{i=1}^n A_i \right\| = \sum_{i=1}^n\|A_i\| - \sum_{1\leq i<j\leq n} \|A_i \cap A_j\| + \sum _{1\leq i<j<k\leq n}\|A_i \cap A_j \cap A_k\| - \cdots + (-1)^{n-1} \| A_1 \cap \cdots \cap A_n \|$$
 
 
 And in a more compact way:
 
 
-$$\left|\bigcup_{i=1}^n A_i \right| = \sum_{\emptyset \neq J\subseteq \\{1,2,\ldots ,n\\}} (-1)^{|J|-1}{\Biggl |}\bigcap_{j\in J}A_{j}{\Biggr |}$$
+$$\left\|\bigcup_{i=1}^n A_i \right\| = \sum_{\emptyset \neq J\subseteq \\{1,2,\ldots ,n\\}} (-1)^{\|J\|-1}{\Biggl \|}\bigcap_{j\in J}A_{j}{\Biggr \|}$$
 
 
 ### The formulation using Venn diagrams
@@ -63,7 +63,7 @@ $$\begin{eqnarray}
 And in a more compact way:
 
 
-$${\cal P} \left(\bigcup_{i=1}^n A_i \right) = \sum_{\emptyset \neq J\subseteq \\{1,2,\ldots ,n\\}} (-1)^{|J|-1}\ {\cal P}{\Biggl (}\bigcap_{j\in J}A_{j}{\Biggr )}$$
+$${\cal P} \left(\bigcup_{i=1}^n A_i \right) = \sum_{\emptyset \neq J\subseteq \\{1,2,\ldots ,n\\}} (-1)^{\|J\|-1}\ {\cal P}{\Biggl (}\bigcap_{j\in J}A_{j}{\Biggr )}$$
 
 
 ## Proof
@@ -71,19 +71,19 @@ $${\cal P} \left(\bigcup_{i=1}^n A_i \right) = \sum_{\emptyset \neq J\subseteq \
 For the proof it is convenient to use the mathematical formulation in terms of set theory:
 
 
-$$\left|\bigcup_{i=1}^n A_i \right| = \sum_{\emptyset \neq J\subseteq \\{1,2,\ldots ,n\\}} (-1)^{|J|-1}{\Biggl |}\bigcap_{j\in J}A_{j}{\Biggr |}$$
+$$\left\|\bigcup_{i=1}^n A_i \right\| = \sum_{\emptyset \neq J\subseteq \\{1,2,\ldots ,n\\}} (-1)^{\|J\|-1}{\Biggl \|}\bigcap_{j\in J}A_{j}{\Biggr \|}$$
 
 
 We want to prove that any element contained in at least one of the sets $A_i$ will occur in the formula only once (note that elements which are not present in any of the sets $A_i$ will never be considered on the right part of the formula).
 
 Consider an element $x$ occurring in $k \geq 1$ sets $A_i$. We will show it is counted only once in the formula. Note that:
 
-* in terms which $|J| = 1$, the item $x$ will be counted **$+\ k$** times;
-* in terms which $|J| = 2$, the item $x$ will be counted **$-\ \binom{k}{2}$** times - because it will be counted in those terms that include two of the $k$ sets containing $x$;
-* in terms which $|J| = 3$, the item $x$ will be counted **$+\ \binom{k}{3}$** times;
+* in terms which $\|J\| = 1$, the item $x$ will be counted **$+\ k$** times;
+* in terms which $\|J\| = 2$, the item $x$ will be counted **$-\ \binom{k}{2}$** times - because it will be counted in those terms that include two of the $k$ sets containing $x$;
+* in terms which $\|J\| = 3$, the item $x$ will be counted **$+\ \binom{k}{3}$** times;
 * $\cdots$
-* in terms which $|J| = k$, the item $x$ will be counted **$(-1)^{k-1}\cdot \binom{k}{k}$** times;
-* in terms which $|J| \gt k$, the item $x$ will be counted **zero** times;
+* in terms which $\|J\| = k$, the item $x$ will be counted **$(-1)^{k-1}\cdot \binom{k}{k}$** times;
+* in terms which $\|J\| \gt k$, the item $x$ will be counted **zero** times;
 
 This leads us to the following sum of [binomial coefficients](../combinatorics/binomial-coefficients):
 
@@ -104,19 +104,19 @@ When $x = 1$, $(1 - x)^k$ looks a lot like $T$. However, the expression has an a
 Inclusion-exclusion principle can be rewritten to calculate number of elements which are present in zero sets:
 
 
-$$\left|\bigcap_{i=1}^n \overline{A_i}\right|=\sum_{m=0}^n (-1)^m \sum_{|X|=m} \left|\bigcap_{i\in X} A_{i}\right|$$
+$$\left\|\bigcap_{i=1}^n \overline{A_i}\right\|=\sum_{m=0}^n (-1)^m \sum_{\|X\|=m} \left\|\bigcap_{i\in X} A_{i}\right\|$$
 
 
 Consider its generalization to calculate number of elements which are present in exactly $r$ sets:
 
 
-$$\left|\bigcup_{|B|=r}\left[\bigcap_{i \in B} A_i \cap \bigcap_{j \not\in B} \overline{A_j}\right]\right|=\sum_{m=r}^n (-1)^{m-r}\dbinom{m}{r} \sum_{|X|=m} \left|\bigcap_{i \in X} A_{i}\right|$$
+$$\left\|\bigcup_{\|B\|=r}\left[\bigcap_{i \in B} A_i \cap \bigcap_{j \not\in B} \overline{A_j}\right]\right\|=\sum_{m=r}^n (-1)^{m-r}\dbinom{m}{r} \sum_{\|X\|=m} \left\|\bigcap_{i \in X} A_{i}\right\|$$
 
 
 To prove this formula, consider some particular $B$. Due to basic inclusion-exclusion principle we can say about it that:
 
 
-$$\left|\bigcap_{i \in B} A_i \cap \bigcap_{j \not \in B} \overline{A_j}\right|=\sum_{m=r}^{n} (-1)^{m-r} \sum_{\substack{|X|=m \newline B \subset X}}\left|\bigcap_{i\in X} A_{i}\right|$$
+$$\left\|\bigcap_{i \in B} A_i \cap \bigcap_{j \not \in B} \overline{A_j}\right\|=\sum_{m=r}^{n} (-1)^{m-r} \sum_{\substack{\|X\|=m \newline B \subset X}}\left\|\bigcap_{i\in X} A_{i}\right\|$$
 
 
 The sets on the left side do not intersect for different $B$, thus we can sum them up directly. Also one should note that any set $X$ will always have coefficient $(-1)^{m-r}$ if it occurs and it will occur for exactly $\dbinom{m}{r}$ sets $B$. 
@@ -138,7 +138,7 @@ Let's count the number of "bad" permutations, that is, permutations in which the
 We will denote by $X$ the set of permutations in which the first element is $\leq 1$ and $Y$ the set of permutations in which the last element is $\geq 8$. Then the number of "bad" permutations, as on the inclusion-exclusion formula, will be:
 
 
-$$ |X \cup Y| = |X| + |Y| - |X \cap Y| $$
+$$ \|X \cup Y\| = \|X\| + \|Y\| - \|X \cap Y\| $$
 
 
 After a simple combinatorial calculation, we will get to:
@@ -159,7 +159,7 @@ Let's denote by $A_i (i = 0,1,2)$ the set of sequences in which the digit $i$ do
 The formula of inclusion-exclusion on the number of "bad" sequences will be:
 
 
-$$ |A_0 \cup A_1 \cup A_2| = |A_0| + |A_1| + |A_2| - |A_0 \cap A_1| - |A_0 \cap A_2| - |A_1 \cap A_2| + |A_0 \cap A_1 \cap A_2| $$
+$$ \|A_0 \cup A_1 \cup A_2\| = \|A_0\| + \|A_1\| + \|A_2\| - \|A_0 \cap A_1\| - \|A_0 \cap A_2\| - \|A_1 \cap A_2\| + \|A_0 \cap A_1 \cap A_2\| $$
 
 
 * The size of each $A_i$ is $2^n$, as each sequence can only contain two of the digits.
@@ -193,13 +193,13 @@ We will now calculate the number of "bad" solutions with the inclusion-exclusion
 Denote by $A_k (k = 1,2\ldots 6)$ the set of solutions where $x_k \ge 9$, and all other $x_i \ge 0 (i \ne k)$ (they may be $\ge 9$ or not). To calculate the size of $A_k$, note that we have essentially the same combinatorial problem that was solved in the two paragraphs above, but now $9$ of the units are excluded from the slots and definitely belong to the first group. Thus:
 
 
-$$ | A_k | = \binom{16}{5} $$
+$$ \| A_k \| = \binom{16}{5} $$
 
 
 Similarly, the size of the intersection between sets $A_k$ and $A_p$ is equal to:
 
 
-$$ \left| A_k \cap A_p \right| = \binom{7}{5}$$
+$$ \left\| A_k \cap A_p \right\| = \binom{7}{5}$$
 
 
 The size of each intersection of three sets is zero, since $20$ units will not be enough for three or more variables greater than or equal to $9$.
@@ -284,7 +284,7 @@ Learn now to solve the first version of the problem: when the string must satisf
 To solve it, iterate and fix a specific subset $X$ from the set of patterns consisting of $k$ patterns. Then we have to count the number of strings that satisfy this set of patterns, and only matches it, that is, they don't match any other pattern. We will use the inclusion-exclusion principle in a slightly different manner: we sum on all supersets $Y$ (subsets from the original set of strings that contain $X$), and either add to the current answer or subtract it from the number of strings:
 
 
-$$ ans(X) = \sum_{Y \supseteq X} (-1)^{|Y|-k} \cdot f(Y) $$
+$$ ans(X) = \sum_{Y \supseteq X} (-1)^{\|Y\|-k} \cdot f(Y) $$
 
 
 Where $f(Y)$ is the number of strings that match $Y$ (at least $Y$).
@@ -294,26 +294,26 @@ Where $f(Y)$ is the number of strings that match $Y$ (at least $Y$).
 If we sum up on all $ans(X)$, we will get the final answer:
 
 
-$$ ans = \sum_{X ~ : ~ |X| = k} ans(X) $$
+$$ ans = \sum_{X ~ : ~ \|X\| = k} ans(X) $$
 
 
 However, asymptotics of this solution is $O(3^k \cdot k)$. To improve it, notice that different $ans(X)$ computations very often share $Y$ sets.
 
-We will reverse the formula of inclusion-exclusion and sum in terms of $Y$ sets. Now it becomes clear that the same set $Y$ would be taken into account in the computation of $ans(X)$ of $\binom{|Y|}{k}$ sets with the same sign $(-1)^{|Y| - k}$.
+We will reverse the formula of inclusion-exclusion and sum in terms of $Y$ sets. Now it becomes clear that the same set $Y$ would be taken into account in the computation of $ans(X)$ of $\binom{\|Y\|}{k}$ sets with the same sign $(-1)^{\|Y\| - k}$.
 
 
-$$ ans = \sum_{Y ~ : ~ |Y| \ge k} (-1)^{|Y|-k} \cdot \binom{|Y|}{k} \cdot f(Y) $$
+$$ ans = \sum_{Y ~ : ~ \|Y\| \ge k} (-1)^{\|Y\|-k} \cdot \binom{\|Y\|}{k} \cdot f(Y) $$
 
 
 Now our solution has asymptotics $O(2^k \cdot k)$.
 
 We will now solve the second version of the problem: find the number of strings that match **at least** $k$ of the patterns.
 
-Of course, we can just use the solution to the first version of the problem and add the answers for sets with size greater than $k$. However, you may notice that in this problem, a set |Y| is considered in the formula for all sets with size $\ge k$ which are contained in $Y$. That said, we can write the part of the expression that is being multiplied by $f(Y)$ as:
+Of course, we can just use the solution to the first version of the problem and add the answers for sets with size greater than $k$. However, you may notice that in this problem, a set \|Y\| is considered in the formula for all sets with size $\ge k$ which are contained in $Y$. That said, we can write the part of the expression that is being multiplied by $f(Y)$ as:
 
 
 
-$$ (-1)^{|Y|-k} \cdot \binom{|Y|}{k} + (-1)^{|Y|-k-1} \cdot \binom{|Y|}{k+1} + (-1)^{|Y|-k-2} \cdot \binom{|Y|}{k+2} + \cdots + (-1)^{|Y|-|Y|} \cdot \binom{|Y|}{|Y|} $$
+$$ (-1)^{\|Y\|-k} \cdot \binom{\|Y\|}{k} + (-1)^{\|Y\|-k-1} \cdot \binom{\|Y\|}{k+1} + (-1)^{\|Y\|-k-2} \cdot \binom{\|Y\|}{k+2} + \cdots + (-1)^{\|Y\|-\|Y\|} \cdot \binom{\|Y\|}{\|Y\|} $$
 
 
 Looking at Graham's (Graham, Knuth, Patashnik. "Concrete mathematics" [1998] ), we see a well-known formula for [binomial coefficients](../combinatorics/binomial-coefficients):
@@ -325,13 +325,13 @@ $$ \sum_{k=0}^m (-1)^k \cdot \binom{n}{k} = (-1)^m \cdot \binom{n-1}{m} $$
 Applying it here, we find that the entire sum of binomial coefficients is minimized:
 
 
-$$ (-1)^{|Y|-k} \cdot \binom{|Y|-1}{|Y|-k} $$
+$$ (-1)^{\|Y\|-k} \cdot \binom{\|Y\|-1}{\|Y\|-k} $$
 
 
 Thus, for this task, we also obtained a solution with the asymptotics $O(2^k \cdot k)$:
 
 
-$$ ans = \sum_{Y ~ : ~ |Y| \ge k} (-1)^{|Y|-k} \cdot \binom{|Y|-1}{|Y|-k} \cdot f(Y) $$
+$$ ans = \sum_{Y ~ : ~ \|Y\| \ge k} (-1)^{\|Y\|-k} \cdot \binom{\|Y\|-1}{\|Y\|-k} \cdot f(Y) $$
 
 
 ### The number of ways of going from a cell to another

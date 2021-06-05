@@ -27,7 +27,7 @@ Let's denote $n = \lfloor x_2' \rfloor$.
 We will not sum up points at $x = n$ and on $y = 0$ for the integrity of the algorithm.
 They may be added manually afterwards.
 Thus we have to sum up $\sum\limits_{x'=0}^{n - 1} \lfloor k' \cdot x' + b'\rfloor$. We also assume that $k' \geq 0$ and $b'\geq 0$.
-Otherwise one should substitute $x'=-t$ and add $\lceil|b'|\rceil$ to $b'$.
+Otherwise one should substitute $x'=-t$ and add $\lceil\|b'\|\rceil$ to $b'$.
 
 Let's discuss how we can evaluate a sum $\sum\limits_{x=0}^{n - 1} \lfloor k \cdot x + b\rfloor$.
 We have two cases:
@@ -53,7 +53,7 @@ If this is not the case, we can say that there are no lattice points such that $
 That means that we will have the same answer if we consider new reference system in which $O'=(n;\lfloor k\cdot n + b\rfloor)$, axis $x'$ is directed down and axis $y'$ is directed to the left.
 For this reference system we are interested in lattice points on the set
 
-$$\left\\{(x;y)~\bigg|~0 \leq x < \lfloor k \cdot n + b\rfloor,~ 0 < y \leq \dfrac{x+(k\cdot n+b)-\lfloor k\cdot n + b \rfloor}{k}\right\\}$$
+$$\left\\{(x;y)~\bigg\|~0 \leq x < \lfloor k \cdot n + b\rfloor,~ 0 < y \leq \dfrac{x+(k\cdot n+b)-\lfloor k\cdot n + b \rfloor}{k}\right\\}$$
 
 which returns us back to the case $k>1$.
 You can see new reference point $O'$ and axes $X'$ and $Y'$ in the picture below:

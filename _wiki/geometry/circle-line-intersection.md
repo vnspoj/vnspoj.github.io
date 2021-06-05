@@ -16,7 +16,7 @@ We assume without loss of generality that the circle is centered at the origin. 
 Let's start by find the point on the line which is closest to the origin $(x_0, y_0)$. First, it has to be at a distance
 
 
-$$ d_0 = \frac{|C|}{\sqrt{A^2+B^2}} $$
+$$ d_0 = \frac{\|C\|}{\sqrt{A^2+B^2}} $$
 
 
 Second, since the vector $(A, B)$ is perpendicular to the line, the coordinates of the point must be proportional to the coordinates of this vector. Since we know the distance of the point to the origin, we just need to scale the vector $(A, B)$ to this length, and we'll get:

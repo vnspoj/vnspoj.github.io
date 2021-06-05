@@ -47,7 +47,7 @@ Both sides of the bi-implication will be proven by contradiction.
   This is a valid matching because the initial and final vertices of $P$ are unsaturated by $M$, and the rest of the vertices are saturated only by the matching $P \cap M$.
   This new matching $M'$ will have one more edge than $M$, and so $M$ could not have been maximum. 
   
-  Formally, given an augmenting path $P$ w.r.t. some maximum matching $M$, the matching $M' = P \oplus M$ is such that $|M'| = |M| + 1$, a contradiction.
+  Formally, given an augmenting path $P$ w.r.t. some maximum matching $M$, the matching $M' = P \oplus M$ is such that $\|M'\| = \|M\| + 1$, a contradiction.
   
 2. A matching $M$ is maximum $\Leftarrow$ there is no augmenting path relative to the matching $M$.
 

@@ -180,7 +180,7 @@ But if $p \le \max(k, n-k)$, then at least one of $k!$ and $(n-k)!$ are not copr
 Nevertheless we can compute the binomial coefficient.
 
 The idea is the following:
-We compute for each $x!$ the biggest exponent $c$ such that $p^c$ divides $x!$, i.e. $p^c ~|~ x!$.
+We compute for each $x!$ the biggest exponent $c$ such that $p^c$ divides $x!$, i.e. $p^c ~\|~ x!$.
 Let $c(x)$ be that number.
 And let $g(x) := \frac{x!}{p^{c(x)}}$.
 Then we can write the binomial coefficient as:
@@ -194,7 +194,7 @@ Therefore $g(x)$ is coprime to m, and we can compute the modular inverses of $g(
 After precomputing all values for $g$ and $c$, which can be done efficiently using dynamic programming in $\mathcal{O}(n)$, we can compute the binomial coefficient in $O(\log m)$ time.
 Or precompute all inverses and all powers of $p$, and then compute the binomial coefficient in $O(1)$.
 
-Notice, if $c(n) - c(k) - c(n-k) \ge b$, than $p^b ~|~ p^{c(n) - c(k) - c(n-k)}$, and the binomial coefficient is $0$.
+Notice, if $c(n) - c(k) - c(n-k) \ge b$, than $p^b ~\|~ p^{c(n) - c(k) - c(n-k)}$, and the binomial coefficient is $0$.
 
 ### Binomial coefficient modulo an arbitrary number
 
