@@ -129,7 +129,7 @@ The number $x$ is called the Grundy value or nim-value of state $v$.
 Moreover, this number can be found in the following recursive way:
 
 
-$$ x = \text{mex}\ { x_1, \ldots, x_k }, $$
+$$ x = \text{mex}\ \{ x_1, \ldots, x_k \}, $$
 
 
 where $x_i$ is the Grundy value for state $v_i$ and the function $\text{mex}$ (*minimum excludant*) is the smallest non-negative integer not found in the given set.
@@ -200,7 +200,7 @@ For the edge case of the cross being marked on position $1$ or $n$, we go to the
 Thus, the Grundy value $g(n)$ has the form:
 
 
-$$g(n) = \text{mex} \Bigl( { g(n-2) } \cup {g(i-2) \oplus g(n-i-1) \mid 2 \leq i \leq n-1} \Bigr) .$$
+$$g(n) = \text{mex} \Bigl( \{ g(n-2) \} \cup \{g(i-2) \oplus g(n-i-1) \mid 2 \leq i \leq n-1\} \Bigr) .$$
 
 
 So we've got a $O(n^2)$ solution.
