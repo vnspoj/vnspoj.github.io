@@ -6,13 +6,13 @@ title_en: "Rabin-Karp Algorithm"
 ---
 
 
-Giải thuật Rabin-Karp dựa trên [String Hashing](../string/string-hashing.md), giúp xác định một pattern $s$ xuất hiện trong một chuỗi $T$ cho trước trong thời gian $O(|T| + |s|)$.
+Giải thuật Rabin-Karp dựa trên [String Hashing](../string/string-hashing.md), giúp xác định một pattern $s$ xuất hiện trong một chuỗi $T$ cho trước trong thời gian $O(\|T\| + \|s\|)$.
 
-Giải thuật: Tính giá trị hash của pattern $s$ và các prefix của chuỗi $T$.
+**Giải thuật:** Tính giá trị hash của pattern $s$ và các prefix của chuỗi $T$.
 
-So sánh từng substring của chuỗi $T$ length $|s|$, chi phí so giá trị hash trong $O(1)$, do đó tốn $O(|T|)$ cho mọi substrings.
+So sánh từng substring của chuỗi $T$ length $\|s\|$, chi phí so giá trị hash trong $O(1)$, do đó tốn $O(\|T\|)$ cho mọi substrings.
 
-Do đó độ phức tạp là $O(|T| + |s|)$ với $O(|s|)$ là tính giá trị hash của pattern $s$ và $O(|T|)$ cho việc compare từng substring trong chuỗi $T$.
+Do đó độ phức tạp là $O(\|T\| + \|s\|)$ với $O(\|s\|)$ là tính giá trị hash của pattern $s$ và $O(\|T\|)$ cho việc compare từng substring trong chuỗi $T$.
 
 ## Implementation
 
