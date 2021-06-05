@@ -37,6 +37,8 @@ And we will discuss some techniques in this article how to keep the probability 
 ## Calculation of the hash of a string
 
 The good and widely used way to define the hash of a string $s$ of length $n$ is
+
+
 $$\begin{align}
 \text{hash}(s) &= s[0] + s[1] \cdot p + s[2] \cdot p^2 + ... + s[n-1] \cdot p^{n-1} \mod m \\\\
 &= \sum_{i=0}^{n-1} s[i] \cdot p^i \mod m,
@@ -117,6 +119,8 @@ Problem: Given a string $s$ and indices $i$ and $j$, find the hash of the substr
 By definition, we have:
 $$\text{hash}(s[i \dots j]) = \sum_{k = i}^j s[k] \cdot p^{k-i} \mod m$$
 Multiplying by $p^i$ gives:
+
+
 $$\begin{align}
 \text{hash}(s[i \dots j]) \cdot p^i &= \sum_{k = i}^j s[k] \cdot p^k \mod m \\\\
 &= \text{hash}(s[0 \dots j]) - \text{hash}(s[0 \dots i-1]) \mod m

@@ -10,6 +10,8 @@ The Chinese Remainder Theorem (which will be referred to as CRT in the rest of t
 ## Formulation
 
 Let $p = p_1 p_2 \cdots p_k$, where $p_i$ are pairwise relatively prime. In addition to $p_i$, we are also given a set of congruence equations
+
+
 $$\begin{align}
     a &\equiv a_1 \pmod{p_1} \\\\
     a &\equiv a_2 \pmod{p_2} \\\\
@@ -27,6 +29,8 @@ $$
     x \equiv a \pmod{p}
 $$
 is equivalent to the system of equations
+
+
 $$\begin{align}
     x &\equiv a_1 \pmod{p_1} \\\\
       &\ldots \\\\

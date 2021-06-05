@@ -82,6 +82,8 @@ And otherwise the least significant digit is a $1$, and we take this $1$ and all
 
 For instance we get
 
+
+
 $$\begin{align}
 g(11) = g(1011_2) = 1000_2 &= 8 \\\\
 g(12) = g(1100_2) = 1100_2 &= 12 \\\\
@@ -101,6 +103,8 @@ Now, we just need to find a way to iterate over all $j$'s, such that $g(j) \le i
 It is easy to see that we can find all such $j$'s by starting with $i$ and flipping the last unset bit.
 We will call this operation $h(j)$.
 For example, for $i = 10$ we have:
+
+
 
 $$\begin{align}
 10 &= 0001010_2 \\\\
@@ -257,6 +261,8 @@ def increase(int i, int delta):
 The computation of $g(i)$ is defined as:
 toggling of the last set $1$ bit in the binary representation of $i$.
 
+
+
 $$\begin{align}
 g(7) = g(111_2) = 110_2 &= 6 \\\\
 g(6) = g(110_2) = 100_2 &= 4 \\\\
@@ -385,6 +391,8 @@ $$
 
 We can write the range sum as difference of two terms, where we use $B_1$ for first term and $B_2$ for second term.
 The difference of the queries will give us prefix sum over $[0, i]$.
+
+
 $$\begin{align}
 sum[0, i] &= sum(B_1, i) \cdot i - sum(B_2, i) \\\\
 &= \begin{cases}

@@ -34,6 +34,8 @@ The following properties of Euler totient function are sufficient to calculate i
 Thus, using the first three properties, we can compute $\phi(n)$ through the factorization of $n$ (decomposition of $n$ into a product of its prime factors).
 If $n = {p_1}^{a_1} \cdot {p_2}^{a_2} \cdots {p_k}^{a_k}$, where $p_i$ are prime factors of $n$,
 
+
+
 $$\begin{align}
 \phi (n) &= \phi ({p_1}^{a_1}) \cdot \phi ({p_2}^{a_2}) \cdots  \phi ({p_k}^{a_k}) \\\\
 &= \left({p_1}^{a_1} - {p_1}^{a_1 - 1}\right) \cdot \left({p_2}^{a_2} - {p_2}^{a_2 - 1}\right) \cdots \left({p_k}^{a_k} - {p_k}^{a_k - 1}\right) \\\\
@@ -145,6 +147,8 @@ Let $p_1, \dots, p_t$ be common prime divisors of $x$ and $m$, and $k_i$ their e
 With those we define $a = p_1^{k_1} \dots p_t^{k_t}$, which makes $\frac{m}{a}$ coprime to $x$.
 And let $k$ be the smallest number such that $a$ divides $x^k$.
 Assuming $n \ge k$, we can write:
+
+
 
 $$\begin{align}x^n \bmod m &= \frac{x^k}{a}ax^{n-k}\bmod m \\\\
 &= \frac{x^k}{a}\left(ax^{n-k}\bmod m\right) \bmod m \\\\

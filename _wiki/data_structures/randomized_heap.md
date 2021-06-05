@@ -95,6 +95,8 @@ Let $L$ and $R$ be the left and the right subtrees of the root $T$, and $n_L$ an
 
 The following shows the induction step:
 
+
+
 $$\begin{align}
 \mathbf{E} h(T) &= 1 + \frac{\mathbf{E} h(L) + \mathbf{E} h(R)}{2} 
 \le 1 + \frac{\log(n_L + 1) \log(n_R + 1)}{2} \\\\

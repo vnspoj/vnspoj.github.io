@@ -31,6 +31,8 @@ Additionally these complex numbers have some very interesting properties:
 e.g. the principal $n$-th root $w_n = w_{n, 1} = e^{\frac{2 \pi i}{n}}$ can be used to describe all other $n$-th roots: $w_{n, k} = (w_n)^k$.
 
 The **discrete Fourier transform (DFT)** of the polynomial $A(x)$ (or equivalently the vector of coefficients $(a_0, a_1, \dots, a_{n-1})$ is defined as the values of the polynomial at the points $x = w_{n, k}$, i.e. it is the vector:
+
+
 $$\begin{align}
 \text{DFT}(a_0, a_1, \dots, a_{n-1}) &= (y_0, y_1, \dots, y_{n-1}) \\\\
 &= (A(w_{n, 0}), A(w_{n, 1}), \dots, A(w_{n, n-1})) \\\\
@@ -81,6 +83,8 @@ So let there be a polynomial $A(x)$ with degree $n - 1$, where $n$ is a power of
 $$A(x) = a_0 x^0 + a_1 x^1 + \dots + a_{n-1} x^{n-1}$$
 
 We divide it into two smaller polynomials, the one containing only the coefficients of the even positions, and the one containing the coefficients of the odd positions:
+
+
 $$\begin{align}
 A_0(x) &= a_0 x^0 + a_2 x^1 + \dots + a_{n-2} x^{\frac{n}{2}-1} \\\\
 A_1(x) &= a_1 x^0 + a_3 x^1 + \dots + a_{n-1} x^{\frac{n}{2}-1}
@@ -103,6 +107,8 @@ For the first $\frac{n}{2}$ values we can just use the previously noted equation
 $$y_k = y_k^0 + w_n^k y_k^1, \quad k = 0 \dots \frac{n}{2} - 1.$$
 
 However for the second $\frac{n}{2}$ values we need to find a slightly, different expression:
+
+
 $$\begin{align}
 y_{k+n/2} &= A\left(w_n^{k+n/2}\right) \\\\
 &= A_0\left(w_n^{2k+n}\right) + w_n^{k + n/2} A_1\left(w_n^{2k+n}\right) \\\\
@@ -115,6 +121,8 @@ y_{k+n/2} &= A\left(w_n^{k+n/2}\right) \\\\
 Here we used again $A(x) = A_0(x^2) + x A_1(x^2)$ and the two identities $w_n^n = 1$ and $w_n^{n/2} = -1$.
 
 Therefore we get the desired formulas for computing the whole vector $(y_k)$:
+
+
 $$\begin{align}
 y_k &= y_k^0 + w_n^k y_k^1, &\quad k = 0 \dots \frac{n}{2} - 1, \\\\
 y_{k+n/2} &= y_k^0 - w_n^k y_k^1, &\quad k = 0 \dots \frac{n}{2} - 1.
@@ -426,6 +434,8 @@ To efficiently compute it, we extensively use properties of the roots (e.g. that
 
 But the same properties hold for the $n$-th roots of unity in modular arithmetic.
 A $n$-th root of unity under a primitive field is such a number $w_n$ that satisfies:
+
+
 $$\begin{align}
 (w_n)^n &= 1 \pmod{p}, \\\\
 (w_n)^k &\ne 1 \pmod{p}, \quad 1 \le k < n.
@@ -436,6 +446,8 @@ The other $n-1$ roots can be obtained as powers of the root $w_n$.
 
 To apply it in the fast Fourier transform algorithm, we need a root to exist for some $n$, which is a power of $2$, and also for all smaller powers.
 We can notice the following interesting property:
+
+
 $$\begin{align}
 (w_n^2)^m = w_n^n &= 1 \pmod{p}, \quad \text{with } m = \frac{n}{2}\\\\
 (w_n^2)^k = w_n^{2k} &\ne 1 \pmod{p}, \quad 1 \le k < m.
@@ -513,6 +525,8 @@ What about the case when the modulus is not of the desired form?
 One option would be to perform multiple number theoretic transforms with different prime numbers of the form $c 2^k + 1$, then apply the [Chinese Remainder Theorem](../algebra/chinese-remainder-theorem) to compute the final coefficients.
 
 Another options is to distribute the polynomials $A(x)$ and $B(x)$ into two smaller polynomials each
+
+
 $$\begin{align}
 A(x) &= A_1(x) + A_2(x) \cdot C \\\\
 B(x) &= B_1(x) + B_2(x) \cdot C
@@ -596,6 +610,8 @@ with $\alpha_{i+j} = \frac{2 \pi T[i+j]}{26}$ and $\beta_j = \frac{2 \pi P[j]}{2
 
 If there is a match, than $T[i+j] = P[j]$, and therefore $\alpha_{i+j} = \beta_j$.
 This gives (using the Pythagorean trigonometric identity):
+
+
 $$\begin{align}
 c_{m-1+i} &= \sum_{j = 0}^{m-1}  \left(\cos(\alpha_{i+j}) + i \sin(\alpha_{i+j})\right) \cdot \left(\cos(\alpha_{i+j}) - i \sin(\alpha_{i+j})\right) \\\\
 &= \sum_{j = 0}^{m-1} \cos(\alpha_{i+j})^2 + \sin(\alpha_{i+j})^2 = \sum_{j = 0}^{m-1} 1 = m

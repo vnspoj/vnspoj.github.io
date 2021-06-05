@@ -24,6 +24,8 @@ Let the permutation $\pi'$ be equal to the permutation $\pi$ with the elements $
 Let's see how much the penalty changed.
 $$F(\pi') - F(\pi) =$$
 It is easy to see that the changes only occur in the $i$-th and $(i+1)$-th summands:
+
+
 $$\begin{align}
 &= c_{\pi_i'} \cdot \sum_{k = 1}^{i-1} t_{\pi_k'} + c_{\pi_{i+1}'} \cdot \sum_{k = 1}^i t_{\pi_k'} - c_{\pi_i} \cdot \sum_{k = 1}^{i-1} t_{\pi_k} - c_{\pi_{i+1}} \cdot \sum_{k = 1}^i t_{\pi_k} \\\\
 &= c_{\pi_{i+1}} \cdot \sum_{k = 1}^{i-1} t_{\pi_k'} + c_{\pi_i} \cdot \sum_{k = 1}^i t_{\pi_k'} - c_{\pi_i} \cdot \sum_{k = 1}^{i-1} t_{\pi_k} - c_{\pi_{i+1}} \cdot \sum_{k = 1}^i t_{\pi_k} \\\\

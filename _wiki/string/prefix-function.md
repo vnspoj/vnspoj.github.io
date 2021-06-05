@@ -314,6 +314,8 @@ For completeness we will solve such a problem:
 given a number $k \le 10^5$ and a string $s$ of length $\le 10^5$.
 We have to compute the number of occurrences of $s$ in the $k$-th Gray string.
 Recall that Gray's strings are define in the following way:
+
+
 $$\begin{align}
 g_1 &= "a"\\\\
 g_2 &= "aba"\\\\
@@ -347,6 +349,8 @@ For example the exact same method also solves the following problem:
 we are given a string $s$ and some patterns $t_i$, each of which is specified as follows:
 it is a string of ordinary characters, and there might be some recursive insertions of the previous strings of the form $t_k^{\text{cnt}}$, which means that at this place we have to insert the string $t_k$ $\text{cnt}$ times.
 An example of such patterns:
+
+
 $$\begin{align}
 t_1 &= "abdeca"\\\\
 t_2 &= "abc" + t_1^{30} + "abd"\\\\

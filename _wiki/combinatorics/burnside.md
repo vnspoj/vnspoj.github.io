@@ -143,6 +143,8 @@ The task is to count the number of different necklaces from $n$ beads, each of w
 When comparing two necklaces, they can be rotated, but not reversed (i.e. a cyclic shift is permitted).
 
 In this problem we can immediately find the group of invariant permutations:
+
+
 $$\begin{align}
 \pi_0 &= 1 2 3 \dots n\\\\
 \pi_1 &= 2 3 \dots n 1\\\\

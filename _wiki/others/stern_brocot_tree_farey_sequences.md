@@ -71,6 +71,8 @@ $$
 
 the new expressions become
 
+
+
 $$\begin{align}
     b(a+c) - a(b+d) &= 1 \\\\
     c(b+d) - d(a+c) &= 1

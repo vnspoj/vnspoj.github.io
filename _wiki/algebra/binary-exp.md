@@ -32,6 +32,8 @@ Since the number $n$ has exactly $\lfloor \log_2 n \rfloor + 1$ digits in base 2
 So we only need to know a fast way to compute those.
 Luckily this is very easy, since an element in the sequence is just the square of the previous element.
 
+
+
 $$\begin{align}
 3^1 &= 3 \\\\
 3^2 &= \left(3^1\right)^2 = 3^2 = 9 \\\\

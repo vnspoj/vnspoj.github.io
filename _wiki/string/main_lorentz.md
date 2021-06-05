@@ -48,7 +48,9 @@ Also, here are some more interesting results related to the number of repetition
 - The number of primitive repetitions (those whose halves are not repetitions) is at most $O(n \log n)$.
 - If we encode repetitions with tuples of numbers (called Crochemore triples) $(i,~ p,~ r)$ (where $i$ is the position of the beginning, $p$ the length of the repeating substring, and $r$ the number of repetitions), then all repetitions can be described with $O(n \log n)$ such triples.
 - Fibonacci strings, defined as 
-  $$\begin{align}
+  
+
+$$\begin{align}
   t_0 &= a, \\\\
   t_1 &= b, \\\\
   t_i &= t_{i-1} + t_{i-2},
@@ -118,7 +120,9 @@ Let us generate **necessary and sufficient** conditions for such a repetition at
 - Let $k_2$ be the largest number such that the $k_2$ characters starting at position $cntr$ coincide with the first $k_2$ characters in the string $v$:
   $$u[cntr \dots cntr + k_2 - 1] = v[0 \dots k_2 - 1]$$
 - Then we have a repetition exactly for any pair $(l_1,~ l_2)$ with
-  $$\begin{align}
+  
+
+$$\begin{align}
   l_1 &\le k_1, \\\\
   l_2 &\le k_2. \\\\
   \end{align}$$
@@ -132,7 +136,9 @@ To summarize:
   There might be multiple such repetitions, they depend on the lengths $l_1$ and $l_2 = l - l_1$.
 - We find $k_1$ and $k_2$ as described above.
 - Then all suitable repetitions are the ones for which the lengths of the pieces $l_1$ and $l_2$ satisfy the conditions:
-  $$\begin{align}
+  
+
+$$\begin{align}
   l_1 + l_2 &= l = |u| - cntr \\\\
   l_1 &\le k_1, \\\\
   l_2 &\le k_2. \\\\
