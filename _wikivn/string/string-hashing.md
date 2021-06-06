@@ -100,7 +100,7 @@ $$\begin{align}
 
 Do đó ta dễ dàng tính được $\text{hash}(s[i \dots j])$ từ 2 prefix đã khởi tạo trước là $\text{hash}(s[0 \dots j])$ và $\text{hash}(s[0 \dots i-1])$. 
 
-Tuy nhiên ở đây xuất hiện **phép toán chia trong miền module** (chia cho $p^i$), do đó cần phải tính trước [modular multiplicative inverse](../../wiki/algebra/module-inverse) của $p^i$, sau đó thay thành phép nhân với giá trị inverse.
+Tuy nhiên ở đây xuất hiện **phép toán chia trong miền module** (chia cho $p^i$), do đó cần phải tính trước [modular multiplicative inverse](../algebra/module-inverse) của $p^i$, sau đó thay thành phép nhân với giá trị inverse.
 
 Từ đó dễ dàng tính được mỗi truy vấn trong $O(1)$.
 
