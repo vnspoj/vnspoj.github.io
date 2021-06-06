@@ -170,7 +170,7 @@ vector<bool> segmentedSieveNoPreGen(long long L, long long R) {
 
 ## Giải thuật theo thời gian tuyến tính
 
-Chúng ta có thể thay đổi lại giải thuật sàng theo cách khác để được độ phức tạp theo thời gian tuyến tính. Chi tiết giải thuật được trình bày trong bài viết [Sieve of Eratosthenes Having Linear Time Complexity](../algebra/prime-sieve-linear). Tuy nhiên mỗi giải thuật đều sẽ có những yếu điểm riêng.
+Chúng ta có thể thay đổi lại giải thuật sàng theo cách khác để được độ phức tạp theo thời gian tuyến tính. Chi tiết giải thuật được trình bày trong bài viết [Sieve of Eratosthenes Having Linear Time Complexity](../../wiki/algebra/prime-sieve-linear). Tuy nhiên mỗi giải thuật đều sẽ có những yếu điểm riêng.
 
 ## Practice Problems
 

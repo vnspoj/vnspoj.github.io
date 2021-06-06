@@ -23,7 +23,7 @@ title: E-Maxx Algorithms in English from CP-Algorithms
     - [Euler's totient function](./algebra/phi-function)
     - [Number of divisors / sum of divisors](./algebra/divisors)
 - **Modular arithmetic**
-    - [Modular Inverse](./algebra/module-inverse)
+    - [Modular Inverse](./algebra/module-inverse) \| [Translation into Vietnamese 🇻🇳](../wikivn/algebra/module-inverse)
     - [Linear Congruence Equation](./algebra/linear_congruence_equation)
     - [Chinese Remainder Theorem](./algebra/chinese-remainder-theorem)
     - [Factorial modulo $p$](./algebra/factorial-modulo)
