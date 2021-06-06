@@ -2,7 +2,6 @@
 layout: wiki_vn
 wiki: true
 title: "String Hashing | 🇻🇳"
-title_en: "String Hashing"
 ---
 
 Hashing là một trong những kỹ thuật xử lý chuỗi thường được sử dụng trong việc **so sánh chuỗi**. Thông thường độ phức tạp khi so sánh 2 chuỗi là $O(\min(n_1, n_2))$ với $n_1$ và $n_2$ là length 2 chuỗi. Ý tưởng của hasing là map mỗi chuỗi thành 1 số int và so sánh 2 chuỗi trong $O(1)$.

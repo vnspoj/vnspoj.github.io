@@ -6,10 +6,19 @@ layout: default
 </header>
 
 <div class="content">
+
+  {% assign url_en = page.url | replace: '/wikivn/', '/wiki/' | replace: '.html', '' %}
+  {% for post in site.wiki %}
+  {% assign post_url = post.url | replace: '.html', '' %}
+  {% if post_url == url_en %}
   <div style="margin-top: 25px;">
-    <i>Tham khảo từ <a href="{{ site.url }}{{ page.url | replace: '/wikivn/', '/wiki/' }}">
-        {{ page.title_en }} | CP-Algorithms</a></i>
+    <i>Tham khảo từ <a href="{{ site.url }}{{ post_url }}">
+        {{ post.title }} | CP-Algorithms</a></i>
   </div>
+  {% break %}
+  {% endif %}
+  {% endfor %}
+
   <div style="margin-top: 25px;">
     {{ content }}
   </div>

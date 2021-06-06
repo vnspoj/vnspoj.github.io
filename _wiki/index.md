@@ -15,7 +15,7 @@ title: E-Maxx Algorithms in English from CP-Algorithms
     - [Linear Diophantine Equations](./algebra/linear-diophantine-equation)
     - [Fibonacci Numbers](./algebra/fibonacci-numbers)
 - **Prime numbers**
-    - [Sieve of Eratosthenes](./algebra/sieve-of-eratosthenes)
+    - [Sieve of Eratosthenes](./algebra/sieve-of-eratosthenes) \| [Translation into Vietnamese 🇻🇳](../wikivn/algebra/sieve-of-eratosthenes)
     - [Sieve of Eratosthenes With Linear Time Complexity](./algebra/prime-sieve-linear)
     - [Primality tests](./algebra/primality_tests)
     - [Integer factorization](./algebra/factorization)

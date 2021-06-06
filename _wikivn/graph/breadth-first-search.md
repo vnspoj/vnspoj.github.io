@@ -2,7 +2,6 @@
 layout: wiki_vn
 wiki: true
 title: "Breadth First Search (BFS) | 🇻🇳"
-title_en: "Breadth First Search"
 ---
 
 Breadth first search hay BFS là một trong những giải thuật cơ bản và cần thiết trong lý thuyết đồ thị. BFS là nền tảng cho những kỹ thuật tìm kiếm khác trong đồ thị. BFS cũng thường được gọi là **kỹ thuật loang** trên đồ thị do cách mà BFS thực hiện là duyệt đồ thị **theo chiều ngang**.

@@ -2,7 +2,6 @@
 layout: wiki_vn
 wiki: true
 title: "Rabin-Karp Algorithm | 🇻🇳"
-title_en: "Rabin-Karp Algorithm"
 ---
 
 

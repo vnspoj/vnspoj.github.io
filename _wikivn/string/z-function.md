@@ -2,7 +2,6 @@
 layout: wiki_vn
 wiki: true
 title: "Z-function | 🇻🇳"
-title_en: "Z-function and its calculation"
 ---
 
 

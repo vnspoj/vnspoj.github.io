@@ -2,7 +2,6 @@
 layout: wiki_vn
 wiki: true
 title: "Depth First Search (DFS) | 🇻🇳"
-title_en: "Depth First Search"
 ---
 
 Depth First Search hay DFS là một giải thuật cơ bản và quan trọng trong lý thuyết đồ thị. DFS là nền tảng để xây dựng nên các giải thuật quan trọng khác như tìm đường đi, tìm thành phần liên thông, cây khung, chu trình, luồng, cặp ghép, ...

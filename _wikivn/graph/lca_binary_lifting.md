@@ -2,7 +2,6 @@
 layout: wiki_vn
 wiki: true
 title: "Lowest Common Ancestor - Binary Lifting (Cha chung gần nhất) | 🇻🇳"
-title_en: "Lowest Common Ancestor - Binary Lifting"
 ---
 
 Giải thuật tìm Cha (tổ tiên) chung gần nhất (LCA) trên cây với độ phức tạp $O(N \log N)$.
