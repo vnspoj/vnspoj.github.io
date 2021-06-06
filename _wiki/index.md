@@ -9,7 +9,7 @@ title: E-Maxx Algorithms in English from CP-Algorithms
 ### Algebra
 
 - **Fundamentals**
-    - [Binary Exponentiation](./algebra/binary-exp)
+    - [Binary Exponentiation](./algebra/binary-exp) \| [Translation into Vietnamese 🇻🇳](../wikivn/algebra/binary-exp)
     - [Euclidean algorithm for computing the greatest common divisor](./algebra/euclid-algorithm)
     - [Extended Euclidean Algorithm](./algebra/extended-euclid-algorithm)
     - [Linear Diophantine Equations](./algebra/linear-diophantine-equation)
@@ -20,7 +20,7 @@ title: E-Maxx Algorithms in English from CP-Algorithms
     - [Primality tests](./algebra/primality_tests)
     - [Integer factorization](./algebra/factorization)
 - **Number-theoretic functions**
-    - [Euler's totient function](./algebra/phi-function)
+    - [Euler's totient function](./algebra/phi-function) \| [Translation into Vietnamese 🇻🇳](../wikivn/algebra/phi-function)
     - [Number of divisors / sum of divisors](./algebra/divisors)
 - **Modular arithmetic**
     - [Modular Inverse](./algebra/module-inverse) \| [Translation into Vietnamese 🇻🇳](../wikivn/algebra/module-inverse)

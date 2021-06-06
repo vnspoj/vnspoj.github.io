@@ -12,7 +12,7 @@ Breadth first search hay BFS là một trong những giải thuật cơ bản v�
 
 ## Giải thuật BFS
 
-Ý tưởng đơn giản của giải thuật BFS như sau: lần lượt duyệt từng đỉnh trên đồ thị, tại mỗi đỉnh loang ra tất cả các đỉnh liền kề với nó chưa đuược duyệt trước đó và đưa vào hàng đợi queue để lần lượt xử lý. Do đó thứ tự duyệt các đỉnh sẽ ưu tiên theo chiều ngang như hình minh hoạ sau
+Ý tưởng đơn giản của giải thuật BFS như sau: lần lượt duyệt từng đỉnh trên đồ thị, tại mỗi đỉnh loang ra tất cả các đỉnh liền kề với nó chưa được duyệt trước đó và đưa vào hàng đợi queue để lần lượt xử lý. Do đó thứ tự duyệt các đỉnh sẽ ưu tiên theo chiều ngang như hình minh hoạ sau
 
 <p align="center"><img src="https://i.imgur.com/Nvn98M5.png" width="80%"></p>
 
@@ -66,7 +66,7 @@ if (!used[u]) {
 
 + Tìm đường đi ngắn nhất từ đỉnh nguồn tới các đỉnh còn lại trong đồ thị không trọng số.
 + Tìm các thành phầm liên thông trong đồ thị vô hướng trong thời gian $O(n + m)$.
-+ Tìm solution cho một problem, thường là trò chơi, số bước di chuyển ít nhất để đạt đuược trạng thái sau cùng, sau khi biểu diễn các trạng thái về các đỉnh của đồ thị.
++ Tìm solution cho một problem, thường là trò chơi, số bước di chuyển ít nhất để đạt được trạng thái sau cùng, sau khi biểu diễn các trạng thái về các đỉnh của đồ thị.
 + Tìm tất cả các cạnh nằm trên bất kì đường đi ngắn nhất nào của một cặp đỉnh $(a, b)$ cho trước:
   + BFS từ $a$ và $b$, lưu vào $d_a []$ và $d_b []$
   + Với mỗi cạnh $(u, v)$, điều kiện để thuộc đường đi ngắn nhất bất kì giữa $a$ và $b$ là: $d_a [u] + 1 + d_b [v] = d_a [b]$
