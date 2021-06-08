@@ -54,7 +54,7 @@ title: E-Maxx Algorithms in English from CP-Algorithms
     - [Sqrt Tree](./data_structures/sqrt-tree)
     - [Randomized Heap](./data_structures/randomized_heap)
 - **Advanced**
-    - [Deleting from a data structure in O(T(n)log n)](./data_structures/deleting_in_log_n)
+    - [Deleting from a data structure in $O(T(n) \log n)$](./data_structures/deleting_in_log_n)
 
 ### Dynamic Programming
 
@@ -79,7 +79,7 @@ title: E-Maxx Algorithms in English from CP-Algorithms
     - [Lyndon factorization](./string/lyndon_factorization)
 - **Tasks**
     - [Expression parsing](./string/expression_parsing)
-    - [Manacher's Algorithm - Finding all sub-palindromes in O(N)](./string/manacher)
+    - [Manacher's Algorithm - Finding all sub-palindromes in $O(N)$](./string/manacher)
     - [Finding repetitions](./string/main_lorentz)
 
 ### Linear Algebra
@@ -129,7 +129,7 @@ title: E-Maxx Algorithms in English from CP-Algorithms
 - **Polygons**
     - [Oriented area of a triangle](./geometry/oriented-triangle-area)
     - [Area of simple polygon](./geometry/area-of-simple-polygon)
-    - [Check if points belong to the convex polygon in O(log N)](./geometry/point-in-convex-polygon)
+    - [Check if points belong to the convex polygon in $O(\log N)$](./geometry/point-in-convex-polygon)
     - [Minkowski sum of convex polygons](./geometry/minkowski)
     - [Pick's Theorem - area of lattice polygons](./geometry/picks-theorem)
     - [Lattice points of non-lattice polygon](./geometry/lattice-points)
@@ -138,12 +138,12 @@ title: E-Maxx Algorithms in English from CP-Algorithms
     - [Convex hull trick and Li Chao tree](./geometry/convex_hull_trick)
 - **Sweep-line**
     - [Search for a pair of intersecting segments](./geometry/intersecting_segments)
-    - [Point location in O(log N)](./geometry/point-location)
+    - [Point location in $O(\log N)$](./geometry/point-location)
 - **Miscellaneous**
     - [Finding the nearest pair of points](./geometry/nearest_points)
     - [Delaunay triangulation and Voronoi diagram](./geometry/delaunay)
     - [Vertical decomposition](./geometry/vertical_decomposition)
-    - [Half-plane intersection - S&I Algorithm in O(Nlog N)](./geometry/halfplane-intersection)
+    - [Half-plane intersection - S&I Algorithm in $O(N \log N)$](./geometry/halfplane-intersection)
 
 ### Graphs
 
@@ -152,14 +152,14 @@ title: E-Maxx Algorithms in English from CP-Algorithms
     - [Depth First Search](./graph/depth-first-search) \| [Translation into Vietnamese 🇻🇳](../wikivn/graph/depth-first-search)
 - **Connected components, bridges, articulations points**
     - [Finding Connected Components](./graph/search-for-connected-components)
-    - [Finding Bridges in O(N+M)](./graph/bridge-searching)
+    - [Finding Bridges in $O(N+M)$](./graph/bridge-searching)
     - [Finding Bridges Online](./graph/bridge-searching-online)
-    - [Finding Articulation Points in O(N+M)](./graph/cutpoints)
+    - [Finding Articulation Points in $O(N+M)$](./graph/cutpoints)
     - [Strongly Connected Components and Condensation Graph](./graph/strongly-connected-components)
     - [Strong Orientation](./graph/strong-orientation)
 - **Single-source shortest paths**
-    - [Dijkstra - finding shortest paths from given vertex](./graph/dijkstra)
-    - [Dijkstra on sparse graphs](./graph/dijkstra_sparse)
+    - [Dijkstra - finding shortest paths from given vertex](./graph/dijkstra) \| [Translation into Vietnamese 🇻🇳](../wikivn/graph/dijkstra)
+    - [Dijkstra on sparse graphs](./graph/dijkstra_sparse) \| [Translation into Vietnamese 🇻🇳](../wikivn/graph/dijkstra_sparse)
     - [Bellman-Ford - finding shortest paths with negative weights](./graph/bellman_ford)
     - [0-1 BFS](./graph/01_bfs)
     - [D´Esopo-Pape algorithm](./graph/desopo_pape)
@@ -174,7 +174,7 @@ title: E-Maxx Algorithms in English from CP-Algorithms
     - [Kirchhoff Theorem](./graph/kirchhoff-theorem)
     - [Prüfer code](./graph/pruefer_code)
 - **Cycles**
-    - [Checking a graph for acyclicity and finding a cycle in O(M)](./graph/finding-cycle)
+    - [Checking a graph for acyclicity and finding a cycle in $O(M)$](./graph/finding-cycle)
     - [Finding a Negative Cycle in the Graph](./graph/finding-negative-cycle-in-graph)
     - [Eulerian Path](./graph/euler_path)
 - **Lowest common ancestor**
@@ -191,7 +191,7 @@ title: E-Maxx Algorithms in English from CP-Algorithms
     - [Maximum flow - MPM algorithm](./graph/mpm)
     - [Flows with demands](./graph/flow_with_demands)
     - [Minimum-cost flow](./graph/min_cost_flow)
-    - [Assignment problem. Solution using min-cost-flow in O (N^5)](./graph/Assignment-problem-min-flow)
+    - [Assignment problem. Solution using min-cost-flow in $O(N^5)$](./graph/Assignment-problem-min-flow)
 - **Matchings and related problems**
     - [Bipartite Graph Check](./graph/bipartite-check)
     - [Kuhn' Algorithm - Maximum Bipartite Matching](./graph/kuhn_maximum_bipartite_matching)
@@ -208,7 +208,7 @@ title: E-Maxx Algorithms in English from CP-Algorithms
     - [RMQ task (Range Minimum Query - the smallest element in an interval)](./sequences/rmq)
     - [Longest increasing subsequence](./sequences/longest_increasing_subsequence)
     - [Search the subsegment with the maximum/minimum sum](./others/maximum_average_segment)
-    - [K-th order statistic in O(N)](./sequences/k-th)
+    - [$K$-th order statistic in $O(N)$](./sequences/k-th)
 - **Game Theory**
     - [Games on arbitrary graphs](./game_theory/games_on_graphs)
     - [Sprague-Grundy theorem. Nim](./game_theory/sprague-grundy-nim)
